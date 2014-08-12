@@ -1149,15 +1149,15 @@ background: #B2DFFF;
 }
 
 .onms-ipinterface-status-indeterminate {
-background: #F6CECD;
+background: #EBEBCD;  /* #F6CECD; */
 }
 
 .onms-ipinterface-status-up {
-background: #D8E1CD;
+background: #EBF7ED;  /* #D8E1CD; */
 }
 
 .onms-ipinterface-status-down {
-background: #F5CDCD;
+background: #F9E9E9;  /* #F5CDCD; */
 }
 
 .onms-table-no-borders-margin{
