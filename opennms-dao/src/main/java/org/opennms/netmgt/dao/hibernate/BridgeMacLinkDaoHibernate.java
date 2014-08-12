@@ -87,13 +87,15 @@ public class BridgeMacLinkDaoHibernate extends AbstractDaoHibernate<BridgeMacLin
                         "ntm.netaddress, " +
                         "ip.ipaddr, " +
                         "ip.nodeid as targetnodeid, " +
-                        "node.nodelabel " +
+                        "node.nodelabel, " +
+                        "ntm.sourceIfIndex " +
                         "from bridgemaclink as mlink " +
                         "left join ipnettomedia as ntm " +
                         "on mlink.macaddress = ntm.physaddress " +
                         "left join ipinterface ip on ip.ipaddr = ntm.netaddress " +
                         "left join node on ip.nodeid = node.nodeid " +
                         "order by bridgeport;").list();
+                //where ip.nodeid is not null
             }
         });
 
@@ -101,7 +103,7 @@ public class BridgeMacLinkDaoHibernate extends AbstractDaoHibernate<BridgeMacLin
         for(Object[] link : links) {
             topoLinks.add(new BridgeMacTopologyLink((Integer)link[0], (Integer)link[1], (Integer)link[2],
                     (Integer)link[3], (Integer)link[4], (Integer)link[5], (String)link[6], (String)link[9],
-                    (String)link[10], (Integer)link[11], (String)link[12]));
+                    (String)link[10], (Integer)link[11], (String)link[12], (Integer)link[13]));
         }
 
         return topoLinks;

@@ -348,7 +348,7 @@ public class EnhancedLinkdTopologyProvider extends AbstractLinkdTopologyProvider
 
 
         } catch (Exception e){
-            String message = e.getMessage();
+            LOG.debug(e.getStackTrace().toString());
         }
 
         LOG.debug("loadtopology: adding nodes without links: " + isAddNodeWithoutLink());
@@ -574,7 +574,7 @@ public class EnhancedLinkdTopologyProvider extends AbstractLinkdTopologyProvider
 
                 //Check to see if there are any edges with the cloudVertex, if not add it
                 if (getEdgeIdsForVertex(cloudVertex).length == 0) {
-                    Edge edge = connectVertices(cloudVertex, parentVertex);
+                    Edge edge = connectVertices(bridgeLinkKey, cloudVertex, parentVertex, BRIDGE_EDGE_NAMESPACE);
                     edge.setTooltipText(getBridgeCloudTooltip(parentVertex, bridgePort));
                 }
 

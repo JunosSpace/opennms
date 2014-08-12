@@ -251,7 +251,7 @@ public class VertexHopGraphProvider implements GraphProvider {
             
             if ((other.getNamespace() != null && other.getNamespace().equals(getNamespace()))
                     &&  (other.getId() != null && other.getId().equals(getId()))
-                    && (other.getLabel() != null && other.getLabel().equals(getLabel()))) {            
+                    && (other.getLabel() != null && other.getLabel().equals(getLabel()))) {
                return true; 
             }
             
