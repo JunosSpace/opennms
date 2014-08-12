@@ -621,7 +621,7 @@ img.info {
          margin-bottom: 5px;
          font-size: 90%;
          float: right;
-         background-color: #536F85;
+         background-color: #F7F5F5; /*#536F85;*/
         }
         
         .pagination span.page-sep {
