@@ -71,7 +71,9 @@ Node <a href="<c:url value='element/node.jsp?node=${model.node.id}'/>">${model.n
       <td class="normal">  
     <select name="toAdd" size="20" multiple>
 	  <c:forEach items="${model.categories}" var="category">
-	    <option value="${category.id}">${category.name}</option>
+	    <c:if test="${! fn:startsWith(category.name, '_')}" >
+	      <option value="${category.id}">${category.name}</option>
+            </c:if>
 	  </c:forEach>
     </select>
       </td>
@@ -86,7 +88,9 @@ Node <a href="<c:url value='element/node.jsp?node=${model.node.id}'/>">${model.n
       <td class="normal">  
     <select name="toDelete" size="20" multiple>
 	  <c:forEach items="${model.sortedCategories}" var="category">
-	    <option value="${category.id}">${category.name}</option>
+            <c:if test="${! fn:startsWith(category.name, '_')}" >
+	      <option value="${category.id}">${category.name}</option>
+            </c:if>
 	  </c:forEach>
     </select>
       </td>

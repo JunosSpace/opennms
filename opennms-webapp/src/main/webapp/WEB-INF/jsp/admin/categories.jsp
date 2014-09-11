@@ -68,6 +68,15 @@
            location = "<%= Util.calculateUrlBase(request, "admin/categories.htm") %>?removeCategoryId=" + categoryId;
        }
    }
+
+   function validate_form()
+   {
+       if (document.getElementsByName("newCategoryName")[0].value.indexOf("_") == 0){
+           alert("Category name can't start with prefix '_'");
+           return false;
+       }
+   }
+
 </script>
 <table>
   <tr>
@@ -76,17 +85,19 @@
     <th>Category</th>
   </tr>
   <c:forEach items="${categories}" var="category">
+<c:if test="${! fn:startsWith(category.name, '_')}" >
 	  <tr>
 	    <td><a onclick="deleteCategory('${fn:escapeXml(category.name)}', ${category.id})" ><img src="images/trash.gif" alt="Delete Category"/></a></td>
 	    <td><a href="admin/categories.htm?categoryid=${category.id}&edit"><img src="images/modify.gif" alt="Edit Category"/></a></td>
 	    <td><a href="admin/categories.htm?categoryid=${category.id}">${fn:escapeXml(category.name)}</a></td> 
   	  </tr>
+</c:if>
   </c:forEach>
   <tr>
     <td></td>
     <td></td>
     <td>
-      <form action="admin/categories.htm">
+      <form action="admin/categories.htm" onsubmit="return validate_form()">
         <input type="textfield" name="newCategoryName" size="40"/>
         <input type="submit" value="Add New Category"/>
       </form>

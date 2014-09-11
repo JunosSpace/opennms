@@ -34,17 +34,15 @@
 	session="true"
 %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
 
 <div id="category-box">
 
 <h3 class="o-box">
   Surveillance Category Memberships
-<%--
   <c:if test="${isAdmin == 'true'}">
     (<a href="<c:url value="admin/categories.htm?edit&amp;node=${param.node}"/>">Edit</a>)
   </c:if>
---%>
 </h3>
 
 <table class="o-box">
@@ -57,7 +55,9 @@
 
   <c:forEach items="${categories}" var="category">
     <tr>
-      <td>${category.name}</td>
+      <c:if test="${! fn:startsWith(category.name, '_')}" >
+        <td>${category.name}</td>
+      </c:if>
     </tr>
   </c:forEach>
 </table>   
