@@ -921,8 +921,7 @@ instances has fired, for triggers with mteTriggerType
                         mteHotValue=%parm[#5]%&lt;/p&gt;
                 </logmsg>
         <severity>Indeterminate</severity>
-</event>
-
+    </event>
     <event>
         <mask>
             <maskelement>
@@ -937,6 +936,10 @@ instances has fired, for triggers with mteTriggerType
                 <mename>specific</mename>
                 <mevalue>1</mevalue>
             </maskelement>
+            <varbind>
+                <vbnumber>2</vbnumber>
+                <vbvalue>1</vbvalue>
+            </varbind>
         </mask>
         <uei>uei.opennms.org/traps/SPACE-PLATFORM-MIB/jnxSpaceNodeDown</uei>
         <event-label>SPACE-PLATFORM-MIB defined trap event: jnxSpaceNodeDown</event-label>
@@ -948,11 +951,82 @@ instances has fired, for triggers with mteTriggerType
         %parm[#1]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
         </descr>
         <logmsg dest="logndisplay">&lt;p&gt;
-        jnxSpaceNodeDown trap received
+        jnxSpaceNodeDown trap received. Node type is space node.
         jnxSpaceNodeIP=%parm[#1]%&lt;/p&gt;
         </logmsg>
         <severity>Major</severity>
-        <alarm-data auto-clean="true" alarm-type="1" reduction-key="%uei%:%dpname%:%nodeid%:%parm[#1]%"/>
+        <alarm-data auto-clean="true" alarm-type="1" reduction-key="%uei%:%dpname%:%nodeid%:%parm[#1]%:%parm[#2]%"/>
+    </event>
+    <event>
+        <mask>
+            <maskelement>
+                <mename>id</mename>
+                <mevalue>.1.3.6.1.4.1.2636.1.3.1.3.1</mevalue>
+            </maskelement>
+            <maskelement>
+                <mename>generic</mename>
+                <mevalue>6</mevalue>
+            </maskelement>
+            <maskelement>
+                <mename>specific</mename>
+                <mevalue>1</mevalue>
+            </maskelement>
+            <varbind>
+                <vbnumber>2</vbnumber>
+                <vbvalue>2</vbvalue>
+            </varbind>
+        </mask>
+        <uei>uei.opennms.org/traps/SPACE-PLATFORM-MIB/jnxSpecialNodeDown</uei>
+        <event-label>SPACE-PLATFORM-MIB defined trap event: jnxSpaceNodeDown</event-label>
+        <descr>
+&lt;p&gt;The special node referred by jnxSpaceNodeIP is currently down.&lt;/p&gt;&lt;table&gt;
+        &lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+        jnxSpaceNodeIP&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+        %parm[#1]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+        </descr>
+        <logmsg dest="logndisplay">&lt;p&gt;
+        jnxSpaceNodeDown trap received. Node type is special node.
+        jnxSpaceNodeIP=%parm[#1]%&lt;/p&gt;
+        </logmsg>
+        <severity>Major</severity>
+        <alarm-data auto-clean="true" alarm-type="1" reduction-key="%uei%:%dpname%:%nodeid%:%parm[#1]%:%parm[#2]%"/>
+    </event>
+
+    <event>
+        <mask>
+            <maskelement>
+                <mename>id</mename>
+                <mevalue>.1.3.6.1.4.1.2636.1.3.1.3.1</mevalue>
+            </maskelement>
+            <maskelement>
+                <mename>generic</mename>
+                <mevalue>6</mevalue>
+            </maskelement>
+            <maskelement>
+                <mename>specific</mename>
+                <mevalue>2</mevalue>
+            </maskelement>
+            <varbind>
+                <vbnumber>2</vbnumber>
+                <vbvalue>1</vbvalue>
+            </varbind>
+        </mask>
+        <uei>uei.opennms.org/traps/SPACE-PLATFORM-MIB/jnxSpaceNodeUp</uei>
+        <event-label>SPACE-PLATFORM-MIB defined trap event: jnxSpaceNodeUp</event-label>
+        <descr>
+&lt;p&gt;The space node referred by jnxSpaceNodeIP is currently up.&lt;/p&gt;&lt;table&gt;
+        &lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+        jnxSpaceNodeIP&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+        %parm[#1]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+        </descr>
+        <logmsg dest="logndisplay">&lt;p&gt;
+        jnxSpaceNodeUp trap received. Node type is space node.
+        jnxSpaceNodeIP=%parm[#1]%&lt;/p&gt;
+        </logmsg>
+        <severity>Normal</severity>
+        <alarm-data auto-clean="true" clear-key="uei.opennms.org/traps/SPACE-PLATFORM-MIB/jnxSpaceNodeDown:%dpname%:%nodeid%:%parm[#1]%:%parm[#2]%" alarm-type="2" reduction-key="%uei%:%dpname%:%nodeid%:%parm[#1]%:%parm[#2]%"/>
     </event>
     <event>
         <mask>
@@ -968,23 +1042,28 @@ instances has fired, for triggers with mteTriggerType
                 <mename>specific</mename>
                 <mevalue>2</mevalue>
             </maskelement>
+            <varbind>
+                <vbnumber>2</vbnumber>
+                <vbvalue>2</vbvalue>
+            </varbind>
         </mask>
-        <uei>uei.opennms.org/traps/SPACE-PLATFORM-MIB/jnxSpaceNodeUp</uei>
+        <uei>uei.opennms.org/traps/SPACE-PLATFORM-MIB/jnxSpecialNodeUp</uei>
         <event-label>SPACE-PLATFORM-MIB defined trap event: jnxSpaceNodeUp</event-label>
         <descr>
-&lt;p&gt;The space node referred by jnxSpaceNodeIP is currently up.&lt;/p&gt;&lt;table&gt;
+&lt;p&gt;The special node referred by jnxSpaceNodeIP is currently up.&lt;/p&gt;&lt;table&gt;
         &lt;tr&gt;&lt;td&gt;&lt;b&gt;
 
         jnxSpaceNodeIP&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
         %parm[#1]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
         </descr>
         <logmsg dest="logndisplay">&lt;p&gt;
-        jnxSpaceNodeUp trap received
+        jnxSpaceNodeUp trap received. Node type is special node.
         jnxSpaceNodeIP=%parm[#1]%&lt;/p&gt;
         </logmsg>
         <severity>Normal</severity>
-        <alarm-data auto-clean="true" clear-key="uei.opennms.org/traps/SPACE-PLATFORM-MIB/jnxSpaceNodeDown:%dpname%:%nodeid%:%parm[#1]%" alarm-type="2" reduction-key="%uei%:%dpname%:%nodeid%:%parm[#1]%"/>
+        <alarm-data auto-clean="true" clear-key="uei.opennms.org/traps/SPACE-PLATFORM-MIB/jnxSpaceNodeDown:%dpname%:%nodeid%:%parm[#1]%:%parm[#2]%" alarm-type="2" reduction-key="%uei%:%dpname%:%nodeid%:%parm[#1]%:%parm[#2]%"/>
     </event>
+
     <event>
         <mask>
             <maskelement>
@@ -999,6 +1078,10 @@ instances has fired, for triggers with mteTriggerType
                 <mename>specific</mename>
                 <mevalue>3</mevalue>
             </maskelement>
+            <varbind>
+                <vbnumber>3</vbnumber>
+                <vbvalue>1</vbvalue>
+            </varbind>
         </mask>
         <uei>uei.opennms.org/traps/SPACE-PLATFORM-MIB/jnxSpaceNodeRemoval</uei>
         <event-label>SPACE-PLATFORM-MIB defined trap event: jnxSpaceNodeRemoval</event-label>
@@ -1014,11 +1097,52 @@ instances has fired, for triggers with mteTriggerType
         %parm[#2]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
         </descr>
         <logmsg dest="logndisplay">&lt;p&gt;
-        jnxSpaceNodeRemoval trap received
+        jnxSpaceNodeRemoval trap received. Node type is space node.
         jnxSpaceNodeIP=%parm[#1]%
         jnxSpaceObjectState=%parm[#2]%&lt;/p&gt;
         </logmsg>
         <severity>Normal</severity>
-	<alarm-data auto-clean="true" alarm-type="1" reduction-key="%uei%:%dpname%:%nodeid%:%parm[#1]%"/>
+	<alarm-data auto-clean="true" alarm-type="1" reduction-key="%uei%:%dpname%:%nodeid%:%parm[#1]%:%parm[#3]%"/>
     </event>
+    <event>
+        <mask>
+            <maskelement>
+                <mename>id</mename>
+                <mevalue>.1.3.6.1.4.1.2636.1.3.1.3.1</mevalue>
+            </maskelement>
+            <maskelement>
+                <mename>generic</mename>
+                <mevalue>6</mevalue>
+            </maskelement>
+            <maskelement>
+                <mename>specific</mename>
+                <mevalue>3</mevalue>
+            </maskelement>
+            <varbind>
+                <vbnumber>3</vbnumber>
+                <vbvalue>2</vbvalue>
+            </varbind>
+        </mask>
+        <uei>uei.opennms.org/traps/SPACE-PLATFORM-MIB/jnxSpecialNodeRemoval</uei>
+        <event-label>SPACE-PLATFORM-MIB defined trap event: jnxSpaceNodeRemoval</event-label>
+        <descr>
+&lt;p&gt;The special node referred by jnxSpaceNodeIP is removed from fabric.&lt;/p&gt;&lt;table&gt;
+        &lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+        jnxSpaceNodeIP&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+        %parm[#1]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+        jnxSpaceObjectState&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+        %parm[#2]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+        </descr>
+        <logmsg dest="logndisplay">&lt;p&gt;
+        jnxSpaceNodeRemoval trap received. Node type is special node.
+        jnxSpaceNodeIP=%parm[#1]%
+        jnxSpaceObjectState=%parm[#2]%&lt;/p&gt;
+        </logmsg>
+        <severity>Normal</severity>
+        <alarm-data auto-clean="true" alarm-type="1" reduction-key="%uei%:%dpname%:%nodeid%:%parm[#1]%:%parm[#3]%"/>
+    </event>
+
 </events>
