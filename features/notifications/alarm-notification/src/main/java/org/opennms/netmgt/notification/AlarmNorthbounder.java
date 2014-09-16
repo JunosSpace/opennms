@@ -667,7 +667,9 @@ public class AlarmNorthbounder extends AbstractNorthbounder{
 			nbiAlarm.setEventparms(northboundalarm.getEventParms());
 			Integer nodeId = northboundalarm.getNodeId();
 			OnmsIpInterface onmsIpInterface = null;
-			String ipaddr = northboundalarm.getIpAddr().getHostAddress();
+			String ipaddr = null;
+			if (northboundalarm.getIpAddr() != null)
+				ipaddr = northboundalarm.getIpAddr().getHostAddress();
 			if (m_ipInterfaceDao != null && nodeId != null && ipaddr != null ) {
 				Integer ifIndex = null;
 				
