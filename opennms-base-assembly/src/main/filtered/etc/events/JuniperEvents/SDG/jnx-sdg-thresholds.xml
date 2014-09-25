@@ -158,11 +158,11 @@
         </alarm-data>
     </event>
 	<event>        
-        <uei>uei.opennms.org/vendor/Juniper/threshold/adcDataCoresExceedingThreshod</uei>
-        <event-label>User defined threshold event: adcDataCoresExceedingThreshod</event-label>
+        <uei>uei.opennms.org/vendor/Juniper/threshold/adcDataCoresExceedingThreshold</uei>
+        <event-label>User defined threshold event: adcDataCoresExceedingThreshold</event-label>
         <descr>This notification is generated when count of ADC DataCores exceeds threshold count for last 64 seconds.</descr>
         <logmsg dest="logndisplay">&lt;p&gt;
-			User defined threshold event: adcDataCoresExceedingThreshod  trap received 
+			User defined threshold event: adcDataCoresExceedingThreshold  trap received 
 				Service Instance Name=%parm[serviceName]% 				
 				KPI Name =%parm[kpiName]% 				
 				Threshold count = %parm[thresholdValue]%
@@ -174,17 +174,17 @@
         </alarm-data>
     </event>    
     <event>        
-        <uei>uei.opennms.org/vendor/Juniper/threshold/adcDataCoresExceedingThreshodCleared</uei>
-        <event-label>User defined threshold event: adcDataCoresExceedingThreshodCleared</event-label>
+        <uei>uei.opennms.org/vendor/Juniper/threshold/adcDataCoresExceedingThresholdCleared</uei>
+        <event-label>User defined threshold event: adcDataCoresExceedingThresholdCleared</event-label>
         <descr>This notification is generated when count of ADC DataCore satisfies the threshold count for last 64 seconds.</descr>
         <logmsg dest="logndisplay">&lt;p&gt;
-			User defined threshold event: adcDataCoresExceedingThreshodCleared trap received 
+			User defined threshold event: adcDataCoresExceedingThresholdCleared trap received 
 				Service Instance Name= %parm[serviceName]% 				
 				KPI Name = %parm[kpiName]% 	
 				Threshold Value = %parm[thresholdValue]%
 				Current Value = %parm[value]%  &lt;/p&gt;</logmsg>
         <severity>Cleared</severity>
-        <alarm-data reduction-key="%uei%:%nodeid%:%parm[serviceName]%:%parm[kpiName]%" alarm-type="2" clear-key="uei.opennms.org/vendor/Juniper/threshold/adcDataCoresExceedingThreshod:%nodeid%:%parm[serviceName]%:%parm[kpiName]%" auto-clean="true">
+        <alarm-data reduction-key="%uei%:%nodeid%:%parm[serviceName]%:%parm[kpiName]%" alarm-type="2" clear-key="uei.opennms.org/vendor/Juniper/threshold/adcDataCoresExceedingThreshold:%nodeid%:%parm[serviceName]%:%parm[kpiName]%" auto-clean="true">
             <update-field field-name="severity" update-on-reduction="true"/>
             <update-field field-name="descr" update-on-reduction="true"/>
         </alarm-data>

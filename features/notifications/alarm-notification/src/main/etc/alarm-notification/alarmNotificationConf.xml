@@ -232,9 +232,9 @@
 			</uei>
 			<uei name="uei.opennms.org/vendor/Juniper/threshold/adcDataCoreCPUStatusThresholdCleared" notification_threshold="5">
 			</uei>
-			<uei name="uei.opennms.org/vendor/Juniper/threshold/adcDataCoresExceedingThreshod" notification_threshold="5">
+			<uei name="uei.opennms.org/vendor/Juniper/threshold/adcDataCoresExceedingThreshold" notification_threshold="5">
 			</uei>
-			<uei name="uei.opennms.org/vendor/Juniper/threshold/adcDataCoresExceedingThreshodCleared" notification_threshold="5">
+			<uei name="uei.opennms.org/vendor/Juniper/threshold/adcDataCoresExceedingThresholdCleared" notification_threshold="5">
 			</uei>
 			<uei name="uei.opennms.org/vendor/Juniper/threshold/adcAllocationFailuresPerNPUThreshold" notification_threshold="5">
 			</uei>
