@@ -49,13 +49,19 @@
        // if i am in an iframe, go to jmp to login
 %>
 <script type="text/javascript">
-  if (window.top != window.self) {
-    //window.top.location = '../mainui/unsecured/logout?appName=CMP';
 
-    var user = window.localStorage.getItem('opennmsuser').toLowerCase();
-    if (user.lastIndexOf('\\') > -1) {
-        user = user.substr(user.lastIndexOf('\\') + 1);
-    }
+  var user = window.localStorage.getItem('opennmsuser').toLowerCase();
+  if (user.lastIndexOf('\\') > -1) {
+     user = user.substr(user.lastIndexOf('\\') + 1);
+   }
+
+  if (window.top != window.self && user != "") {
+    //window.top.location = '../mainui/unsecured/logout?appName=CMP';
+    
+    //var user = window.localStorage.getItem('opennmsuser').toLowerCase();
+    //if (user.lastIndexOf('\\') > -1) {
+    //    user = user.substr(user.lastIndexOf('\\') + 1);
+    //}
     var password = window.localStorage.getItem('opennmspw');
     var groups = window.localStorage.getItem('opennmsdomainname');
 
@@ -92,7 +98,7 @@
 </c:if> 
   
    } else {
-    window.top.location = '../mainui/unsecured/logout?appName=CMP';
+    window.top.location = '../mainui/';
    }
 </script>
 <%
