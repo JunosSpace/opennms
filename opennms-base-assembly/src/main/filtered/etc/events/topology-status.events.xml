@@ -6,10 +6,10 @@ Events for topology linkDown and linkUp
     <uei>uei.opennms.org/internal/topology/linkDown</uei>
     <event-label>OpenNMS-defined topology event: linkDown</event-label>
     <descr>
-      &lt;p&gt;node: %nodeid% with ifindex: %ifindex% is down &lt;/p&gt;
+      &lt;p&gt;Link Down. Node: %nodeid% with ifindex: %ifindex% is down &lt;/p&gt;
     </descr>
     <logmsg dest='logndisplay'>
-      node: %nodeid% with ifindex: %ifindex% is down
+      Link Down. Node: %nodeid% with ifindex: %ifindex% is down
     </logmsg>
     <severity>Minor</severity>
         <alarm-data reduction-key="%uei%:%nodeid%:%ifindex%" alarm-type="1" auto-clean="false" />
@@ -18,10 +18,10 @@ Events for topology linkDown and linkUp
     <uei>uei.opennms.org/internal/topology/linkUp</uei>
     <event-label>OpenNMS-defined topology event: linkUp</event-label>
     <descr>
-      &lt;p&gt;node: %nodeid% with ifindex: %ifindex% is up &lt;/p&gt;
+      &lt;p&gt; Link Up. Node: %nodeid% with ifindex: %ifindex% is up &lt;/p&gt;
     </descr>
     <logmsg dest='logndisplay'>
-      node: %nodeid% with ifindex: %ifindex% is up
+      Link Up. Node: %nodeid% with ifindex: %ifindex% is up
     </logmsg>
     <severity>Normal</severity>
         <alarm-data reduction-key="%uei%:%nodeid%:%ifindex%"
