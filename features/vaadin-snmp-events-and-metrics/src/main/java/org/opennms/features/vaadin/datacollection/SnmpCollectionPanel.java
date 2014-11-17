@@ -107,7 +107,7 @@ public class SnmpCollectionPanel extends Panel {
                     if (!isNew && !oldName.equals(snmpCollectionForm.getSnmpCollectionName())) {
                         Notification.show("Be sure to replace " + oldName + " with " + snmpCollectionForm.getSnmpCollectionName() + " in case the collection is being used in collectd-configuration.xml", Notification.Type.WARNING_MESSAGE); // TODO Is this enough
                     }
-                    if (!isNew && oldStep != snmpCollectionForm.getRrdStep()) {
+                    if (!isNew && oldStep.intValue() != snmpCollectionForm.getRrdStep().intValue()) {
                         Notification.show("Be sure to replace the collection interval from " + oldStep + "s with " + snmpCollectionForm.getRrdStep() + "s in case the collection is being used in collectd-configuration.xml", Notification.Type.WARNING_MESSAGE); // TODO Is this enough
                     }
                 } catch (CommitException e) {
