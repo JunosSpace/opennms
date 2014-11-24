@@ -512,6 +512,10 @@ public class OnmsIpInterface extends OnmsEntity implements Serializable {
         if (hasNewValue(scannedIface.getIpLastCapsdPoll(), getIpLastCapsdPoll())) {
             setIpLastCapsdPoll(scannedIface.getIpLastCapsdPoll());
         }
+
+        if (hasNewValue(scannedIface.getSnmpInterface(), getSnmpInterface())) {
+            setSnmpInterface(scannedIface.getSnmpInterface());
+        }
         
     }
     

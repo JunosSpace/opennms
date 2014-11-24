@@ -852,7 +852,7 @@ public class SnmpTrapHelper {
             }
             
             InetAddress agentAddress;
-            agentAddress = InetAddressUtils.addr(addr);
+            agentAddress = InetAddressUtils.addr(event.getSnmphost());
             if (agentAddress == null) {
                 throw new SnmpTrapHelperException("Invalid ip address.");
             }
