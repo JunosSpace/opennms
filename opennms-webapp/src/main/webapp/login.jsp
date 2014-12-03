@@ -50,10 +50,13 @@
 %>
 <script type="text/javascript">
 
-  var user = window.localStorage.getItem('opennmsuser').toLowerCase();
-  if (user.lastIndexOf('\\') > -1) {
+  var user = window.localStorage.getItem('opennmsuser');
+  if (user != null) {
+    user = user.toLowerCase();
+  }
+  if (user != null && user.lastIndexOf('\\') > -1) {
      user = user.substr(user.lastIndexOf('\\') + 1);
-   }
+  }
 
   if (window.top != window.self && user != "") {
     //window.top.location = '../mainui/unsecured/logout?appName=CMP';
