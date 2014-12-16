@@ -101,7 +101,7 @@
 </c:if> 
   
    } else {
-    window.top.location = '../mainui/';
+    window.top.location = '../mainui/unsecured/logout.jsp';
    }
 </script>
 <%
