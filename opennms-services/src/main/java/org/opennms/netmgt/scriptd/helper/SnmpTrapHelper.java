@@ -997,6 +997,7 @@ public class SnmpTrapHelper {
             addVarBinding(packet, SNMP_SYSUPTIME_OID, EventConstants.TYPE_SNMP_TIMETICKS, Long.toString(snmpInfo.getTimeStamp()));
             
             String oid;
+	    boolean addrPresent = false;
 
             if (snmpInfo.getGeneric() == ENTERPRISE_SPECIFIC) {
                 oid = snmpInfo.getId() + "." + snmpInfo.getSpecific();
@@ -1011,14 +1012,22 @@ public class SnmpTrapHelper {
                 Value value = parm.getValue();
 
                 try {
-                    addVarBinding(packet, parm.getParmName(), value.getType(), value.getEncoding(), value.getContent());
-                }
+		    if (parm.getParmName().equals(SNMP_TRAP_ADDRESS_OID)) {
+			addrPresent = true;
+			addVarBinding(packet, SNMP_TRAP_ADDRESS_OID, EventConstants.TYPE_SNMP_IPADDRESS, event.getSnmphost());
+		    } else {
+			addVarBinding(packet, parm.getParmName(), value.getType(), value.getEncoding(), value.getContent());
+		    }
+                }	
 
                 catch (SnmpTrapHelperException e) {
                     throw new SnmpTrapHelperException(e.getMessage() + " in event parm[" + i + "]");
                 }
 
                 i++;
+            }
+            if (!addrPresent) {
+                addVarBinding(packet, SNMP_TRAP_ADDRESS_OID, EventConstants.TYPE_SNMP_IPADDRESS, event.getSnmphost());
             }
         } else {
             throw new SnmpTrapHelperException("Invalid SNMP version: " + version);
