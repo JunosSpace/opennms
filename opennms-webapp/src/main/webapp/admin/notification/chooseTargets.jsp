@@ -193,7 +193,8 @@ action="admin/notification/destinationWizard" >
              <%
                          for (Map.Entry<String,Boolean> entry : getUsers(targets).entrySet()) {
                              String key = entry.getKey();
-                             if (entry.getValue().booleanValue()) {
+                             if(key.indexOf("_") != 0) {
+                             	if (entry.getValue().booleanValue()) {
              %>
                     <option selected VALUE=<%=key%>><%=key%></option>
             <%
@@ -201,6 +202,7 @@ action="admin/notification/destinationWizard" >
             %>
                     <option VALUE=<%=key%>><%=key%></option>
             <%
+                        	}
                         }
                         }
             %>
