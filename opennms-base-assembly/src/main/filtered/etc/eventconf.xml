@@ -1977,6 +1977,7 @@
   <event-file>events/JUNIPER-IFOPTICS-MIB.events.xml</event-file>
   <event-file>events/JUNIPER-FRU-MIB.events.xml</event-file>
   <event-file>events/JNX-OPT-IF-EXT-MIB.events.xml</event-file>
+  <event-file>events/ISIS-MIB.events.xml</event-file>
   <event-file>events/Translator.default.events.xml</event-file>
   <event-file>events/Rancid.events.xml</event-file>
   <event-file>events/3Com.events.xml</event-file>

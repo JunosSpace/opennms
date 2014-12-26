@@ -1,0 +1,1114 @@
+<events xmlns="http://xmlns.opennms.org/xsd/eventconf">
+   <event>
+      <mask>
+         <maskelement>
+            <mename>id</mename>
+            <mevalue>.1.3.6.1.2.1.138</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>generic</mename>
+            <mevalue>6</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>specific</mename>
+            <mevalue>1</mevalue>
+         </maskelement>
+      </mask>
+      <uei>uei.opennms.org/traps/ISIS-MIB/isisDatabaseOverload</uei>
+      <event-label>ISIS-MIB defined trap event: isisDatabaseOverload</event-label>
+      <descr>
+&lt;p>This notification is generated when the system
+             enters or leaves the Overload state.  The number
+             of times this has been generated and cleared is kept
+             track of by isisSysStatLSPDbaseOloads.&lt;/p>&lt;table>
+	&lt;tr>&lt;td>&lt;b>
+
+	isisNotificationSysLevelIndex&lt;/b>&lt;/td>&lt;td>
+	%parm[#1]%;&lt;/td>&lt;td>&lt;p>
+		level1(1)
+		level2(2)
+		level1and2(3)
+	&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	isisSysLevelState&lt;/b>&lt;/td>&lt;td>
+	%parm[#2]%;&lt;/td>&lt;td>&lt;p>
+		off(1)
+		on(2)
+		waiting(3)
+		overloaded(4)
+	&lt;/p>&lt;/td>&lt;/tr>&lt;/table>
+	</descr>
+      <logmsg dest="logndisplay">&lt;p>
+	isisDatabaseOverload trap received
+	isisNotificationSysLevelIndex=%parm[#1]%
+	isisSysLevelState=%parm[#2]%&lt;/p>
+	</logmsg>
+      <severity>Indeterminate</severity>
+      <varbindsdecode>
+         <parmid>parm[#1]</parmid>
+         <decode varbindvalue="1" varbinddecodedstring="level1"/>
+         <decode varbindvalue="2" varbinddecodedstring="level2"/>
+         <decode varbindvalue="3" varbinddecodedstring="level1and2"/>
+      </varbindsdecode>
+      <varbindsdecode>
+         <parmid>parm[#2]</parmid>
+         <decode varbindvalue="1" varbinddecodedstring="off"/>
+         <decode varbindvalue="2" varbinddecodedstring="on"/>
+         <decode varbindvalue="3" varbinddecodedstring="waiting"/>
+         <decode varbindvalue="4" varbinddecodedstring="overloaded"/>
+      </varbindsdecode>
+   </event>
+   <event>
+      <mask>
+         <maskelement>
+            <mename>id</mename>
+            <mevalue>.1.3.6.1.2.1.138</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>generic</mename>
+            <mevalue>6</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>specific</mename>
+            <mevalue>2</mevalue>
+         </maskelement>
+      </mask>
+      <uei>uei.opennms.org/traps/ISIS-MIB/isisManualAddressDrops</uei>
+      <event-label>ISIS-MIB defined trap event: isisManualAddressDrops</event-label>
+      <descr>
+&lt;p>This notification is generated when one of the
+             manual areaAddresses assigned to this system is
+             ignored when computing routes.  The object
+             isisNotificationAreaAddress describes the area that
+             has been dropped.
+
+             The number of times this event has been generated
+             is counted by isisSysStatManAddrDropFromAreas.
+
+             The agent must throttle the generation of
+             consecutive isisManualAddressDrops notifications
+             so that there is at least a 5-second gap between
+             notifications of this type.  When notifications
+             are throttled, they are dropped, not queued for
+             sending at a future time.&lt;/p>&lt;table>
+	&lt;tr>&lt;td>&lt;b>
+
+	isisNotificationAreaAddress&lt;/b>&lt;/td>&lt;td>
+	%parm[#1]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>&lt;/table>
+	</descr>
+      <logmsg dest="logndisplay">&lt;p>
+	isisManualAddressDrops trap received
+	isisNotificationAreaAddress=%parm[#1]%&lt;/p>
+	</logmsg>
+      <severity>Indeterminate</severity>
+   </event>
+   <event>
+      <mask>
+         <maskelement>
+            <mename>id</mename>
+            <mevalue>.1.3.6.1.2.1.138</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>generic</mename>
+            <mevalue>6</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>specific</mename>
+            <mevalue>3</mevalue>
+         </maskelement>
+      </mask>
+      <uei>uei.opennms.org/traps/ISIS-MIB/isisCorruptedLSPDetected</uei>
+      <event-label>ISIS-MIB defined trap event: isisCorruptedLSPDetected</event-label>
+      <descr>
+&lt;p>This notification is generated when we find that
+             an LSP that was stored in memory has become
+             corrupted.  The number of times this has been
+             generated is counted by isisSysCorrLSPs.
+
+             We forward an LSP ID.  We may have independent
+             knowledge of the ID, but in some implementations
+             there is a chance that the ID itself will be
+             corrupted.&lt;/p>&lt;table>
+	&lt;tr>&lt;td>&lt;b>
+
+	isisNotificationSysLevelIndex&lt;/b>&lt;/td>&lt;td>
+	%parm[#1]%;&lt;/td>&lt;td>&lt;p>
+		level1(1)
+		level2(2)
+		level1and2(3)
+	&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	isisPduLspId&lt;/b>&lt;/td>&lt;td>
+	%parm[#2]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>&lt;/table>
+	</descr>
+      <logmsg dest="logndisplay">&lt;p>
+	isisCorruptedLSPDetected trap received
+	isisNotificationSysLevelIndex=%parm[#1]%
+	isisPduLspId=%parm[#2]%&lt;/p>
+	</logmsg>
+      <severity>Indeterminate</severity>
+      <varbindsdecode>
+         <parmid>parm[#1]</parmid>
+         <decode varbindvalue="1" varbinddecodedstring="level1"/>
+         <decode varbindvalue="2" varbinddecodedstring="level2"/>
+         <decode varbindvalue="3" varbinddecodedstring="level1and2"/>
+      </varbindsdecode>
+   </event>
+   <event>
+      <mask>
+         <maskelement>
+            <mename>id</mename>
+            <mevalue>.1.3.6.1.2.1.138</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>generic</mename>
+            <mevalue>6</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>specific</mename>
+            <mevalue>4</mevalue>
+         </maskelement>
+      </mask>
+      <uei>uei.opennms.org/traps/ISIS-MIB/isisAttemptToExceedMaxSequence</uei>
+      <event-label>ISIS-MIB defined trap event: isisAttemptToExceedMaxSequence</event-label>
+      <descr>
+&lt;p>When the sequence number on an LSP we generate
+             wraps the 32-bit sequence counter, we purge and
+             wait to re-announce this information.  This
+             notification describes that event.  Since these
+             should not be generated rapidly, we generate
+             an event each time this happens.
+
+             While the first 6 bytes of the LSPID are ours,
+             the other two contain useful information.&lt;/p>&lt;table>
+	&lt;tr>&lt;td>&lt;b>
+
+	isisNotificationSysLevelIndex&lt;/b>&lt;/td>&lt;td>
+	%parm[#1]%;&lt;/td>&lt;td>&lt;p>
+		level1(1)
+		level2(2)
+		level1and2(3)
+	&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	isisPduLspId&lt;/b>&lt;/td>&lt;td>
+	%parm[#2]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>&lt;/table>
+	</descr>
+      <logmsg dest="logndisplay">&lt;p>
+	isisAttemptToExceedMaxSequence trap received
+	isisNotificationSysLevelIndex=%parm[#1]%
+	isisPduLspId=%parm[#2]%&lt;/p>
+	</logmsg>
+      <severity>Indeterminate</severity>
+      <varbindsdecode>
+         <parmid>parm[#1]</parmid>
+         <decode varbindvalue="1" varbinddecodedstring="level1"/>
+         <decode varbindvalue="2" varbinddecodedstring="level2"/>
+         <decode varbindvalue="3" varbinddecodedstring="level1and2"/>
+      </varbindsdecode>
+   </event>
+   <event>
+      <mask>
+         <maskelement>
+            <mename>id</mename>
+            <mevalue>.1.3.6.1.2.1.138</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>generic</mename>
+            <mevalue>6</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>specific</mename>
+            <mevalue>5</mevalue>
+         </maskelement>
+      </mask>
+      <uei>uei.opennms.org/traps/ISIS-MIB/isisIDLenMismatch</uei>
+      <event-label>ISIS-MIB defined trap event: isisIDLenMismatch</event-label>
+      <descr>
+&lt;p>A notification sent when we receive a PDU
+             with a different value for the System ID Length.
+             This notification includes an index to identify
+             the circuit where we saw the PDU and the header of
+             the PDU, which may help a network manager identify
+             the source of the confusion.
+
+             The agent must throttle the generation of
+             consecutive isisIDLenMismatch notifications
+             so that there is at least a 5-second gap between
+             notifications of this type.  When notifications
+             are throttled, they are dropped, not queued for
+             sending at a future time.&lt;/p>&lt;table>
+	&lt;tr>&lt;td>&lt;b>
+
+	isisNotificationSysLevelIndex&lt;/b>&lt;/td>&lt;td>
+	%parm[#1]%;&lt;/td>&lt;td>&lt;p>
+		level1(1)
+		level2(2)
+		level1and2(3)
+	&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	isisPduFieldLen&lt;/b>&lt;/td>&lt;td>
+	%parm[#2]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	isisNotificationCircIfIndex&lt;/b>&lt;/td>&lt;td>
+	%parm[#3]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	isisPduFragment&lt;/b>&lt;/td>&lt;td>
+	%parm[#4]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>&lt;/table>
+	</descr>
+      <logmsg dest="logndisplay">&lt;p>
+	isisIDLenMismatch trap received
+	isisNotificationSysLevelIndex=%parm[#1]%
+	isisPduFieldLen=%parm[#2]%
+	isisNotificationCircIfIndex=%parm[#3]%
+	isisPduFragment=%parm[#4]%&lt;/p>
+	</logmsg>
+      <severity>Indeterminate</severity>
+      <varbindsdecode>
+         <parmid>parm[#1]</parmid>
+         <decode varbindvalue="1" varbinddecodedstring="level1"/>
+         <decode varbindvalue="2" varbinddecodedstring="level2"/>
+         <decode varbindvalue="3" varbinddecodedstring="level1and2"/>
+      </varbindsdecode>
+   </event>
+   <event>
+      <mask>
+         <maskelement>
+            <mename>id</mename>
+            <mevalue>.1.3.6.1.2.1.138</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>generic</mename>
+            <mevalue>6</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>specific</mename>
+            <mevalue>6</mevalue>
+         </maskelement>
+      </mask>
+      <uei>uei.opennms.org/traps/ISIS-MIB/isisMaxAreaAddressesMismatch</uei>
+      <event-label>ISIS-MIB defined trap event: isisMaxAreaAddressesMismatch</event-label>
+      <descr>
+&lt;p>A notification sent when we receive a PDU
+             with a different value for the Maximum Area
+             Addresses.  This notification includes the
+             header of the packet, which may help a
+             network manager identify the source of the
+             confusion.
+
+             The agent must throttle the generation of
+             consecutive isisMaxAreaAddressesMismatch
+             notifications so that there is at least a 5-second
+             gap between notifications of this type.  When
+             notifications are throttled, they are dropped, not
+             queued for sending at a future time.&lt;/p>&lt;table>
+	&lt;tr>&lt;td>&lt;b>
+
+	isisNotificationSysLevelIndex&lt;/b>&lt;/td>&lt;td>
+	%parm[#1]%;&lt;/td>&lt;td>&lt;p>
+		level1(1)
+		level2(2)
+		level1and2(3)
+	&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	isisPduMaxAreaAddress&lt;/b>&lt;/td>&lt;td>
+	%parm[#2]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	isisNotificationCircIfIndex&lt;/b>&lt;/td>&lt;td>
+	%parm[#3]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	isisPduFragment&lt;/b>&lt;/td>&lt;td>
+	%parm[#4]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>&lt;/table>
+	</descr>
+      <logmsg dest="logndisplay">&lt;p>
+	isisMaxAreaAddressesMismatch trap received
+	isisNotificationSysLevelIndex=%parm[#1]%
+	isisPduMaxAreaAddress=%parm[#2]%
+	isisNotificationCircIfIndex=%parm[#3]%
+	isisPduFragment=%parm[#4]%&lt;/p>
+	</logmsg>
+      <severity>Indeterminate</severity>
+      <varbindsdecode>
+         <parmid>parm[#1]</parmid>
+         <decode varbindvalue="1" varbinddecodedstring="level1"/>
+         <decode varbindvalue="2" varbinddecodedstring="level2"/>
+         <decode varbindvalue="3" varbinddecodedstring="level1and2"/>
+      </varbindsdecode>
+   </event>
+   <event>
+      <mask>
+         <maskelement>
+            <mename>id</mename>
+            <mevalue>.1.3.6.1.2.1.138</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>generic</mename>
+            <mevalue>6</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>specific</mename>
+            <mevalue>7</mevalue>
+         </maskelement>
+      </mask>
+      <uei>uei.opennms.org/traps/ISIS-MIB/isisOwnLSPPurge</uei>
+      <event-label>ISIS-MIB defined trap event: isisOwnLSPPurge</event-label>
+      <descr>
+&lt;p>A notification sent when we receive a PDU
+             with our systemID and zero age.  This
+             notification includes the circuit Index
+             and router ID from the LSP, if available,
+             which may help a network manager
+             identify the source of the confusion.&lt;/p>&lt;table>
+	&lt;tr>&lt;td>&lt;b>
+
+	isisNotificationSysLevelIndex&lt;/b>&lt;/td>&lt;td>
+	%parm[#1]%;&lt;/td>&lt;td>&lt;p>
+		level1(1)
+		level2(2)
+		level1and2(3)
+	&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	isisNotificationCircIfIndex&lt;/b>&lt;/td>&lt;td>
+	%parm[#2]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	isisPduLspId&lt;/b>&lt;/td>&lt;td>
+	%parm[#3]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>&lt;/table>
+	</descr>
+      <logmsg dest="logndisplay">&lt;p>
+	isisOwnLSPPurge trap received
+	isisNotificationSysLevelIndex=%parm[#1]%
+	isisNotificationCircIfIndex=%parm[#2]%
+	isisPduLspId=%parm[#3]%&lt;/p>
+	</logmsg>
+      <severity>Indeterminate</severity>
+      <varbindsdecode>
+         <parmid>parm[#1]</parmid>
+         <decode varbindvalue="1" varbinddecodedstring="level1"/>
+         <decode varbindvalue="2" varbinddecodedstring="level2"/>
+         <decode varbindvalue="3" varbinddecodedstring="level1and2"/>
+      </varbindsdecode>
+   </event>
+   <event>
+      <mask>
+         <maskelement>
+            <mename>id</mename>
+            <mevalue>.1.3.6.1.2.1.138</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>generic</mename>
+            <mevalue>6</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>specific</mename>
+            <mevalue>8</mevalue>
+         </maskelement>
+      </mask>
+      <uei>uei.opennms.org/traps/ISIS-MIB/isisSequenceNumberSkip</uei>
+      <event-label>ISIS-MIB defined trap event: isisSequenceNumberSkip</event-label>
+      <descr>
+&lt;p>When we receive an LSP with our System ID
+             and different contents, we may need to reissue
+             the LSP with a higher sequence number.
+
+             We send this notification if we need to increase
+             the sequence number by more than one.  If two
+             Intermediate Systems are configured with the same
+             System ID, this notification will fire.&lt;/p>&lt;table>
+	&lt;tr>&lt;td>&lt;b>
+
+	isisNotificationSysLevelIndex&lt;/b>&lt;/td>&lt;td>
+	%parm[#1]%;&lt;/td>&lt;td>&lt;p>
+		level1(1)
+		level2(2)
+		level1and2(3)
+	&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	isisNotificationCircIfIndex&lt;/b>&lt;/td>&lt;td>
+	%parm[#2]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	isisPduLspId&lt;/b>&lt;/td>&lt;td>
+	%parm[#3]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>&lt;/table>
+	</descr>
+      <logmsg dest="logndisplay">&lt;p>
+	isisSequenceNumberSkip trap received
+	isisNotificationSysLevelIndex=%parm[#1]%
+	isisNotificationCircIfIndex=%parm[#2]%
+	isisPduLspId=%parm[#3]%&lt;/p>
+	</logmsg>
+      <severity>Indeterminate</severity>
+      <varbindsdecode>
+         <parmid>parm[#1]</parmid>
+         <decode varbindvalue="1" varbinddecodedstring="level1"/>
+         <decode varbindvalue="2" varbinddecodedstring="level2"/>
+         <decode varbindvalue="3" varbinddecodedstring="level1and2"/>
+      </varbindsdecode>
+   </event>
+   <event>
+      <mask>
+         <maskelement>
+            <mename>id</mename>
+            <mevalue>.1.3.6.1.2.1.138</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>generic</mename>
+            <mevalue>6</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>specific</mename>
+            <mevalue>9</mevalue>
+         </maskelement>
+      </mask>
+      <uei>uei.opennms.org/traps/ISIS-MIB/isisAuthenticationTypeFailure</uei>
+      <event-label>ISIS-MIB defined trap event: isisAuthenticationTypeFailure</event-label>
+      <descr>
+&lt;p>A notification sent when we receive a PDU
+             with the wrong authentication type field.
+             This notification includes the header of the
+             packet, which may help a network manager
+             identify the source of the confusion.
+
+             The agent must throttle the generation of
+             consecutive isisAuthenticationTypeFailure
+             notifications so that there is at least a 5-second
+             gap between notifications of this type.  When
+             notifications are throttled, they are dropped, not
+             queued for sending at a future time.&lt;/p>&lt;table>
+	&lt;tr>&lt;td>&lt;b>
+
+	isisNotificationSysLevelIndex&lt;/b>&lt;/td>&lt;td>
+	%parm[#1]%;&lt;/td>&lt;td>&lt;p>
+		level1(1)
+		level2(2)
+		level1and2(3)
+	&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	isisNotificationCircIfIndex&lt;/b>&lt;/td>&lt;td>
+	%parm[#2]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	isisPduFragment&lt;/b>&lt;/td>&lt;td>
+	%parm[#3]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>&lt;/table>
+	</descr>
+      <logmsg dest="logndisplay">&lt;p>
+	isisAuthenticationTypeFailure trap received
+	isisNotificationSysLevelIndex=%parm[#1]%
+	isisNotificationCircIfIndex=%parm[#2]%
+	isisPduFragment=%parm[#3]%&lt;/p>
+	</logmsg>
+      <severity>Indeterminate</severity>
+      <varbindsdecode>
+         <parmid>parm[#1]</parmid>
+         <decode varbindvalue="1" varbinddecodedstring="level1"/>
+         <decode varbindvalue="2" varbinddecodedstring="level2"/>
+         <decode varbindvalue="3" varbinddecodedstring="level1and2"/>
+      </varbindsdecode>
+   </event>
+   <event>
+      <mask>
+         <maskelement>
+            <mename>id</mename>
+            <mevalue>.1.3.6.1.2.1.138</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>generic</mename>
+            <mevalue>6</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>specific</mename>
+            <mevalue>10</mevalue>
+         </maskelement>
+      </mask>
+      <uei>uei.opennms.org/traps/ISIS-MIB/isisAuthenticationFailure</uei>
+      <event-label>ISIS-MIB defined trap event: isisAuthenticationFailure</event-label>
+      <descr>
+&lt;p>A notification sent when we receive a PDU
+             with an incorrect authentication information
+             field.  This notification includes the header
+             of the packet, which may help a network manager
+             identify the source of the confusion.
+             The agent must throttle the generation of
+             consecutive isisAuthenticationFailure
+             notifications so that there is at least a 5-second
+             gap between notifications of this type.  When
+             notifications are throttled, they are dropped, not
+             queued for sending at a future time.&lt;/p>&lt;table>
+	&lt;tr>&lt;td>&lt;b>
+
+	isisNotificationSysLevelIndex&lt;/b>&lt;/td>&lt;td>
+	%parm[#1]%;&lt;/td>&lt;td>&lt;p>
+		level1(1)
+		level2(2)
+		level1and2(3)
+	&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	isisNotificationCircIfIndex&lt;/b>&lt;/td>&lt;td>
+	%parm[#2]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	isisPduFragment&lt;/b>&lt;/td>&lt;td>
+	%parm[#3]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>&lt;/table>
+	</descr>
+      <logmsg dest="logndisplay">&lt;p>
+	isisAuthenticationFailure trap received
+	isisNotificationSysLevelIndex=%parm[#1]%
+	isisNotificationCircIfIndex=%parm[#2]%
+	isisPduFragment=%parm[#3]%&lt;/p>
+	</logmsg>
+      <severity>Indeterminate</severity>
+      <varbindsdecode>
+         <parmid>parm[#1]</parmid>
+         <decode varbindvalue="1" varbinddecodedstring="level1"/>
+         <decode varbindvalue="2" varbinddecodedstring="level2"/>
+         <decode varbindvalue="3" varbinddecodedstring="level1and2"/>
+      </varbindsdecode>
+   </event>
+   <event>
+      <mask>
+         <maskelement>
+            <mename>id</mename>
+            <mevalue>.1.3.6.1.2.1.138</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>generic</mename>
+            <mevalue>6</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>specific</mename>
+            <mevalue>11</mevalue>
+         </maskelement>
+      </mask>
+      <uei>uei.opennms.org/traps/ISIS-MIB/isisVersionSkew</uei>
+      <event-label>ISIS-MIB defined trap event: isisVersionSkew</event-label>
+      <descr>
+&lt;p>A notification sent when we receive a Hello
+             PDU from an IS running a different version
+             of the protocol.  This notification includes
+             the header of the packet, which may help a
+             network manager identify the source of the
+             confusion.
+
+             The agent must throttle the generation of
+             consecutive isisVersionSkew notifications
+             so that there is at least a 5-second gap
+             between notifications of this type.  When
+             notifications are throttled, they are dropped, not
+             queued for sending at a future time.&lt;/p>&lt;table>
+	&lt;tr>&lt;td>&lt;b>
+
+	isisNotificationSysLevelIndex&lt;/b>&lt;/td>&lt;td>
+	%parm[#1]%;&lt;/td>&lt;td>&lt;p>
+		level1(1)
+		level2(2)
+		level1and2(3)
+	&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	isisNotificationCircIfIndex&lt;/b>&lt;/td>&lt;td>
+	%parm[#2]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	isisPduProtocolVersion&lt;/b>&lt;/td>&lt;td>
+	%parm[#3]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	isisPduFragment&lt;/b>&lt;/td>&lt;td>
+	%parm[#4]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>&lt;/table>
+	</descr>
+      <logmsg dest="logndisplay">&lt;p>
+	isisVersionSkew trap received
+	isisNotificationSysLevelIndex=%parm[#1]%
+	isisNotificationCircIfIndex=%parm[#2]%
+	isisPduProtocolVersion=%parm[#3]%
+	isisPduFragment=%parm[#4]%&lt;/p>
+	</logmsg>
+      <severity>Indeterminate</severity>
+      <varbindsdecode>
+         <parmid>parm[#1]</parmid>
+         <decode varbindvalue="1" varbinddecodedstring="level1"/>
+         <decode varbindvalue="2" varbinddecodedstring="level2"/>
+         <decode varbindvalue="3" varbinddecodedstring="level1and2"/>
+      </varbindsdecode>
+   </event>
+   <event>
+      <mask>
+         <maskelement>
+            <mename>id</mename>
+            <mevalue>.1.3.6.1.2.1.138</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>generic</mename>
+            <mevalue>6</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>specific</mename>
+            <mevalue>12</mevalue>
+         </maskelement>
+      </mask>
+      <uei>uei.opennms.org/traps/ISIS-MIB/isisAreaMismatch</uei>
+      <event-label>ISIS-MIB defined trap event: isisAreaMismatch</event-label>
+      <descr>
+&lt;p>A notification sent when we receive a Hello
+             PDU from an IS that does not share any
+             area address.  This notification includes
+             the header of the packet, which may help a
+             network manager identify the source of the
+             confusion.
+
+             The agent must throttle the generation of
+             consecutive isisAreaMismatch notifications
+             so that there is at least a 5-second gap
+             between notifications of this type.  When
+             notifications are throttled, they are dropped, not
+             queued for sending at a future time.&lt;/p>&lt;table>
+	&lt;tr>&lt;td>&lt;b>
+
+	isisNotificationCircIfIndex&lt;/b>&lt;/td>&lt;td>
+	%parm[#1]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	isisPduFragment&lt;/b>&lt;/td>&lt;td>
+	%parm[#2]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>&lt;/table>
+	</descr>
+      <logmsg dest="logndisplay">&lt;p>
+	isisAreaMismatch trap received
+	isisNotificationCircIfIndex=%parm[#1]%
+	isisPduFragment=%parm[#2]%&lt;/p>
+	</logmsg>
+      <severity>Indeterminate</severity>
+   </event>
+   <event>
+      <mask>
+         <maskelement>
+            <mename>id</mename>
+            <mevalue>.1.3.6.1.2.1.138</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>generic</mename>
+            <mevalue>6</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>specific</mename>
+            <mevalue>13</mevalue>
+         </maskelement>
+      </mask>
+      <uei>uei.opennms.org/traps/ISIS-MIB/isisRejectedAdjacency</uei>
+      <event-label>ISIS-MIB defined trap event: isisRejectedAdjacency</event-label>
+      <descr>
+&lt;p>A notification sent when we receive a Hello
+             PDU from an IS but do not establish an
+             adjacency for some reason.
+
+             The agent must throttle the generation of
+             consecutive isisRejectedAdjacency notifications
+             so that there is at least a 5-second gap
+             between notifications of this type.  When
+             notifications are throttled, they are dropped, not
+             queued for sending at a future time.&lt;/p>&lt;table>
+	&lt;tr>&lt;td>&lt;b>
+
+	isisNotificationSysLevelIndex&lt;/b>&lt;/td>&lt;td>
+	%parm[#1]%;&lt;/td>&lt;td>&lt;p>
+		level1(1)
+		level2(2)
+		level1and2(3)
+	&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	isisNotificationCircIfIndex&lt;/b>&lt;/td>&lt;td>
+	%parm[#2]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	isisPduFragment&lt;/b>&lt;/td>&lt;td>
+	%parm[#3]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>&lt;/table>
+	</descr>
+      <logmsg dest="logndisplay">&lt;p>
+	isisRejectedAdjacency trap received
+	isisNotificationSysLevelIndex=%parm[#1]%
+	isisNotificationCircIfIndex=%parm[#2]%
+	isisPduFragment=%parm[#3]%&lt;/p>
+	</logmsg>
+      <severity>Indeterminate</severity>
+      <varbindsdecode>
+         <parmid>parm[#1]</parmid>
+         <decode varbindvalue="1" varbinddecodedstring="level1"/>
+         <decode varbindvalue="2" varbinddecodedstring="level2"/>
+         <decode varbindvalue="3" varbinddecodedstring="level1and2"/>
+      </varbindsdecode>
+   </event>
+   <event>
+      <mask>
+         <maskelement>
+            <mename>id</mename>
+            <mevalue>.1.3.6.1.2.1.138</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>generic</mename>
+            <mevalue>6</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>specific</mename>
+            <mevalue>14</mevalue>
+         </maskelement>
+      </mask>
+      <uei>uei.opennms.org/traps/ISIS-MIB/isisLSPTooLargeToPropagate</uei>
+      <event-label>ISIS-MIB defined trap event: isisLSPTooLargeToPropagate</event-label>
+      <descr>
+&lt;p>A notification sent when we attempt to propagate
+             an LSP that is larger than the dataLinkBlockSize
+             for the circuit.
+
+             The agent must throttle the generation of
+             consecutive isisLSPTooLargeToPropagate notifications
+             so that there is at least a 5-second gap
+             between notifications of this type.  When
+             notifications are throttled, they are dropped, not
+             queued for sending at a future time.&lt;/p>&lt;table>
+	&lt;tr>&lt;td>&lt;b>
+
+	isisNotificationSysLevelIndex&lt;/b>&lt;/td>&lt;td>
+	%parm[#1]%;&lt;/td>&lt;td>&lt;p>
+		level1(1)
+		level2(2)
+		level1and2(3)
+	&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	isisNotificationCircIfIndex&lt;/b>&lt;/td>&lt;td>
+	%parm[#2]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	isisPduLspSize&lt;/b>&lt;/td>&lt;td>
+	%parm[#3]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	isisPduLspId&lt;/b>&lt;/td>&lt;td>
+	%parm[#4]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>&lt;/table>
+	</descr>
+      <logmsg dest="logndisplay">&lt;p>
+	isisLSPTooLargeToPropagate trap received
+	isisNotificationSysLevelIndex=%parm[#1]%
+	isisNotificationCircIfIndex=%parm[#2]%
+	isisPduLspSize=%parm[#3]%
+	isisPduLspId=%parm[#4]%&lt;/p>
+	</logmsg>
+      <severity>Indeterminate</severity>
+      <varbindsdecode>
+         <parmid>parm[#1]</parmid>
+         <decode varbindvalue="1" varbinddecodedstring="level1"/>
+         <decode varbindvalue="2" varbinddecodedstring="level2"/>
+         <decode varbindvalue="3" varbinddecodedstring="level1and2"/>
+      </varbindsdecode>
+   </event>
+   <event>
+      <mask>
+         <maskelement>
+            <mename>id</mename>
+            <mevalue>.1.3.6.1.2.1.138</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>generic</mename>
+            <mevalue>6</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>specific</mename>
+            <mevalue>15</mevalue>
+         </maskelement>
+      </mask>
+      <uei>uei.opennms.org/traps/ISIS-MIB/isisOrigLSPBuffSizeMismatch</uei>
+      <event-label>ISIS-MIB defined trap event: isisOrigLSPBuffSizeMismatch</event-label>
+      <descr>
+&lt;p>A notification sent when a Level 1 LSP or Level
+             2 LSP is received that is larger than the local
+             value for isisSysLevelOrigLSPBuffSize, or when an
+             LSP is received that contains the supported Buffer Size
+             option and the value in the PDU option field does
+             not match the local value for isisSysLevelOrigLSPBuffSize.
+             We pass up the size from the option field and the
+             size of the LSP when one of them exceeds our configuration.
+
+             The agent must throttle the generation of
+             consecutive isisOrigLSPBuffSizeMismatch notifications
+             so that there is at least a 5-second gap
+             between notifications of this type.  When
+             notifications are throttled, they are dropped, not
+             queued for sending at a future time.&lt;/p>&lt;table>
+	&lt;tr>&lt;td>&lt;b>
+
+	isisNotificationSysLevelIndex&lt;/b>&lt;/td>&lt;td>
+	%parm[#1]%;&lt;/td>&lt;td>&lt;p>
+		level1(1)
+		level2(2)
+		level1and2(3)
+	&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	isisNotificationCircIfIndex&lt;/b>&lt;/td>&lt;td>
+	%parm[#2]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	isisPduLspId&lt;/b>&lt;/td>&lt;td>
+	%parm[#3]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	isisPduOriginatingBufferSize&lt;/b>&lt;/td>&lt;td>
+	%parm[#4]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	isisPduBufferSize&lt;/b>&lt;/td>&lt;td>
+	%parm[#5]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>&lt;/table>
+	</descr>
+      <logmsg dest="logndisplay">&lt;p>
+	isisOrigLSPBuffSizeMismatch trap received
+	isisNotificationSysLevelIndex=%parm[#1]%
+	isisNotificationCircIfIndex=%parm[#2]%
+	isisPduLspId=%parm[#3]%
+	isisPduOriginatingBufferSize=%parm[#4]%
+	isisPduBufferSize=%parm[#5]%&lt;/p>
+	</logmsg>
+      <severity>Indeterminate</severity>
+      <varbindsdecode>
+         <parmid>parm[#1]</parmid>
+         <decode varbindvalue="1" varbinddecodedstring="level1"/>
+         <decode varbindvalue="2" varbinddecodedstring="level2"/>
+         <decode varbindvalue="3" varbinddecodedstring="level1and2"/>
+      </varbindsdecode>
+   </event>
+   <event>
+      <mask>
+         <maskelement>
+            <mename>id</mename>
+            <mevalue>.1.3.6.1.2.1.138</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>generic</mename>
+            <mevalue>6</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>specific</mename>
+            <mevalue>16</mevalue>
+         </maskelement>
+      </mask>
+      <uei>uei.opennms.org/traps/ISIS-MIB/isisProtocolsSupportedMismatch</uei>
+      <event-label>ISIS-MIB defined trap event: isisProtocolsSupportedMismatch</event-label>
+      <descr>
+&lt;p>A notification sent when a non-pseudonode
+             segment 0 LSP is received that has no matching
+             protocols supported.  This may be because the system
+             does not generate the field, or because there are no
+             common elements.  The list of protocols supported
+             should be included in the notification: it may be
+             empty if the TLV is not supported, or if the
+             TLV is empty.
+
+             The agent must throttle the generation of
+             consecutive isisProtocolsSupportedMismatch
+             notifications so that there is at least a 5-second
+             gap between notifications of this type.  When
+             notifications are throttled, they are dropped, not
+             queued for sending at a future time.&lt;/p>&lt;table>
+	&lt;tr>&lt;td>&lt;b>
+
+	isisNotificationSysLevelIndex&lt;/b>&lt;/td>&lt;td>
+	%parm[#1]%;&lt;/td>&lt;td>&lt;p>
+		level1(1)
+		level2(2)
+		level1and2(3)
+	&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	isisNotificationCircIfIndex&lt;/b>&lt;/td>&lt;td>
+	%parm[#2]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	isisPduProtocolsSupported&lt;/b>&lt;/td>&lt;td>
+	%parm[#3]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	isisPduLspId&lt;/b>&lt;/td>&lt;td>
+	%parm[#4]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	isisPduFragment&lt;/b>&lt;/td>&lt;td>
+	%parm[#5]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>&lt;/table>
+	</descr>
+      <logmsg dest="logndisplay">&lt;p>
+	isisProtocolsSupportedMismatch trap received
+	isisNotificationSysLevelIndex=%parm[#1]%
+	isisNotificationCircIfIndex=%parm[#2]%
+	isisPduProtocolsSupported=%parm[#3]%
+	isisPduLspId=%parm[#4]%
+	isisPduFragment=%parm[#5]%&lt;/p>
+	</logmsg>
+      <severity>Indeterminate</severity>
+      <varbindsdecode>
+         <parmid>parm[#1]</parmid>
+         <decode varbindvalue="1" varbinddecodedstring="level1"/>
+         <decode varbindvalue="2" varbinddecodedstring="level2"/>
+         <decode varbindvalue="3" varbinddecodedstring="level1and2"/>
+      </varbindsdecode>
+   </event>
+   <event>
+      <mask>
+         <maskelement>
+            <mename>id</mename>
+            <mevalue>.1.3.6.1.2.1.138</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>generic</mename>
+            <mevalue>6</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>specific</mename>
+            <mevalue>17</mevalue>
+         </maskelement>
+      </mask>
+      <uei>uei.opennms.org/traps/ISIS-MIB/isisAdjacencyChange</uei>
+      <event-label>ISIS-MIB defined trap event: isisAdjacencyChange</event-label>
+      <descr>
+&lt;p>A notification sent when an adjacency changes
+             state, entering or leaving state up.
+             The first 6 bytes of the isisPduLspId are the
+             SystemID of the adjacent IS.
+             The isisAdjState is the new state of the adjacency.&lt;/p>&lt;table>
+	&lt;tr>&lt;td>&lt;b>
+
+	isisNotificationSysLevelIndex&lt;/b>&lt;/td>&lt;td>
+	%parm[#1]%;&lt;/td>&lt;td>&lt;p>
+		level1(1)
+		level2(2)
+		level1and2(3)
+	&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	isisNotificationCircIfIndex&lt;/b>&lt;/td>&lt;td>
+	%parm[#2]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	isisPduLspId&lt;/b>&lt;/td>&lt;td>
+	%parm[#3]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	isisAdjState&lt;/b>&lt;/td>&lt;td>
+	%parm[#4]%;&lt;/td>&lt;td>&lt;p>
+		down(1)
+		initializing(2)
+		up(3)
+		failed(4)
+	&lt;/p>&lt;/td>&lt;/tr>&lt;/table>
+	</descr>
+      <logmsg dest="logndisplay">&lt;p>
+	isisAdjacencyChange trap received
+	isisNotificationSysLevelIndex=%parm[#1]%
+	isisNotificationCircIfIndex=%parm[#2]%
+	isisPduLspId=%parm[#3]%
+	isisAdjState=%parm[#4]%&lt;/p>
+	</logmsg>
+      <severity>Indeterminate</severity>
+      <varbindsdecode>
+         <parmid>parm[#1]</parmid>
+         <decode varbindvalue="1" varbinddecodedstring="level1"/>
+         <decode varbindvalue="2" varbinddecodedstring="level2"/>
+         <decode varbindvalue="3" varbinddecodedstring="level1and2"/>
+      </varbindsdecode>
+      <varbindsdecode>
+         <parmid>parm[#4]</parmid>
+         <decode varbindvalue="1" varbinddecodedstring="down"/>
+         <decode varbindvalue="2" varbinddecodedstring="initializing"/>
+         <decode varbindvalue="3" varbinddecodedstring="up"/>
+         <decode varbindvalue="4" varbinddecodedstring="failed"/>
+      </varbindsdecode>
+   </event>
+   <event>
+      <mask>
+         <maskelement>
+            <mename>id</mename>
+            <mevalue>.1.3.6.1.2.1.138</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>generic</mename>
+            <mevalue>6</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>specific</mename>
+            <mevalue>18</mevalue>
+         </maskelement>
+      </mask>
+      <uei>uei.opennms.org/traps/ISIS-MIB/isisLSPErrorDetected</uei>
+      <event-label>ISIS-MIB defined trap event: isisLSPErrorDetected</event-label>
+      <descr>
+&lt;p>This notification is generated when we receive
+             an LSP with a parse error.  The isisCircIfIndex
+             holds an index of the circuit on which the PDU
+             arrived.  The isisPduFragment holds the start of the
+             LSP, and the isisErrorOffset points to the problem.
+
+             If the problem is a malformed TLV, isisErrorOffset
+             points to the start of the TLV, and isisErrorTLVType
+             holds the value of the type.
+
+             If the problem is with the LSP header, isisErrorOffset
+             points to the suspicious byte.
+
+             The number of such LSPs is accumulated in
+             isisSysStatLSPErrors.&lt;/p>&lt;table>
+	&lt;tr>&lt;td>&lt;b>
+
+	isisNotificationSysLevelIndex&lt;/b>&lt;/td>&lt;td>
+	%parm[#1]%;&lt;/td>&lt;td>&lt;p>
+		level1(1)
+		level2(2)
+		level1and2(3)
+	&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	isisPduLspId&lt;/b>&lt;/td>&lt;td>
+	%parm[#2]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	isisNotificationCircIfIndex&lt;/b>&lt;/td>&lt;td>
+	%parm[#3]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	isisPduFragment&lt;/b>&lt;/td>&lt;td>
+	%parm[#4]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	isisErrorOffset&lt;/b>&lt;/td>&lt;td>
+	%parm[#5]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	isisErrorTLVType&lt;/b>&lt;/td>&lt;td>
+	%parm[#6]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>&lt;/table>
+	</descr>
+      <logmsg dest="logndisplay">&lt;p>
+	isisLSPErrorDetected trap received
+	isisNotificationSysLevelIndex=%parm[#1]%
+	isisPduLspId=%parm[#2]%
+	isisNotificationCircIfIndex=%parm[#3]%
+	isisPduFragment=%parm[#4]%
+	isisErrorOffset=%parm[#5]%
+	isisErrorTLVType=%parm[#6]%&lt;/p>
+	</logmsg>
+      <severity>Indeterminate</severity>
+      <varbindsdecode>
+         <parmid>parm[#1]</parmid>
+         <decode varbindvalue="1" varbinddecodedstring="level1"/>
+         <decode varbindvalue="2" varbinddecodedstring="level2"/>
+         <decode varbindvalue="3" varbinddecodedstring="level1and2"/>
+      </varbindsdecode>
+   </event>
+</events>
