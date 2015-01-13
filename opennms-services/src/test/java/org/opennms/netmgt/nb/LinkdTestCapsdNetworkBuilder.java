@@ -106,7 +106,7 @@ public class LinkdTestCapsdNetworkBuilder extends TestNetworkBuilder implements 
     @Test
     @Ignore
     @JUnitSnmpAgents(value={
-            @JUnitSnmpAgent(host = SSeMalmNobe_IP, port = 161, resource = SSeMalmNobe_SNMP_RESOURCE),
+            @JUnitSnmpAgent(host = SSeMalmNobe_IP, port = 161, resource = SSeMalmNobe_SNMP_RESOURCE)
     })
     @Transactional
     public final void testCapsd() throws MarshalException, ValidationException, IOException {
@@ -122,7 +122,7 @@ public class LinkdTestCapsdNetworkBuilder extends TestNetworkBuilder implements 
     @Test
     @Ignore
     @JUnitSnmpAgents(value={
-            @JUnitSnmpAgent(host = CISCO_C870_IP, port = 161, resource = CISCO_C870_SNMP_RESOURCE),
+            @JUnitSnmpAgent(host = CISCO_C870_IP, port = 161, resource = CISCO_C870_SNMP_RESOURCE)
     })
     @Transactional
     public final void testCapsdA() throws MarshalException, ValidationException, IOException {
@@ -138,7 +138,7 @@ public class LinkdTestCapsdNetworkBuilder extends TestNetworkBuilder implements 
     @Test
     @Ignore
     @JUnitSnmpAgents(value={
-            @JUnitSnmpAgent(host = FROH_IP, port = 161, resource = FROH_SNMP_RESOURCE),
+            @JUnitSnmpAgent(host = FROH_IP, port = 161, resource = FROH_SNMP_RESOURCE)
     })
     @Transactional
     public final void testCapsdB() throws MarshalException, ValidationException, IOException {
@@ -154,7 +154,7 @@ public class LinkdTestCapsdNetworkBuilder extends TestNetworkBuilder implements 
     @Test
     @Ignore
     @JUnitSnmpAgents(value={
-            @JUnitSnmpAgent(host = OEDIPUS_IP, port = 161, resource = OEDIPUS_SNMP_RESOURCE),
+            @JUnitSnmpAgent(host = OEDIPUS_IP, port = 161, resource = OEDIPUS_SNMP_RESOURCE)
     })
     @Transactional
     public final void testCapsdC() throws MarshalException, ValidationException, IOException {
@@ -169,7 +169,7 @@ public class LinkdTestCapsdNetworkBuilder extends TestNetworkBuilder implements 
 
     @Test
     @JUnitSnmpAgents(value={
-            @JUnitSnmpAgent(host = SIEGFRIE_IP, port = 161, resource = SIEGFRIE_SNMP_RESOURCE),
+            @JUnitSnmpAgent(host = SIEGFRIE_IP, port = 161, resource = SIEGFRIE_SNMP_RESOURCE)
     })
     @Transactional
     public final void testCapsdD() throws MarshalException, ValidationException, IOException {

@@ -611,7 +611,7 @@ public class EnLinkdSnmpTest extends TestNetworkBuilder implements InitializingB
 
     @Test
     @JUnitSnmpAgents(value={
-        @JUnitSnmpAgent(host=DLINK1_IP, port=161, resource=DLINK1_SNMP_RESOURCE),
+        @JUnitSnmpAgent(host=DLINK1_IP, port=161, resource=DLINK1_SNMP_RESOURCE)
     })
     public void testDot1dBaseWalk() throws Exception {
 
@@ -650,7 +650,7 @@ public class EnLinkdSnmpTest extends TestNetworkBuilder implements InitializingB
 
     @Test
     @JUnitSnmpAgents(value={
-            @JUnitSnmpAgent(host=DLINK1_IP, port=161, resource=DLINK1_SNMP_RESOURCE),
+            @JUnitSnmpAgent(host=DLINK1_IP, port=161, resource=DLINK1_SNMP_RESOURCE)
     })
     public void testDot1dBasePortTableWalk() throws Exception {
 
@@ -690,7 +690,7 @@ public class EnLinkdSnmpTest extends TestNetworkBuilder implements InitializingB
 
     @Test
     @JUnitSnmpAgents(value={
-        @JUnitSnmpAgent(host=DLINK1_IP, port=161, resource=DLINK1_SNMP_RESOURCE),
+        @JUnitSnmpAgent(host=DLINK1_IP, port=161, resource=DLINK1_SNMP_RESOURCE)
     })
     public void testDot1dStpPortTableWalk() throws Exception {
 
@@ -742,7 +742,7 @@ public class EnLinkdSnmpTest extends TestNetworkBuilder implements InitializingB
 
     @Test
     @JUnitSnmpAgents(value={
-        @JUnitSnmpAgent(host=DLINK1_IP, port=161, resource=DLINK1_SNMP_RESOURCE),
+        @JUnitSnmpAgent(host=DLINK1_IP, port=161, resource=DLINK1_SNMP_RESOURCE)
     })
     public void testDot1dTpFdbTableWalk() throws Exception {
 
