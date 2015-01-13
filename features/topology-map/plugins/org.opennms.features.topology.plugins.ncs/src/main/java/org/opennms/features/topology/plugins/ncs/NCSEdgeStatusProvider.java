@@ -66,8 +66,8 @@ public class NCSEdgeStatusProvider implements EdgeStatusProvider{
     private final Pattern m_foreignIdPattern;
 
     public NCSEdgeStatusProvider() {
-        m_foreignSourcePattern = Pattern.compile("foreignSource=(.*?)\\(.*?\\)");
-        m_foreignIdPattern = Pattern.compile("foreignId=(.*?)\\(.*?\\)");
+        m_foreignSourcePattern = Pattern.compile("ForeignSource=(.*?)\\(.*?\\)");
+        m_foreignIdPattern = Pattern.compile("ForeignId=(.*?)\\(.*?\\)");
     }
 
     @Override
