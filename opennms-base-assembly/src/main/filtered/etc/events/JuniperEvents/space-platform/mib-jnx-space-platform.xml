@@ -278,7 +278,7 @@
                       Swap memory usage threshold upper limit exceeded. %parm[#7]%&lt;/p&gt;
                 </logmsg>
         <severity>Major</severity>
-        <alarm-data auto-clean="false" alarm-type="1" reduction-key="%uei%:%dpname%:%nodeid%:%parm[#6]%"/>
+        <alarm-data auto-clean="false" alarm-type="1" reduction-key="%uei%:%dpname%:%nodeid%"/>
 </event>
 
 <event>
@@ -309,7 +309,7 @@
                        Swap memory usage is normal, available swap space: %parm[#6]% KB&lt;/p&gt;
                 </logmsg>
         <severity>Normal</severity>
-        <alarm-data auto-clean="true" clear-key="uei.opennms.org/traps/SPACE-PLATFORM-MIB/jnxSpaceSwapUsageRising:%dpname%:%nodeid%:%parm[#6]%" alarm-type="2" reduction-key="%uei%:%dpname%:%nodeid%:%parm[#6]%"/>
+        <alarm-data auto-clean="true" clear-key="uei.opennms.org/traps/SPACE-PLATFORM-MIB/jnxSpaceSwapUsageRising:%dpname%:%nodeid%" alarm-type="2" reduction-key="%uei%:%dpname%:%nodeid%"/>
 </event>
 
 <event>
