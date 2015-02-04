@@ -305,7 +305,7 @@ final class ConvertToEvent {
         }
 
         // Using parms provides configurability.
-        bldr.setLogMessage(message.getMessage());
+        bldr.setLogMessage(message.getMessage().replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll("\"", "&quot;"));
 
         bldr.addParam("syslogmessage", message.getMessage());
         bldr.addParam("severity", "" + priorityTxt);

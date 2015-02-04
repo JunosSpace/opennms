@@ -1,3 +1,4 @@
+<%@ tag import="org.opennms.core.utils.WebSecurityUtils" %>
 <%@ attribute name="nodes" type="java.util.List" rtexprvalue="true" required="true" %>
 <%@ attribute name="snmpParm" type="java.lang.String" rtexprvalue="true" required="true" %>
 <%@ attribute name="isMaclikeSearch"  type="java.lang.Boolean" rtexprvalue="true" required="true" %>
@@ -12,7 +13,7 @@
     <li>
       <c:choose>
         <c:when test="${!empty nodeModel.node.foreignSource}">
-          <a href="${nodeLink}" title="foreignID: ${nodeModel.node.foreignSource}:${nodeModel.node.foreignId}">${nodeModel.node.label}</a> (ID: ${nodeModel.node.id})
+          <a href="${nodeLink}" title="foreignID: ${nodeModel.node.foreignSource}:${nodeModel.node.foreignId}"><%=WebSecurityUtils.sanitizeString(((org.opennms.web.svclayer.support.NodeListModel.NodeModel)jspContext.getAttribute("nodeModel")).getNode().getLabel()) %></a> (ID: ${nodeModel.node.id})
         </c:when>
         <c:otherwise>
           <a href="${nodeLink}">${nodeModel.node.label}</a> (ID: ${nodeModel.node.id})

@@ -40,6 +40,7 @@
 <%@page import="org.opennms.web.event.filter.*"%>
 <%@page import="org.opennms.web.filter.Filter"%>
 <%@page import="org.opennms.web.filter.NormalizedQueryParameters"%>
+<%@page import="org.opennms.core.utils.WebSecurityUtils"%>
 <%@page import="org.opennms.web.servlet.XssRequestWrapper"%>
 <%@page import="org.opennms.web.tags.filters.EventFilterCallback"%>
 <%@page import="org.opennms.web.tags.filters.FilterCallback"%>
@@ -49,7 +50,6 @@
 <%@page import="org.opennms.web.api.Util" %>
 <%@page import="org.opennms.web.tags.FavoriteTag" %>
 
-<%@page import="org.opennms.core.utils.WebSecurityUtils"%>
 <%@page import="org.opennms.web.event.EventQueryParms"%>
 <%@page import="org.opennms.web.event.EventUtil"%>
 <%@page	import="org.opennms.web.controller.event.EventPurgeController"%>
@@ -509,7 +509,7 @@ if (isPurgeExport)
           <td class="divider">
          <% if(events[i].getNodeId() != 0 && events[i].getNodeLabel()!= null ) { %>
               <% Filter nodeFilter = new NodeFilter(events[i].getNodeId(), pageContext.getServletContext()); %>
-              <% String[] labels = this.getNodeLabels( events[i].getNodeLabel() ); %>
+              <% String[] labels = this.getNodeLabels( WebSecurityUtils.sanitizeString(events[i].getNodeLabel()) ); %>
               <a href="element/node.jsp?node=<%=events[i].getNodeId()%>" title="<%=labels[1]%>"><%=labels[0]%></a>
                     
               <% if( !parms.getFilters().contains(nodeFilter) ) { %>
@@ -591,11 +591,11 @@ if (isPurgeExport)
         </tr>
        
         <tr valign="top" class="<%= events[i].getSeverity().getLabel() %>">
-          <td colspan="4"><%=this.getTextDesc(events[i].getDescription())%></td>
+          <td colspan="4"><%=WebSecurityUtils.sanitizeString(this.getTextDesc(events[i].getDescription()), true)%></td>
         </tr>
 
         <tr valign="top" class="<%= events[i].getSeverity().getLabel() %>">
-          <td colspan="4"><%=events[i].getLogMessage()%></td>
+          <td colspan="4"><%=WebSecurityUtils.sanitizeString(events[i].getLogMessage(), true)%></td>
         </tr>
        
       <% } /*end for*/%>

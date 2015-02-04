@@ -39,6 +39,7 @@
 <%@page import="org.springframework.util.Assert"%>
 
 <%@page import="org.opennms.netmgt.EventConstants"%>
+<%@page import="org.opennms.core.utils.WebSecurityUtils"%>
 <%@page import="org.opennms.web.servlet.XssRequestWrapper"%>
 <%@page import="org.opennms.web.event.Event"%>
 <%@page import="org.opennms.web.event.AcknowledgeType"%>
@@ -200,7 +201,7 @@
           <th>Log&nbsp;Message</th>
         </tr>
         <tr class="<%= event.getSeverity().getLabel() %>">
-          <td><%=event.getLogMessage()%></td>
+          <td><%=WebSecurityUtils.sanitizeString(event.getLogMessage(), true)%></td>
         </tr>
       </table>
 
@@ -209,7 +210,7 @@
           <th>Description</th>
         </tr>
         <tr class="<%= event.getSeverity().getLabel() %>">
-          <td><%=event.getDescription()%></td>
+          <td><%=WebSecurityUtils.sanitizeString(event.getDescription(),true)%></td>
         </tr>
       </table>
       

@@ -39,6 +39,7 @@
 <%@page import="org.opennms.web.alarm.filter.*" %>
 <%@page import="org.opennms.web.api.Authentication" %>
 <%@page import="org.opennms.web.api.Util" %>
+<%@page import="org.opennms.core.utils.WebSecurityUtils" %>
 <%@page import="org.opennms.web.controller.alarm.AlarmSeverityChangeController" %>
 <%@page import="org.opennms.web.controller.alarm.AlarmReportController" %>
 <%@page import="org.opennms.web.controller.alarm.AlarmPurgeController" %>
@@ -614,8 +615,8 @@
                         <% }%>
           </c:if>
           </td>
-          <td class="divider"><%=this.getTextDesc(alarms[i].getDescription())%></td>
-          <td class="divider"><%=alarms[i].getLogMsg()%></td>
+          <td class="divider"><%=WebSecurityUtils.sanitizeString(this.getTextDesc(alarms[i].getDescription()), true)%></td>
+          <td class="divider"><%=WebSecurityUtils.sanitizeString(alarms[i].getLogMsg(), true)%></td>
        </tr>
       <% } /*end for*/%>
         

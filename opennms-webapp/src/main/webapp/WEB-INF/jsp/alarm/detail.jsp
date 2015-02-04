@@ -37,6 +37,7 @@
         org.opennms.core.utils.InetAddressUtils,
         java.text.SimpleDateFormat,
         org.opennms.web.filter.Filter,
+        org.opennms.core.utils.WebSecurityUtils,
 	org.opennms.web.controller.alarm.*,
 	org.opennms.web.alarm.*,
         org.opennms.web.event.Event,
@@ -251,7 +252,7 @@ org.opennms.web.api.Authentication"
         <th>Log&nbsp;Message</th>
     </tr>
     <tr class="<%=alarm.getSeverity().getLabel()%>">
-        <td><%=alarm.getLogMsg()%></td>
+        <td><%=WebSecurityUtils.sanitizeString(alarm.getLogMsg(), true)%></td>
     </tr>
 </table>
 
@@ -279,7 +280,7 @@ org.opennms.web.api.Authentication"
         <th>Description</th>
     </tr>
     <tr class="<%=alarm.getSeverity().getLabel()%>">
-        <td><%=alarm.getDescription()%></td>
+        <td><%=WebSecurityUtils.sanitizeString(alarm.getDescription(), true)%></td>
     </tr>
 </table>
         
