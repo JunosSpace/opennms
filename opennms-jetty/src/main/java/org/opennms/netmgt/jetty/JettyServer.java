@@ -114,6 +114,7 @@ public class JettyServer extends AbstractServiceDaemon {
             final SslContextFactory contextFactory = new SslContextFactory(keyStorePath);
             contextFactory.setKeyStorePassword(keyStorePassword);
             contextFactory.setKeyManagerPassword(keyManagerPassword);
+            contextFactory.addExcludeProtocols("SSLv3");
             if (certificateAlias != null && !"".equals(certificateAlias.trim())) {
                 contextFactory.setCertAlias(certificateAlias);
             }

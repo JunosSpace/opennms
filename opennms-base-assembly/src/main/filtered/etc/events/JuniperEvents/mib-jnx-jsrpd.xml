@@ -57,5 +57,56 @@
     <severity>Critical</severity>
     <alarm-data auto-clean="true" alarm-type="1" reduction-key="%uei%:%dpname%:%nodeid%:%parm[#1]%:%parm[#2]%:%parm[#3]%:%parm[#4]%:%parm[#5]%:%parm[#6]%"/>
   </event>
+   <event>
+      <mask>
+         <maskelement>
+            <mename>id</mename>
+            <mevalue>.1.3.6.1.4.1.2636.3.39.1.14.1</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>generic</mename>
+            <mevalue>6</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>specific</mename>
+            <mevalue>2</mevalue>
+         </maskelement>
+      </mask>
+      <uei>uei.opennms.org/traps/JUNIPER-CHASSIS-CLUSTER-MIB/jnxJsChClusterIntfTrap</uei>
+      <event-label>JUNIPER-CHASSIS-CLUSTER-MIB defined trap event: jnxJsChClusterIntfTrap</event-label>
+      <descr>
+&lt;p>Notification to signal change in HA interface state.&lt;/p>&lt;table>
+        &lt;tr>&lt;td>&lt;b>
+
+        jnxJsChClusterSwitchoverInfoClusterId&lt;/b>&lt;/td>&lt;td>
+        %parm[#1]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+        &lt;tr>&lt;td>&lt;b>
+
+        jnxJsChClusterIntfName&lt;/b>&lt;/td>&lt;td>
+        %parm[#2]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+        &lt;tr>&lt;td>&lt;b>
+
+        jnxJsChClusterIntfState&lt;/b>&lt;/td>&lt;td>
+        %parm[#3]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+        &lt;tr>&lt;td>&lt;b>
+
+        jnxJsChClusterIntfSeverity&lt;/b>&lt;/td>&lt;td>
+        %parm[#4]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+        &lt;tr>&lt;td>&lt;b>
+
+        jnxJsChClusterIntfStateReason&lt;/b>&lt;/td>&lt;td>
+        %parm[#5]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>&lt;/table>
+        </descr>
+      <logmsg dest="logndisplay">&lt;p>
+        jnxJsChClusterIntfTrap trap received
+        jnxJsChClusterSwitchoverInfoClusterId=%parm[#1]%
+        jnxJsChClusterIntfName=%parm[#2]%
+        jnxJsChClusterIntfState=%parm[#3]%
+        jnxJsChClusterIntfSeverity=%parm[#4]%
+        jnxJsChClusterIntfStateReason=%parm[#5]%&lt;/p>
+        </logmsg>
+      <severity>Critical</severity>
+      <alarm-data auto-clean="true" alarm-type="1" reduction-key="%uei%:%dpname%:%nodeid%:%parm[#1]%:%parm[#2]%:%parm[#3]%:%parm[#4]%:%parm[#5]%"/>
+   </event>
 </events>
 
