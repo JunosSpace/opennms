@@ -77,8 +77,8 @@ import java.util.*;
 @SuppressWarnings("serial")
 @Theme("topo_default")
 @JavaScript({
-        "CFInstall.min.js",	
-        "chromeFrameCheck.js",
+//        "CFInstall.min.js",	
+//        "chromeFrameCheck.js",
 	"handleTimeoutInTopology.js"
 })
 @PreserveOnRefresh
@@ -948,12 +948,13 @@ public class TopologyUI extends UI implements CommandUpdateListener, MenuItemUpd
 
     private int getFocusVertices(GraphContainer graphContainer) {
         int count = 0;
-        FocusNodeHopCriteria nodeCrit = VertexHopGraphProvider.getFocusNodeHopCriteriaForContainer(graphContainer);
-        count += nodeCrit.size();
+//        FocusNodeHopCriteria nodeCrit = VertexHopGraphProvider.getFocusNodeHopCriteriaForContainer(graphContainer);
+//        count += nodeCrit.size();
         Criteria[] crits = graphContainer.getCriteria();
         for(Criteria criteria : crits){
             try{
-                CategoryHopCriteria catCrit = (CategoryHopCriteria) criteria;
+//                CategoryHopCriteria catCrit = (CategoryHopCriteria) criteria;
+            	VertexHopGraphProvider.VertexHopCriteria catCrit = (VertexHopGraphProvider.VertexHopCriteria) criteria;
                 count += catCrit.getVertices().size();
             } catch(ClassCastException e){}
 
