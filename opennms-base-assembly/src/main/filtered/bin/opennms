@@ -80,7 +80,7 @@ VERBOSE_GC=""
 RUNJAVA_OPTIONS=""
 
 # URL that this script uses to communicate with a running OpenNMS daemon.
-INVOKE_URL="http://127.0.0.1:8181/invoke?objectname=OpenNMS:Name=Manager"
+INVOKE_URL="http://localhost:8181/invoke?objectname=OpenNMS:Name=Manager"
 
 # The user that OpenNMS needs to run as.
 RUNAS="root"
