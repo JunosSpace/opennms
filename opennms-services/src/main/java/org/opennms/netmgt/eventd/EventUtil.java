@@ -908,16 +908,16 @@ public final class EventUtil {
                 }
 
                 String parmVal = getValueOfParm(parm, event);
-                // m_logger.debug("value of parm: " + parmVal);
+                LOG.debug("value of parm: " + parmVal);
 
                 if (parmVal != null) {
                     if (decode != null && decode.containsKey(parm) && decode.get(parm).containsKey(parmVal)) {
                         ret.append(decode.get(parm).get(parmVal));
                         ret.append("(");
-                        ret.append(parmVal);
+                        ret.append(parmVal.replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll("\"", "&quot;"));
                         ret.append(")");
                     } else {
-                        ret.append(parmVal);
+                        ret.append(parmVal.replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll("\"", "&quot;"));
                     }
                 }
 
