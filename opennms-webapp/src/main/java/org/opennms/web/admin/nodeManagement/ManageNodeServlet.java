@@ -112,7 +112,10 @@ public class ManageNodeServlet extends HttpServlet {
         List<String> interfaceList = Arrays.asList(request.getParameterValues("interfaceCheck"));
 
         // the list of all services marked as managed
-        List<String> serviceList = Arrays.asList(request.getParameterValues("serviceCheck"));
+        List<String> serviceList = new ArrayList <String> ();
+        if ( request.getParameterValues("serviceCheck") != null ) {
+        	serviceList = Arrays.asList(request.getParameterValues("serviceCheck"));
+        }
 
         // the list of interfaces that need to be put into the URL file
         List<String> addToURL = new ArrayList<String>();
