@@ -77,6 +77,7 @@ public class ExecCommandController extends MapsLoggingController {
 
         String address = request.getParameter("address");
         if (address == null) throw new  IllegalArgumentException("Address is required");
+        address = address.replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll("\"", "&quot;");
 
         String numericoutput = request.getParameter("numericOutput");
         if (numericoutput != null && numericoutput.equals("true")) {
