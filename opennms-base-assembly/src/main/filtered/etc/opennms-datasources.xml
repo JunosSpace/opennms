@@ -40,14 +40,14 @@
   <jdbc-data-source name="opennms" 
                     database-name="${install.database.name}" 
                     class-name="${install.database.driver}" 
-                    url="jdbc:postgresql://localhost:5432/${install.database.name}"
+                    url="jdbc:postgresql://localhost:5432/${install.database.name}?ssl=true"
                     user-name="${install.database.user}"
                     password="${install.database.password}" />
 
   <jdbc-data-source name="opennms-admin" 
                     database-name="template1" 
                     class-name="${install.database.driver}" 
-                    url="jdbc:postgresql://localhost:5432/template1"
+                    url="jdbc:postgresql://localhost:5432/template1?ssl=true"
                     user-name="${install.database.admin.user}"
                     password="${install.database.admin.password}" />
 </datasource-configuration>
