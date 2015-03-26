@@ -585,6 +585,9 @@ public class JRobinRrdStrategy implements RrdStrategy<RrdDef,RrdDb> {
 
             } else if (arg.startsWith("DEF:")) {
                 String definition = arg.substring("DEF:".length());
+                String last = definition.substring(definition.lastIndexOf(":") + 1);
+                String middleStr = definition.substring(0, definition.lastIndexOf(":"));
+                String middle = middleStr.substring(middleStr.lastIndexOf(":") + 1);
                 String[] def = splitDef(definition);
                 String[] ds = def[0].split("=");
                  LOG.debug("ds = {}", Arrays.toString(ds));
@@ -602,12 +605,12 @@ public class JRobinRrdStrategy implements RrdStrategy<RrdDef,RrdDb> {
 
                 final String absolutePath = (File.separatorChar == '\\')? dsFile.getAbsolutePath().replace("\\", "\\\\") : dsFile.getAbsolutePath();
                  LOG.debug("absolutePath = {}", absolutePath);
-                graphDef.datasource(ds[0], absolutePath, def[1], def[2]);
+                graphDef.datasource(ds[0], absolutePath, middle,last);
 
                 List<String> defBits = new ArrayList<String>();
                 defBits.add(absolutePath);
-                defBits.add(def[1]);
-                defBits.add(def[2]);
+                defBits.add(middle);
+                defBits.add(last);
                 defs.put(ds[0], defBits);
 
             } else if (arg.startsWith("CDEF:")) {
@@ -730,7 +733,7 @@ public class JRobinRrdStrategy implements RrdStrategy<RrdDef,RrdDb> {
 				def = definition.split("(?<!\\\\):");
 			}
 		} else {
-			def = definition.split("(?<!\\\\):");
+			def = definition.split("(?<!\\\\)(:icmp|:snmp)");
 		}
 		// LOG.debug("returning: {}", Arrays.toString(def));
 		return def;
