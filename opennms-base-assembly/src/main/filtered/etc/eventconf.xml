@@ -2095,6 +2095,7 @@
 <event-file>events/JuniperEvents/mib-jnx-bgpmib2.xml</event-file>
 <event-file>events/JuniperEvents/mib-jnx-cfgmgmt.xml</event-file>
 <event-file>events/JuniperEvents/mib-jnx-chassis.xml</event-file>
+<event-file>events/JuniperEvents/mib-jnx-fabric-chassis.xml</event-file>
 <event-file>events/JuniperEvents/mib-jnx-coll.xml</event-file>
 <event-file>events/JuniperEvents/mib-jnx-cos.xml</event-file>
 <event-file>events/JuniperEvents/mib-jnx-dfc.xml</event-file>
