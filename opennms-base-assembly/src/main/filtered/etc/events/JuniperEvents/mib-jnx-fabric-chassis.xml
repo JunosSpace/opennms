@@ -1,0 +1,2438 @@
+<events xmlns="http://xmlns.opennms.org/xsd/eventconf">
+   <event>
+      <mask>
+         <maskelement>
+            <mename>id</mename>
+            <mevalue>.1.3.6.1.4.1.2636.4.19</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>generic</mename>
+            <mevalue>6</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>specific</mename>
+            <mevalue>1</mevalue>
+         </maskelement>
+      </mask>
+      <uei>uei.opennms.org/traps/JUNIPER-FABRIC-CHASSIS/jnxFabricPowerSupplyFailure</uei>
+      <event-label>JUNIPER-FABRIC-CHASSIS defined trap event: jnxFabricPowerSupplyFailure</event-label>
+      <descr>
+&lt;p>A jnxFabricPowerSupplyFailure trap signifies that
+            the SNMP entity, acting in an agent role, has
+            detected that the specified power supply in the
+            chassis has been in the failure (bad DC output) 
+            condition.&lt;/p>&lt;table>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricDeviceIndex&lt;/b>&lt;/td>&lt;td>
+	%parm[#1]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricContentsContainerIndex&lt;/b>&lt;/td>&lt;td>
+	%parm[#2]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricContentsL1Index&lt;/b>&lt;/td>&lt;td>
+	%parm[#3]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricContentsL2Index&lt;/b>&lt;/td>&lt;td>
+	%parm[#4]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricContentsL3Index&lt;/b>&lt;/td>&lt;td>
+	%parm[#5]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricContentsDescr&lt;/b>&lt;/td>&lt;td>
+	%parm[#6]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricOperatingState&lt;/b>&lt;/td>&lt;td>
+	%parm[#7]%;&lt;/td>&lt;td>&lt;p>
+		unknown(1)
+		running(2)
+		ready(3)
+		reset(4)
+		runningAtFullSpeed(5)
+		down(6)
+		standby(7)
+	&lt;/p>&lt;/td>&lt;/tr>&lt;/table>
+	</descr>
+      <logmsg dest="logndisplay">&lt;p>
+	jnxFabricPowerSupplyFailure trap received
+	jnxFabricDeviceIndex=%parm[#1]%
+	jnxFabricContentsContainerIndex=%parm[#2]%
+	jnxFabricContentsL1Index=%parm[#3]%
+	jnxFabricContentsL2Index=%parm[#4]%
+	jnxFabricContentsL3Index=%parm[#5]%
+	jnxFabricContentsDescr=%parm[#6]%
+	jnxFabricOperatingState=%parm[#7]%&lt;/p>
+	</logmsg>
+      <severity>Major</severity>
+      <varbindsdecode>
+         <parmid>parm[#7]</parmid>
+         <decode varbindvalue="1" varbinddecodedstring="unknown"/>
+         <decode varbindvalue="2" varbinddecodedstring="running"/>
+         <decode varbindvalue="3" varbinddecodedstring="ready"/>
+         <decode varbindvalue="4" varbinddecodedstring="reset"/>
+         <decode varbindvalue="5" varbinddecodedstring="runningAtFullSpeed"/>
+         <decode varbindvalue="6" varbinddecodedstring="down"/>
+         <decode varbindvalue="7" varbinddecodedstring="standby"/>
+      </varbindsdecode>
+   </event>
+   <event>
+      <mask>
+         <maskelement>
+            <mename>id</mename>
+            <mevalue>.1.3.6.1.4.1.2636.4.19</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>generic</mename>
+            <mevalue>6</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>specific</mename>
+            <mevalue>2</mevalue>
+         </maskelement>
+      </mask>
+      <uei>uei.opennms.org/traps/JUNIPER-FABRIC-CHASSIS/jnxFabricFanFailure</uei>
+      <event-label>JUNIPER-FABRIC-CHASSIS defined trap event: jnxFabricFanFailure</event-label>
+      <descr>
+&lt;p>A jnxFabricFanFailure trap signifies that the SNMP
+            entity, acting in an agent role, has detected
+            that the specified cooling fan or impeller in 
+            the chassis has been in the failure (not spinning) 
+            condition.&lt;/p>&lt;table>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricDeviceIndex&lt;/b>&lt;/td>&lt;td>
+	%parm[#1]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricContentsContainerIndex&lt;/b>&lt;/td>&lt;td>
+	%parm[#2]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricContentsL1Index&lt;/b>&lt;/td>&lt;td>
+	%parm[#3]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricContentsL2Index&lt;/b>&lt;/td>&lt;td>
+	%parm[#4]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricContentsL3Index&lt;/b>&lt;/td>&lt;td>
+	%parm[#5]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricContentsDescr&lt;/b>&lt;/td>&lt;td>
+	%parm[#6]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricOperatingState&lt;/b>&lt;/td>&lt;td>
+	%parm[#7]%;&lt;/td>&lt;td>&lt;p>
+		unknown(1)
+		running(2)
+		ready(3)
+		reset(4)
+		runningAtFullSpeed(5)
+		down(6)
+		standby(7)
+	&lt;/p>&lt;/td>&lt;/tr>&lt;/table>
+	</descr>
+      <logmsg dest="logndisplay">&lt;p>
+	jnxFabricFanFailure trap received
+	jnxFabricDeviceIndex=%parm[#1]%
+	jnxFabricContentsContainerIndex=%parm[#2]%
+	jnxFabricContentsL1Index=%parm[#3]%
+	jnxFabricContentsL2Index=%parm[#4]%
+	jnxFabricContentsL3Index=%parm[#5]%
+	jnxFabricContentsDescr=%parm[#6]%
+	jnxFabricOperatingState=%parm[#7]%&lt;/p>
+	</logmsg>
+      <severity>Major</severity>
+      <varbindsdecode>
+         <parmid>parm[#7]</parmid>
+         <decode varbindvalue="1" varbinddecodedstring="unknown"/>
+         <decode varbindvalue="2" varbinddecodedstring="running"/>
+         <decode varbindvalue="3" varbinddecodedstring="ready"/>
+         <decode varbindvalue="4" varbinddecodedstring="reset"/>
+         <decode varbindvalue="5" varbinddecodedstring="runningAtFullSpeed"/>
+         <decode varbindvalue="6" varbinddecodedstring="down"/>
+         <decode varbindvalue="7" varbinddecodedstring="standby"/>
+      </varbindsdecode>
+   </event>
+   <event>
+      <mask>
+         <maskelement>
+            <mename>id</mename>
+            <mevalue>.1.3.6.1.4.1.2636.4.19</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>generic</mename>
+            <mevalue>6</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>specific</mename>
+            <mevalue>3</mevalue>
+         </maskelement>
+      </mask>
+      <uei>uei.opennms.org/traps/JUNIPER-FABRIC-CHASSIS/jnxFabricOverTemperature</uei>
+      <event-label>JUNIPER-FABRIC-CHASSIS defined trap event: jnxFabricOverTemperature</event-label>
+      <descr>
+&lt;p>A jnxFabricOverTemperature trap signifies that the 
+            SNMP entity, acting in an agent role, has 
+            detected that the specified hardware component
+            in the chassis has experienced over temperature
+            condition.&lt;/p>&lt;table>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricDeviceIndex&lt;/b>&lt;/td>&lt;td>
+	%parm[#1]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricContentsContainerIndex&lt;/b>&lt;/td>&lt;td>
+	%parm[#2]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricContentsL1Index&lt;/b>&lt;/td>&lt;td>
+	%parm[#3]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricContentsL2Index&lt;/b>&lt;/td>&lt;td>
+	%parm[#4]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricContentsL3Index&lt;/b>&lt;/td>&lt;td>
+	%parm[#5]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricContentsDescr&lt;/b>&lt;/td>&lt;td>
+	%parm[#6]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricOperatingTemp&lt;/b>&lt;/td>&lt;td>
+	%parm[#7]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>&lt;/table>
+	</descr>
+      <logmsg dest="logndisplay">&lt;p>
+	jnxFabricOverTemperature trap received
+	jnxFabricDeviceIndex=%parm[#1]%
+	jnxFabricContentsContainerIndex=%parm[#2]%
+	jnxFabricContentsL1Index=%parm[#3]%
+	jnxFabricContentsL2Index=%parm[#4]%
+	jnxFabricContentsL3Index=%parm[#5]%
+	jnxFabricContentsDescr=%parm[#6]%
+	jnxFabricOperatingTemp=%parm[#7]%&lt;/p>
+	</logmsg>
+      <severity>Major</severity>
+   </event>
+   <event>
+      <mask>
+         <maskelement>
+            <mename>id</mename>
+            <mevalue>.1.3.6.1.4.1.2636.4.19</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>generic</mename>
+            <mevalue>6</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>specific</mename>
+            <mevalue>4</mevalue>
+         </maskelement>
+      </mask>
+      <uei>uei.opennms.org/traps/JUNIPER-FABRIC-CHASSIS/jnxFabricRedundancySwitchover</uei>
+      <event-label>JUNIPER-FABRIC-CHASSIS defined trap event: jnxFabricRedundancySwitchover</event-label>
+      <descr>
+&lt;p>A jnxFabricRedundancySwitchover trap signifies that 
+            the SNMP entity, acting in an agent role, has 
+            detected that the specified hardware component
+            in the chassis has experienced a redundancy 
+            switchover event defined as a change in state
+            of jnxFabricRedundancyState from master to backup or
+            vice versa.&lt;/p>&lt;table>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricDeviceIndex&lt;/b>&lt;/td>&lt;td>
+	%parm[#1]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricRedundancyContentsIndex&lt;/b>&lt;/td>&lt;td>
+	%parm[#2]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricRedundancyL1Index&lt;/b>&lt;/td>&lt;td>
+	%parm[#3]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricRedundancyL2Index&lt;/b>&lt;/td>&lt;td>
+	%parm[#4]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricRedundancyL3Index&lt;/b>&lt;/td>&lt;td>
+	%parm[#5]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricRedundancyDescr&lt;/b>&lt;/td>&lt;td>
+	%parm[#6]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricRedundancyConfig&lt;/b>&lt;/td>&lt;td>
+	%parm[#7]%;&lt;/td>&lt;td>&lt;p>
+		unknown(1)
+		master(2)
+		backup(3)
+		disabled(4)
+		notApplicable(5)
+	&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricRedundancyState&lt;/b>&lt;/td>&lt;td>
+	%parm[#8]%;&lt;/td>&lt;td>&lt;p>
+		unknown(1)
+		master(2)
+		backup(3)
+		disabled(4)
+	&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricRedundancySwitchoverCount&lt;/b>&lt;/td>&lt;td>
+	%parm[#9]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricRedundancySwitchoverTime&lt;/b>&lt;/td>&lt;td>
+	%parm[#10]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricRedundancySwitchoverReason&lt;/b>&lt;/td>&lt;td>
+	%parm[#11]%;&lt;/td>&lt;td>&lt;p>
+		other(1)
+		neverSwitched(2)
+		userSwitched(3)
+		autoSwitched(4)
+	&lt;/p>&lt;/td>&lt;/tr>&lt;/table>
+	</descr>
+      <logmsg dest="logndisplay">&lt;p>
+	jnxFabricRedundancySwitchover trap received
+	jnxFabricDeviceIndex=%parm[#1]%
+	jnxFabricRedundancyContentsIndex=%parm[#2]%
+	jnxFabricRedundancyL1Index=%parm[#3]%
+	jnxFabricRedundancyL2Index=%parm[#4]%
+	jnxFabricRedundancyL3Index=%parm[#5]%
+	jnxFabricRedundancyDescr=%parm[#6]%
+	jnxFabricRedundancyConfig=%parm[#7]%
+	jnxFabricRedundancyState=%parm[#8]%
+	jnxFabricRedundancySwitchoverCount=%parm[#9]%
+	jnxFabricRedundancySwitchoverTime=%parm[#10]%
+	jnxFabricRedundancySwitchoverReason=%parm[#11]%&lt;/p>
+	</logmsg>
+      <severity>Normal</severity>
+      <varbindsdecode>
+         <parmid>parm[#7]</parmid>
+         <decode varbindvalue="1" varbinddecodedstring="unknown"/>
+         <decode varbindvalue="2" varbinddecodedstring="master"/>
+         <decode varbindvalue="3" varbinddecodedstring="backup"/>
+         <decode varbindvalue="4" varbinddecodedstring="disabled"/>
+         <decode varbindvalue="5" varbinddecodedstring="notApplicable"/>
+      </varbindsdecode>
+      <varbindsdecode>
+         <parmid>parm[#8]</parmid>
+         <decode varbindvalue="1" varbinddecodedstring="unknown"/>
+         <decode varbindvalue="2" varbinddecodedstring="master"/>
+         <decode varbindvalue="3" varbinddecodedstring="backup"/>
+         <decode varbindvalue="4" varbinddecodedstring="disabled"/>
+      </varbindsdecode>
+      <varbindsdecode>
+         <parmid>parm[#11]</parmid>
+         <decode varbindvalue="1" varbinddecodedstring="other"/>
+         <decode varbindvalue="2" varbinddecodedstring="neverSwitched"/>
+         <decode varbindvalue="3" varbinddecodedstring="userSwitched"/>
+         <decode varbindvalue="4" varbinddecodedstring="autoSwitched"/>
+      </varbindsdecode>
+   </event>
+   <event>
+      <mask>
+         <maskelement>
+            <mename>id</mename>
+            <mevalue>.1.3.6.1.4.1.2636.4.19</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>generic</mename>
+            <mevalue>6</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>specific</mename>
+            <mevalue>5</mevalue>
+         </maskelement>
+      </mask>
+      <uei>uei.opennms.org/traps/JUNIPER-FABRIC-CHASSIS/jnxFabricFruRemoval</uei>
+      <event-label>JUNIPER-FABRIC-CHASSIS defined trap event: jnxFabricFruRemoval</event-label>
+      <descr>
+&lt;p>A jnxFabricFruRemoval trap signifies that the SNMP 
+            entity, acting in an agent role, has detected 
+            that the specified FRU (Field Replaceable Unit)
+            has been removed from the chassis.&lt;/p>&lt;table>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricDeviceIndex&lt;/b>&lt;/td>&lt;td>
+	%parm[#1]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricFruContentsIndex&lt;/b>&lt;/td>&lt;td>
+	%parm[#2]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricFruL1Index&lt;/b>&lt;/td>&lt;td>
+	%parm[#3]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricFruL2Index&lt;/b>&lt;/td>&lt;td>
+	%parm[#4]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricFruL3Index&lt;/b>&lt;/td>&lt;td>
+	%parm[#5]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricFruName&lt;/b>&lt;/td>&lt;td>
+	%parm[#6]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricFruType&lt;/b>&lt;/td>&lt;td>
+	%parm[#7]%;&lt;/td>&lt;td>&lt;p>
+		other(1)
+		clockGenerator(2)
+		flexiblePicConcentrator(3)
+		switchingAndForwardingModule(4)
+		controlBoard(5)
+		routingEngine(6)
+		powerEntryModule(7)
+		frontPanelModule(8)
+		switchInterfaceBoard(9)
+		processorMezzanineBoardForSIB(10)
+		portInterfaceCard(11)
+		craftInterfacePanel(12)
+		fan(13)
+		lineCardChassis(14)
+		forwardingEngineBoard(15)
+		protectedSystemDomain(16)
+	&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricFruSlot&lt;/b>&lt;/td>&lt;td>
+	%parm[#8]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>&lt;/table>
+	</descr>
+      <logmsg dest="logndisplay">&lt;p>
+	jnxFabricFruRemoval trap received
+	jnxFabricDeviceIndex=%parm[#1]%
+	jnxFabricFruContentsIndex=%parm[#2]%
+	jnxFabricFruL1Index=%parm[#3]%
+	jnxFabricFruL2Index=%parm[#4]%
+	jnxFabricFruL3Index=%parm[#5]%
+	jnxFabricFruName=%parm[#6]%
+	jnxFabricFruType=%parm[#7]%
+	jnxFabricFruSlot=%parm[#8]%&lt;/p>
+	</logmsg>
+      <severity>Major</severity>
+      <varbindsdecode>
+         <parmid>parm[#7]</parmid>
+         <decode varbindvalue="1" varbinddecodedstring="other"/>
+         <decode varbindvalue="2" varbinddecodedstring="clockGenerator"/>
+         <decode varbindvalue="3" varbinddecodedstring="flexiblePicConcentrator"/>
+         <decode varbindvalue="4" varbinddecodedstring="switchingAndForwardingModule"/>
+         <decode varbindvalue="5" varbinddecodedstring="controlBoard"/>
+         <decode varbindvalue="6" varbinddecodedstring="routingEngine"/>
+         <decode varbindvalue="7" varbinddecodedstring="powerEntryModule"/>
+         <decode varbindvalue="8" varbinddecodedstring="frontPanelModule"/>
+         <decode varbindvalue="9" varbinddecodedstring="switchInterfaceBoard"/>
+         <decode varbindvalue="10" varbinddecodedstring="processorMezzanineBoardForSIB"/>
+         <decode varbindvalue="11" varbinddecodedstring="portInterfaceCard"/>
+         <decode varbindvalue="12" varbinddecodedstring="craftInterfacePanel"/>
+         <decode varbindvalue="13" varbinddecodedstring="fan"/>
+         <decode varbindvalue="14" varbinddecodedstring="lineCardChassis"/>
+         <decode varbindvalue="15" varbinddecodedstring="forwardingEngineBoard"/>
+         <decode varbindvalue="16" varbinddecodedstring="protectedSystemDomain"/>
+      </varbindsdecode>
+   </event>
+   <event>
+      <mask>
+         <maskelement>
+            <mename>id</mename>
+            <mevalue>.1.3.6.1.4.1.2636.4.19</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>generic</mename>
+            <mevalue>6</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>specific</mename>
+            <mevalue>6</mevalue>
+         </maskelement>
+      </mask>
+      <uei>uei.opennms.org/traps/JUNIPER-FABRIC-CHASSIS/jnxFabricFruInsertion</uei>
+      <event-label>JUNIPER-FABRIC-CHASSIS defined trap event: jnxFabricFruInsertion</event-label>
+      <descr>
+&lt;p>A jnxFabricFruInsertion trap signifies that the SNMP 
+            entity,     acting in an agent role, has detected that
+            the specified FRU (Field Replaceable Unit) has been 
+            inserted into the chassis.&lt;/p>&lt;table>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricDeviceIndex&lt;/b>&lt;/td>&lt;td>
+	%parm[#1]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricFruContentsIndex&lt;/b>&lt;/td>&lt;td>
+	%parm[#2]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricFruL1Index&lt;/b>&lt;/td>&lt;td>
+	%parm[#3]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricFruL2Index&lt;/b>&lt;/td>&lt;td>
+	%parm[#4]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricFruL3Index&lt;/b>&lt;/td>&lt;td>
+	%parm[#5]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricFruName&lt;/b>&lt;/td>&lt;td>
+	%parm[#6]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricFruType&lt;/b>&lt;/td>&lt;td>
+	%parm[#7]%;&lt;/td>&lt;td>&lt;p>
+		other(1)
+		clockGenerator(2)
+		flexiblePicConcentrator(3)
+		switchingAndForwardingModule(4)
+		controlBoard(5)
+		routingEngine(6)
+		powerEntryModule(7)
+		frontPanelModule(8)
+		switchInterfaceBoard(9)
+		processorMezzanineBoardForSIB(10)
+		portInterfaceCard(11)
+		craftInterfacePanel(12)
+		fan(13)
+		lineCardChassis(14)
+		forwardingEngineBoard(15)
+		protectedSystemDomain(16)
+	&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricFruSlot&lt;/b>&lt;/td>&lt;td>
+	%parm[#8]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>&lt;/table>
+	</descr>
+      <logmsg dest="logndisplay">&lt;p>
+	jnxFabricFruInsertion trap received
+	jnxFabricDeviceIndex=%parm[#1]%
+	jnxFabricFruContentsIndex=%parm[#2]%
+	jnxFabricFruL1Index=%parm[#3]%
+	jnxFabricFruL2Index=%parm[#4]%
+	jnxFabricFruL3Index=%parm[#5]%
+	jnxFabricFruName=%parm[#6]%
+	jnxFabricFruType=%parm[#7]%
+	jnxFabricFruSlot=%parm[#8]%&lt;/p>
+	</logmsg>
+      <severity>Normal</severity>
+      <varbindsdecode>
+         <parmid>parm[#7]</parmid>
+         <decode varbindvalue="1" varbinddecodedstring="other"/>
+         <decode varbindvalue="2" varbinddecodedstring="clockGenerator"/>
+         <decode varbindvalue="3" varbinddecodedstring="flexiblePicConcentrator"/>
+         <decode varbindvalue="4" varbinddecodedstring="switchingAndForwardingModule"/>
+         <decode varbindvalue="5" varbinddecodedstring="controlBoard"/>
+         <decode varbindvalue="6" varbinddecodedstring="routingEngine"/>
+         <decode varbindvalue="7" varbinddecodedstring="powerEntryModule"/>
+         <decode varbindvalue="8" varbinddecodedstring="frontPanelModule"/>
+         <decode varbindvalue="9" varbinddecodedstring="switchInterfaceBoard"/>
+         <decode varbindvalue="10" varbinddecodedstring="processorMezzanineBoardForSIB"/>
+         <decode varbindvalue="11" varbinddecodedstring="portInterfaceCard"/>
+         <decode varbindvalue="12" varbinddecodedstring="craftInterfacePanel"/>
+         <decode varbindvalue="13" varbinddecodedstring="fan"/>
+         <decode varbindvalue="14" varbinddecodedstring="lineCardChassis"/>
+         <decode varbindvalue="15" varbinddecodedstring="forwardingEngineBoard"/>
+         <decode varbindvalue="16" varbinddecodedstring="protectedSystemDomain"/>
+      </varbindsdecode>
+   </event>
+   <event>
+      <mask>
+         <maskelement>
+            <mename>id</mename>
+            <mevalue>.1.3.6.1.4.1.2636.4.19</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>generic</mename>
+            <mevalue>6</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>specific</mename>
+            <mevalue>7</mevalue>
+         </maskelement>
+      </mask>
+      <uei>uei.opennms.org/traps/JUNIPER-FABRIC-CHASSIS/jnxFabricFruPowerOff</uei>
+      <event-label>JUNIPER-FABRIC-CHASSIS defined trap event: jnxFabricFruPowerOff</event-label>
+      <descr>
+&lt;p>A jnxFabricFruPowerOff trap signifies that the SNMP 
+            entity, acting in an agent role, has detected 
+            that the specified FRU (Field Replaceable Unit)
+            has been powered off in the chassis.&lt;/p>&lt;table>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricDeviceIndex&lt;/b>&lt;/td>&lt;td>
+	%parm[#1]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricFruContentsIndex&lt;/b>&lt;/td>&lt;td>
+	%parm[#2]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricFruL1Index&lt;/b>&lt;/td>&lt;td>
+	%parm[#3]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricFruL2Index&lt;/b>&lt;/td>&lt;td>
+	%parm[#4]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricFruL3Index&lt;/b>&lt;/td>&lt;td>
+	%parm[#5]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricFruName&lt;/b>&lt;/td>&lt;td>
+	%parm[#6]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricFruType&lt;/b>&lt;/td>&lt;td>
+	%parm[#7]%;&lt;/td>&lt;td>&lt;p>
+		other(1)
+		clockGenerator(2)
+		flexiblePicConcentrator(3)
+		switchingAndForwardingModule(4)
+		controlBoard(5)
+		routingEngine(6)
+		powerEntryModule(7)
+		frontPanelModule(8)
+		switchInterfaceBoard(9)
+		processorMezzanineBoardForSIB(10)
+		portInterfaceCard(11)
+		craftInterfacePanel(12)
+		fan(13)
+		lineCardChassis(14)
+		forwardingEngineBoard(15)
+		protectedSystemDomain(16)
+	&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricFruSlot&lt;/b>&lt;/td>&lt;td>
+	%parm[#8]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricFruOfflineReason&lt;/b>&lt;/td>&lt;td>
+	%parm[#9]%;&lt;/td>&lt;td>&lt;p>
+		unknown(1)
+		none(2)
+		error(3)
+		noPower(4)
+		configPowerOff(5)
+		configHoldInReset(6)
+		cliCommand(7)
+		buttonPress(8)
+		cliRestart(9)
+		overtempShutdown(10)
+		masterClockDown(11)
+		singleSfmModeChange(12)
+		packetSchedulingModeChange(13)
+		physicalRemoval(14)
+		unresponsiveRestart(15)
+		sonetClockAbsent(16)
+		rddPowerOff(17)
+		majorErrors(18)
+		minorErrors(19)
+		lccHardRestart(20)
+		lccVersionMismatch(21)
+		powerCycle(22)
+		reconnect(23)
+		overvoltage(24)
+		pfeVersionMismatch(25)
+		febRddCfgChange(26)
+		fpcMisconfig(27)
+		fruReconnectFail(28)
+		fruFwddReset(29)
+		fruFebSwitch(30)
+		fruFebOffline(31)
+		fruInServSoftUpgradeError(32)
+		fruChasdPowerRatingExceed(33)
+		fruConfigOffline(34)
+		fruServiceRestartRequest(35)
+		spuResetRequest(36)
+		spuFlowdDown(37)
+		spuSpi4Down(38)
+		spuWatchdogTimeout(39)
+		spuCoreDump(40)
+		fpgaSpi4LinkDown(41)
+		i3Spi4LinkDown(42)
+		cppDisconnect(43)
+		cpuNotBoot(44)
+		spuCoreDumpComplete(45)
+		rstOnSpcSpuFailure(46)
+		softRstOnSpcSpuFailure(47)
+		hwAuthenticationFailure(48)
+		reconnectFpcFail(49)
+		fpcAppFailed(50)
+		fpcKernelCrash(51)
+		spuFlowdDownNoCore(52)
+		spuFlowdCoreDumpIncomplete(53)
+		spuFlowdCoreDumpComplete(54)
+		spuIdpdDownNoCore(55)
+		spuIdpdCoreDumpIncomplete(56)
+		spuIdpdCoreDumpComplete(57)
+		spuCoreDumpIncomplete(58)
+		spuIdpdDown(59)
+		fruPfeReset(60)
+		fruReconnectNotReady(61)
+		fruSfLinkDown(62)
+		fruFabricDown(63)
+		fruAntiCounterfeitRetry(64)
+		fruFPCChassisClusterDisable(65)
+		spuFipsError(66)
+		fruFPCFabricDownOffline(67)
+		febCfgChange(68)
+		routeLocalizationRoleChange(69)
+		fruFpcUnsupported(70)
+		psdVersionMismatch(71)
+		fruResetThresholdExceeded(72)
+		picBounce(73)
+		badVoltage(74)
+		fruFPCReducedFabricBW(75)
+	&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricFruLastPowerOff&lt;/b>&lt;/td>&lt;td>
+	%parm[#10]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricFruLastPowerOn&lt;/b>&lt;/td>&lt;td>
+	%parm[#11]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>&lt;/table>
+	</descr>
+      <logmsg dest="logndisplay">&lt;p>
+	jnxFabricFruPowerOff trap received
+	jnxFabricDeviceIndex=%parm[#1]%
+	jnxFabricFruContentsIndex=%parm[#2]%
+	jnxFabricFruL1Index=%parm[#3]%
+	jnxFabricFruL2Index=%parm[#4]%
+	jnxFabricFruL3Index=%parm[#5]%
+	jnxFabricFruName=%parm[#6]%
+	jnxFabricFruType=%parm[#7]%
+	jnxFabricFruSlot=%parm[#8]%
+	jnxFabricFruOfflineReason=%parm[#9]%
+	jnxFabricFruLastPowerOff=%parm[#10]%
+	jnxFabricFruLastPowerOn=%parm[#11]%&lt;/p>
+	</logmsg>
+      <severity>Major</severity>
+      <varbindsdecode>
+         <parmid>parm[#7]</parmid>
+         <decode varbindvalue="1" varbinddecodedstring="other"/>
+         <decode varbindvalue="2" varbinddecodedstring="clockGenerator"/>
+         <decode varbindvalue="3" varbinddecodedstring="flexiblePicConcentrator"/>
+         <decode varbindvalue="4" varbinddecodedstring="switchingAndForwardingModule"/>
+         <decode varbindvalue="5" varbinddecodedstring="controlBoard"/>
+         <decode varbindvalue="6" varbinddecodedstring="routingEngine"/>
+         <decode varbindvalue="7" varbinddecodedstring="powerEntryModule"/>
+         <decode varbindvalue="8" varbinddecodedstring="frontPanelModule"/>
+         <decode varbindvalue="9" varbinddecodedstring="switchInterfaceBoard"/>
+         <decode varbindvalue="10" varbinddecodedstring="processorMezzanineBoardForSIB"/>
+         <decode varbindvalue="11" varbinddecodedstring="portInterfaceCard"/>
+         <decode varbindvalue="12" varbinddecodedstring="craftInterfacePanel"/>
+         <decode varbindvalue="13" varbinddecodedstring="fan"/>
+         <decode varbindvalue="14" varbinddecodedstring="lineCardChassis"/>
+         <decode varbindvalue="15" varbinddecodedstring="forwardingEngineBoard"/>
+         <decode varbindvalue="16" varbinddecodedstring="protectedSystemDomain"/>
+      </varbindsdecode>
+      <varbindsdecode>
+         <parmid>parm[#9]</parmid>
+         <decode varbindvalue="1" varbinddecodedstring="unknown"/>
+         <decode varbindvalue="2" varbinddecodedstring="none"/>
+         <decode varbindvalue="3" varbinddecodedstring="error"/>
+         <decode varbindvalue="4" varbinddecodedstring="noPower"/>
+         <decode varbindvalue="5" varbinddecodedstring="configPowerOff"/>
+         <decode varbindvalue="6" varbinddecodedstring="configHoldInReset"/>
+         <decode varbindvalue="7" varbinddecodedstring="cliCommand"/>
+         <decode varbindvalue="8" varbinddecodedstring="buttonPress"/>
+         <decode varbindvalue="9" varbinddecodedstring="cliRestart"/>
+         <decode varbindvalue="10" varbinddecodedstring="overtempShutdown"/>
+         <decode varbindvalue="11" varbinddecodedstring="masterClockDown"/>
+         <decode varbindvalue="12" varbinddecodedstring="singleSfmModeChange"/>
+         <decode varbindvalue="13" varbinddecodedstring="packetSchedulingModeChange"/>
+         <decode varbindvalue="14" varbinddecodedstring="physicalRemoval"/>
+         <decode varbindvalue="15" varbinddecodedstring="unresponsiveRestart"/>
+         <decode varbindvalue="16" varbinddecodedstring="sonetClockAbsent"/>
+         <decode varbindvalue="17" varbinddecodedstring="rddPowerOff"/>
+         <decode varbindvalue="18" varbinddecodedstring="majorErrors"/>
+         <decode varbindvalue="19" varbinddecodedstring="minorErrors"/>
+         <decode varbindvalue="20" varbinddecodedstring="lccHardRestart"/>
+         <decode varbindvalue="21" varbinddecodedstring="lccVersionMismatch"/>
+         <decode varbindvalue="22" varbinddecodedstring="powerCycle"/>
+         <decode varbindvalue="23" varbinddecodedstring="reconnect"/>
+         <decode varbindvalue="24" varbinddecodedstring="overvoltage"/>
+         <decode varbindvalue="25" varbinddecodedstring="pfeVersionMismatch"/>
+         <decode varbindvalue="26" varbinddecodedstring="febRddCfgChange"/>
+         <decode varbindvalue="27" varbinddecodedstring="fpcMisconfig"/>
+         <decode varbindvalue="28" varbinddecodedstring="fruReconnectFail"/>
+         <decode varbindvalue="29" varbinddecodedstring="fruFwddReset"/>
+         <decode varbindvalue="30" varbinddecodedstring="fruFebSwitch"/>
+         <decode varbindvalue="31" varbinddecodedstring="fruFebOffline"/>
+         <decode varbindvalue="32" varbinddecodedstring="fruInServSoftUpgradeError"/>
+         <decode varbindvalue="33" varbinddecodedstring="fruChasdPowerRatingExceed"/>
+         <decode varbindvalue="34" varbinddecodedstring="fruConfigOffline"/>
+         <decode varbindvalue="35" varbinddecodedstring="fruServiceRestartRequest"/>
+         <decode varbindvalue="36" varbinddecodedstring="spuResetRequest"/>
+         <decode varbindvalue="37" varbinddecodedstring="spuFlowdDown"/>
+         <decode varbindvalue="38" varbinddecodedstring="spuSpi4Down"/>
+         <decode varbindvalue="39" varbinddecodedstring="spuWatchdogTimeout"/>
+         <decode varbindvalue="40" varbinddecodedstring="spuCoreDump"/>
+         <decode varbindvalue="41" varbinddecodedstring="fpgaSpi4LinkDown"/>
+         <decode varbindvalue="42" varbinddecodedstring="i3Spi4LinkDown"/>
+         <decode varbindvalue="43" varbinddecodedstring="cppDisconnect"/>
+         <decode varbindvalue="44" varbinddecodedstring="cpuNotBoot"/>
+         <decode varbindvalue="45" varbinddecodedstring="spuCoreDumpComplete"/>
+         <decode varbindvalue="46" varbinddecodedstring="rstOnSpcSpuFailure"/>
+         <decode varbindvalue="47" varbinddecodedstring="softRstOnSpcSpuFailure"/>
+         <decode varbindvalue="48" varbinddecodedstring="hwAuthenticationFailure"/>
+         <decode varbindvalue="49" varbinddecodedstring="reconnectFpcFail"/>
+         <decode varbindvalue="50" varbinddecodedstring="fpcAppFailed"/>
+         <decode varbindvalue="51" varbinddecodedstring="fpcKernelCrash"/>
+         <decode varbindvalue="52" varbinddecodedstring="spuFlowdDownNoCore"/>
+         <decode varbindvalue="53" varbinddecodedstring="spuFlowdCoreDumpIncomplete"/>
+         <decode varbindvalue="54" varbinddecodedstring="spuFlowdCoreDumpComplete"/>
+         <decode varbindvalue="55" varbinddecodedstring="spuIdpdDownNoCore"/>
+         <decode varbindvalue="56" varbinddecodedstring="spuIdpdCoreDumpIncomplete"/>
+         <decode varbindvalue="57" varbinddecodedstring="spuIdpdCoreDumpComplete"/>
+         <decode varbindvalue="58" varbinddecodedstring="spuCoreDumpIncomplete"/>
+         <decode varbindvalue="59" varbinddecodedstring="spuIdpdDown"/>
+         <decode varbindvalue="60" varbinddecodedstring="fruPfeReset"/>
+         <decode varbindvalue="61" varbinddecodedstring="fruReconnectNotReady"/>
+         <decode varbindvalue="62" varbinddecodedstring="fruSfLinkDown"/>
+         <decode varbindvalue="63" varbinddecodedstring="fruFabricDown"/>
+         <decode varbindvalue="64" varbinddecodedstring="fruAntiCounterfeitRetry"/>
+         <decode varbindvalue="65" varbinddecodedstring="fruFPCChassisClusterDisable"/>
+         <decode varbindvalue="66" varbinddecodedstring="spuFipsError"/>
+         <decode varbindvalue="67" varbinddecodedstring="fruFPCFabricDownOffline"/>
+         <decode varbindvalue="68" varbinddecodedstring="febCfgChange"/>
+         <decode varbindvalue="69" varbinddecodedstring="routeLocalizationRoleChange"/>
+         <decode varbindvalue="70" varbinddecodedstring="fruFpcUnsupported"/>
+         <decode varbindvalue="71" varbinddecodedstring="psdVersionMismatch"/>
+         <decode varbindvalue="72" varbinddecodedstring="fruResetThresholdExceeded"/>
+         <decode varbindvalue="73" varbinddecodedstring="picBounce"/>
+         <decode varbindvalue="74" varbinddecodedstring="badVoltage"/>
+         <decode varbindvalue="75" varbinddecodedstring="fruFPCReducedFabricBW"/>
+      </varbindsdecode>
+   </event>
+   <event>
+      <mask>
+         <maskelement>
+            <mename>id</mename>
+            <mevalue>.1.3.6.1.4.1.2636.4.19</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>generic</mename>
+            <mevalue>6</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>specific</mename>
+            <mevalue>8</mevalue>
+         </maskelement>
+      </mask>
+      <uei>uei.opennms.org/traps/JUNIPER-FABRIC-CHASSIS/jnxFabricFruPowerOn</uei>
+      <event-label>JUNIPER-FABRIC-CHASSIS defined trap event: jnxFabricFruPowerOn</event-label>
+      <descr>
+&lt;p>A jnxFabricFruPowerOn trap signifies that the SNMP 
+            entity,     acting in an agent role, has detected that
+            the specified FRU (Field Replaceable Unit) has been 
+            powered on in the chassis.&lt;/p>&lt;table>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricDeviceIndex&lt;/b>&lt;/td>&lt;td>
+	%parm[#1]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricFruContentsIndex&lt;/b>&lt;/td>&lt;td>
+	%parm[#2]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricFruL1Index&lt;/b>&lt;/td>&lt;td>
+	%parm[#3]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricFruL2Index&lt;/b>&lt;/td>&lt;td>
+	%parm[#4]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricFruL3Index&lt;/b>&lt;/td>&lt;td>
+	%parm[#5]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricFruName&lt;/b>&lt;/td>&lt;td>
+	%parm[#6]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricFruType&lt;/b>&lt;/td>&lt;td>
+	%parm[#7]%;&lt;/td>&lt;td>&lt;p>
+		other(1)
+		clockGenerator(2)
+		flexiblePicConcentrator(3)
+		switchingAndForwardingModule(4)
+		controlBoard(5)
+		routingEngine(6)
+		powerEntryModule(7)
+		frontPanelModule(8)
+		switchInterfaceBoard(9)
+		processorMezzanineBoardForSIB(10)
+		portInterfaceCard(11)
+		craftInterfacePanel(12)
+		fan(13)
+		lineCardChassis(14)
+		forwardingEngineBoard(15)
+		protectedSystemDomain(16)
+	&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricFruSlot&lt;/b>&lt;/td>&lt;td>
+	%parm[#8]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricFruOfflineReason&lt;/b>&lt;/td>&lt;td>
+	%parm[#9]%;&lt;/td>&lt;td>&lt;p>
+		unknown(1)
+		none(2)
+		error(3)
+		noPower(4)
+		configPowerOff(5)
+		configHoldInReset(6)
+		cliCommand(7)
+		buttonPress(8)
+		cliRestart(9)
+		overtempShutdown(10)
+		masterClockDown(11)
+		singleSfmModeChange(12)
+		packetSchedulingModeChange(13)
+		physicalRemoval(14)
+		unresponsiveRestart(15)
+		sonetClockAbsent(16)
+		rddPowerOff(17)
+		majorErrors(18)
+		minorErrors(19)
+		lccHardRestart(20)
+		lccVersionMismatch(21)
+		powerCycle(22)
+		reconnect(23)
+		overvoltage(24)
+		pfeVersionMismatch(25)
+		febRddCfgChange(26)
+		fpcMisconfig(27)
+		fruReconnectFail(28)
+		fruFwddReset(29)
+		fruFebSwitch(30)
+		fruFebOffline(31)
+		fruInServSoftUpgradeError(32)
+		fruChasdPowerRatingExceed(33)
+		fruConfigOffline(34)
+		fruServiceRestartRequest(35)
+		spuResetRequest(36)
+		spuFlowdDown(37)
+		spuSpi4Down(38)
+		spuWatchdogTimeout(39)
+		spuCoreDump(40)
+		fpgaSpi4LinkDown(41)
+		i3Spi4LinkDown(42)
+		cppDisconnect(43)
+		cpuNotBoot(44)
+		spuCoreDumpComplete(45)
+		rstOnSpcSpuFailure(46)
+		softRstOnSpcSpuFailure(47)
+		hwAuthenticationFailure(48)
+		reconnectFpcFail(49)
+		fpcAppFailed(50)
+		fpcKernelCrash(51)
+		spuFlowdDownNoCore(52)
+		spuFlowdCoreDumpIncomplete(53)
+		spuFlowdCoreDumpComplete(54)
+		spuIdpdDownNoCore(55)
+		spuIdpdCoreDumpIncomplete(56)
+		spuIdpdCoreDumpComplete(57)
+		spuCoreDumpIncomplete(58)
+		spuIdpdDown(59)
+		fruPfeReset(60)
+		fruReconnectNotReady(61)
+		fruSfLinkDown(62)
+		fruFabricDown(63)
+		fruAntiCounterfeitRetry(64)
+		fruFPCChassisClusterDisable(65)
+		spuFipsError(66)
+		fruFPCFabricDownOffline(67)
+		febCfgChange(68)
+		routeLocalizationRoleChange(69)
+		fruFpcUnsupported(70)
+		psdVersionMismatch(71)
+		fruResetThresholdExceeded(72)
+		picBounce(73)
+		badVoltage(74)
+		fruFPCReducedFabricBW(75)
+	&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricFruLastPowerOff&lt;/b>&lt;/td>&lt;td>
+	%parm[#10]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricFruLastPowerOn&lt;/b>&lt;/td>&lt;td>
+	%parm[#11]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>&lt;/table>
+	</descr>
+      <logmsg dest="logndisplay">&lt;p>
+	jnxFabricFruPowerOn trap received
+	jnxFabricDeviceIndex=%parm[#1]%
+	jnxFabricFruContentsIndex=%parm[#2]%
+	jnxFabricFruL1Index=%parm[#3]%
+	jnxFabricFruL2Index=%parm[#4]%
+	jnxFabricFruL3Index=%parm[#5]%
+	jnxFabricFruName=%parm[#6]%
+	jnxFabricFruType=%parm[#7]%
+	jnxFabricFruSlot=%parm[#8]%
+	jnxFabricFruOfflineReason=%parm[#9]%
+	jnxFabricFruLastPowerOff=%parm[#10]%
+	jnxFabricFruLastPowerOn=%parm[#11]%&lt;/p>
+	</logmsg>
+      <severity>Normal</severity>
+      <varbindsdecode>
+         <parmid>parm[#7]</parmid>
+         <decode varbindvalue="1" varbinddecodedstring="other"/>
+         <decode varbindvalue="2" varbinddecodedstring="clockGenerator"/>
+         <decode varbindvalue="3" varbinddecodedstring="flexiblePicConcentrator"/>
+         <decode varbindvalue="4" varbinddecodedstring="switchingAndForwardingModule"/>
+         <decode varbindvalue="5" varbinddecodedstring="controlBoard"/>
+         <decode varbindvalue="6" varbinddecodedstring="routingEngine"/>
+         <decode varbindvalue="7" varbinddecodedstring="powerEntryModule"/>
+         <decode varbindvalue="8" varbinddecodedstring="frontPanelModule"/>
+         <decode varbindvalue="9" varbinddecodedstring="switchInterfaceBoard"/>
+         <decode varbindvalue="10" varbinddecodedstring="processorMezzanineBoardForSIB"/>
+         <decode varbindvalue="11" varbinddecodedstring="portInterfaceCard"/>
+         <decode varbindvalue="12" varbinddecodedstring="craftInterfacePanel"/>
+         <decode varbindvalue="13" varbinddecodedstring="fan"/>
+         <decode varbindvalue="14" varbinddecodedstring="lineCardChassis"/>
+         <decode varbindvalue="15" varbinddecodedstring="forwardingEngineBoard"/>
+         <decode varbindvalue="16" varbinddecodedstring="protectedSystemDomain"/>
+      </varbindsdecode>
+      <varbindsdecode>
+         <parmid>parm[#9]</parmid>
+         <decode varbindvalue="1" varbinddecodedstring="unknown"/>
+         <decode varbindvalue="2" varbinddecodedstring="none"/>
+         <decode varbindvalue="3" varbinddecodedstring="error"/>
+         <decode varbindvalue="4" varbinddecodedstring="noPower"/>
+         <decode varbindvalue="5" varbinddecodedstring="configPowerOff"/>
+         <decode varbindvalue="6" varbinddecodedstring="configHoldInReset"/>
+         <decode varbindvalue="7" varbinddecodedstring="cliCommand"/>
+         <decode varbindvalue="8" varbinddecodedstring="buttonPress"/>
+         <decode varbindvalue="9" varbinddecodedstring="cliRestart"/>
+         <decode varbindvalue="10" varbinddecodedstring="overtempShutdown"/>
+         <decode varbindvalue="11" varbinddecodedstring="masterClockDown"/>
+         <decode varbindvalue="12" varbinddecodedstring="singleSfmModeChange"/>
+         <decode varbindvalue="13" varbinddecodedstring="packetSchedulingModeChange"/>
+         <decode varbindvalue="14" varbinddecodedstring="physicalRemoval"/>
+         <decode varbindvalue="15" varbinddecodedstring="unresponsiveRestart"/>
+         <decode varbindvalue="16" varbinddecodedstring="sonetClockAbsent"/>
+         <decode varbindvalue="17" varbinddecodedstring="rddPowerOff"/>
+         <decode varbindvalue="18" varbinddecodedstring="majorErrors"/>
+         <decode varbindvalue="19" varbinddecodedstring="minorErrors"/>
+         <decode varbindvalue="20" varbinddecodedstring="lccHardRestart"/>
+         <decode varbindvalue="21" varbinddecodedstring="lccVersionMismatch"/>
+         <decode varbindvalue="22" varbinddecodedstring="powerCycle"/>
+         <decode varbindvalue="23" varbinddecodedstring="reconnect"/>
+         <decode varbindvalue="24" varbinddecodedstring="overvoltage"/>
+         <decode varbindvalue="25" varbinddecodedstring="pfeVersionMismatch"/>
+         <decode varbindvalue="26" varbinddecodedstring="febRddCfgChange"/>
+         <decode varbindvalue="27" varbinddecodedstring="fpcMisconfig"/>
+         <decode varbindvalue="28" varbinddecodedstring="fruReconnectFail"/>
+         <decode varbindvalue="29" varbinddecodedstring="fruFwddReset"/>
+         <decode varbindvalue="30" varbinddecodedstring="fruFebSwitch"/>
+         <decode varbindvalue="31" varbinddecodedstring="fruFebOffline"/>
+         <decode varbindvalue="32" varbinddecodedstring="fruInServSoftUpgradeError"/>
+         <decode varbindvalue="33" varbinddecodedstring="fruChasdPowerRatingExceed"/>
+         <decode varbindvalue="34" varbinddecodedstring="fruConfigOffline"/>
+         <decode varbindvalue="35" varbinddecodedstring="fruServiceRestartRequest"/>
+         <decode varbindvalue="36" varbinddecodedstring="spuResetRequest"/>
+         <decode varbindvalue="37" varbinddecodedstring="spuFlowdDown"/>
+         <decode varbindvalue="38" varbinddecodedstring="spuSpi4Down"/>
+         <decode varbindvalue="39" varbinddecodedstring="spuWatchdogTimeout"/>
+         <decode varbindvalue="40" varbinddecodedstring="spuCoreDump"/>
+         <decode varbindvalue="41" varbinddecodedstring="fpgaSpi4LinkDown"/>
+         <decode varbindvalue="42" varbinddecodedstring="i3Spi4LinkDown"/>
+         <decode varbindvalue="43" varbinddecodedstring="cppDisconnect"/>
+         <decode varbindvalue="44" varbinddecodedstring="cpuNotBoot"/>
+         <decode varbindvalue="45" varbinddecodedstring="spuCoreDumpComplete"/>
+         <decode varbindvalue="46" varbinddecodedstring="rstOnSpcSpuFailure"/>
+         <decode varbindvalue="47" varbinddecodedstring="softRstOnSpcSpuFailure"/>
+         <decode varbindvalue="48" varbinddecodedstring="hwAuthenticationFailure"/>
+         <decode varbindvalue="49" varbinddecodedstring="reconnectFpcFail"/>
+         <decode varbindvalue="50" varbinddecodedstring="fpcAppFailed"/>
+         <decode varbindvalue="51" varbinddecodedstring="fpcKernelCrash"/>
+         <decode varbindvalue="52" varbinddecodedstring="spuFlowdDownNoCore"/>
+         <decode varbindvalue="53" varbinddecodedstring="spuFlowdCoreDumpIncomplete"/>
+         <decode varbindvalue="54" varbinddecodedstring="spuFlowdCoreDumpComplete"/>
+         <decode varbindvalue="55" varbinddecodedstring="spuIdpdDownNoCore"/>
+         <decode varbindvalue="56" varbinddecodedstring="spuIdpdCoreDumpIncomplete"/>
+         <decode varbindvalue="57" varbinddecodedstring="spuIdpdCoreDumpComplete"/>
+         <decode varbindvalue="58" varbinddecodedstring="spuCoreDumpIncomplete"/>
+         <decode varbindvalue="59" varbinddecodedstring="spuIdpdDown"/>
+         <decode varbindvalue="60" varbinddecodedstring="fruPfeReset"/>
+         <decode varbindvalue="61" varbinddecodedstring="fruReconnectNotReady"/>
+         <decode varbindvalue="62" varbinddecodedstring="fruSfLinkDown"/>
+         <decode varbindvalue="63" varbinddecodedstring="fruFabricDown"/>
+         <decode varbindvalue="64" varbinddecodedstring="fruAntiCounterfeitRetry"/>
+         <decode varbindvalue="65" varbinddecodedstring="fruFPCChassisClusterDisable"/>
+         <decode varbindvalue="66" varbinddecodedstring="spuFipsError"/>
+         <decode varbindvalue="67" varbinddecodedstring="fruFPCFabricDownOffline"/>
+         <decode varbindvalue="68" varbinddecodedstring="febCfgChange"/>
+         <decode varbindvalue="69" varbinddecodedstring="routeLocalizationRoleChange"/>
+         <decode varbindvalue="70" varbinddecodedstring="fruFpcUnsupported"/>
+         <decode varbindvalue="71" varbinddecodedstring="psdVersionMismatch"/>
+         <decode varbindvalue="72" varbinddecodedstring="fruResetThresholdExceeded"/>
+         <decode varbindvalue="73" varbinddecodedstring="picBounce"/>
+         <decode varbindvalue="74" varbinddecodedstring="badVoltage"/>
+         <decode varbindvalue="75" varbinddecodedstring="fruFPCReducedFabricBW"/>
+      </varbindsdecode>
+   </event>
+   <event>
+      <mask>
+         <maskelement>
+            <mename>id</mename>
+            <mevalue>.1.3.6.1.4.1.2636.4.19</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>generic</mename>
+            <mevalue>6</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>specific</mename>
+            <mevalue>9</mevalue>
+         </maskelement>
+      </mask>
+      <uei>uei.opennms.org/traps/JUNIPER-FABRIC-CHASSIS/jnxFabricFruFailed</uei>
+      <event-label>JUNIPER-FABRIC-CHASSIS defined trap event: jnxFabricFruFailed</event-label>
+      <descr>
+&lt;p>This indicates the specified FRU (Field Replaceable Unit)
+                 has failed in the chassis. Most probably this is due toi
+                 some hard error such as fru is not powering up or not
+                 able to load ukernel. In these cases, fru is replaced.&lt;/p>&lt;table>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricDeviceIndex&lt;/b>&lt;/td>&lt;td>
+	%parm[#1]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricFruContentsIndex&lt;/b>&lt;/td>&lt;td>
+	%parm[#2]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricFruL1Index&lt;/b>&lt;/td>&lt;td>
+	%parm[#3]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricFruL2Index&lt;/b>&lt;/td>&lt;td>
+	%parm[#4]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricFruL3Index&lt;/b>&lt;/td>&lt;td>
+	%parm[#5]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricFruName&lt;/b>&lt;/td>&lt;td>
+	%parm[#6]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricFruType&lt;/b>&lt;/td>&lt;td>
+	%parm[#7]%;&lt;/td>&lt;td>&lt;p>
+		other(1)
+		clockGenerator(2)
+		flexiblePicConcentrator(3)
+		switchingAndForwardingModule(4)
+		controlBoard(5)
+		routingEngine(6)
+		powerEntryModule(7)
+		frontPanelModule(8)
+		switchInterfaceBoard(9)
+		processorMezzanineBoardForSIB(10)
+		portInterfaceCard(11)
+		craftInterfacePanel(12)
+		fan(13)
+		lineCardChassis(14)
+		forwardingEngineBoard(15)
+		protectedSystemDomain(16)
+	&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricFruSlot&lt;/b>&lt;/td>&lt;td>
+	%parm[#8]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>&lt;/table>
+	</descr>
+      <logmsg dest="logndisplay">&lt;p>
+	jnxFabricFruFailed trap received
+	jnxFabricDeviceIndex=%parm[#1]%
+	jnxFabricFruContentsIndex=%parm[#2]%
+	jnxFabricFruL1Index=%parm[#3]%
+	jnxFabricFruL2Index=%parm[#4]%
+	jnxFabricFruL3Index=%parm[#5]%
+	jnxFabricFruName=%parm[#6]%
+	jnxFabricFruType=%parm[#7]%
+	jnxFabricFruSlot=%parm[#8]%&lt;/p>
+	</logmsg>
+      <severity>Major</severity>
+      <varbindsdecode>
+         <parmid>parm[#7]</parmid>
+         <decode varbindvalue="1" varbinddecodedstring="other"/>
+         <decode varbindvalue="2" varbinddecodedstring="clockGenerator"/>
+         <decode varbindvalue="3" varbinddecodedstring="flexiblePicConcentrator"/>
+         <decode varbindvalue="4" varbinddecodedstring="switchingAndForwardingModule"/>
+         <decode varbindvalue="5" varbinddecodedstring="controlBoard"/>
+         <decode varbindvalue="6" varbinddecodedstring="routingEngine"/>
+         <decode varbindvalue="7" varbinddecodedstring="powerEntryModule"/>
+         <decode varbindvalue="8" varbinddecodedstring="frontPanelModule"/>
+         <decode varbindvalue="9" varbinddecodedstring="switchInterfaceBoard"/>
+         <decode varbindvalue="10" varbinddecodedstring="processorMezzanineBoardForSIB"/>
+         <decode varbindvalue="11" varbinddecodedstring="portInterfaceCard"/>
+         <decode varbindvalue="12" varbinddecodedstring="craftInterfacePanel"/>
+         <decode varbindvalue="13" varbinddecodedstring="fan"/>
+         <decode varbindvalue="14" varbinddecodedstring="lineCardChassis"/>
+         <decode varbindvalue="15" varbinddecodedstring="forwardingEngineBoard"/>
+         <decode varbindvalue="16" varbinddecodedstring="protectedSystemDomain"/>
+      </varbindsdecode>
+   </event>
+   <event>
+      <mask>
+         <maskelement>
+            <mename>id</mename>
+            <mevalue>.1.3.6.1.4.1.2636.4.19</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>generic</mename>
+            <mevalue>6</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>specific</mename>
+            <mevalue>10</mevalue>
+         </maskelement>
+      </mask>
+      <uei>uei.opennms.org/traps/JUNIPER-FABRIC-CHASSIS/jnxFabricFruOffline</uei>
+      <event-label>JUNIPER-FABRIC-CHASSIS defined trap event: jnxFabricFruOffline</event-label>
+      <descr>
+&lt;p>A jnxFabricFruOffline trap signifies that the SNMP
+                entity, acting in an agent role, has detected
+                that the specified FRU (Field Replaceable Unit)
+                has gone offline in the chassis.&lt;/p>&lt;table>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricDeviceIndex&lt;/b>&lt;/td>&lt;td>
+	%parm[#1]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricFruContentsIndex&lt;/b>&lt;/td>&lt;td>
+	%parm[#2]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricFruL1Index&lt;/b>&lt;/td>&lt;td>
+	%parm[#3]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricFruL2Index&lt;/b>&lt;/td>&lt;td>
+	%parm[#4]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricFruL3Index&lt;/b>&lt;/td>&lt;td>
+	%parm[#5]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricFruName&lt;/b>&lt;/td>&lt;td>
+	%parm[#6]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricFruType&lt;/b>&lt;/td>&lt;td>
+	%parm[#7]%;&lt;/td>&lt;td>&lt;p>
+		other(1)
+		clockGenerator(2)
+		flexiblePicConcentrator(3)
+		switchingAndForwardingModule(4)
+		controlBoard(5)
+		routingEngine(6)
+		powerEntryModule(7)
+		frontPanelModule(8)
+		switchInterfaceBoard(9)
+		processorMezzanineBoardForSIB(10)
+		portInterfaceCard(11)
+		craftInterfacePanel(12)
+		fan(13)
+		lineCardChassis(14)
+		forwardingEngineBoard(15)
+		protectedSystemDomain(16)
+	&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricFruSlot&lt;/b>&lt;/td>&lt;td>
+	%parm[#8]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricFruOfflineReason&lt;/b>&lt;/td>&lt;td>
+	%parm[#9]%;&lt;/td>&lt;td>&lt;p>
+		unknown(1)
+		none(2)
+		error(3)
+		noPower(4)
+		configPowerOff(5)
+		configHoldInReset(6)
+		cliCommand(7)
+		buttonPress(8)
+		cliRestart(9)
+		overtempShutdown(10)
+		masterClockDown(11)
+		singleSfmModeChange(12)
+		packetSchedulingModeChange(13)
+		physicalRemoval(14)
+		unresponsiveRestart(15)
+		sonetClockAbsent(16)
+		rddPowerOff(17)
+		majorErrors(18)
+		minorErrors(19)
+		lccHardRestart(20)
+		lccVersionMismatch(21)
+		powerCycle(22)
+		reconnect(23)
+		overvoltage(24)
+		pfeVersionMismatch(25)
+		febRddCfgChange(26)
+		fpcMisconfig(27)
+		fruReconnectFail(28)
+		fruFwddReset(29)
+		fruFebSwitch(30)
+		fruFebOffline(31)
+		fruInServSoftUpgradeError(32)
+		fruChasdPowerRatingExceed(33)
+		fruConfigOffline(34)
+		fruServiceRestartRequest(35)
+		spuResetRequest(36)
+		spuFlowdDown(37)
+		spuSpi4Down(38)
+		spuWatchdogTimeout(39)
+		spuCoreDump(40)
+		fpgaSpi4LinkDown(41)
+		i3Spi4LinkDown(42)
+		cppDisconnect(43)
+		cpuNotBoot(44)
+		spuCoreDumpComplete(45)
+		rstOnSpcSpuFailure(46)
+		softRstOnSpcSpuFailure(47)
+		hwAuthenticationFailure(48)
+		reconnectFpcFail(49)
+		fpcAppFailed(50)
+		fpcKernelCrash(51)
+		spuFlowdDownNoCore(52)
+		spuFlowdCoreDumpIncomplete(53)
+		spuFlowdCoreDumpComplete(54)
+		spuIdpdDownNoCore(55)
+		spuIdpdCoreDumpIncomplete(56)
+		spuIdpdCoreDumpComplete(57)
+		spuCoreDumpIncomplete(58)
+		spuIdpdDown(59)
+		fruPfeReset(60)
+		fruReconnectNotReady(61)
+		fruSfLinkDown(62)
+		fruFabricDown(63)
+		fruAntiCounterfeitRetry(64)
+		fruFPCChassisClusterDisable(65)
+		spuFipsError(66)
+		fruFPCFabricDownOffline(67)
+		febCfgChange(68)
+		routeLocalizationRoleChange(69)
+		fruFpcUnsupported(70)
+		psdVersionMismatch(71)
+		fruResetThresholdExceeded(72)
+		picBounce(73)
+		badVoltage(74)
+		fruFPCReducedFabricBW(75)
+	&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricFruLastPowerOff&lt;/b>&lt;/td>&lt;td>
+	%parm[#10]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricFruLastPowerOn&lt;/b>&lt;/td>&lt;td>
+	%parm[#11]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>&lt;/table>
+	</descr>
+      <logmsg dest="logndisplay">&lt;p>
+	jnxFabricFruOffline trap received
+	jnxFabricDeviceIndex=%parm[#1]%
+	jnxFabricFruContentsIndex=%parm[#2]%
+	jnxFabricFruL1Index=%parm[#3]%
+	jnxFabricFruL2Index=%parm[#4]%
+	jnxFabricFruL3Index=%parm[#5]%
+	jnxFabricFruName=%parm[#6]%
+	jnxFabricFruType=%parm[#7]%
+	jnxFabricFruSlot=%parm[#8]%
+	jnxFabricFruOfflineReason=%parm[#9]%
+	jnxFabricFruLastPowerOff=%parm[#10]%
+	jnxFabricFruLastPowerOn=%parm[#11]%&lt;/p>
+	</logmsg>
+      <severity>Normal</severity>
+      <varbindsdecode>
+         <parmid>parm[#7]</parmid>
+         <decode varbindvalue="1" varbinddecodedstring="other"/>
+         <decode varbindvalue="2" varbinddecodedstring="clockGenerator"/>
+         <decode varbindvalue="3" varbinddecodedstring="flexiblePicConcentrator"/>
+         <decode varbindvalue="4" varbinddecodedstring="switchingAndForwardingModule"/>
+         <decode varbindvalue="5" varbinddecodedstring="controlBoard"/>
+         <decode varbindvalue="6" varbinddecodedstring="routingEngine"/>
+         <decode varbindvalue="7" varbinddecodedstring="powerEntryModule"/>
+         <decode varbindvalue="8" varbinddecodedstring="frontPanelModule"/>
+         <decode varbindvalue="9" varbinddecodedstring="switchInterfaceBoard"/>
+         <decode varbindvalue="10" varbinddecodedstring="processorMezzanineBoardForSIB"/>
+         <decode varbindvalue="11" varbinddecodedstring="portInterfaceCard"/>
+         <decode varbindvalue="12" varbinddecodedstring="craftInterfacePanel"/>
+         <decode varbindvalue="13" varbinddecodedstring="fan"/>
+         <decode varbindvalue="14" varbinddecodedstring="lineCardChassis"/>
+         <decode varbindvalue="15" varbinddecodedstring="forwardingEngineBoard"/>
+         <decode varbindvalue="16" varbinddecodedstring="protectedSystemDomain"/>
+      </varbindsdecode>
+      <varbindsdecode>
+         <parmid>parm[#9]</parmid>
+         <decode varbindvalue="1" varbinddecodedstring="unknown"/>
+         <decode varbindvalue="2" varbinddecodedstring="none"/>
+         <decode varbindvalue="3" varbinddecodedstring="error"/>
+         <decode varbindvalue="4" varbinddecodedstring="noPower"/>
+         <decode varbindvalue="5" varbinddecodedstring="configPowerOff"/>
+         <decode varbindvalue="6" varbinddecodedstring="configHoldInReset"/>
+         <decode varbindvalue="7" varbinddecodedstring="cliCommand"/>
+         <decode varbindvalue="8" varbinddecodedstring="buttonPress"/>
+         <decode varbindvalue="9" varbinddecodedstring="cliRestart"/>
+         <decode varbindvalue="10" varbinddecodedstring="overtempShutdown"/>
+         <decode varbindvalue="11" varbinddecodedstring="masterClockDown"/>
+         <decode varbindvalue="12" varbinddecodedstring="singleSfmModeChange"/>
+         <decode varbindvalue="13" varbinddecodedstring="packetSchedulingModeChange"/>
+         <decode varbindvalue="14" varbinddecodedstring="physicalRemoval"/>
+         <decode varbindvalue="15" varbinddecodedstring="unresponsiveRestart"/>
+         <decode varbindvalue="16" varbinddecodedstring="sonetClockAbsent"/>
+         <decode varbindvalue="17" varbinddecodedstring="rddPowerOff"/>
+         <decode varbindvalue="18" varbinddecodedstring="majorErrors"/>
+         <decode varbindvalue="19" varbinddecodedstring="minorErrors"/>
+         <decode varbindvalue="20" varbinddecodedstring="lccHardRestart"/>
+         <decode varbindvalue="21" varbinddecodedstring="lccVersionMismatch"/>
+         <decode varbindvalue="22" varbinddecodedstring="powerCycle"/>
+         <decode varbindvalue="23" varbinddecodedstring="reconnect"/>
+         <decode varbindvalue="24" varbinddecodedstring="overvoltage"/>
+         <decode varbindvalue="25" varbinddecodedstring="pfeVersionMismatch"/>
+         <decode varbindvalue="26" varbinddecodedstring="febRddCfgChange"/>
+         <decode varbindvalue="27" varbinddecodedstring="fpcMisconfig"/>
+         <decode varbindvalue="28" varbinddecodedstring="fruReconnectFail"/>
+         <decode varbindvalue="29" varbinddecodedstring="fruFwddReset"/>
+         <decode varbindvalue="30" varbinddecodedstring="fruFebSwitch"/>
+         <decode varbindvalue="31" varbinddecodedstring="fruFebOffline"/>
+         <decode varbindvalue="32" varbinddecodedstring="fruInServSoftUpgradeError"/>
+         <decode varbindvalue="33" varbinddecodedstring="fruChasdPowerRatingExceed"/>
+         <decode varbindvalue="34" varbinddecodedstring="fruConfigOffline"/>
+         <decode varbindvalue="35" varbinddecodedstring="fruServiceRestartRequest"/>
+         <decode varbindvalue="36" varbinddecodedstring="spuResetRequest"/>
+         <decode varbindvalue="37" varbinddecodedstring="spuFlowdDown"/>
+         <decode varbindvalue="38" varbinddecodedstring="spuSpi4Down"/>
+         <decode varbindvalue="39" varbinddecodedstring="spuWatchdogTimeout"/>
+         <decode varbindvalue="40" varbinddecodedstring="spuCoreDump"/>
+         <decode varbindvalue="41" varbinddecodedstring="fpgaSpi4LinkDown"/>
+         <decode varbindvalue="42" varbinddecodedstring="i3Spi4LinkDown"/>
+         <decode varbindvalue="43" varbinddecodedstring="cppDisconnect"/>
+         <decode varbindvalue="44" varbinddecodedstring="cpuNotBoot"/>
+         <decode varbindvalue="45" varbinddecodedstring="spuCoreDumpComplete"/>
+         <decode varbindvalue="46" varbinddecodedstring="rstOnSpcSpuFailure"/>
+         <decode varbindvalue="47" varbinddecodedstring="softRstOnSpcSpuFailure"/>
+         <decode varbindvalue="48" varbinddecodedstring="hwAuthenticationFailure"/>
+         <decode varbindvalue="49" varbinddecodedstring="reconnectFpcFail"/>
+         <decode varbindvalue="50" varbinddecodedstring="fpcAppFailed"/>
+         <decode varbindvalue="51" varbinddecodedstring="fpcKernelCrash"/>
+         <decode varbindvalue="52" varbinddecodedstring="spuFlowdDownNoCore"/>
+         <decode varbindvalue="53" varbinddecodedstring="spuFlowdCoreDumpIncomplete"/>
+         <decode varbindvalue="54" varbinddecodedstring="spuFlowdCoreDumpComplete"/>
+         <decode varbindvalue="55" varbinddecodedstring="spuIdpdDownNoCore"/>
+         <decode varbindvalue="56" varbinddecodedstring="spuIdpdCoreDumpIncomplete"/>
+         <decode varbindvalue="57" varbinddecodedstring="spuIdpdCoreDumpComplete"/>
+         <decode varbindvalue="58" varbinddecodedstring="spuCoreDumpIncomplete"/>
+         <decode varbindvalue="59" varbinddecodedstring="spuIdpdDown"/>
+         <decode varbindvalue="60" varbinddecodedstring="fruPfeReset"/>
+         <decode varbindvalue="61" varbinddecodedstring="fruReconnectNotReady"/>
+         <decode varbindvalue="62" varbinddecodedstring="fruSfLinkDown"/>
+         <decode varbindvalue="63" varbinddecodedstring="fruFabricDown"/>
+         <decode varbindvalue="64" varbinddecodedstring="fruAntiCounterfeitRetry"/>
+         <decode varbindvalue="65" varbinddecodedstring="fruFPCChassisClusterDisable"/>
+         <decode varbindvalue="66" varbinddecodedstring="spuFipsError"/>
+         <decode varbindvalue="67" varbinddecodedstring="fruFPCFabricDownOffline"/>
+         <decode varbindvalue="68" varbinddecodedstring="febCfgChange"/>
+         <decode varbindvalue="69" varbinddecodedstring="routeLocalizationRoleChange"/>
+         <decode varbindvalue="70" varbinddecodedstring="fruFpcUnsupported"/>
+         <decode varbindvalue="71" varbinddecodedstring="psdVersionMismatch"/>
+         <decode varbindvalue="72" varbinddecodedstring="fruResetThresholdExceeded"/>
+         <decode varbindvalue="73" varbinddecodedstring="picBounce"/>
+         <decode varbindvalue="74" varbinddecodedstring="badVoltage"/>
+         <decode varbindvalue="75" varbinddecodedstring="fruFPCReducedFabricBW"/>
+      </varbindsdecode>
+   </event>
+   <event>
+      <mask>
+         <maskelement>
+            <mename>id</mename>
+            <mevalue>.1.3.6.1.4.1.2636.4.19</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>generic</mename>
+            <mevalue>6</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>specific</mename>
+            <mevalue>11</mevalue>
+         </maskelement>
+      </mask>
+      <uei>uei.opennms.org/traps/JUNIPER-FABRIC-CHASSIS/jnxFabricFruOnline</uei>
+      <event-label>JUNIPER-FABRIC-CHASSIS defined trap event: jnxFabricFruOnline</event-label>
+      <descr>
+&lt;p>A jnxFabricFruOnline trap signifies that the SNMP
+                entity, acting in an agent role, has detected that
+                the specified FRU (Field Replaceable Unit) has
+                gone online in the chassis.&lt;/p>&lt;table>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricDeviceIndex&lt;/b>&lt;/td>&lt;td>
+	%parm[#1]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricFruContentsIndex&lt;/b>&lt;/td>&lt;td>
+	%parm[#2]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricFruL1Index&lt;/b>&lt;/td>&lt;td>
+	%parm[#3]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricFruL2Index&lt;/b>&lt;/td>&lt;td>
+	%parm[#4]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricFruL3Index&lt;/b>&lt;/td>&lt;td>
+	%parm[#5]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricFruName&lt;/b>&lt;/td>&lt;td>
+	%parm[#6]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricFruType&lt;/b>&lt;/td>&lt;td>
+	%parm[#7]%;&lt;/td>&lt;td>&lt;p>
+		other(1)
+		clockGenerator(2)
+		flexiblePicConcentrator(3)
+		switchingAndForwardingModule(4)
+		controlBoard(5)
+		routingEngine(6)
+		powerEntryModule(7)
+		frontPanelModule(8)
+		switchInterfaceBoard(9)
+		processorMezzanineBoardForSIB(10)
+		portInterfaceCard(11)
+		craftInterfacePanel(12)
+		fan(13)
+		lineCardChassis(14)
+		forwardingEngineBoard(15)
+		protectedSystemDomain(16)
+	&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricFruSlot&lt;/b>&lt;/td>&lt;td>
+	%parm[#8]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>&lt;/table>
+	</descr>
+      <logmsg dest="logndisplay">&lt;p>
+	jnxFabricFruOnline trap received
+	jnxFabricDeviceIndex=%parm[#1]%
+	jnxFabricFruContentsIndex=%parm[#2]%
+	jnxFabricFruL1Index=%parm[#3]%
+	jnxFabricFruL2Index=%parm[#4]%
+	jnxFabricFruL3Index=%parm[#5]%
+	jnxFabricFruName=%parm[#6]%
+	jnxFabricFruType=%parm[#7]%
+	jnxFabricFruSlot=%parm[#8]%&lt;/p>
+	</logmsg>
+      <severity>Normal</severity>
+      <varbindsdecode>
+         <parmid>parm[#7]</parmid>
+         <decode varbindvalue="1" varbinddecodedstring="other"/>
+         <decode varbindvalue="2" varbinddecodedstring="clockGenerator"/>
+         <decode varbindvalue="3" varbinddecodedstring="flexiblePicConcentrator"/>
+         <decode varbindvalue="4" varbinddecodedstring="switchingAndForwardingModule"/>
+         <decode varbindvalue="5" varbinddecodedstring="controlBoard"/>
+         <decode varbindvalue="6" varbinddecodedstring="routingEngine"/>
+         <decode varbindvalue="7" varbinddecodedstring="powerEntryModule"/>
+         <decode varbindvalue="8" varbinddecodedstring="frontPanelModule"/>
+         <decode varbindvalue="9" varbinddecodedstring="switchInterfaceBoard"/>
+         <decode varbindvalue="10" varbinddecodedstring="processorMezzanineBoardForSIB"/>
+         <decode varbindvalue="11" varbinddecodedstring="portInterfaceCard"/>
+         <decode varbindvalue="12" varbinddecodedstring="craftInterfacePanel"/>
+         <decode varbindvalue="13" varbinddecodedstring="fan"/>
+         <decode varbindvalue="14" varbinddecodedstring="lineCardChassis"/>
+         <decode varbindvalue="15" varbinddecodedstring="forwardingEngineBoard"/>
+         <decode varbindvalue="16" varbinddecodedstring="protectedSystemDomain"/>
+      </varbindsdecode>
+   </event>
+   <event>
+      <mask>
+         <maskelement>
+            <mename>id</mename>
+            <mevalue>.1.3.6.1.4.1.2636.4.19</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>generic</mename>
+            <mevalue>6</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>specific</mename>
+            <mevalue>12</mevalue>
+         </maskelement>
+      </mask>
+      <uei>uei.opennms.org/traps/JUNIPER-FABRIC-CHASSIS/jnxFabricFruCheck</uei>
+      <event-label>JUNIPER-FABRIC-CHASSIS defined trap event: jnxFabricFruCheck</event-label>
+      <descr>
+&lt;p>A jnxFabricFruCheck trap signifies that the SNMP
+                entity, acting in an agent role, has detected that
+                the specified FRU (Field Replaceable Unit) has
+                encountered some operational errors and gone into
+                check state in the chassis.&lt;/p>&lt;table>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricDeviceIndex&lt;/b>&lt;/td>&lt;td>
+	%parm[#1]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricFruContentsIndex&lt;/b>&lt;/td>&lt;td>
+	%parm[#2]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricFruL1Index&lt;/b>&lt;/td>&lt;td>
+	%parm[#3]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricFruL2Index&lt;/b>&lt;/td>&lt;td>
+	%parm[#4]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricFruL3Index&lt;/b>&lt;/td>&lt;td>
+	%parm[#5]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricFruName&lt;/b>&lt;/td>&lt;td>
+	%parm[#6]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricFruType&lt;/b>&lt;/td>&lt;td>
+	%parm[#7]%;&lt;/td>&lt;td>&lt;p>
+		other(1)
+		clockGenerator(2)
+		flexiblePicConcentrator(3)
+		switchingAndForwardingModule(4)
+		controlBoard(5)
+		routingEngine(6)
+		powerEntryModule(7)
+		frontPanelModule(8)
+		switchInterfaceBoard(9)
+		processorMezzanineBoardForSIB(10)
+		portInterfaceCard(11)
+		craftInterfacePanel(12)
+		fan(13)
+		lineCardChassis(14)
+		forwardingEngineBoard(15)
+		protectedSystemDomain(16)
+	&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricFruSlot&lt;/b>&lt;/td>&lt;td>
+	%parm[#8]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>&lt;/table>
+	</descr>
+      <logmsg dest="logndisplay">&lt;p>
+	jnxFabricFruCheck trap received
+	jnxFabricDeviceIndex=%parm[#1]%
+	jnxFabricFruContentsIndex=%parm[#2]%
+	jnxFabricFruL1Index=%parm[#3]%
+	jnxFabricFruL2Index=%parm[#4]%
+	jnxFabricFruL3Index=%parm[#5]%
+	jnxFabricFruName=%parm[#6]%
+	jnxFabricFruType=%parm[#7]%
+	jnxFabricFruSlot=%parm[#8]%&lt;/p>
+	</logmsg>
+      <severity>Normal</severity>
+      <varbindsdecode>
+         <parmid>parm[#7]</parmid>
+         <decode varbindvalue="1" varbinddecodedstring="other"/>
+         <decode varbindvalue="2" varbinddecodedstring="clockGenerator"/>
+         <decode varbindvalue="3" varbinddecodedstring="flexiblePicConcentrator"/>
+         <decode varbindvalue="4" varbinddecodedstring="switchingAndForwardingModule"/>
+         <decode varbindvalue="5" varbinddecodedstring="controlBoard"/>
+         <decode varbindvalue="6" varbinddecodedstring="routingEngine"/>
+         <decode varbindvalue="7" varbinddecodedstring="powerEntryModule"/>
+         <decode varbindvalue="8" varbinddecodedstring="frontPanelModule"/>
+         <decode varbindvalue="9" varbinddecodedstring="switchInterfaceBoard"/>
+         <decode varbindvalue="10" varbinddecodedstring="processorMezzanineBoardForSIB"/>
+         <decode varbindvalue="11" varbinddecodedstring="portInterfaceCard"/>
+         <decode varbindvalue="12" varbinddecodedstring="craftInterfacePanel"/>
+         <decode varbindvalue="13" varbinddecodedstring="fan"/>
+         <decode varbindvalue="14" varbinddecodedstring="lineCardChassis"/>
+         <decode varbindvalue="15" varbinddecodedstring="forwardingEngineBoard"/>
+         <decode varbindvalue="16" varbinddecodedstring="protectedSystemDomain"/>
+      </varbindsdecode>
+   </event>
+   <event>
+      <mask>
+         <maskelement>
+            <mename>id</mename>
+            <mevalue>.1.3.6.1.4.1.2636.4.19</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>generic</mename>
+            <mevalue>6</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>specific</mename>
+            <mevalue>13</mevalue>
+         </maskelement>
+      </mask>
+      <uei>uei.opennms.org/traps/JUNIPER-FABRIC-CHASSIS/jnxFabricFEBSwitchover</uei>
+      <event-label>JUNIPER-FABRIC-CHASSIS defined trap event: jnxFabricFEBSwitchover</event-label>
+      <descr>
+&lt;p>A jnxFabricFEBSwitchover trap signifies that the SNMP
+                entity, acting in an agent role, has detected that
+                the specified FEB (Forwarding Engine Board) has
+                switched over.&lt;/p>&lt;table>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricDeviceIndex&lt;/b>&lt;/td>&lt;td>
+	%parm[#1]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricFruContentsIndex&lt;/b>&lt;/td>&lt;td>
+	%parm[#2]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricFruL1Index&lt;/b>&lt;/td>&lt;td>
+	%parm[#3]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricFruL2Index&lt;/b>&lt;/td>&lt;td>
+	%parm[#4]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricFruL3Index&lt;/b>&lt;/td>&lt;td>
+	%parm[#5]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricFruName&lt;/b>&lt;/td>&lt;td>
+	%parm[#6]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricFruType&lt;/b>&lt;/td>&lt;td>
+	%parm[#7]%;&lt;/td>&lt;td>&lt;p>
+		other(1)
+		clockGenerator(2)
+		flexiblePicConcentrator(3)
+		switchingAndForwardingModule(4)
+		controlBoard(5)
+		routingEngine(6)
+		powerEntryModule(7)
+		frontPanelModule(8)
+		switchInterfaceBoard(9)
+		processorMezzanineBoardForSIB(10)
+		portInterfaceCard(11)
+		craftInterfacePanel(12)
+		fan(13)
+		lineCardChassis(14)
+		forwardingEngineBoard(15)
+		protectedSystemDomain(16)
+	&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricFruSlot&lt;/b>&lt;/td>&lt;td>
+	%parm[#8]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>&lt;/table>
+	</descr>
+      <logmsg dest="logndisplay">&lt;p>
+	jnxFabricFEBSwitchover trap received
+	jnxFabricDeviceIndex=%parm[#1]%
+	jnxFabricFruContentsIndex=%parm[#2]%
+	jnxFabricFruL1Index=%parm[#3]%
+	jnxFabricFruL2Index=%parm[#4]%
+	jnxFabricFruL3Index=%parm[#5]%
+	jnxFabricFruName=%parm[#6]%
+	jnxFabricFruType=%parm[#7]%
+	jnxFabricFruSlot=%parm[#8]%&lt;/p>
+	</logmsg>
+      <severity>Normal</severity>
+      <varbindsdecode>
+         <parmid>parm[#7]</parmid>
+         <decode varbindvalue="1" varbinddecodedstring="other"/>
+         <decode varbindvalue="2" varbinddecodedstring="clockGenerator"/>
+         <decode varbindvalue="3" varbinddecodedstring="flexiblePicConcentrator"/>
+         <decode varbindvalue="4" varbinddecodedstring="switchingAndForwardingModule"/>
+         <decode varbindvalue="5" varbinddecodedstring="controlBoard"/>
+         <decode varbindvalue="6" varbinddecodedstring="routingEngine"/>
+         <decode varbindvalue="7" varbinddecodedstring="powerEntryModule"/>
+         <decode varbindvalue="8" varbinddecodedstring="frontPanelModule"/>
+         <decode varbindvalue="9" varbinddecodedstring="switchInterfaceBoard"/>
+         <decode varbindvalue="10" varbinddecodedstring="processorMezzanineBoardForSIB"/>
+         <decode varbindvalue="11" varbinddecodedstring="portInterfaceCard"/>
+         <decode varbindvalue="12" varbinddecodedstring="craftInterfacePanel"/>
+         <decode varbindvalue="13" varbinddecodedstring="fan"/>
+         <decode varbindvalue="14" varbinddecodedstring="lineCardChassis"/>
+         <decode varbindvalue="15" varbinddecodedstring="forwardingEngineBoard"/>
+         <decode varbindvalue="16" varbinddecodedstring="protectedSystemDomain"/>
+      </varbindsdecode>
+   </event>
+   <event>
+      <mask>
+         <maskelement>
+            <mename>id</mename>
+            <mevalue>.1.3.6.1.4.1.2636.4.19</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>generic</mename>
+            <mevalue>6</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>specific</mename>
+            <mevalue>14</mevalue>
+         </maskelement>
+      </mask>
+      <uei>uei.opennms.org/traps/JUNIPER-FABRIC-CHASSIS/jnxFabricHardDiskFailed</uei>
+      <event-label>JUNIPER-FABRIC-CHASSIS defined trap event: jnxFabricHardDiskFailed</event-label>
+      <descr>
+&lt;p>A jnxHardDiskFailed trap signifies that the SNMP
+                entity, acting in an agent role, has detected that
+                the Disk in the specified Routing Engine has
+                encountered some operational errors and gone into
+                failed state in the chassis.&lt;/p>&lt;table>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricDeviceIndex&lt;/b>&lt;/td>&lt;td>
+	%parm[#1]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricFruContentsIndex&lt;/b>&lt;/td>&lt;td>
+	%parm[#2]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricFruL1Index&lt;/b>&lt;/td>&lt;td>
+	%parm[#3]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricFruL2Index&lt;/b>&lt;/td>&lt;td>
+	%parm[#4]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricFruL3Index&lt;/b>&lt;/td>&lt;td>
+	%parm[#5]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricFruName&lt;/b>&lt;/td>&lt;td>
+	%parm[#6]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricFruType&lt;/b>&lt;/td>&lt;td>
+	%parm[#7]%;&lt;/td>&lt;td>&lt;p>
+		other(1)
+		clockGenerator(2)
+		flexiblePicConcentrator(3)
+		switchingAndForwardingModule(4)
+		controlBoard(5)
+		routingEngine(6)
+		powerEntryModule(7)
+		frontPanelModule(8)
+		switchInterfaceBoard(9)
+		processorMezzanineBoardForSIB(10)
+		portInterfaceCard(11)
+		craftInterfacePanel(12)
+		fan(13)
+		lineCardChassis(14)
+		forwardingEngineBoard(15)
+		protectedSystemDomain(16)
+	&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricFruSlot&lt;/b>&lt;/td>&lt;td>
+	%parm[#8]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>&lt;/table>
+	</descr>
+      <logmsg dest="logndisplay">&lt;p>
+	jnxFabricHardDiskFailed trap received
+	jnxFabricDeviceIndex=%parm[#1]%
+	jnxFabricFruContentsIndex=%parm[#2]%
+	jnxFabricFruL1Index=%parm[#3]%
+	jnxFabricFruL2Index=%parm[#4]%
+	jnxFabricFruL3Index=%parm[#5]%
+	jnxFabricFruName=%parm[#6]%
+	jnxFabricFruType=%parm[#7]%
+	jnxFabricFruSlot=%parm[#8]%&lt;/p>
+	</logmsg>
+      <severity>Normal</severity>
+      <varbindsdecode>
+         <parmid>parm[#7]</parmid>
+         <decode varbindvalue="1" varbinddecodedstring="other"/>
+         <decode varbindvalue="2" varbinddecodedstring="clockGenerator"/>
+         <decode varbindvalue="3" varbinddecodedstring="flexiblePicConcentrator"/>
+         <decode varbindvalue="4" varbinddecodedstring="switchingAndForwardingModule"/>
+         <decode varbindvalue="5" varbinddecodedstring="controlBoard"/>
+         <decode varbindvalue="6" varbinddecodedstring="routingEngine"/>
+         <decode varbindvalue="7" varbinddecodedstring="powerEntryModule"/>
+         <decode varbindvalue="8" varbinddecodedstring="frontPanelModule"/>
+         <decode varbindvalue="9" varbinddecodedstring="switchInterfaceBoard"/>
+         <decode varbindvalue="10" varbinddecodedstring="processorMezzanineBoardForSIB"/>
+         <decode varbindvalue="11" varbinddecodedstring="portInterfaceCard"/>
+         <decode varbindvalue="12" varbinddecodedstring="craftInterfacePanel"/>
+         <decode varbindvalue="13" varbinddecodedstring="fan"/>
+         <decode varbindvalue="14" varbinddecodedstring="lineCardChassis"/>
+         <decode varbindvalue="15" varbinddecodedstring="forwardingEngineBoard"/>
+         <decode varbindvalue="16" varbinddecodedstring="protectedSystemDomain"/>
+      </varbindsdecode>
+   </event>
+   <event>
+      <mask>
+         <maskelement>
+            <mename>id</mename>
+            <mevalue>.1.3.6.1.4.1.2636.4.19</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>generic</mename>
+            <mevalue>6</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>specific</mename>
+            <mevalue>15</mevalue>
+         </maskelement>
+      </mask>
+      <uei>uei.opennms.org/traps/JUNIPER-FABRIC-CHASSIS/jnxFabricHardDiskMissing</uei>
+      <event-label>JUNIPER-FABRIC-CHASSIS defined trap event: jnxFabricHardDiskMissing</event-label>
+      <descr>
+&lt;p>A DiskMissing trap signifies that the SNMP
+                entity, acting in an agent role, has detected that
+                hard disk in the specified outing Engine is missing
+                from boot device list.&lt;/p>&lt;table>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricDeviceIndex&lt;/b>&lt;/td>&lt;td>
+	%parm[#1]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricFruContentsIndex&lt;/b>&lt;/td>&lt;td>
+	%parm[#2]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricFruL1Index&lt;/b>&lt;/td>&lt;td>
+	%parm[#3]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricFruL2Index&lt;/b>&lt;/td>&lt;td>
+	%parm[#4]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricFruL3Index&lt;/b>&lt;/td>&lt;td>
+	%parm[#5]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricFruName&lt;/b>&lt;/td>&lt;td>
+	%parm[#6]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricFruType&lt;/b>&lt;/td>&lt;td>
+	%parm[#7]%;&lt;/td>&lt;td>&lt;p>
+		other(1)
+		clockGenerator(2)
+		flexiblePicConcentrator(3)
+		switchingAndForwardingModule(4)
+		controlBoard(5)
+		routingEngine(6)
+		powerEntryModule(7)
+		frontPanelModule(8)
+		switchInterfaceBoard(9)
+		processorMezzanineBoardForSIB(10)
+		portInterfaceCard(11)
+		craftInterfacePanel(12)
+		fan(13)
+		lineCardChassis(14)
+		forwardingEngineBoard(15)
+		protectedSystemDomain(16)
+	&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricFruSlot&lt;/b>&lt;/td>&lt;td>
+	%parm[#8]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>&lt;/table>
+	</descr>
+      <logmsg dest="logndisplay">&lt;p>
+	jnxFabricHardDiskMissing trap received
+	jnxFabricDeviceIndex=%parm[#1]%
+	jnxFabricFruContentsIndex=%parm[#2]%
+	jnxFabricFruL1Index=%parm[#3]%
+	jnxFabricFruL2Index=%parm[#4]%
+	jnxFabricFruL3Index=%parm[#5]%
+	jnxFabricFruName=%parm[#6]%
+	jnxFabricFruType=%parm[#7]%
+	jnxFabricFruSlot=%parm[#8]%&lt;/p>
+	</logmsg>
+      <severity>Major</severity>
+      <varbindsdecode>
+         <parmid>parm[#7]</parmid>
+         <decode varbindvalue="1" varbinddecodedstring="other"/>
+         <decode varbindvalue="2" varbinddecodedstring="clockGenerator"/>
+         <decode varbindvalue="3" varbinddecodedstring="flexiblePicConcentrator"/>
+         <decode varbindvalue="4" varbinddecodedstring="switchingAndForwardingModule"/>
+         <decode varbindvalue="5" varbinddecodedstring="controlBoard"/>
+         <decode varbindvalue="6" varbinddecodedstring="routingEngine"/>
+         <decode varbindvalue="7" varbinddecodedstring="powerEntryModule"/>
+         <decode varbindvalue="8" varbinddecodedstring="frontPanelModule"/>
+         <decode varbindvalue="9" varbinddecodedstring="switchInterfaceBoard"/>
+         <decode varbindvalue="10" varbinddecodedstring="processorMezzanineBoardForSIB"/>
+         <decode varbindvalue="11" varbinddecodedstring="portInterfaceCard"/>
+         <decode varbindvalue="12" varbinddecodedstring="craftInterfacePanel"/>
+         <decode varbindvalue="13" varbinddecodedstring="fan"/>
+         <decode varbindvalue="14" varbinddecodedstring="lineCardChassis"/>
+         <decode varbindvalue="15" varbinddecodedstring="forwardingEngineBoard"/>
+         <decode varbindvalue="16" varbinddecodedstring="protectedSystemDomain"/>
+      </varbindsdecode>
+   </event>
+   <event>
+      <mask>
+         <maskelement>
+            <mename>id</mename>
+            <mevalue>.1.3.6.1.4.1.2636.4.19</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>generic</mename>
+            <mevalue>6</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>specific</mename>
+            <mevalue>16</mevalue>
+         </maskelement>
+      </mask>
+      <uei>uei.opennms.org/traps/JUNIPER-FABRIC-CHASSIS/jnxFabricBootFromBackup</uei>
+      <event-label>JUNIPER-FABRIC-CHASSIS defined trap event: jnxFabricBootFromBackup</event-label>
+      <descr>
+&lt;p>A jnxBootFromBackup trap signifies that the SNMP
+                 entity, acting in an agent role, has detected that
+                 the specified  routing-engine/member has booted from
+                 the back up root partition&lt;/p>&lt;table>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricFruContentsIndex&lt;/b>&lt;/td>&lt;td>
+	%parm[#1]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricFruL1Index&lt;/b>&lt;/td>&lt;td>
+	%parm[#2]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricFruL2Index&lt;/b>&lt;/td>&lt;td>
+	%parm[#3]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricFruL3Index&lt;/b>&lt;/td>&lt;td>
+	%parm[#4]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricFruName&lt;/b>&lt;/td>&lt;td>
+	%parm[#5]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricFruType&lt;/b>&lt;/td>&lt;td>
+	%parm[#6]%;&lt;/td>&lt;td>&lt;p>
+		other(1)
+		clockGenerator(2)
+		flexiblePicConcentrator(3)
+		switchingAndForwardingModule(4)
+		controlBoard(5)
+		routingEngine(6)
+		powerEntryModule(7)
+		frontPanelModule(8)
+		switchInterfaceBoard(9)
+		processorMezzanineBoardForSIB(10)
+		portInterfaceCard(11)
+		craftInterfacePanel(12)
+		fan(13)
+		lineCardChassis(14)
+		forwardingEngineBoard(15)
+		protectedSystemDomain(16)
+	&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricFruSlot&lt;/b>&lt;/td>&lt;td>
+	%parm[#7]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>&lt;/table>
+	</descr>
+      <logmsg dest="logndisplay">&lt;p>
+	jnxFabricBootFromBackup trap received
+	jnxFabricFruContentsIndex=%parm[#1]%
+	jnxFabricFruL1Index=%parm[#2]%
+	jnxFabricFruL2Index=%parm[#3]%
+	jnxFabricFruL3Index=%parm[#4]%
+	jnxFabricFruName=%parm[#5]%
+	jnxFabricFruType=%parm[#6]%
+	jnxFabricFruSlot=%parm[#7]%&lt;/p>
+	</logmsg>
+      <severity>Normal</severity>
+      <varbindsdecode>
+         <parmid>parm[#6]</parmid>
+         <decode varbindvalue="1" varbinddecodedstring="other"/>
+         <decode varbindvalue="2" varbinddecodedstring="clockGenerator"/>
+         <decode varbindvalue="3" varbinddecodedstring="flexiblePicConcentrator"/>
+         <decode varbindvalue="4" varbinddecodedstring="switchingAndForwardingModule"/>
+         <decode varbindvalue="5" varbinddecodedstring="controlBoard"/>
+         <decode varbindvalue="6" varbinddecodedstring="routingEngine"/>
+         <decode varbindvalue="7" varbinddecodedstring="powerEntryModule"/>
+         <decode varbindvalue="8" varbinddecodedstring="frontPanelModule"/>
+         <decode varbindvalue="9" varbinddecodedstring="switchInterfaceBoard"/>
+         <decode varbindvalue="10" varbinddecodedstring="processorMezzanineBoardForSIB"/>
+         <decode varbindvalue="11" varbinddecodedstring="portInterfaceCard"/>
+         <decode varbindvalue="12" varbinddecodedstring="craftInterfacePanel"/>
+         <decode varbindvalue="13" varbinddecodedstring="fan"/>
+         <decode varbindvalue="14" varbinddecodedstring="lineCardChassis"/>
+         <decode varbindvalue="15" varbinddecodedstring="forwardingEngineBoard"/>
+         <decode varbindvalue="16" varbinddecodedstring="protectedSystemDomain"/>
+      </varbindsdecode>
+   </event>
+   <event>
+      <mask>
+         <maskelement>
+            <mename>id</mename>
+            <mevalue>.1.3.6.1.4.1.2636.4.20</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>generic</mename>
+            <mevalue>6</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>specific</mename>
+            <mevalue>1</mevalue>
+         </maskelement>
+      </mask>
+      <uei>uei.opennms.org/traps/JUNIPER-FABRIC-CHASSIS/jnxFabricPowerSupplyOK</uei>
+      <event-label>JUNIPER-FABRIC-CHASSIS defined trap event: jnxFabricPowerSupplyOK</event-label>
+      <descr>
+&lt;p>A jnxFabricPowerSupplyOK trap signifies that the 
+            SNMP entity, acting in an agent role, has
+            detected that the specified power supply in the
+            chassis has recovered from the failure (bad DC output) 
+            condition.&lt;/p>&lt;table>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricDeviceIndex&lt;/b>&lt;/td>&lt;td>
+	%parm[#1]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricContentsContainerIndex&lt;/b>&lt;/td>&lt;td>
+	%parm[#2]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricContentsL1Index&lt;/b>&lt;/td>&lt;td>
+	%parm[#3]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricContentsL2Index&lt;/b>&lt;/td>&lt;td>
+	%parm[#4]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricContentsL3Index&lt;/b>&lt;/td>&lt;td>
+	%parm[#5]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricContentsDescr&lt;/b>&lt;/td>&lt;td>
+	%parm[#6]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricOperatingState&lt;/b>&lt;/td>&lt;td>
+	%parm[#7]%;&lt;/td>&lt;td>&lt;p>
+		unknown(1)
+		running(2)
+		ready(3)
+		reset(4)
+		runningAtFullSpeed(5)
+		down(6)
+		standby(7)
+	&lt;/p>&lt;/td>&lt;/tr>&lt;/table>
+	</descr>
+      <logmsg dest="logndisplay">&lt;p>
+	jnxFabricPowerSupplyOK trap received
+	jnxFabricDeviceIndex=%parm[#1]%
+	jnxFabricContentsContainerIndex=%parm[#2]%
+	jnxFabricContentsL1Index=%parm[#3]%
+	jnxFabricContentsL2Index=%parm[#4]%
+	jnxFabricContentsL3Index=%parm[#5]%
+	jnxFabricContentsDescr=%parm[#6]%
+	jnxFabricOperatingState=%parm[#7]%&lt;/p>
+	</logmsg>
+      <severity>Normal</severity>
+      <varbindsdecode>
+         <parmid>parm[#7]</parmid>
+         <decode varbindvalue="1" varbinddecodedstring="unknown"/>
+         <decode varbindvalue="2" varbinddecodedstring="running"/>
+         <decode varbindvalue="3" varbinddecodedstring="ready"/>
+         <decode varbindvalue="4" varbinddecodedstring="reset"/>
+         <decode varbindvalue="5" varbinddecodedstring="runningAtFullSpeed"/>
+         <decode varbindvalue="6" varbinddecodedstring="down"/>
+         <decode varbindvalue="7" varbinddecodedstring="standby"/>
+      </varbindsdecode>
+   </event>
+   <event>
+      <mask>
+         <maskelement>
+            <mename>id</mename>
+            <mevalue>.1.3.6.1.4.1.2636.4.20</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>generic</mename>
+            <mevalue>6</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>specific</mename>
+            <mevalue>2</mevalue>
+         </maskelement>
+      </mask>
+      <uei>uei.opennms.org/traps/JUNIPER-FABRIC-CHASSIS/jnxFabricFanOK</uei>
+      <event-label>JUNIPER-FABRIC-CHASSIS defined trap event: jnxFabricFanOK</event-label>
+      <descr>
+&lt;p>A jnxFabricFanOK trap signifies that the SNMP
+            entity, acting in an agent role, has detected that
+            the specified cooling fan or impeller in the chassis
+            has recovered from the failure (not spinning) condition.&lt;/p>&lt;table>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricDeviceIndex&lt;/b>&lt;/td>&lt;td>
+	%parm[#1]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricContentsContainerIndex&lt;/b>&lt;/td>&lt;td>
+	%parm[#2]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricContentsL1Index&lt;/b>&lt;/td>&lt;td>
+	%parm[#3]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricContentsL2Index&lt;/b>&lt;/td>&lt;td>
+	%parm[#4]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricContentsL3Index&lt;/b>&lt;/td>&lt;td>
+	%parm[#5]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricContentsDescr&lt;/b>&lt;/td>&lt;td>
+	%parm[#6]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricOperatingState&lt;/b>&lt;/td>&lt;td>
+	%parm[#7]%;&lt;/td>&lt;td>&lt;p>
+		unknown(1)
+		running(2)
+		ready(3)
+		reset(4)
+		runningAtFullSpeed(5)
+		down(6)
+		standby(7)
+	&lt;/p>&lt;/td>&lt;/tr>&lt;/table>
+	</descr>
+      <logmsg dest="logndisplay">&lt;p>
+	jnxFabricFanOK trap received
+	jnxFabricDeviceIndex=%parm[#1]%
+	jnxFabricContentsContainerIndex=%parm[#2]%
+	jnxFabricContentsL1Index=%parm[#3]%
+	jnxFabricContentsL2Index=%parm[#4]%
+	jnxFabricContentsL3Index=%parm[#5]%
+	jnxFabricContentsDescr=%parm[#6]%
+	jnxFabricOperatingState=%parm[#7]%&lt;/p>
+	</logmsg>
+      <severity>Normal</severity>
+      <varbindsdecode>
+         <parmid>parm[#7]</parmid>
+         <decode varbindvalue="1" varbinddecodedstring="unknown"/>
+         <decode varbindvalue="2" varbinddecodedstring="running"/>
+         <decode varbindvalue="3" varbinddecodedstring="ready"/>
+         <decode varbindvalue="4" varbinddecodedstring="reset"/>
+         <decode varbindvalue="5" varbinddecodedstring="runningAtFullSpeed"/>
+         <decode varbindvalue="6" varbinddecodedstring="down"/>
+         <decode varbindvalue="7" varbinddecodedstring="standby"/>
+      </varbindsdecode>
+   </event>
+   <event>
+      <mask>
+         <maskelement>
+            <mename>id</mename>
+            <mevalue>.1.3.6.1.4.1.2636.4.20</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>generic</mename>
+            <mevalue>6</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>specific</mename>
+            <mevalue>3</mevalue>
+         </maskelement>
+      </mask>
+      <uei>uei.opennms.org/traps/JUNIPER-FABRIC-CHASSIS/jnxFabricTemperatureOK</uei>
+      <event-label>JUNIPER-FABRIC-CHASSIS defined trap event: jnxFabricTemperatureOK</event-label>
+      <descr>
+&lt;p>A jnxFabricTemperatureOK trap signifies that the 
+            SNMP entity, acting in an agent role, has 
+            detected that the specified hardware component
+            in the chassis has recovered from over temperature
+            condition.&lt;/p>&lt;table>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricDeviceIndex&lt;/b>&lt;/td>&lt;td>
+	%parm[#1]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricContentsContainerIndex&lt;/b>&lt;/td>&lt;td>
+	%parm[#2]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricContentsL1Index&lt;/b>&lt;/td>&lt;td>
+	%parm[#3]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricContentsL2Index&lt;/b>&lt;/td>&lt;td>
+	%parm[#4]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricContentsL3Index&lt;/b>&lt;/td>&lt;td>
+	%parm[#5]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricContentsDescr&lt;/b>&lt;/td>&lt;td>
+	%parm[#6]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricOperatingTemp&lt;/b>&lt;/td>&lt;td>
+	%parm[#7]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>&lt;/table>
+	</descr>
+      <logmsg dest="logndisplay">&lt;p>
+	jnxFabricTemperatureOK trap received
+	jnxFabricDeviceIndex=%parm[#1]%
+	jnxFabricContentsContainerIndex=%parm[#2]%
+	jnxFabricContentsL1Index=%parm[#3]%
+	jnxFabricContentsL2Index=%parm[#4]%
+	jnxFabricContentsL3Index=%parm[#5]%
+	jnxFabricContentsDescr=%parm[#6]%
+	jnxFabricOperatingTemp=%parm[#7]%&lt;/p>
+	</logmsg>
+      <severity>Normal</severity>
+   </event>
+   <event>
+      <mask>
+         <maskelement>
+            <mename>id</mename>
+            <mevalue>.1.3.6.1.4.1.2636.4.20</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>generic</mename>
+            <mevalue>6</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>specific</mename>
+            <mevalue>4</mevalue>
+         </maskelement>
+      </mask>
+      <uei>uei.opennms.org/traps/JUNIPER-FABRIC-CHASSIS/jnxFabricFruOK</uei>
+      <event-label>JUNIPER-FABRIC-CHASSIS defined trap event: jnxFabricFruOK</event-label>
+      <descr>
+&lt;p>A jnxFabricFabricFruOK trap signifies that the SNMP
+                entity, acting in an agent role, has detected that
+                the specified FRU (Field Replaceable Unit) has
+                recovered from previous operational errors and it
+                is in ok state in the chassis.&lt;/p>&lt;table>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricDeviceIndex&lt;/b>&lt;/td>&lt;td>
+	%parm[#1]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricFruContentsIndex&lt;/b>&lt;/td>&lt;td>
+	%parm[#2]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricFruL1Index&lt;/b>&lt;/td>&lt;td>
+	%parm[#3]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricFruL2Index&lt;/b>&lt;/td>&lt;td>
+	%parm[#4]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricFruL3Index&lt;/b>&lt;/td>&lt;td>
+	%parm[#5]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricFruName&lt;/b>&lt;/td>&lt;td>
+	%parm[#6]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricFruType&lt;/b>&lt;/td>&lt;td>
+	%parm[#7]%;&lt;/td>&lt;td>&lt;p>
+		other(1)
+		clockGenerator(2)
+		flexiblePicConcentrator(3)
+		switchingAndForwardingModule(4)
+		controlBoard(5)
+		routingEngine(6)
+		powerEntryModule(7)
+		frontPanelModule(8)
+		switchInterfaceBoard(9)
+		processorMezzanineBoardForSIB(10)
+		portInterfaceCard(11)
+		craftInterfacePanel(12)
+		fan(13)
+		lineCardChassis(14)
+		forwardingEngineBoard(15)
+		protectedSystemDomain(16)
+	&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	jnxFabricFruSlot&lt;/b>&lt;/td>&lt;td>
+	%parm[#8]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>&lt;/table>
+	</descr>
+      <logmsg dest="logndisplay">&lt;p>
+	jnxFabricFruOK trap received
+	jnxFabricDeviceIndex=%parm[#1]%
+	jnxFabricFruContentsIndex=%parm[#2]%
+	jnxFabricFruL1Index=%parm[#3]%
+	jnxFabricFruL2Index=%parm[#4]%
+	jnxFabricFruL3Index=%parm[#5]%
+	jnxFabricFruName=%parm[#6]%
+	jnxFabricFruType=%parm[#7]%
+	jnxFabricFruSlot=%parm[#8]%&lt;/p>
+	</logmsg>
+      <severity>Normal</severity>
+      <varbindsdecode>
+         <parmid>parm[#7]</parmid>
+         <decode varbindvalue="1" varbinddecodedstring="other"/>
+         <decode varbindvalue="2" varbinddecodedstring="clockGenerator"/>
+         <decode varbindvalue="3" varbinddecodedstring="flexiblePicConcentrator"/>
+         <decode varbindvalue="4" varbinddecodedstring="switchingAndForwardingModule"/>
+         <decode varbindvalue="5" varbinddecodedstring="controlBoard"/>
+         <decode varbindvalue="6" varbinddecodedstring="routingEngine"/>
+         <decode varbindvalue="7" varbinddecodedstring="powerEntryModule"/>
+         <decode varbindvalue="8" varbinddecodedstring="frontPanelModule"/>
+         <decode varbindvalue="9" varbinddecodedstring="switchInterfaceBoard"/>
+         <decode varbindvalue="10" varbinddecodedstring="processorMezzanineBoardForSIB"/>
+         <decode varbindvalue="11" varbinddecodedstring="portInterfaceCard"/>
+         <decode varbindvalue="12" varbinddecodedstring="craftInterfacePanel"/>
+         <decode varbindvalue="13" varbinddecodedstring="fan"/>
+         <decode varbindvalue="14" varbinddecodedstring="lineCardChassis"/>
+         <decode varbindvalue="15" varbinddecodedstring="forwardingEngineBoard"/>
+         <decode varbindvalue="16" varbinddecodedstring="protectedSystemDomain"/>
+      </varbindsdecode>
+   </event>
+</events>
