@@ -3,7 +3,7 @@
 	<property name="ireport.zoom" value="1.5"/>
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="470"/>
-	<template><![CDATA["${install.dir}/etc/report-templates/assets/styles/defaultStyles.jrtx"]]></template>
+	<template><![CDATA["/opt/opennms/etc/report-templates/assets/styles/defaultStyles.jrtx"]]></template>
 	<style name="expire_warning_MARK" mode="Transparent" hAlign="Center" vAlign="Middle" rotation="Left" markup="styled">
 		<conditionalStyle>
 			<conditionExpression><![CDATA["expired".equals($F{maintcontractstatus})]]></conditionExpression>
@@ -103,7 +103,7 @@ ORDER BY
 	</parameter>
 	<parameter name="COMPANY_LOGO" class="java.lang.String">
 		<parameterDescription><![CDATA[Company logo]]></parameterDescription>
-		<defaultValueExpression><![CDATA["${install.dir}/etc/report-templates/assets/images/company-logo.png"]]></defaultValueExpression>
+		<defaultValueExpression><![CDATA["/opt/opennms/etc/report-templates/assets/images/company-logo.png"]]></defaultValueExpression>
 	</parameter>
 	<parameter name="DATE_FORMAT" class="java.lang.String">
 		<parameterDescription><![CDATA[Format for expire date. Default: "YYYY-MM-DD"]]></parameterDescription>
@@ -564,4 +564,13 @@ ORDER BY
 	<summary>
 		<band splitType="Stretch"/>
 	</summary>
+        <noData>
+                <band height="50">
+                        <staticText>
+                                <reportElement x="196" y="15" width="163" height="20"/>
+                                <textElement/>
+                                <text><![CDATA[There is No Data for this Report]]></text>
+                        </staticText>
+                </band>
+        </noData>
 </jasperReport>
