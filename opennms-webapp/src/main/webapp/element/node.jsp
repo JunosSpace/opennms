@@ -37,7 +37,7 @@
 <%@page language="java"
 	contentType="text/html"
 	session="true"
-	import="org.opennms.web.element.*,org.opennms.netmgt.model.OnmsNode,java.util.*,java.net.*,java.sql.SQLException,org.opennms.core.soa.ServiceRegistry,org.opennms.core.utils.InetAddressUtils,org.opennms.netmgt.poller.PathOutageFactory,org.opennms.web.api.Authentication,org.opennms.web.svclayer.ResourceService,org.opennms.web.asset.Asset,org.opennms.web.asset.AssetModel,org.opennms.web.navigate.*,org.springframework.web.context.WebApplicationContext,org.springframework.web.context.support.WebApplicationContextUtils"
+	import="org.opennms.web.element.*,org.opennms.netmgt.model.OnmsNode,java.util.*,java.net.*,java.sql.SQLException,org.opennms.core.soa.ServiceRegistry,org.opennms.core.utils.InetAddressUtils,org.opennms.core.utils.WebSecurityUtils,org.opennms.netmgt.poller.PathOutageFactory,org.opennms.web.api.Authentication,org.opennms.web.svclayer.ResourceService,org.opennms.web.asset.Asset,org.opennms.web.asset.AssetModel,org.opennms.web.navigate.*,org.springframework.web.context.WebApplicationContext,org.springframework.web.context.support.WebApplicationContextUtils"
 %>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
@@ -147,7 +147,7 @@
     Asset asset = m_model.getAsset(nodeId);
     nodeModel.put("asset", asset);
     if (asset != null && asset.getBuilding() != null && asset.getBuilding().length() > 0) {
-        nodeModel.put("statusSite", asset.getBuilding());
+    	nodeModel.put("statusSite", WebSecurityUtils.sanitizeString(asset.getBuilding(),true));
     }
     
     nodeModel.put("lldp",    EnLinkdElementFactory.getInstance(getServletContext()).getLldpElement(nodeId));
@@ -185,6 +185,10 @@
     nodeModel.put("showRancid","true".equalsIgnoreCase(Vault.getProperty("opennms.rancidIntegrationEnabled")));
     
     nodeModel.put("node", node_db);
+    nodeModel.put("sysName", WebSecurityUtils.sanitizeString(node_db.getSysName()));
+    nodeModel.put("sysLocation", WebSecurityUtils.sanitizeString(node_db.getSysLocation()));
+    nodeModel.put("sysContact", WebSecurityUtils.sanitizeString(node_db.getSysContact(), true));
+    nodeModel.put("sysDescription", WebSecurityUtils.sanitizeString(node_db.getSysDescription()));
     
     if(!(node_db.getForeignSource() == null) && !(node_db.getForeignId() == null)) {
         nodeModel.put("parentRes", node_db.getForeignSource() + ":" + node_db.getForeignId());
@@ -362,7 +366,7 @@
     <table class="o-box">
       <tr>
         <th width="25%">Name</th>
-        <td>${model.node.sysName}</td>
+        <td>${model.sysName}</td>
       </tr>
       <tr>
         <th>sysObjectID</th>
@@ -370,15 +374,15 @@
       </tr>
       <tr>
         <th>Location</th>
-        <td>${model.node.sysLocation}</td>
+        <td>${model.sysLocation}</td>
       </tr>
       <tr>
         <th>Contact</th>
-        <td>${model.node.sysContact}</td>
+        <td>${model.sysContact}</td>
       </tr>
       <tr>
         <th valign="top">Description</th>
-        <td valign="top">${model.node.sysDescription}</td>
+        <td valign="top">${model.sysDescription}</td>
       </tr>
     </table>
   </c:if>
