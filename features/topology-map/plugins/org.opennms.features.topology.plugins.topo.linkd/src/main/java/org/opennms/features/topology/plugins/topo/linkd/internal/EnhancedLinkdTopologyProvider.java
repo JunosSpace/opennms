@@ -543,13 +543,15 @@ public class EnhancedLinkdTopologyProvider extends AbstractLinkdTopologyProvider
             } else{
                 //add single connection
                 BridgeMacTopologyLink topoLink = links.iterator().next();
-                String id = Math.min(topoLink.getNodeId(), topoLink.getTargetNodeId()) + "|" + Math.max(topoLink.getNodeId(), topoLink.getTargetNodeId());
-                BridgeLinkDetail detail = new BridgeLinkDetail(id, EnhancedLinkdTopologyProvider.TOPOLOGY_NAMESPACE_LINKD,
-                        getVertex(m_nodeDao.get(topoLink.getNodeId())), topoLink.getId(), getVertex(m_nodeDao.get(topoLink.getTargetNodeId())), topoLink.getId());
+                if (topoLink.getTargetNodeId() != null) {
+                    String id = Math.min(topoLink.getNodeId(), topoLink.getTargetNodeId()) + "|" + Math.max(topoLink.getNodeId(), topoLink.getTargetNodeId());
+                    BridgeLinkDetail detail = new BridgeLinkDetail(id, EnhancedLinkdTopologyProvider.TOPOLOGY_NAMESPACE_LINKD,
+                                                                   getVertex(m_nodeDao.get(topoLink.getNodeId())), topoLink.getId(), getVertex(m_nodeDao.get(topoLink.getTargetNodeId())), topoLink.getId());
 
-                AbstractEdge edge = connectVertices(detail.getId(), detail.getSource(), detail.getTarget(), BRIDGE_EDGE_NAMESPACE);
-                //TODO: fix tooltip for bridge topology
-                edge.setTooltipText(getEdgeTooltipText(detail));
+                    AbstractEdge edge = connectVertices(detail.getId(), detail.getSource(), detail.getTarget(), BRIDGE_EDGE_NAMESPACE);
+                    //TODO: fix tooltip for bridge topology
+                    edge.setTooltipText(getEdgeTooltipText(detail));
+                }
             }
 
         }

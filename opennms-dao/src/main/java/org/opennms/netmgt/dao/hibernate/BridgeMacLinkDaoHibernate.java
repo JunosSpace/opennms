@@ -83,17 +83,19 @@ public class BridgeMacLinkDaoHibernate extends AbstractDaoHibernate<BridgeMacLin
         List<Object[]> links =  getHibernateTemplate().execute(new HibernateCallback<List<Object[]>>() {
             @Override
             public List<Object[]> doInHibernate(Session session) throws HibernateException, SQLException {
-                return session.createSQLQuery("select mlink.*," +
+                return session.createSQLQuery("select distinct mlink.*," +
                         "ntm.netaddress, " +
                         "ip.ipaddr, " +
-                        "ip.nodeid as targetnodeid, " +
+                        "snmp.nodeid as targetnodeid, " +
                         "node.nodelabel, " +
                         "ntm.sourceIfIndex " +
                         "from bridgemaclink as mlink " +
+                        "left join snmpinterface as snmp " +
+                        "on mlink.macaddress = snmp.snmpphysaddr " +
                         "left join ipnettomedia as ntm " +
                         "on mlink.macaddress = ntm.physaddress " +
                         "left join ipinterface ip on ip.ipaddr = ntm.netaddress " +
-                        "left join node on ip.nodeid = node.nodeid " +
+                        "left join node on snmp.nodeid = node.nodeid " +
                         "order by bridgeport;").list();
                 //where ip.nodeid is not null
             }
