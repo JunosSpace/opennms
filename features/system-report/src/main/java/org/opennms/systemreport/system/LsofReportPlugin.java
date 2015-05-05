@@ -60,7 +60,7 @@ public class LsofReportPlugin extends AbstractSystemReportPlugin {
         final String lsof = findBinary("lsof");
 
         if (lsof != null) {
-            lsofOutput = slurpOutput(CommandLine.parse(lsof), false);
+            lsofOutput = slurpOutput(CommandLine.parse(lsof + " -u opennms"), false);
         }
 
         if (lsofOutput != null) {

@@ -591,7 +591,7 @@ public class JRobinRrdStrategy implements RrdStrategy<RrdDef,RrdDb> {
                 String[] def = splitDef(definition);
                 String[] ds = def[0].split("=");
                  LOG.debug("ds = {}", Arrays.toString(ds));
-                final String replaced = ds[1].replaceAll("\\\\(.)", "$1");
+                final String replaced = (ds[1]+".jrb").replaceAll("\\\\(.)", "$1");
                  LOG.debug("replaced = {}", replaced);
 
                 final File dsFile;
@@ -733,7 +733,7 @@ public class JRobinRrdStrategy implements RrdStrategy<RrdDef,RrdDb> {
 				def = definition.split("(?<!\\\\):");
 			}
 		} else {
-			def = definition.split("(?<!\\\\)(:icmp|:snmp)");
+			def = definition.split("(?<!\\\\)(.jrb:)");
 		}
 		// LOG.debug("returning: {}", Arrays.toString(def));
 		return def;
