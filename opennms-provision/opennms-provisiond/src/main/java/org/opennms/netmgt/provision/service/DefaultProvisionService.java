@@ -433,6 +433,7 @@ public class DefaultProvisionService implements ProvisionService, InitializingBe
                 LOG.info("Updating IpInterface {}", dbIface);
                 m_ipInterfaceDao.update(dbIface);
                 m_ipInterfaceDao.flush();
+                dbIface.updateSnmpInterface(scannedIface);
                 return dbIface;
             }
 

@@ -513,9 +513,9 @@ public class OnmsIpInterface extends OnmsEntity implements Serializable {
             setIpLastCapsdPoll(scannedIface.getIpLastCapsdPoll());
         }
 
-        if (hasNewValue(scannedIface.getSnmpInterface(), getSnmpInterface())) {
-            setSnmpInterface(scannedIface.getSnmpInterface());
-        }
+//        if (hasNewValue(scannedIface.getSnmpInterface(), getSnmpInterface())) {
+//            setSnmpInterface(scannedIface.getSnmpInterface());
+//        }
         
     }
     
@@ -583,7 +583,7 @@ public class OnmsIpInterface extends OnmsEntity implements Serializable {
      * @param scannedIface a {@link org.opennms.netmgt.model.OnmsIpInterface} object.
      */
     public void updateSnmpInterface(OnmsIpInterface scannedIface) {
-        
+    	
         if (!hasNewValue(scannedIface.getIfIndex(), getIfIndex())) {
             /* no ifIndex in currently scanned interface so don't bother
              * we must have failed to collect data
@@ -598,7 +598,11 @@ public class OnmsIpInterface extends OnmsEntity implements Serializable {
             // locate the snmpInterface on this node that has the new ifIndex and set it
             // into the interface
             OnmsSnmpInterface snmpIface = getNode().getSnmpInterfaceWithIfIndex(scannedIface.getIfIndex());
-            setSnmpInterface(snmpIface);
+            if (snmpIface == null) {
+            	setSnmpInterface(scannedIface.getSnmpInterface());
+            } else {
+            	setSnmpInterface(snmpIface);
+            }
         }
         
         
