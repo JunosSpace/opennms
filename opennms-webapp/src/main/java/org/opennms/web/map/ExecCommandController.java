@@ -69,15 +69,19 @@ public class ExecCommandController extends MapsLoggingController {
         int numberOfRequest = 10;
         int packetSize = 56;
         String hopAddress = null;
-        
+
         String command = request.getParameter("command");
+        String address = request.getParameter("address");
         if (command == null) throw new  IllegalArgumentException("Command is required");
         
         String commandToExec = command;
 
-        String address = request.getParameter("address");
         if (address == null) throw new  IllegalArgumentException("Address is required");
         address = address.replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll("\"", "&quot;");
+
+        if (address.contains(":") && command.equals("ping")) {
+            commandToExec = "ping6";
+        }
 
         String numericoutput = request.getParameter("numericOutput");
         if (numericoutput != null && numericoutput.equals("true")) {
