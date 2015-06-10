@@ -556,27 +556,31 @@ org.opennms.web.api.Authentication"
     <tr class="<%=alarm.getSeverity().getLabel()%>">
         <td colspan="3">
             <form method="post" action="alarm/saveStickyMemo.htm">
-                <textarea style="width:99%" name="stickyMemoBody" ><%=alarm.getStickyMemo() == null? "" : (alarm.getStickyMemo().getBody() != null ? alarm.getStickyMemo().getBody() : "")%></textarea>
+                <textarea <% if ( (! req.isUserInRole(Authentication.ROLE_ADMIN)) || request.isUserInRole(Authentication.ROLE_READONLY)) {%> disabled="disabled" <% }%> style="width:99%" name="stickyMemoBody" ><%=alarm.getStickyMemo() == null? "" : (alarm.getStickyMemo().getBody() != null ? alarm.getStickyMemo().getBody() : "")%></textarea>
                 <br/>
+<% if (req.isUserInRole(Authentication.ROLE_ADMIN) || !request.isUserInRole(Authentication.ROLE_READONLY)) {%>
                 <input type="hidden" name="alarmId" value="<%=alarm.getId()%>"/>
                 <input type="submit" value="Save" />
             </form>
             <form method="post" action="alarm/removeStickyMemo.htm">
                  <input type="hidden" name="alarmId" value="<%=alarm.getId()%>"/>
                  <input type="submit" value="Delete" />
+<% }%>
             </form>
         </td>
 
         <td colspan="3">
             <form method="post" action="alarm/saveJournalMemo.htm">
-                <textarea style="width:99%" name="journalMemoBody" ><%=alarm.getReductionKeyMemo() == null? "" : (alarm.getReductionKeyMemo().getBody() != null ? alarm.getReductionKeyMemo().getBody() : "")%></textarea>
+                <textarea <% if ( (! req.isUserInRole(Authentication.ROLE_ADMIN)) || request.isUserInRole(Authentication.ROLE_READONLY)) {%> disabled="disabled" <% }%> style="width:99%" name="journalMemoBody" ><%=alarm.getReductionKeyMemo() == null? "" : (alarm.getReductionKeyMemo().getBody() != null ? alarm.getReductionKeyMemo().getBody() : "")%></textarea>
                 <br/>
+<% if (req.isUserInRole(Authentication.ROLE_ADMIN) || !request.isUserInRole(Authentication.ROLE_READONLY)) {%>
                 <input type="hidden" name="alarmId" value="<%=alarm.getId()%>"/>
                 <input type="submit" value="Save" />
             </form>
             <form method="post" action="alarm/removeJournalMemo.htm">
                 <input type="hidden" name="alarmId" value="<%=alarm.getId()%>"/>
                 <input type="submit" value="Delete" />
+<% }%>
             </form>
         </td>
     </tr>
