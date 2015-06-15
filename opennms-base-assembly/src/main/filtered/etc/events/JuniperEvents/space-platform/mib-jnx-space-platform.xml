@@ -141,6 +141,130 @@
                 </maskelement>
                 <varbind>
                         <vbnumber>1</vbnumber>
+                        <vbvalue>CPU fan3 trigger</vbvalue>
+                </varbind>
+        </mask>
+        <uei>uei.opennms.org/traps/SPACE-PLATFORM-MIB/jnxSpaceCPUFan3Rising</uei>
+        <event-label>SPACE-PLATFORM customized trap event: jnxSpaceCPUFanRising</event-label>
+        <descr>
+        &lt;p&gt;CPU fan too slow: %parm[#5]%&lt;/p&gt;
+        </descr>
+                <logmsg dest='logndisplay'>&lt;p&gt;
+                       CPU fan too slow: %parm[#5]%&lt;/p&gt;
+                </logmsg>
+        <severity>Major</severity>
+        <alarm-data auto-clean="false" alarm-type="1" reduction-key="%uei%:%dpname%:%nodeid%"/>
+</event>
+
+<event>
+        <mask>
+                <maskelement>
+                        <mename>id</mename>
+                        <mevalue>.1.3.6.1.2.1.88.2</mevalue>
+                </maskelement>
+                <maskelement>
+                        <mename>generic</mename>
+                        <mevalue>6</mevalue>
+                </maskelement>
+                <maskelement>
+                        <mename>specific</mename>
+                        <mevalue>1</mevalue>
+                </maskelement>
+                <varbind>
+                        <vbnumber>1</vbnumber>
+                        <vbvalue>CPU fan3 clear</vbvalue>
+                </varbind>
+        </mask>
+        <uei>uei.opennms.org/traps/SPACE-PLATFORM-MIB/jnxSpaceCPUFan3Cleared</uei>
+        <event-label>SPACE-PLATFORM customized trap event: jnxSpaceCPUFanCleared</event-label>
+        <descr>
+        &lt;p&gt;CPU fan is normal: %parm[#5]%rpm&lt;/p&gt;
+        </descr>
+                <logmsg dest='logndisplay'>&lt;p&gt;
+                      CPU fan is normal: %parm[#5]%rpm&lt;/p&gt;
+                </logmsg>
+        <severity>Normal</severity>
+        <alarm-data auto-clean="true" clear-key="uei.opennms.org/traps/SPACE-PLATFORM-MIB/jnxSpaceCPUFanRising:%dpname%:%nodeid%" alarm-type="2" reduction-key="%uei%:%dpname%:%nodeid%"/>
+</event>
+
+<event>
+        <mask>
+                <maskelement>
+                        <mename>id</mename>
+                        <mevalue>.1.3.6.1.2.1.88.2</mevalue>
+                </maskelement>
+                <maskelement>
+                        <mename>generic</mename>
+                        <mevalue>6</mevalue>
+                </maskelement>
+                <maskelement>
+                        <mename>specific</mename>
+                        <mevalue>1</mevalue>
+                </maskelement>
+                <varbind>
+                        <vbnumber>1</vbnumber>
+                        <vbvalue>CPU fan4 trigger</vbvalue>
+                </varbind>
+        </mask>
+        <uei>uei.opennms.org/traps/SPACE-PLATFORM-MIB/jnxSpaceCPUFan4Rising</uei>
+        <event-label>SPACE-PLATFORM customized trap event: jnxSpaceCPUFanRising</event-label>
+        <descr>
+        &lt;p&gt;CPU fan too slow: %parm[#5]%&lt;/p&gt;
+        </descr>
+                <logmsg dest='logndisplay'>&lt;p&gt;
+                       CPU fan too slow: %parm[#5]%&lt;/p&gt;
+                </logmsg>
+        <severity>Major</severity>
+        <alarm-data auto-clean="false" alarm-type="1" reduction-key="%uei%:%dpname%:%nodeid%"/>
+</event>
+
+<event>
+        <mask>
+                <maskelement>
+                        <mename>id</mename>
+                        <mevalue>.1.3.6.1.2.1.88.2</mevalue>
+                </maskelement>
+                <maskelement>
+                        <mename>generic</mename>
+                        <mevalue>6</mevalue>
+                </maskelement>
+                <maskelement>
+                        <mename>specific</mename>
+                        <mevalue>1</mevalue>
+                </maskelement>
+                <varbind>
+                        <vbnumber>1</vbnumber>
+                        <vbvalue>CPU fan4 clear</vbvalue>
+                </varbind>
+        </mask>
+        <uei>uei.opennms.org/traps/SPACE-PLATFORM-MIB/jnxSpaceCPUFan4Cleared</uei>
+        <event-label>SPACE-PLATFORM customized trap event: jnxSpaceCPUFanCleared</event-label>
+        <descr>
+        &lt;p&gt;CPU fan is normal: %parm[#5]%rpm&lt;/p&gt;
+        </descr>
+                <logmsg dest='logndisplay'>&lt;p&gt;
+                      CPU fan is normal: %parm[#5]%rpm&lt;/p&gt;
+                </logmsg>
+        <severity>Normal</severity>
+        <alarm-data auto-clean="true" clear-key="uei.opennms.org/traps/SPACE-PLATFORM-MIB/jnxSpaceCPUFanRising:%dpname%:%nodeid%" alarm-type="2" reduction-key="%uei%:%dpname%:%nodeid%"/>
+</event>
+
+<event>
+        <mask>
+                <maskelement>
+                        <mename>id</mename>
+                        <mevalue>.1.3.6.1.2.1.88.2</mevalue>
+                </maskelement>
+                <maskelement>
+                        <mename>generic</mename>
+                        <mevalue>6</mevalue>
+                </maskelement>
+                <maskelement>
+                        <mename>specific</mename>
+                        <mevalue>1</mevalue>
+                </maskelement>
+                <varbind>
+                        <vbnumber>1</vbnumber>
                         <vbvalue>CPU voltage trigger</vbvalue>
                 </varbind>
         </mask>
