@@ -361,6 +361,7 @@ img.info {
 	    background: #536F85; /* for non-css3 browsers */
 	    background: -webkit-gradient(linear, left top, left bottom, from(#7E99C1), to(#536F85)); /* for webkit browsers */
 	    background: -moz-linear-gradient(top,  #7E99C1,  #536F85); /* for firefox 3.6+ */
+	    background: -ms-linear-gradient(top,  #7E99C1,  #536F85); /* for IE10+ */
 	    background-color: #DFE8F6;
 	}
 	th a {
@@ -586,6 +587,7 @@ img.info {
 		 background: #536F85; /* for non-css3 browsers */
 		 background: -webkit-gradient(linear, left top, left bottom, from(#7E99C1), to(#536F85)); /* for webkit browsers */
 		 background: -moz-linear-gradient(top,  #7E99C1,  #536F85); /* for firefox 3.6+ */
+	         background: -ms-linear-gradient(top,  #7E99C1,  #536F85); /* for IE10+ */
 		 color: #FFF;
 		 border:1px solid #999;
 		 border-bottom: 0;
@@ -683,6 +685,7 @@ img.info {
 	 background: #536F85; /* for non-css3 browsers */
 	 background: -webkit-gradient(linear, left top, left bottom, from(#7E99C1), to(#536F85)); /* for webkit browsers */
 	 background: -moz-linear-gradient(top,  #7E99C1,  #536F85); /* for firefox 3.6+ */
+	 background: -ms-linear-gradient(top,  #7E99C1,  #536F85); /* for IE10+ */
 	 background-color: #536F85;
         }
         
