@@ -66,8 +66,10 @@
         </errorhandling>
         </script>
         <ueis>
-            		<uei name="uei.opennms.org/vendor/Juniper/traps/adcRealServerUp" notification_threshold="5">
-            		</uei>
+			<uei name="uei.opennms.org/generic/traps/EnterpriseDefault" notification_threshold="5">
+			</uei>
+            <uei name="uei.opennms.org/vendor/Juniper/traps/adcRealServerUp" notification_threshold="5">
+            </uei>
 			<uei name="uei.opennms.org/vendor/Juniper/traps/adcRealServerDown" notification_threshold="5">
 			</uei>
 			<uei name="uei.opennms.org/vendor/Juniper/traps/adcVirtualServerUp" notification_threshold="5">
@@ -272,6 +274,18 @@
 			</uei>
 			<uei name="uei.opennms.org/vendor/Juniper/threshold/tlbEgressInterfaceStatusThresholdCleared" notification_threshold="5">
 			</uei>
+			<uei name="uei.opennms.org/vendor/Juniper/threshold/tlbVIPDownThreshold" notification_threshold="5">
+			</uei>
+			<uei name="uei.opennms.org/vendor/Juniper/threshold/tlbVIPDownThresholdCleared" notification_threshold="5">
+			</uei>
+			<uei name="uei.opennms.org/vendor/Juniper/threshold/tlbServerGroupDownThreshold" notification_threshold="5">
+			</uei>
+			<uei name="uei.opennms.org/vendor/Juniper/threshold/tlbServerGroupDownThresholdCleared" notification_threshold="5">
+			</uei>
+			<uei name="uei.opennms.org/vendor/Juniper/threshold/tlbVIPClientPacketDropThreshold" notification_threshold="5">
+			</uei>
+			<uei name="uei.opennms.org/vendor/Juniper/threshold/tlbVIPClientPacketDropThresholdCleared" notification_threshold="5">
+			</uei>
 			<uei name="uei.opennms.org/vendor/Juniper/threshold/cgnatCPUUtilizationStatusThreshold" notification_threshold="5">
 			</uei>
 			<uei name="uei.opennms.org/vendor/Juniper/threshold/cgnatCPUUtilizationStatusThresholdCleared" notification_threshold="5">
@@ -300,6 +314,10 @@
 			</uei>
 			<uei name="uei.opennms.org/vendor/Juniper/threshold/cgnatCPUUtilStatefulSyncThresholdCleared" notification_threshold="5">
 			</uei>
+			<uei name="uei.opennms.org/vendor/Juniper/threshold/cgnatTotalSubscriberActiveStatusThreshold" notification_threshold="5">
+			</uei>
+			<uei name="uei.opennms.org/vendor/Juniper/threshold/cgnatTotalSubscriberActiveStatusThresholdCleared" notification_threshold="5">
+			</uei>
 			<uei name="uei.opennms.org/vendor/Juniper/threshold/sfwCPUUtilizationStatusThreshold" notification_threshold="5">
 			</uei>
 			<uei name="uei.opennms.org/vendor/Juniper/threshold/sfwCPUUtilizationStatusThresholdCleared" notification_threshold="5">
@@ -315,6 +333,10 @@
 			<uei name="uei.opennms.org/vendor/Juniper/threshold/sfwServicePICStatusDownThreshold" notification_threshold="5">
 			</uei>
 			<uei name="uei.opennms.org/vendor/Juniper/threshold/sfwServicePICStatusThresholdCleared" notification_threshold="5">
+			</uei>
+			<uei name="uei.opennms.org/vendor/Juniper/threshold/sfwTotalSubscriberActiveStatusThreshold" notification_threshold="5">
+			</uei>
+			<uei name="uei.opennms.org/vendor/Juniper/threshold/sfwTotalSubscriberActiveStatusThresholdCleared" notification_threshold="5">
 			</uei>
 			<uei name="uei.opennms.org/vendor/Juniper/threshold/sdgHAStatusThreshold" notification_threshold="5">
 			</uei>
@@ -400,6 +422,38 @@
 			</uei>
 			<uei name="uei.opennms.org/vendor/Juniper/threshold/reBufferThresholdCleared" notification_threshold="5">
 			</uei>
+			<uei name="uei.opennms.org/vendor/Juniper/traps/tlbRealServerUp" notification_threshold="5">
+			</uei>
+			<uei name="uei.opennms.org/vendor/Juniper/traps/tlbRealServerDown" notification_threshold="5">
+			</uei>
+			<uei name="uei.opennms.org/vendor/Juniper/traps/tlbRealServerRejoined" notification_threshold="5">
+			</uei>
+			<uei name="uei.opennms.org/vendor/Juniper/traps/tlbVirtualServiceUp" notification_threshold="5">
+			</uei>
+			<uei name="uei.opennms.org/vendor/Juniper/traps/tlbVirtualServiceDown" notification_threshold="5">
+			</uei>
+			<uei name="uei.opennms.org/vendor/Juniper/traps/tlbRealServerServiceUp" notification_threshold="5">
+			</uei>
+			<uei name="uei.opennms.org/vendor/Juniper/traps/tlbRealServerServiceDown" notification_threshold="5">
+			</uei>
+			<uei name="uei.opennms.org/vendor/Juniper/traps/tlbVirtualServerServiceUp" notification_threshold="5">
+			</uei>
+			<uei name="uei.opennms.org/vendor/Juniper/traps/tlbVirtualServerServiceDown" notification_threshold="5">
+			</uei>
+			<uei name="uei.opennms.org/vendor/Juniper/traps/tlbUp" notification_threshold="5">
+			</uei>
+			<uei name="uei.opennms.org/vendor/Juniper/traps/tlbShutdown" notification_threshold="5">
+			</uei>
+			<uei name="uei.opennms.org/vendor/Juniper/traps/tlbPicConnected" notification_threshold="5">
+			</uei>
+			<uei name="uei.opennms.org/vendor/Juniper/traps/tlbPicDisconnected" notification_threshold="5">
+			</uei>
+			<uei name="uei.opennms.org/vendor/Juniper/traps/tlbCpuHigh" notification_threshold="5">
+			</uei>
+			<uei name="uei.opennms.org/vendor/Juniper/traps/tlbCpuNormal" notification_threshold="5">
+			</uei>
+			<uei name="uei.opennms.org/vendor/Juniper/traps/tlbUnlicensedPic" notification_threshold="5">
+			</uei>			
 		</ueis>
     </notification> 
 
