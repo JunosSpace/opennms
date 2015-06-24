@@ -30,6 +30,7 @@ package org.opennms.features.topology.plugins.topo.linkd.internal;
 
 import com.google.common.collect.HashMultimap;
 import com.google.common.collect.Multimap;
+
 import org.opennms.features.topology.api.topo.EdgeRef;
 import org.opennms.netmgt.dao.api.BridgeMacLinkDao;
 import org.opennms.netmgt.model.OnmsAlarm;
@@ -53,15 +54,21 @@ public class BridgeLinkStatusProvider extends AbstractLinkStatusProvider {
         //Bridge Links are different, don't need the linkIds
 
         Multimap<String, EdgeAlarmStatusSummary> summaryMap = HashMultimap.create();
-        for(BridgeMacTopologyLink link : m_multimapLinks.values()) {
-            String key = link.getNodeId() + ":" + link.getBridgePortIfIndex();
+        for (String mkey : m_multimapLinks.keySet()) {
+            for(BridgeMacTopologyLink link : m_multimapLinks.get(mkey)) {
+                String key = link.getNodeId() + ":" + link.getBridgePortIfIndex();
+                if (mkey.equals(String.valueOf(link.getNodeId()) + "|" + String.valueOf(link.getBridgePort()))) {
+                    if (!summaryMap.containsKey(key)){
+                        summaryMap.put(key, new EdgeAlarmStatusSummary(link.getNodeId(), link.getBridgePort(), null));
+                    }
+                } else {
+                    if (link.getTargetNodeId() != null)
+                        summaryMap.put(key, new EdgeAlarmStatusSummary(link.getNodeId(), link.getTargetNodeId(), null));
+                }
 
-            if (!summaryMap.containsKey(key)){
-                summaryMap.put(key, new EdgeAlarmStatusSummary(link.getNodeId(), link.getBridgePort(), null));
-            }
-
-            if(link.getTargetNodeId() != null && link.getSourceIfIndex() != null){
-                summaryMap.put(link.getTargetNodeId() + ":" + link.getSourceIfIndex(), new EdgeAlarmStatusSummary(link.getNodeId(), link.getTargetNodeId(), null));
+                if(link.getTargetNodeId() != null && link.getSourceIfIndex() != null){
+                    summaryMap.put(link.getTargetNodeId() + ":" + link.getSourceIfIndex(), new EdgeAlarmStatusSummary(link.getNodeId(), link.getTargetNodeId(), null));
+                }
             }
         }
 
@@ -103,8 +110,11 @@ public class BridgeLinkStatusProvider extends AbstractLinkStatusProvider {
             String idKey = String.valueOf(macLink.getNodeId()) + "|" + String.valueOf(macLink.getBridgePort());
             if (mappedRefs.containsKey(idKey) && macLink.getTargetNodeId() != null && macLink.getSourceIfIndex() != null) {
                 multimap.put(idKey, macLink);
+            } else if (macLink.getTargetNodeId() != null) {
+                idKey = Math.min(macLink.getNodeId(), macLink.getTargetNodeId()) + "|" + Math.max(macLink.getNodeId(), macLink.getTargetNodeId());
+                if (mappedRefs.containsKey(idKey))
+                    multimap.put(idKey, macLink);
             }
-
         }
 
         if(m_multimapLinks == null){
