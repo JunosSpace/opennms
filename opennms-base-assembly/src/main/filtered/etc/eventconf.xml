@@ -1965,6 +1965,7 @@
   </event>
 
   <!-- SDG Trap Definitions start -->
+  <event-file>events/JuniperEvents/SDG/mib-jnx-tlb.xml</event-file>
   <event-file>events/JuniperEvents/SDG/mib-jnx-adc.xml</event-file>
   <event-file>events/JuniperEvents/SDG/jnx-sdg-thresholds.xml</event-file>
   <event-file>events/JuniperEvents/SDG/mib-jnx-ha-event.xml</event-file>
