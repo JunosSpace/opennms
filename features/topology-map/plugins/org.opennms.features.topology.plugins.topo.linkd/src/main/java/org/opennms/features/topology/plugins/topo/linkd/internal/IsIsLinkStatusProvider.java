@@ -30,20 +30,26 @@ package org.opennms.features.topology.plugins.topo.linkd.internal;
 
 import com.google.common.collect.HashMultimap;
 import com.google.common.collect.Multimap;
+
+import org.apache.commons.lang.StringUtils;
 import org.opennms.core.criteria.Criteria;
 import org.opennms.core.criteria.restrictions.InRestriction;
+import org.opennms.core.criteria.restrictions.NeRestriction;
 import org.opennms.features.topology.api.topo.EdgeRef;
+import org.opennms.netmgt.EventConstants;
 import org.opennms.netmgt.dao.api.IsIsLinkDao;
 import org.opennms.netmgt.model.IsIsElement;
 import org.opennms.netmgt.model.IsIsLink;
 import org.opennms.netmgt.model.OnmsAlarm;
 import org.opennms.netmgt.model.OnmsNode;
+import org.opennms.netmgt.model.OnmsSeverity;
 import org.opennms.netmgt.model.topology.EdgeAlarmStatusSummary;
 
 import java.util.*;
 
 public class IsIsLinkStatusProvider extends AbstractLinkStatusProvider {
 
+    public static final String ISIS_ADJACENCY_DOWN_EVENT_UEI = "uei.opennms.org/traps/ISIS-MIB/isisAdjacencyDown";
     private IsIsLinkDao m_isIsLinkDao;
 
 
@@ -74,24 +80,57 @@ public class IsIsLinkStatusProvider extends AbstractLinkStatusProvider {
 
         List<OnmsAlarm> alarms = getLinkDownAlarms();
         for (OnmsAlarm alarm : alarms) {
-	    if (alarm.getIfIndex() != null) {
-                String key = alarm.getNodeId() + ":" + alarm.getIfIndex();
-                if (summaryMap.containsKey(key)) {
-                    Collection<EdgeAlarmStatusSummary> summaries = summaryMap.get(key);
-                    for (EdgeAlarmStatusSummary summary : summaries) {
-                        summary.setEventUEI(alarm.getUei());
+            if (alarm.getUei().equals(EventConstants.TOPOLOGY_LINK_DOWN_EVENT_UEI)) {
+                if (alarm.getIfIndex() != null) {
+                    String key = alarm.getNodeId() + ":" + alarm.getIfIndex();
+                    if (summaryMap.containsKey(key)) {
+
+                        Collection<EdgeAlarmStatusSummary> summaries = summaryMap.get(key);
+                        for (EdgeAlarmStatusSummary summary : summaries) {
+                            summary.setEventUEI(alarm.getUei());
+                        }
+                    }
+                } else {
+                    for (String key : summaryMap.keySet()){
+                        if (key.indexOf(alarm.getNodeId() + ":") > -1) {
+
+                            Collection<EdgeAlarmStatusSummary> summaries = summaryMap.get(key);
+                            for (EdgeAlarmStatusSummary summary : summaries) {
+                                summary.setEventUEI(alarm.getUei());
+                            }
+                        }
                     }
                 }
             } else {
-               for (String key : summaryMap.keySet()){
-                   if (key.indexOf(alarm.getNodeId() + ":") > -1) {
-                       Collection<EdgeAlarmStatusSummary> summaries = summaryMap.get(key);
-                       for (EdgeAlarmStatusSummary summary : summaries) {
-                           summary.setEventUEI(alarm.getUei());
-                       }
-                   }
-               }
-	    }
+                String parms = alarm.getEventParms();
+                String isisNotificationCircIfIndex = "";
+
+                char separator = ';';
+                String[] parmArray = StringUtils.split(parms, separator);
+                for (String string : parmArray) {
+                    
+                    char nameValueDelim = '=';
+                    String[] nameValueArray = StringUtils.split(string, nameValueDelim);
+                    String parmName = nameValueArray[0];
+                    String parmValue = StringUtils.split(nameValueArray[1], '(')[0];
+                    
+                    if (parmName.indexOf(".1.3.6.1.2.1.138.1.10.1.2") > -1) {
+                        isisNotificationCircIfIndex = parmValue;
+                        break;
+                    }
+                }
+                if (!isisNotificationCircIfIndex.isEmpty()) {
+                    String key = alarm.getNodeId() + ":" + isisNotificationCircIfIndex;
+                    if (summaryMap.containsKey(key)) {
+
+                        Collection<EdgeAlarmStatusSummary> summaries = summaryMap.get(key);
+                        for (EdgeAlarmStatusSummary summary : summaries) {
+                            summary.setEventUEI(EventConstants.TOPOLOGY_LINK_DOWN_EVENT_UEI);
+                        }
+                    }
+                }
+            }
+
         }
         return new ArrayList<EdgeAlarmStatusSummary>(summaryMap.values());
     }
@@ -109,6 +148,15 @@ public class IsIsLinkStatusProvider extends AbstractLinkStatusProvider {
             }
         }
         return linkIds;
+    }
+
+    @Override
+    protected List<OnmsAlarm> getLinkDownAlarms() {
+        org.opennms.core.criteria.Criteria criteria = new org.opennms.core.criteria.Criteria(OnmsAlarm.class);
+        String[] UEIs = new String[] {EventConstants.TOPOLOGY_LINK_DOWN_EVENT_UEI, ISIS_ADJACENCY_DOWN_EVENT_UEI};
+        criteria.addRestriction(new InRestriction("uei", UEIs));
+        criteria.addRestriction(new NeRestriction("severity", OnmsSeverity.CLEARED));
+        return getAlarmDao().findMatching(criteria);
     }
 
     public IsIsLinkDao getIsisLinkDao() {
