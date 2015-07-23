@@ -126,7 +126,7 @@ public class LldpLinkStatusProvider extends AbstractLinkStatusProvider {
                         String parmName = nameValueArray[0];
                         String parmValue = StringUtils.split(nameValueArray[1], '(')[0];
                         
-                        if (parmName.indexOf("ifName") > -1) {
+                        if (parmName.indexOf(".1.3.6.1.2.1.31.1.1.1.1.") > -1) {
                             ifName = parmValue;
                             break;
                         }
