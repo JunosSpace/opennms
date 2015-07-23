@@ -30,7 +30,10 @@ package org.opennms.features.topology.plugins.topo.linkd.internal;
 
 import com.google.common.collect.HashMultimap;
 import com.google.common.collect.Multimap;
+
+import org.apache.commons.lang.StringUtils;
 import org.opennms.features.topology.api.topo.*;
+import org.opennms.netmgt.EventConstants;
 import org.opennms.netmgt.dao.api.LldpLinkDao;
 import org.opennms.netmgt.model.*;
 import org.opennms.netmgt.model.topology.EdgeAlarmStatusSummary;
@@ -88,7 +91,14 @@ public class LldpLinkStatusProvider extends AbstractLinkStatusProvider {
                             new EdgeAlarmStatusSummary(sourceLink.getId(),
                                     targetLink.getId(), null)
                     );
-
+                    //if the LinkDown alarm is from physical interface, there won't have related interface index for the logical interface
+                    //such as, the link is from logical interface ge-0/0/0.0 but the alarm is from physical interface ge-0/0/0
+                    if(sourceLink.getLldpPortDescr() != null && sourceLink.getLldpPortDescr().contains(".")){
+                    	summaryMap.put(sourceNode.getNodeId() + ":" + sourceLink.getLldpPortDescr().split("\\.")[0],
+                                new EdgeAlarmStatusSummary(sourceLink.getId(),
+                                        targetLink.getId(), null)
+                        );
+                    }                    
                 }
             }
         }
@@ -102,6 +112,33 @@ public class LldpLinkStatusProvider extends AbstractLinkStatusProvider {
                     Collection<EdgeAlarmStatusSummary> summaries = summaryMap.get(key);
                     for (EdgeAlarmStatusSummary summary : summaries) {
                         summary.setEventUEI(alarm.getUei());
+                    }
+                } else {
+                	String parms = alarm.getEventParms();
+                	String ifName = "";
+                	char separator = ';';
+                    String[] parmArray = StringUtils.split(parms, separator);
+                    
+                    for (String string : parmArray) {
+                        
+                        char nameValueDelim = '=';
+                        String[] nameValueArray = StringUtils.split(string, nameValueDelim);
+                        String parmName = nameValueArray[0];
+                        String parmValue = StringUtils.split(nameValueArray[1], '(')[0];
+                        
+                        if (parmName.indexOf("ifName") > -1) {
+                            ifName = parmValue;
+                            break;
+                        }
+                    }
+                    if (!ifName.isEmpty()) {
+                        String keyWithIfName = alarm.getNodeId() + ":" + ifName;
+                        if (summaryMap.containsKey(keyWithIfName)) {
+                            Collection<EdgeAlarmStatusSummary> summaries = summaryMap.get(key);
+                            for (EdgeAlarmStatusSummary summary : summaries) {
+                                summary.setEventUEI(EventConstants.TOPOLOGY_LINK_DOWN_EVENT_UEI);
+                            }
+                        }
                     }
                 }
             } else {

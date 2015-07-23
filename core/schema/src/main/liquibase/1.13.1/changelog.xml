@@ -774,7 +774,7 @@
       <renameColumn tableName="isislink" oldColumnName="isisisadjneighsystype" newColumnName="isisisadjneighsysyype" />
     </rollback>
   </changeSet>
-  <changeSet author="yhzhan@juniper.net" id="fix-category-group-table">
+  <changeSet author="yhzhan" id="fix-category-group-table">
 	<sql>alter table category_group alter groupid type varchar(255)</sql>
   </changeSet>
 
