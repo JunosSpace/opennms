@@ -134,7 +134,7 @@ public class LldpLinkStatusProvider extends AbstractLinkStatusProvider {
                     if (!ifName.isEmpty()) {
                         String keyWithIfName = alarm.getNodeId() + ":" + ifName;
                         if (summaryMap.containsKey(keyWithIfName)) {
-                            Collection<EdgeAlarmStatusSummary> summaries = summaryMap.get(key);
+                            Collection<EdgeAlarmStatusSummary> summaries = summaryMap.get(keyWithIfName);
                             for (EdgeAlarmStatusSummary summary : summaries) {
                                 summary.setEventUEI(EventConstants.TOPOLOGY_LINK_DOWN_EVENT_UEI);
                             }
