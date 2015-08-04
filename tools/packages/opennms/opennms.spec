@@ -24,7 +24,7 @@
 # Where OpenNMS binaries live
 %{!?bindir:%define bindir %instprefix/bin}
 
-%{!?java:%define java java >= 1.7}
+%{!?javaversion:%define javaversion java-1.7.0-openjdk }
 
 %{!?extrainfo:%define extrainfo }
 %{!?extrainfo2:%define extrainfo2 }
@@ -66,7 +66,7 @@ Requires(pre):		postgresql-server  >= 8.4
 Requires:		postgresql-server  >= 8.4
 
 # don't worry about buildrequires, the shell script will bomb quick  =)
-BuildRequires:		%{java}
+BuildRequires:		%{javaversion}
 
 Prefix: %{instprefix}
 Prefix: %{sharedir}
@@ -92,8 +92,8 @@ Requires(pre):	jicmp
 Requires:	jicmp
 Requires(pre):	jicmp6
 Requires:	jicmp6
-Requires(pre):	%{java}
-Requires:	%{java}
+Requires(pre):	%{javaversion}
+Requires:	%{javaversion}
 Requires(pretrans):	/bin/sh, /bin/mv, /bin/cp
 Requires(pre):	opennms-auto-upgrade = %{version}-%{release}
 Requires:	opennms-auto-upgrade = %{version}-%{release}
@@ -138,8 +138,8 @@ for OpenNMS.
 %package remote-poller
 Summary:	Remote (Distributed) Poller for OpenNMS
 Group:		Applications/System
-Requires(pre):	%{java}
-Requires:	%{java}
+Requires(pre):	%{javaversion}
+Requires:	%{javaversion}
 Requires(pretrans):	/bin/sh, /bin/mv, /bin/cp
 
 %description remote-poller
@@ -153,8 +153,8 @@ The OpenNMS distributed monitor.  For details, see:
 %package jmx-config-generator
 Summary:	Generate JMX Configuration
 Group:		Applications/System
-Requires(pre):	%{java}
-Requires:	%{java}
+Requires(pre):	%{javaversion}
+Requires:	%{javaversion}
 
 %description jmx-config-generator
 Generates configuration files for monitoring/collecting from
