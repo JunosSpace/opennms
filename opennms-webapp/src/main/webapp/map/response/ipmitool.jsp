@@ -48,7 +48,7 @@
     <base HREF="<%= Util.calculateUrlBase(request) %>" />
     <link rel="stylesheet" type="text/css" href="includes/styles.css" />
 </head>
-
+<%--
 <script type="text/javascript">
 
 function checkIpAddress(ip){
@@ -217,7 +217,7 @@ function doCommand(){
 
 </table>
 
-
+--%>
 </body>
 </html>
 
