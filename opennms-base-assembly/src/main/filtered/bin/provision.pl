@@ -46,7 +46,7 @@ $XML = XML::Twig->new();
 # set defaults
 $url_root = 'http://localhost:8980/opennms/rest';
 $username = 'admin';
-$password = 'juniper123';
+$password = '<password>';
 
 $user_config_file = ($^O eq "MSWin32") ? $ENV{LOCALAPPDATA} . "\\OpenNMS\\provision.plrc" : $ENV{HOME} . "/.opennms/provision.plrc";
 
