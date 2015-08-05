@@ -169,7 +169,7 @@ public abstract class Util extends Object {
         for (int i = 0; i < hostHeaders.length; ++i) {
         	final String ret = request.getHeader(hostHeaders[i]);
             if (ret != null) {
-                return ret;
+                return ret.replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll("\"", "&quot;");
             }
         }
         return request.getServerName() + ":" + Integer.toString(request.getServerPort());
