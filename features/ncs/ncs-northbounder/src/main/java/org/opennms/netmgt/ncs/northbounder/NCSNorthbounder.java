@@ -94,6 +94,7 @@ public class NCSNorthbounder extends AbstractNorthbounder {
     private static final String COMPONENT_FOREIGN_ID = "componentForeignId";
     private static final String COMPONENT_FOREIGN_SOURCE = "componentForeignSource";
     private static final String COMPONENT_TYPE = "componentType";
+    private static final String CAUSE = "cause";
     private NCSNorthbounderConfig m_config;
 
     public NCSNorthbounder(NCSNorthbounderConfig config) {
@@ -149,8 +150,10 @@ public class NCSNorthbounder extends AbstractNorthbounder {
 
         String id = alarmParms.get(COMPONENT_FOREIGN_SOURCE)+":"+alarmParms.get(COMPONENT_FOREIGN_ID);
         String name = alarmParms.get(COMPONENT_NAME);
+        String causeId = alarmParms.get(CAUSE);
 
-        return new ServiceAlarm(id, name, alarmType == AlarmType.PROBLEM ? "Down" : "Up");
+//        return new ServiceAlarm(id, name, alarmType == AlarmType.PROBLEM ? "Down" : "Up", Integer.toString(alarm.getNodeId()), Integer.toString(alarm.getId()),causeId);
+        return new ServiceAlarm(id, name, alarmType == AlarmType.PROBLEM ? "Down" : "Up", Integer.toString(alarm.getId()), causeId, alarm.getEventParms());
     }
 
     Map<String, String> getParameterMap(String parmString) {

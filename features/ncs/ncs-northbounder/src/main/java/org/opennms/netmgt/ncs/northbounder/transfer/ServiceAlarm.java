@@ -42,7 +42,16 @@ public class ServiceAlarm {
 
 	@XmlElement(name="Name")
 	private String m_name;
-
+	
+	@XmlElement(name="AlarmId")
+	private String m_alarmId;
+	
+	@XmlElement(name="RootCauseEventId")
+	private String m_rootCauseEventId;
+	
+	@XmlElement(name="EventParms")
+	private String m_eventParms;
+	
 	@XmlElement(name="Status")
 	private String m_status;
 
@@ -52,6 +61,15 @@ public class ServiceAlarm {
 		m_id = id;
 		m_name = name;
 		m_status = status;
+	}
+	
+	public ServiceAlarm(String id, String name, String status, String alarmId, String rootCauseEventId, String eventParms) {
+		m_id = id;
+		m_name = name;
+		m_status = status;
+		m_alarmId = alarmId;
+		m_rootCauseEventId = rootCauseEventId;
+		m_eventParms = eventParms;
 	}
 
 	public String getId() {
@@ -78,4 +96,27 @@ public class ServiceAlarm {
 		m_status = status;
 	}
 
+	public String getAlarmId() {
+		return m_alarmId;
+	}
+
+	public void setAlarmId(String alarmId) {
+		this.m_alarmId = alarmId;
+	}
+
+	public String getRootCauseEventId() {
+		return m_rootCauseEventId;
+	}
+
+	public void setRootCauseEventId(String rootCauseEventId) {
+		this.m_rootCauseEventId = rootCauseEventId;
+	}
+	
+	public String getEventParms() {
+		return m_eventParms;
+	}
+
+	public void setEventParms(String eventParms) {
+		m_eventParms = eventParms;
+	}
 }
