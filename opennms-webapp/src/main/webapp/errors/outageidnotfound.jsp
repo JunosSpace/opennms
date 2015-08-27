@@ -61,7 +61,7 @@
 <h1>Outage ID Not Found</h1>
 
 <p>
-  The outage ID <%=einfe.getBadID()%> is invalid. <%=einfe.getMessage()%>
+  The outage ID <%=org.opennms.core.utils.WebSecurityUtils.sanitizeString(einfe.getBadID(),false)%> is invalid.
   <br/>
   You can re-enter it here or <a href="outage/list.htm">browse all of the
   outages</a> to find the outage you are looking for.

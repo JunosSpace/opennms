@@ -27,7 +27,6 @@
  *     http://www.opennms.com/
  *******************************************************************************/
 
---%>
 
 <%@page language="java" contentType="text/html" session="true"%>
 
@@ -105,3 +104,4 @@
 </form>
 
 <jsp:include page="/includes/footer.jsp" flush="false" />
+--%>

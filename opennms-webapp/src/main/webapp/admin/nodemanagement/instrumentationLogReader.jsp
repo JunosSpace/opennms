@@ -27,7 +27,6 @@
  *     http://www.opennms.com/
  *******************************************************************************/
 
---%>
 
 <%@page language="java"
 	contentType="text/html"
@@ -343,3 +342,4 @@ the <em>log4j2.properties</em> configuration file.
 	<hr />
 <jsp:include page="/includes/footer.jsp" flush="false"/>
 </body>
+--%>

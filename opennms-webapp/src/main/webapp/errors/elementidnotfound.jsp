@@ -62,7 +62,7 @@
 <h1><%=einfe.getElemType(true)%> ID Not Found</h1>
 
 <p>
-  The <%=einfe.getElemType()%> ID <%=einfe.getBadID()%> is invalid. <%=einfe.getMessage()%>
+  The <%=einfe.getElemType()%> ID <%=einfe.getBadID()%> is invalid. <%=org.opennms.core.utils.WebSecurityUtils.sanitizeString(einfe.getMessage(),false)%>
   <br/>
   <% if (einfe.getDetailUri() != null) { %>
   <p>
