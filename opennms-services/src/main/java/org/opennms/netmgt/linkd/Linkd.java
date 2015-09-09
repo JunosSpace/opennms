@@ -174,6 +174,8 @@ public class Linkd extends AbstractServiceDaemon {
 
         Assert.notNull(m_nodes);
         scheduleCollection();
+        
+        new IPASOEventProcessor(m_eventForwarder);
 
         LOG.info("init: LINKD CONFIGURATION INITIALIZED");
     }

@@ -65,8 +65,29 @@ public abstract class SaveOrUpdateOperation extends ImportOperation {
      * @param provisionService a {@link org.opennms.netmgt.provision.service.ProvisionService} object.
      */
     public SaveOrUpdateOperation(String foreignSource, String foreignId, String nodeLabel, String building, String city, ProvisionService provisionService) {
-		this(null, foreignSource, foreignId, nodeLabel, building, city, provisionService);
+		this(foreignSource, foreignId, nodeLabel, building, city, null, provisionService);
 	}
+    
+
+    public SaveOrUpdateOperation(String foreignSource, String foreignId, String nodeLabel, String building, String city, String devicePlatform, ProvisionService provisionService) {
+        this(null, foreignSource, foreignId, nodeLabel, building, city, devicePlatform, provisionService);
+    }
+
+    
+    public SaveOrUpdateOperation(Integer nodeId, String foreignSource, String foreignId, String nodeLabel, String building, String city, String devicePlatform, ProvisionService provisionService) {
+        super(provisionService);
+        m_node = new OnmsNode();
+        m_node.setId(nodeId);
+        m_node.setLabel(nodeLabel);
+        m_node.setDevicePlatform(devicePlatform);
+        m_node.setLabelSource(NodeLabelSource.USER);
+        m_node.setType(NodeType.ACTIVE);
+        m_node.setForeignSource(foreignSource);
+        m_node.setForeignId(foreignId);
+        m_node.getAssetRecord().setBuilding(building);
+        m_node.getAssetRecord().setCity(city);
+    }
+    
 
 	/**
 	 * <p>Constructor for SaveOrUpdateOperation.</p>
@@ -80,18 +101,10 @@ public abstract class SaveOrUpdateOperation extends ImportOperation {
 	 * @param provisionService a {@link org.opennms.netmgt.provision.service.ProvisionService} object.
 	 */
 	public SaveOrUpdateOperation(Integer nodeId, String foreignSource, String foreignId, String nodeLabel, String building, String city, ProvisionService provisionService) {
-	    super(provisionService);
-	    
-        m_node = new OnmsNode();
-        m_node.setId(nodeId);
-		m_node.setLabel(nodeLabel);
-		m_node.setLabelSource(NodeLabelSource.USER);
-		m_node.setType(NodeType.ACTIVE);
-        m_node.setForeignSource(foreignSource);
-        m_node.setForeignId(foreignId);
-        m_node.getAssetRecord().setBuilding(building);
-        m_node.getAssetRecord().setCity(city);
+	    this(nodeId,foreignSource,foreignId,nodeLabel,building,city,null,provisionService);
 	}
+	
+
 	
 	/**
 	 * <p>getScanManager</p>

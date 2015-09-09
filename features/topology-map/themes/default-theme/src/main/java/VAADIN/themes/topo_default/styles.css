@@ -108,6 +108,47 @@ div.v-table-header-wrap {
 	stroke: #00ffff;
 }
 
+.edge.nec_radio {
+	stroke: #ccc;
+	stroke-dasharray: 8,4,2,4;
+}
+/**
+.edge.nec_radio.direct {
+	stroke: #00AA00;
+        stroke-dasharray: 8,4,2,4;
+}
+**/
+.edge.nec_radio.selected {
+	stroke: #00ffff;
+        stroke-dasharray: 8,4,2,4;
+}
+
+.edge.nec_dcn {
+        stroke: #ccc;
+	stroke-width: 1 !important;
+}
+/**
+.edge.nec_dcn.direct {
+        stroke: #00AA00;
+}
+**/
+.edge.nec_dcn.selected {
+        stroke: #00ffff;
+	stroke-width: 1 !important;
+}
+
+.edge.nec_traffic {
+        stroke: #ccc;
+}
+/**
+.edge.nec_traffic.direct {
+        stroke: #00DD00; 
+}   
+**/
+.edge.nec_traffic.selected {
+        stroke: #00ffff;
+}
+
 .map-controls {
 	background-color: #ffffff;
 	border-left: 1px solid #dddddd;

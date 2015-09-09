@@ -31,6 +31,8 @@ package org.opennms.features.topology.app.internal;
 import org.opennms.features.topology.api.GraphContainer;
 import org.opennms.features.topology.api.SelectionContext;
 import org.opennms.features.topology.api.VerticesUpdateManager;
+import org.opennms.features.topology.api.topo.EdgeRef;
+import org.opennms.features.topology.api.topo.Ref;
 import org.opennms.features.topology.api.topo.VertexRef;
 import org.opennms.osgi.OnmsServiceManager;
 import org.opennms.osgi.VaadinApplicationContext;
@@ -58,17 +60,17 @@ public class OsgiVerticesUpdateManager implements VerticesUpdateManager {
      * The selected VertexRefs. If a selection is made only the selected VertexRefs are in focus.
      * If no selection is made all visible (or displayable) VertexRefs are in focus.
      */
-    private final Set<VertexRef> m_selectedVertices = Collections.synchronizedSet(new HashSet<VertexRef>());
+    private final Set<Ref> m_selectedVertices = Collections.synchronizedSet(new HashSet<Ref>());
 
     /**
      * The currently displayable VertexRefs.
      */
-    private final Set<VertexRef> m_displayableVertexRefs = Collections.synchronizedSet(new HashSet<VertexRef>());
+    private final Set<Ref> m_displayableVertexRefs = Collections.synchronizedSet(new HashSet<Ref>());
 
     /**
      * The currently selected VertexRefs.
      */
-    private final Set<VertexRef> m_verticesInFocus = Collections.synchronizedSet(new HashSet<VertexRef>());
+    private final Set<Ref> m_verticesInFocus = Collections.synchronizedSet(new HashSet<Ref>());
 
     @Override
     public void graphChanged(GraphContainer graphContainer){
@@ -89,6 +91,20 @@ public class OsgiVerticesUpdateManager implements VerticesUpdateManager {
     public void selectionChanged(SelectionContext selectionContext) {
         if(selectionContext == null) return;
         Collection<VertexRef> selectedVertexRefs = selectionContext.getSelectedVertexRefs();
+        Collection<EdgeRef> selectedEdgeRefs = selectionContext.getSelectedEdgeRefs();
+        
+        if ( (selectedVertexRefs == null || selectedVertexRefs.isEmpty()) && (selectedEdgeRefs != null && !selectedEdgeRefs.isEmpty())) {
+            if(!selectedEdgeRefs.equals(m_selectedVertices)) {
+                synchronized (m_selectedVertices) {
+                    m_selectedVertices.clear();
+                    m_selectedVertices.addAll(selectedEdgeRefs);
+                }
+            }
+            fireVertexRefsUpdated(getVerticesInFocus());
+            
+            return;
+        }
+        
         if(!selectedVertexRefs.equals(m_selectedVertices)) {
             synchronized (m_selectedVertices) {
                 m_selectedVertices.clear();
@@ -98,13 +114,13 @@ public class OsgiVerticesUpdateManager implements VerticesUpdateManager {
         fireVertexRefsUpdated(getVerticesInFocus());
 
     }
-
-    private Set<VertexRef> getVerticesInFocus() {
+    
+    private Set<Ref> getVerticesInFocus() {
         if(m_selectedVertices.isEmpty()) return m_displayableVertexRefs;
         return m_selectedVertices;
     }
 
-    private boolean hasChanged(Collection<VertexRef> newVertexRefs, Collection<VertexRef> verticesInFocus) {
+    private boolean hasChanged(Collection<Ref> newVertexRefs, Collection<Ref> verticesInFocus) {
         // if newVertexRefs and verticesInFocus are empty, we assume that they have changed
         // this is usually only the case when the UI is initialized, because
         // then both lists are empty, but we need them to be different.
@@ -119,7 +135,7 @@ public class OsgiVerticesUpdateManager implements VerticesUpdateManager {
      * Notifies all listeners that the focus of the vertices has changed.
      * @param newVertexRefs
      */
-    synchronized private void fireVertexRefsUpdated(Collection<VertexRef> newVertexRefs) {
+    synchronized private void fireVertexRefsUpdated(Collection<Ref> newVertexRefs) {
         if (!hasChanged(newVertexRefs, m_verticesInFocus)) {
             return;
         }
@@ -130,7 +146,7 @@ public class OsgiVerticesUpdateManager implements VerticesUpdateManager {
             displayedSelected = true;
         }
 
-        final VerticesUpdateEvent updateEvent = new VerticesUpdateEvent(Collections.unmodifiableSet(m_verticesInFocus), displayedSelected);
+        final VerticesUpdateEvent updateEvent = new VerticesUpdateEvent(displayedSelected,Collections.unmodifiableSet(m_verticesInFocus));
         m_applicationContext.getEventProxy(m_serviceManager).fireEvent(updateEvent);
     }
 }

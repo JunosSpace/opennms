@@ -13,6 +13,7 @@
 	<reference id="alarmRepository" interface="org.opennms.netmgt.dao.api.AlarmRepository" availability="mandatory" />
 	<reference id="geocoderService" interface="org.opennms.features.geocoder.GeocoderService" availability="mandatory" />
 	<reference id="onmsHeaderProvider" interface="org.opennms.web.api.OnmsHeaderProvider" availability="optional" />
+	<reference id="dataLinkInterfaceDao" interface="org.opennms.netmgt.dao.api.DataLinkInterfaceDao" availability="mandatory" />
 
 	<bean id="alarmTableCellStyleGenerator" class="org.opennms.features.topology.plugins.browsers.AlarmTableCellStyleGenerator" />
 	<bean id="selectionCheckboxGenerator" class="org.opennms.features.topology.plugins.browsers.CheckboxGenerator">
@@ -33,6 +34,7 @@
 	<!-- Wrap the DAO in a Vaadin container -->
 	<bean id="alarmDaoContainer" class="org.opennms.features.topology.plugins.browsers.AlarmDaoContainer" scope="prototype">
 		<argument ref="alarmDao" />
+		<property name="dataLinkInterfaceDao" ref="dataLinkInterfaceDao" />
 	</bean>
 	
 	<bean id="alarmTable" class="org.opennms.features.topology.plugins.browsers.AlarmTable" scope="prototype">

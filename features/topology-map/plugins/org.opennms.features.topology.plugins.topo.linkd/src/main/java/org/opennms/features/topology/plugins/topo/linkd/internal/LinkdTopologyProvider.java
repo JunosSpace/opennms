@@ -65,6 +65,7 @@ import org.opennms.features.topology.api.topo.WrappedGraph;
 import org.opennms.features.topology.api.topo.WrappedGroup;
 import org.opennms.features.topology.api.topo.WrappedLeafVertex;
 import org.opennms.features.topology.api.topo.WrappedVertex;
+import org.opennms.netmgt.dao.api.AlarmDao;
 import org.opennms.netmgt.dao.api.DataLinkInterfaceDao;
 import org.opennms.netmgt.dao.api.IpInterfaceDao;
 import org.opennms.netmgt.dao.api.NodeDao;
@@ -268,6 +269,8 @@ public class LinkdTopologyProvider extends AbstractTopologyProvider implements G
 
     private SnmpInterfaceDao m_snmpInterfaceDao;
 
+    private AlarmDao m_alarmDao;
+
     private IpInterfaceDao m_ipInterfaceDao;
 
     private TopologyDao m_topologyDao;
@@ -398,6 +401,10 @@ public class LinkdTopologyProvider extends AbstractTopologyProvider implements G
             // TODO: Make sure that all properties are set on this object
             AbstractEdge edge = connectVertices(link.getDataLinkInterfaceId(), source, target); 
             edge.setTooltipText(getEdgeTooltipText(link, source, target));
+            String styleName = this.getStyleName(node, parentNode, link); 
+            if ( styleName != null) {
+            	edge.setStyleName(styleName);
+            }
         }
         
         log("loadtopology: adding nodes without links: " + isAddNodeWithoutLink());
@@ -470,6 +477,40 @@ public class LinkdTopologyProvider extends AbstractTopologyProvider implements G
         log("Found " + getGroups().size() + " groups");        
         log("Found " + getVerticesWithoutGroups().size() + " vertices");
         log("Found " + getEdges().size() + " edges");
+    }
+    
+    private boolean isHasAlarm(OnmsNode node, OnmsNode parentNode, DataLinkInterface link){
+        return addNodeWithoutLink;
+        
+    }
+
+    private String getStyleName(OnmsNode node, OnmsNode parentNode, DataLinkInterface link){
+
+        if( node.getSysObjectId() == null || parentNode.getSysObjectId() == null){
+        	return null;
+        }
+        if( !node.getSysObjectId().contains("1.3.6.1.4.1.119") || !parentNode.getSysObjectId().contains("1.3.6.1.4.1.119.")){
+        	return null;
+        }
+        
+    	OnmsSnmpInterface sourceInterface = m_snmpInterfaceDao.findByNodeIdAndIfIndex(Integer.parseInt(node.getNodeId()), link.getIfIndex());
+        OnmsSnmpInterface targetInterface = m_snmpInterfaceDao.findByNodeIdAndIfIndex(Integer.parseInt(parentNode.getNodeId()), link.getParentIfIndex());
+
+        
+        if (sourceInterface == null || targetInterface == null) {
+        	return "nec_dcn edge";
+        }
+        
+        //ifType 8: radio interface, has one is radio link
+        //inType 7: traffic interface, has both is traffic link
+        //inType 6: dcn interface, one is dcn, another one is dcn or traffice is dcn 
+        if (sourceInterface.getIfType().intValue() == 8 || targetInterface.getIfType().intValue() == 8){
+        	return "nec_radio edge ";
+        } else if (sourceInterface.getIfType().intValue() == 7 && targetInterface.getIfType().intValue() == 7){
+        	return "nec_traffic edge ";
+        }else{
+        	return "nec_dcn edge";
+        }
     }
 
     private List<OnmsNode> getAllNodesNoACL() {
@@ -615,6 +656,9 @@ public class LinkdTopologyProvider extends AbstractTopologyProvider implements G
     }
     
     public static String getIconName(OnmsNode node) {
+        if (node.getSysObjectId() != null && node.getSysObjectId().equals(".1.3.6.1.4.1.119.2.3.69.502")) {
+            return "linkd:system:snmp:"+node.getSysObjectId()+"."+node.getDevicePlatform();
+        }
         return node.getSysObjectId() == null ? "linkd:system" : "linkd:system:snmp:"+node.getSysObjectId();
     }
     

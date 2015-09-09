@@ -30,6 +30,8 @@ package org.opennms.features.topology.api;
 
 import java.util.Set;
 
+import org.opennms.features.topology.api.topo.EdgeRef;
+import org.opennms.features.topology.api.topo.Ref;
 import org.opennms.features.topology.api.topo.VertexRef;
 
 /**
@@ -48,6 +50,7 @@ public interface VerticesUpdateManager extends SelectionListener, GraphContainer
     class VerticesUpdateEvent {
 
         private final Set<VertexRef> m_vertexRefs;
+        private final Set<Ref> m_Refs;
         private final boolean m_displayingAllVertices;
 
         public VerticesUpdateEvent(Set<VertexRef> vertexRefs) {
@@ -55,7 +58,14 @@ public interface VerticesUpdateManager extends SelectionListener, GraphContainer
         }
 
         public VerticesUpdateEvent(Set<VertexRef> vertexRefs, boolean displayingAllVertices){
+            m_Refs = null;
             m_vertexRefs = vertexRefs;
+            m_displayingAllVertices = displayingAllVertices;
+        }
+        
+        public VerticesUpdateEvent(boolean displayingAllVertices,Set<Ref> edgeRefs){
+            m_vertexRefs = null;
+            m_Refs = edgeRefs;
             m_displayingAllVertices = displayingAllVertices;
         }
 
@@ -67,9 +77,19 @@ public interface VerticesUpdateManager extends SelectionListener, GraphContainer
             return m_displayingAllVertices;
         }
         
+        public Set<Ref> getRefs() {
+            return m_Refs;
+        }
+
+
+        
         @Override
         public String toString() {
+            if (m_vertexRefs == null && m_Refs != null) {
+                return "VerticesUpdateEvent@" + this.hashCode() + " [displayAll=" + m_displayingAllVertices + ", refs=" + m_Refs + "]";
+            }
             return "VerticesUpdateEvent@" + this.hashCode() + " [displayAll=" + m_displayingAllVertices + ", refs=" + m_vertexRefs + "]";
         }
+
     }
 }

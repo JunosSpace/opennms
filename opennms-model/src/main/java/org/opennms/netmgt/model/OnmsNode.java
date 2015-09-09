@@ -147,6 +147,8 @@ public class OnmsNode extends OnmsEntity implements Serializable, Comparable<Onm
     private String m_foreignSource;
     
     private String m_foreignId;
+    
+    private String m_devicePlatform;
 
     /** persistent field */
     private OnmsDistPoller m_distPoller;
@@ -630,6 +632,17 @@ public class OnmsNode extends OnmsEntity implements Serializable, Comparable<Onm
     public void setForeignId(String foreignId) {
         m_foreignId = foreignId;
     }
+    
+    @XmlAttribute(name="devicePlatform")
+    @Column(name="devicePlatform")
+    public String getDevicePlatform() {
+        return m_devicePlatform;
+    }
+
+    public void setDevicePlatform(String devicePlatform) {
+        m_devicePlatform = devicePlatform;
+    }
+
 
     /**
      * <p>getForeignSource</p>

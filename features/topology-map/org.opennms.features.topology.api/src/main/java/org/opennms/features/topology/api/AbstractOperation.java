@@ -74,6 +74,11 @@ public abstract class AbstractOperation implements Operation {
         Vertex vertex = getVertexItem(operationContext, target);
         return vertex == null ? null : vertex.getIpAddress();
     }
+    
+    protected static String getIconKeyValue(final OperationContext operationContext, final VertexRef target) {
+        Vertex vertex = getVertexItem(operationContext, target);
+        return vertex == null ? null : vertex.getIconKey();
+    }
 
     protected static Integer getNodeIdValue(final OperationContext operationContext, final VertexRef target) {
         Vertex vertex = getVertexItem(operationContext, target);

@@ -2132,6 +2132,14 @@
 <event-file>events/JuniperEvents/tcaos/mib-jnx-tca-interface.xml</event-file>
 <event-file>events/JuniperEvents/tcaos/mib-jnx-tca-ntp.xml</event-file>
 <event-file>events/JuniperEvents/tcaos/mib-jnx-tca-timing.xml</event-file>
+
+<!-- Events for the ipaso family -->
+<event-file>events/JuniperEvents/ipaso/MIB-MNIS-IPASOLINK-100-200-COMMON-MIB.events.xml</event-file>
+<event-file>events/JuniperEvents/ipaso/MIB-MNIS-IPASOLINK-100-200-SYSTEM-MIB.events.xml</event-file>
+<event-file>events/JuniperEvents/ipaso/MIB-MNIS-IPASOLINK-400-COMMON-MIB.events.xml</event-file>
+<event-file>events/JuniperEvents/ipaso/MIB-MNIS-IPASOLINK-400-SYSTEM-MIB.events.xml</event-file>
+<event-file>events/JuniperEvents/ipaso/IPASOLINK-LINKD_ALARM.xml</event-file>
+
 <!-- Events for the mbg mx family -->
 <event-file>events/JuniperEvents/mbg/mib-jnx-mobile-gateway-aaa.xml</event-file>
 <event-file>events/JuniperEvents/mbg/mib-jnx-mobile-gateway-appfw.xml</event-file>
@@ -2244,4 +2252,3 @@
   <event-file>events/Standard.events.xml</event-file>
   <event-file>events/default.events.xml</event-file>
 </events>
-

@@ -1,0 +1,962 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<events xmlns="http://xmlns.opennms.org/xsd/eventconf"> 
+ <event>
+    <uei>uei.opennms.org/internal/linkd/trap/frameID</uei>
+    <event-label>OpenNMS-defined linkd event: frameID</event-label>
+    <descr>
+&lt;p&gt;MODEM Frame ID Alarm.&lt;/p&gt;&lt;table&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    trapDate&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#2]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    trapTime&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#3]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    endPoint1&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#4]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    endPoint2&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#14]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    ChnPrtNo&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#6]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    </descr>
+    <logmsg dest='logndisplay'>&lt;p&gt;
+    frameID trap received
+    trapDate=%parm[#2]%
+    trapTime=%parm[#3]%
+    endPoint1=%parm[#4]%
+    endPoint2=%parm[#14]%
+    mnisChnPrtNo=%parm[#6]%
+    </logmsg>
+    <alarm-data reduction-key="%uei%:%parm[#4]%:%parm[#14]%" alarm-type="1" >
+        <update-field field-name="severity" update-on-reduction="true"/>
+    </alarm-data>
+  </event>
+  <event>
+    <uei>uei.opennms.org/internal/linkd/cleare/frameID</uei>
+    <event-label>OpenNMS-defined linkd event: Data receive Failed</event-label>
+    <descr>
+&lt;p&gt;MODEM Frame ID Alarm.&lt;/p&gt;&lt;table&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    trapDate&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#2]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    trapTime&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#3]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    endPoint1&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#4]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    endPoint2&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#14]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    ChnPrtNo&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#6]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    </descr>
+    <logmsg dest='logndisplay'>&lt;p&gt;
+    frameID trap received
+    trapDate=%parm[#2]%
+    trapTime=%parm[#3]%
+    endPoint1=%parm[#4]%
+    endPoint2=%parm[#14]%
+    mnisChnPrtNo=%parm[#6]%
+    </logmsg>
+    <severity>Cleared</severity>
+    <alarm-data reduction-key="%uei%:%parm[#4]%:%parm[#14]%" clear-key="uei.opennms.org/internal/linkd/trap/frameID:%parm[#4]%:%parm[#14]%" alarm-type="2" auto-clean="true" />
+  </event>
+
+ <event>
+    <uei>uei.opennms.org/internal/linkd/trap/txPowerAlarm</uei>
+    <event-label>OpenNMS-defined linkd event: txPowerAlarm</event-label>
+    <descr>
+&lt;p&gt;ODU TX Power Alarm.&lt;/p&gt;&lt;table&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    trapDate&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#2]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    trapTime&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#3]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    endPoint1&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#4]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    endPoint2&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#14]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    ChnPrtNo&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#6]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    </descr>
+    <logmsg dest='logndisplay'>&lt;p&gt;
+    txPowerAlarm trap received
+    trapDate=%parm[#2]%
+    trapTime=%parm[#3]%
+    endPoint1=%parm[#4]%
+    endPoint2=%parm[#14]%
+    mnisChnPrtNo=%parm[#6]%
+    </logmsg>
+    <alarm-data reduction-key="%uei%:%parm[#4]%:%parm[#14]%" alarm-type="1" >
+        <update-field field-name="severity" update-on-reduction="true"/>
+    </alarm-data>
+  </event>
+  <event>
+    <uei>uei.opennms.org/internal/linkd/cleare/txPowerAlarm</uei>
+    <event-label>OpenNMS-defined linkd event: Data receive Failed</event-label>
+    <descr>
+&lt;p&gt;ODU TX Power Alarm.&lt;/p&gt;&lt;table&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    trapDate&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#2]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    trapTime&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#3]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    endPoint1&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#4]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    endPoint2&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#14]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    ChnPrtNo&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#6]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    </descr>
+    <logmsg dest='logndisplay'>&lt;p&gt;
+    txPowerAlarm trap received
+    trapDate=%parm[#2]%
+    trapTime=%parm[#3]%
+    endPoint1=%parm[#4]%
+    endPoint2=%parm[#14]%
+    mnisChnPrtNo=%parm[#6]%
+    </logmsg>
+    <severity>Cleared</severity>
+    <alarm-data reduction-key="%uei%:%parm[#4]%:%parm[#14]%" clear-key="uei.opennms.org/internal/linkd/trap/txPowerAlarm:%parm[#4]%:%parm[#14]%" alarm-type="2" auto-clean="true" />
+  </event>
+
+ <event>
+    <uei>uei.opennms.org/internal/linkd/trap/rxLevelAlarm</uei>
+    <event-label>OpenNMS-defined linkd event: rxLevelAlarm</event-label>
+    <descr>
+&lt;p&gt;ODU RX Level Alarm.&lt;/p&gt;&lt;table&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    trapDate&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#2]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    trapTime&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#3]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    endPoint1&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#4]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    endPoint2&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#14]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    ChnPrtNo&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#6]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    </descr>
+    <logmsg dest='logndisplay'>&lt;p&gt;
+    rxLevelAlarm trap received
+    trapDate=%parm[#2]%
+    trapTime=%parm[#3]%
+    endPoint1=%parm[#4]%
+    endPoint2=%parm[#14]%
+    mnisChnPrtNo=%parm[#6]%
+    </logmsg>
+    <alarm-data reduction-key="%uei%:%parm[#4]%:%parm[#14]%" alarm-type="1" >
+        <update-field field-name="severity" update-on-reduction="true"/>
+    </alarm-data>
+  </event>
+  <event>
+    <uei>uei.opennms.org/internal/linkd/cleare/rxLevelAlarm</uei>
+    <event-label>OpenNMS-defined linkd event: Data receive Failed</event-label>
+    <descr>
+&lt;p&gt;ODU RX Level Alarm.&lt;/p&gt;&lt;table&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    trapDate&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#2]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    trapTime&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#3]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    endPoint1&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#4]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    endPoint2&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#14]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    ChnPrtNo&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#6]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    </descr>
+    <logmsg dest='logndisplay'>&lt;p&gt;
+    rxLevelAlarm trap received
+    trapDate=%parm[#2]%
+    trapTime=%parm[#3]%
+    endPoint1=%parm[#4]%
+    endPoint2=%parm[#14]%
+    mnisChnPrtNo=%parm[#6]%
+    </logmsg>
+    <severity>Cleared</severity>
+    <alarm-data reduction-key="%uei%:%parm[#4]%:%parm[#14]%" clear-key="uei.opennms.org/internal/linkd/trap/rxLevelAlarm:%parm[#4]%:%parm[#14]%" alarm-type="2" auto-clean="true" />
+  </event>
+
+ <event>
+    <uei>uei.opennms.org/internal/linkd/trap/asETHPortSFPLos</uei>
+    <event-label>OpenNMS-defined linkd event: asETHPortSFPLos</event-label>
+    <descr>
+&lt;p&gt;GbE ETH LOS Alarm.&lt;/p&gt;&lt;table&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    trapDate&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#2]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    trapTime&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#3]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    endPoint1&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#4]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    endPoint2&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#14]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    ChnPrtNo&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#6]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    </descr>
+    <logmsg dest='logndisplay'>&lt;p&gt;
+    asETHPortSFPLos trap received
+    trapDate=%parm[#2]%
+    trapTime=%parm[#3]%
+    endPoint1=%parm[#4]%
+    endPoint2=%parm[#14]%
+    mnisChnPrtNo=%parm[#6]%
+    </logmsg>
+    <alarm-data reduction-key="%uei%:%parm[#4]%:%parm[#14]%" alarm-type="1" >
+        <update-field field-name="severity" update-on-reduction="true"/>
+    </alarm-data>
+  </event>
+  <event>
+    <uei>uei.opennms.org/internal/linkd/cleare/asETHPortSFPLos</uei>
+    <event-label>OpenNMS-defined linkd event: Data receive Failed</event-label>
+    <descr>
+&lt;p&gt;GbE ETH LOS Alarm.&lt;/p&gt;&lt;table&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    trapDate&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#2]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    trapTime&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#3]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    endPoint1&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#4]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    endPoint2&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#14]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    ChnPrtNo&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#6]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    </descr>
+    <logmsg dest='logndisplay'>&lt;p&gt;
+    asETHPortSFPLos trap received
+    trapDate=%parm[#2]%
+    trapTime=%parm[#3]%
+    endPoint1=%parm[#4]%
+    endPoint2=%parm[#14]%
+    mnisChnPrtNo=%parm[#6]%
+    </logmsg>
+    <severity>Cleared</severity>
+    <alarm-data reduction-key="%uei%:%parm[#4]%:%parm[#14]%" clear-key="uei.opennms.org/internal/linkd/trap/asETHPortSFPLos:%parm[#4]%:%parm[#14]%" alarm-type="2" auto-clean="true" />
+  </event>
+
+ <event>
+    <uei>uei.opennms.org/internal/linkd/trap/lpUnequipedAlarm</uei>
+    <event-label>OpenNMS-defined linkd event: lpUnequipedAlarm</event-label>
+    <descr>
+&lt;p&gt;STM-1 LP UNEQ Alarm.&lt;/p&gt;&lt;table&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    trapDate&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#2]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    trapTime&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#3]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    endPoint1&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#4]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    endPoint2&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#14]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    ChnPrtNo&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#6]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    </descr>
+    <logmsg dest='logndisplay'>&lt;p&gt;
+    lpUnequipedAlarm trap received
+    trapDate=%parm[#2]%
+    trapTime=%parm[#3]%
+    endPoint1=%parm[#4]%
+    endPoint2=%parm[#14]%
+    mnisChnPrtNo=%parm[#6]%
+    </logmsg>
+    <alarm-data reduction-key="%uei%:%parm[#4]%:%parm[#14]%" alarm-type="1" >
+        <update-field field-name="severity" update-on-reduction="true"/>
+    </alarm-data>
+  </event>
+  <event>
+    <uei>uei.opennms.org/internal/linkd/cleare/lpUnequipedAlarm</uei>
+    <event-label>OpenNMS-defined linkd event: Data receive Failed</event-label>
+    <descr>
+&lt;p&gt;STM-1 LP UNEQ Alarm.&lt;/p&gt;&lt;table&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    trapDate&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#2]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    trapTime&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#3]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    endPoint1&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#4]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    endPoint2&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#14]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    ChnPrtNo&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#6]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    </descr>
+    <logmsg dest='logndisplay'>&lt;p&gt;
+    lpUnequipedAlarm trap received
+    trapDate=%parm[#2]%
+    trapTime=%parm[#3]%
+    endPoint1=%parm[#4]%
+    endPoint2=%parm[#14]%
+    mnisChnPrtNo=%parm[#6]%
+    </logmsg>
+    <severity>Cleared</severity>
+    <alarm-data reduction-key="%uei%:%parm[#4]%:%parm[#14]%" clear-key="uei.opennms.org/internal/linkd/trap/lpUnequipedAlarm:%parm[#4]%:%parm[#14]%" alarm-type="2" auto-clean="true" />
+  </event>
+
+ <event>
+    <uei>uei.opennms.org/internal/linkd/trap/asETHPortSFPTxError</uei>
+    <event-label>OpenNMS-defined linkd event: asETHPortSFPTxError</event-label>
+    <descr>
+&lt;p&gt;GbE ETH TF (Transmit FAIL) Alarm.&lt;/p&gt;&lt;table&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    trapDate&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#2]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    trapTime&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#3]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    endPoint1&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#4]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    endPoint2&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#14]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    ChnPrtNo&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#6]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    </descr>
+    <logmsg dest='logndisplay'>&lt;p&gt;
+    asETHPortSFPTxError trap received
+    trapDate=%parm[#2]%
+    trapTime=%parm[#3]%
+    endPoint1=%parm[#4]%
+    endPoint2=%parm[#14]%
+    mnisChnPrtNo=%parm[#6]%
+    </logmsg>
+    <alarm-data reduction-key="%uei%:%parm[#4]%:%parm[#14]%" alarm-type="1" >
+        <update-field field-name="severity" update-on-reduction="true"/>
+    </alarm-data>
+  </event>
+  <event>
+    <uei>uei.opennms.org/internal/linkd/cleare/asETHPortSFPTxError</uei>
+    <event-label>OpenNMS-defined linkd event: Data receive Failed</event-label>
+    <descr>
+&lt;p&gt;GbE ETH TF (Transmit FAIL) Alarm.&lt;/p&gt;&lt;table&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    trapDate&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#2]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    trapTime&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#3]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    endPoint1&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#4]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    endPoint2&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#14]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    ChnPrtNo&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#6]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    </descr>
+    <logmsg dest='logndisplay'>&lt;p&gt;
+    asETHPortSFPTxError trap received
+    trapDate=%parm[#2]%
+    trapTime=%parm[#3]%
+    endPoint1=%parm[#4]%
+    endPoint2=%parm[#14]%
+    mnisChnPrtNo=%parm[#6]%
+    </logmsg>
+    <severity>Cleared</severity>
+    <alarm-data reduction-key="%uei%:%parm[#4]%:%parm[#14]%" clear-key="uei.opennms.org/internal/linkd/trap/asETHPortSFPTxError:%parm[#4]%:%parm[#14]%" alarm-type="2" auto-clean="true" />
+  </event>
+
+ <event>
+    <uei>uei.opennms.org/internal/linkd/trap/e1LosAlarm</uei>
+    <event-label>OpenNMS-defined linkd event: e1LosAlarm</event-label>
+    <descr>
+&lt;p&gt;E1 Channel LOS Alarm.&lt;/p&gt;&lt;table&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    trapDate&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#2]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    trapTime&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#3]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    endPoint1&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#4]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    endPoint2&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#14]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    ChnPrtNo&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#6]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    </descr>
+    <logmsg dest='logndisplay'>&lt;p&gt;
+    e1LosAlarm trap received
+    trapDate=%parm[#2]%
+    trapTime=%parm[#3]%
+    endPoint1=%parm[#4]%
+    endPoint2=%parm[#14]%
+    mnisChnPrtNo=%parm[#6]%
+    </logmsg>
+    <alarm-data reduction-key="%uei%:%parm[#4]%:%parm[#14]%" alarm-type="1" >
+        <update-field field-name="severity" update-on-reduction="true"/>
+    </alarm-data>
+  </event>
+  <event>
+    <uei>uei.opennms.org/internal/linkd/cleare/e1LosAlarm</uei>
+    <event-label>OpenNMS-defined linkd event: Data receive Failed</event-label>
+    <descr>
+&lt;p&gt;E1 Channel LOS Alarm.&lt;/p&gt;&lt;table&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    trapDate&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#2]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    trapTime&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#3]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    endPoint1&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#4]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    endPoint2&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#14]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    ChnPrtNo&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#6]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    </descr>
+    <logmsg dest='logndisplay'>&lt;p&gt;
+    e1LosAlarm trap received
+    trapDate=%parm[#2]%
+    trapTime=%parm[#3]%
+    endPoint1=%parm[#4]%
+    endPoint2=%parm[#14]%
+    mnisChnPrtNo=%parm[#6]%
+    </logmsg>
+    <severity>Cleared</severity>
+    <alarm-data reduction-key="%uei%:%parm[#4]%:%parm[#14]%" clear-key="uei.opennms.org/internal/linkd/trap/e1LosAlarm:%parm[#4]%:%parm[#14]%" alarm-type="2" auto-clean="true" />
+  </event>
+
+ <event>
+    <uei>uei.opennms.org/internal/linkd/trap/tdmRangeMismatch</uei>
+    <event-label>OpenNMS-defined linkd event: tdmRangeMismatch</event-label>
+    <descr>
+&lt;p&gt;MODEM TDM / AMR Range Mismatch Alarm.&lt;/p&gt;&lt;table&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    trapDate&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#2]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    trapTime&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#3]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    endPoint1&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#4]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    endPoint2&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#14]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    ChnPrtNo&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#6]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    </descr>
+    <logmsg dest='logndisplay'>&lt;p&gt;
+    tdmRangeMismatch trap received
+    trapDate=%parm[#2]%
+    trapTime=%parm[#3]%
+    endPoint1=%parm[#4]%
+    endPoint2=%parm[#14]%
+    mnisChnPrtNo=%parm[#6]%
+    </logmsg>
+    <alarm-data reduction-key="%uei%:%parm[#4]%:%parm[#14]%" alarm-type="1" >
+        <update-field field-name="severity" update-on-reduction="true"/>
+    </alarm-data>
+  </event>
+  <event>
+    <uei>uei.opennms.org/internal/linkd/cleare/tdmRangeMismatch</uei>
+    <event-label>OpenNMS-defined linkd event: Data receive Failed</event-label>
+    <descr>
+&lt;p&gt;MODEM TDM / AMR Range Mismatch Alarm.&lt;/p&gt;&lt;table&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    trapDate&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#2]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    trapTime&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#3]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    endPoint1&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#4]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    endPoint2&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#14]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    ChnPrtNo&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#6]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    </descr>
+    <logmsg dest='logndisplay'>&lt;p&gt;
+    tdmRangeMismatch trap received
+    trapDate=%parm[#2]%
+    trapTime=%parm[#3]%
+    endPoint1=%parm[#4]%
+    endPoint2=%parm[#14]%
+    mnisChnPrtNo=%parm[#6]%
+    </logmsg>
+    <severity>Cleared</severity>
+    <alarm-data reduction-key="%uei%:%parm[#4]%:%parm[#14]%" clear-key="uei.opennms.org/internal/linkd/trap/tdmRangeMismatch:%parm[#4]%:%parm[#14]%" alarm-type="2" auto-clean="true" />
+  </event>
+
+ <event>
+    <uei>uei.opennms.org/internal/linkd/trap/stm1LosAlarm</uei>
+    <event-label>OpenNMS-defined linkd event: stm1LosAlarm</event-label>
+    <descr>
+&lt;p&gt;STM-1 LOS Alarm.&lt;/p&gt;&lt;table&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    trapDate&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#2]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    trapTime&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#3]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    endPoint1&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#4]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    endPoint2&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#14]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    ChnPrtNo&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#6]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    </descr>
+    <logmsg dest='logndisplay'>&lt;p&gt;
+    stm1LosAlarm trap received
+    trapDate=%parm[#2]%
+    trapTime=%parm[#3]%
+    endPoint1=%parm[#4]%
+    endPoint2=%parm[#14]%
+    mnisChnPrtNo=%parm[#6]%
+    </logmsg>
+    <alarm-data reduction-key="%uei%:%parm[#4]%:%parm[#14]%" alarm-type="1" >
+        <update-field field-name="severity" update-on-reduction="true"/>
+    </alarm-data>
+  </event>
+  <event>
+    <uei>uei.opennms.org/internal/linkd/cleare/stm1LosAlarm</uei>
+    <event-label>OpenNMS-defined linkd event: Data receive Failed</event-label>
+    <descr>
+&lt;p&gt;STM-1 LOS Alarm.&lt;/p&gt;&lt;table&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    trapDate&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#2]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    trapTime&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#3]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    endPoint1&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#4]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    endPoint2&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#14]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    ChnPrtNo&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#6]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    </descr>
+    <logmsg dest='logndisplay'>&lt;p&gt;
+    stm1LosAlarm trap received
+    trapDate=%parm[#2]%
+    trapTime=%parm[#3]%
+    endPoint1=%parm[#4]%
+    endPoint2=%parm[#14]%
+    mnisChnPrtNo=%parm[#6]%
+    </logmsg>
+    <severity>Cleared</severity>
+    <alarm-data reduction-key="%uei%:%parm[#4]%:%parm[#14]%" clear-key="uei.opennms.org/internal/linkd/trap/stm1LosAlarm:%parm[#4]%:%parm[#14]%" alarm-type="2" auto-clean="true" />
+  </event>
+
+ <event>
+    <uei>uei.opennms.org/internal/linkd/trap/asETHPortLinkStatus</uei>
+    <event-label>OpenNMS-defined linkd event: asETHPortLinkStatus</event-label>
+    <descr>
+&lt;p&gt;GbE LAN Link Alarm.&lt;/p&gt;&lt;table&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    trapDate&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#2]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    trapTime&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#3]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    endPoint1&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#4]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    endPoint2&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#14]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    ChnPrtNo&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#6]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    </descr>
+    <logmsg dest='logndisplay'>&lt;p&gt;
+    asETHPortLinkStatus trap received
+    trapDate=%parm[#2]%
+    trapTime=%parm[#3]%
+    endPoint1=%parm[#4]%
+    endPoint2=%parm[#14]%
+    mnisChnPrtNo=%parm[#6]%
+    </logmsg>
+    <alarm-data reduction-key="%uei%:%parm[#4]%:%parm[#14]%" alarm-type="1" >
+        <update-field field-name="severity" update-on-reduction="true"/>
+    </alarm-data>
+  </event>
+  <event>
+    <uei>uei.opennms.org/internal/linkd/cleare/asETHPortLinkStatus</uei>
+    <event-label>OpenNMS-defined linkd event: Data receive Failed</event-label>
+    <descr>
+&lt;p&gt;GbE LAN Link Alarm.&lt;/p&gt;&lt;table&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    trapDate&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#2]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    trapTime&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#3]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    endPoint1&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#4]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    endPoint2&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#14]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    ChnPrtNo&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#6]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    </descr>
+    <logmsg dest='logndisplay'>&lt;p&gt;
+    asETHPortLinkStatus trap received
+    trapDate=%parm[#2]%
+    trapTime=%parm[#3]%
+    endPoint1=%parm[#4]%
+    endPoint2=%parm[#14]%
+    mnisChnPrtNo=%parm[#6]%
+    </logmsg>
+    <severity>Cleared</severity>
+    <alarm-data reduction-key="%uei%:%parm[#4]%:%parm[#14]%" clear-key="uei.opennms.org/internal/linkd/trap/asETHPortLinkStatus:%parm[#4]%:%parm[#14]%" alarm-type="2" auto-clean="true" />
+  </event>
+
+ <event>
+    <uei>uei.opennms.org/internal/linkd/trap/lof</uei>
+    <event-label>OpenNMS-defined linkd event: lof</event-label>
+    <descr>
+&lt;p&gt;MODEM LOF Alarm.&lt;/p&gt;&lt;table&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    trapDate&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#2]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    trapTime&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#3]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    endPoint1&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#4]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    endPoint2&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#14]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    ChnPrtNo&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#6]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    </descr>
+    <logmsg dest='logndisplay'>&lt;p&gt;
+    lof trap received
+    trapDate=%parm[#2]%
+    trapTime=%parm[#3]%
+    endPoint1=%parm[#4]%
+    endPoint2=%parm[#14]%
+    mnisChnPrtNo=%parm[#6]%
+    </logmsg>
+    <alarm-data reduction-key="%uei%:%parm[#4]%:%parm[#14]%" alarm-type="1" >
+        <update-field field-name="severity" update-on-reduction="true"/>
+    </alarm-data>
+  </event>
+  <event>
+    <uei>uei.opennms.org/internal/linkd/cleare/lof</uei>
+    <event-label>OpenNMS-defined linkd event: Data receive Failed</event-label>
+    <descr>
+&lt;p&gt;MODEM LOF Alarm.&lt;/p&gt;&lt;table&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    trapDate&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#2]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    trapTime&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#3]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    endPoint1&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#4]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    endPoint2&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#14]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    ChnPrtNo&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#6]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    </descr>
+    <logmsg dest='logndisplay'>&lt;p&gt;
+    lof trap received
+    trapDate=%parm[#2]%
+    trapTime=%parm[#3]%
+    endPoint1=%parm[#4]%
+    endPoint2=%parm[#14]%
+    mnisChnPrtNo=%parm[#6]%
+    </logmsg>
+    <severity>Cleared</severity>
+    <alarm-data reduction-key="%uei%:%parm[#4]%:%parm[#14]%" clear-key="uei.opennms.org/internal/linkd/trap/lof:%parm[#4]%:%parm[#14]%" alarm-type="2" auto-clean="true" />
+  </event>
+
+ <event>
+    <uei>uei.opennms.org/internal/linkd/trap/l2SyncLossAlarm</uei>
+    <event-label>OpenNMS-defined linkd event: l2SyncLossAlarm</event-label>
+    <descr>
+&lt;p&gt;MODEM L2SYNC Loss Alarm.&lt;/p&gt;&lt;table&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    trapDate&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#2]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    trapTime&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#3]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    endPoint1&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#4]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    endPoint2&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#14]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    ChnPrtNo&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#6]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    </descr>
+    <logmsg dest='logndisplay'>&lt;p&gt;
+    l2SyncLossAlarm trap received
+    trapDate=%parm[#2]%
+    trapTime=%parm[#3]%
+    endPoint1=%parm[#4]%
+    endPoint2=%parm[#14]%
+    mnisChnPrtNo=%parm[#6]%
+    </logmsg>
+    <alarm-data reduction-key="%uei%:%parm[#4]%:%parm[#14]%" alarm-type="1" >
+        <update-field field-name="severity" update-on-reduction="true"/>
+    </alarm-data>
+  </event>
+  <event>
+    <uei>uei.opennms.org/internal/linkd/cleare/l2SyncLossAlarm</uei>
+    <event-label>OpenNMS-defined linkd event: Data receive Failed</event-label>
+    <descr>
+&lt;p&gt;MODEM L2SYNC Loss Alarm.&lt;/p&gt;&lt;table&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    trapDate&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#2]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    trapTime&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#3]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    endPoint1&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#4]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    endPoint2&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#14]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    ChnPrtNo&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#6]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    </descr>
+    <logmsg dest='logndisplay'>&lt;p&gt;
+    l2SyncLossAlarm trap received
+    trapDate=%parm[#2]%
+    trapTime=%parm[#3]%
+    endPoint1=%parm[#4]%
+    endPoint2=%parm[#14]%
+    mnisChnPrtNo=%parm[#6]%
+    </logmsg>
+    <severity>Cleared</severity>
+    <alarm-data reduction-key="%uei%:%parm[#4]%:%parm[#14]%" clear-key="uei.opennms.org/internal/linkd/trap/l2SyncLossAlarm:%parm[#4]%:%parm[#14]%" alarm-type="2" auto-clean="true" />
+  </event>
+</events>
