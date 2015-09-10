@@ -53,7 +53,7 @@ public class RequisitionAccountant extends AbstractRequisitionVisitor {
     /** {@inheritDoc} */
     @Override
     public void visitNode(OnmsNodeRequisition nodeReq) {
-        m_currentOp = m_opsMgr.foundNode(nodeReq.getForeignId(), nodeReq.getNodeLabel(), nodeReq.getBuilding(), nodeReq.getCity());        
+        m_currentOp = m_opsMgr.foundNode(nodeReq.getForeignId(), nodeReq.getNodeLabel(), nodeReq.getBuilding(), nodeReq.getCity(),nodeReq.getDevicePlatform());        
     }
     
     /** {@inheritDoc} */

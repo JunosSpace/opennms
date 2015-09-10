@@ -86,6 +86,10 @@ public class OnmsNodeRequisition {
         return m_foreignSource;
     }
     
+    public String getDevicePlatform() {
+        return m_node.getDevicePlatform();
+    }
+    
     private List<OnmsAssetRequisition> constructAssetRequistions() {
     	final List<OnmsAssetRequisition> reqs = new ArrayList<OnmsAssetRequisition>(m_node.getAssets().size());
         for(final RequisitionAsset asset : m_node.getAssets()) {
@@ -291,4 +295,5 @@ public class OnmsNodeRequisition {
     public RequisitionNode getNode() {
         return m_node;
     }
+
 }

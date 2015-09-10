@@ -143,11 +143,16 @@ xsi:schemaLocation="http://www.osgi.org/xmlns/blueprint/v1.0.0
                     <entry key="linkd:system:snmp:.1.3.6.1.4.1.2636.1.1.1.2.57" value="MX10_x0D_MX40_x0D_MX80"/>
                     <entry key="linkd:system:snmp:.1.3.6.1.4.1.2636.1.1.1.2.76" value="EX_Series"/>
                     <entry key="linkd:system:snmp:.1.3.6.1.4.1.2636.1.1.1.2.92" value="EX4550"/>
+                    <entry key="linkd:system:snmp:.1.3.6.1.4.1.119.2.3.69.502" value="iPASO1000"/>
+                    <entry key="linkd:system:snmp:.1.3.6.1.4.1.119.2.3.69.502.IPASOLINK 200" value="iPASO200"/>
+                    <entry key="linkd:system:snmp:.1.3.6.1.4.1.119.2.3.69.502.IPASOLINK 400" value="iPASO400"/>
+                    <entry key="linkd:system:snmp:.1.3.6.1.4.1.119.2.3.69.502.IPASOLINK 1000" value="iPASO1000"/>
                 </map>
             </property>
             <property name="SVGDefs">
                 <list>
                     <value>theme://svg/Juniper_icons.svg</value>
+                    <value>theme://svg/Ipasolin_icons.svg</value>
                 </list>
             </property>
         </bean>

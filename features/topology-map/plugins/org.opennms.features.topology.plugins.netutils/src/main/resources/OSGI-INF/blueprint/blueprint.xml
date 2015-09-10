@@ -14,6 +14,7 @@ http://www.osgi.org/xmlns/blueprint-ext/v1.1.0 https://svn.apache.org/repos/asf/
         	<cm:property name="nodePageURL" value="element/node.jsp?node="/>
         	<cm:property name="resourceGraphListURL" value="graph/index.jsp"/>
         	<cm:property name="resourceGraphNodeURL" value="graph/chooseresource.htm?reports=all&amp;parentResourceId=node"/> 
+        	<cm:property name="sshURL" value="../mainui/ipaso/IpasolinkSSOAdapter.jsp?nodeid="/>
         </cm:default-properties>
     </cm:property-placeholder>
     
@@ -35,6 +36,10 @@ http://www.osgi.org/xmlns/blueprint-ext/v1.1.0 https://svn.apache.org/repos/asf/
         <property name="resourceGraphListURL" value="${resourceGraphListURL}"/>
         <property name="resourceGraphNodeURL" value="${resourceGraphNodeURL}"/>
     </bean>
+    <bean id="sshOperation" class="org.opennms.features.topology.netutils.internal.operations.PASOLINKOperation" >
+        <property name="sshURL" value="${sshURL}"/>
+    </bean> 
+    
     
     <service interface="org.opennms.features.topology.api.Operation" ref="pingOperation">
         <service-properties>
@@ -75,5 +80,13 @@ http://www.osgi.org/xmlns/blueprint-ext/v1.1.0 https://svn.apache.org/repos/asf/
             <entry key="operation.label" value="Resource Graphs"/>
         </service-properties>
     </service>
+
+    <service interface="org.opennms.features.topology.api.Operation" ref="sshOperation">
+        <service-properties>
+            <entry key="operation.menuLocation" value="Device"/>
+            <entry key="operation.contextMenuLocation" value=""/> <!-- SPC-360 -->
+            <entry key="operation.label" value="Connect to iPASO Device"/>
+        </service-properties>
+    </service> 
     
 </blueprint>
