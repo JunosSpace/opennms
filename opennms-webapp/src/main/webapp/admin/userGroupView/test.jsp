@@ -27,7 +27,6 @@
  *     http://www.opennms.com/
  *******************************************************************************/
 
---%>
 
 <%@ page language="java" contentType="text/html" %>
 <%@ page import="java.io.IOException" %>
@@ -94,3 +93,4 @@ outputNamesInScope(out, pageContext, "SessionScope", PageContext.SESSION_SCOPE);
 %>
 </body>
 </html>
+--%>

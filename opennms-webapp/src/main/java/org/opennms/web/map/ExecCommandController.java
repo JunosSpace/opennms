@@ -120,8 +120,8 @@ public class ExecCommandController extends MapsLoggingController {
 		    String ipmiProtocol = request.getParameter("ipmiProtocol");
 		    
 		    if(ipmiCommand !=null && ipmiUserName != null &&  ipmiPassword != null ){
-		        commandToExec = commandToExec + " -I "+ipmiProtocol+" -U " 
-		        + ipmiUserName +" -P " + ipmiPassword + " -H " + address +" " + ipmiCommand;
+		        commandToExec = commandToExec + " -I "+ ( ipmiProtocol+" -U " 
+		        + ipmiUserName +" -P " + ipmiPassword + " -H " + address +" " + ipmiCommand ).replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll("\"", "&quot;");
 		    }
 		    else
 		        throw new IllegalStateException("IPMITool requires Protocol, Command, Usernane and Password");
