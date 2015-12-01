@@ -10,6 +10,8 @@ import javax.servlet.ServletContext;
 
 import org.opennms.core.criteria.CriteriaBuilder;
 import org.opennms.core.spring.BeanUtils;
+import org.opennms.core.utils.LldpUtils.LldpChassisIdSubType;
+import org.opennms.core.utils.LldpUtils.LldpPortIdSubType;
 import org.opennms.netmgt.dao.api.BridgeBridgeLinkDao;
 import org.opennms.netmgt.dao.api.BridgeElementDao;
 import org.opennms.netmgt.dao.api.BridgeMacLinkDao;
@@ -30,8 +32,6 @@ import org.opennms.netmgt.model.BridgeElement.BridgeDot1dStpProtocolSpecificatio
 import org.opennms.netmgt.model.IsIsElement.IsisAdminState;
 import org.opennms.netmgt.model.IsIsLink.IsisISAdjNeighSysType;
 import org.opennms.netmgt.model.IsIsLink.IsisISAdjState;
-import org.opennms.netmgt.model.LldpElement.LldpChassisIdSubType;
-import org.opennms.netmgt.model.LldpLink.LldpPortIdSubType;
 import org.opennms.netmgt.model.OspfElement.Status;
 import org.opennms.netmgt.model.BridgeMacLink;
 import org.opennms.netmgt.model.IpNetToMedia;

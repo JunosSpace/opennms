@@ -28,8 +28,8 @@
 
 package org.opennms.netmgt.dao.api;
 
+import org.opennms.core.utils.LldpUtils.LldpChassisIdSubType;
 import org.opennms.netmgt.model.LldpElement;
-import org.opennms.netmgt.model.LldpElement.LldpChassisIdSubType;
 
 /**
  * <p>LldpElementDao interface.</p>
