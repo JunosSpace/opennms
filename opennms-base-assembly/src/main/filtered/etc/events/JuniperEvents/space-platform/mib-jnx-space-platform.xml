@@ -23,10 +23,10 @@
         <uei>uei.opennms.org/traps/SPACE-PLATFORM-MIB/jnxSpaceCPUTempRising</uei>
         <event-label>SPACE-PLATFORM customized trap event: jnxSpaceCPUTempRising</event-label>
         <descr>
-        &lt;p&gt;CPU temperature too high: %parm[#5]%&lt;/p&gt;
+        &lt;p&gt;CPU temperature too high: %parm[#5]%mC&lt;/p&gt;
         </descr>
                 <logmsg dest='logndisplay'>&lt;p&gt;
-                       CPU temperature too high: %parm[#5]%&lt;/p&gt;
+                       CPU temperature too high: %parm[#5]%mC&lt;/p&gt;
                 </logmsg>
         <severity>Major</severity>
         <alarm-data auto-clean="false" alarm-type="1" reduction-key="%uei%:%dpname%:%nodeid%"/>
