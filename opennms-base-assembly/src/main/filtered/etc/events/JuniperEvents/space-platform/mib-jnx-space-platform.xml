@@ -2309,9 +2309,4 @@ instances has fired, for triggers with mteTriggerType
 	<alarm-data auto-clean="true" clear-key="uei.opennms.org/traps/SPACE-PLATFORM-MIB/jnxSpecialNodeFabricMonitoring:%parm[#3]%:%parm[#6]%:1" alarm-type="2" reduction-key="%uei%:%parm[#3]%:%parm[#6]%:%parm[#5]%"/>
     </event>
 
-
-
-
-    
-
 </events>
