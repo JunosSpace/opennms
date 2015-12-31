@@ -7,7 +7,7 @@ use XML::Simple;
 use Data::Dumper;
 use DateTime;
 
-my $CURL = "curl -k -u admin:juniper123"; 
+my $CURL = "curl -k -u admin:[[password of admin]]"; 
 my $REST_PREFIX = '/opennms/rest';
 my $source_xml = $ARGV[0];
 my $space_server = $ARGV[1];
