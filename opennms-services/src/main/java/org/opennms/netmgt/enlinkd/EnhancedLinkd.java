@@ -30,9 +30,9 @@ package org.opennms.netmgt.enlinkd;
 
 
 import java.net.InetAddress;
-
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
 
@@ -136,6 +136,9 @@ public class EnhancedLinkd extends AbstractServiceDaemon {
      */
     private void scheduleCollectionForNode(final LinkableSnmpNode node) {
 
+        final Date now = new Date();
+        this.getQueryManager().delete(node.getNodeId());
+        
         for (final NodeDiscovery snmpcoll : getSnmpCollections(node) ){
             LOG.info("ScheduleCollectionForNode: Scheduling {}",
                 snmpcoll.getInfo());
