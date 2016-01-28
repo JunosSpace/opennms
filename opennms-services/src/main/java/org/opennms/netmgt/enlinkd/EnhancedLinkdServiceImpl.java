@@ -152,6 +152,7 @@ public class EnhancedLinkdServiceImpl implements EnhancedLinkdService {
 		reconcileLldp(nodeId, now);
 		reconcileCdp(nodeId, now);
 		reconcileOspf(nodeId, now);
+		reconcileIsis(nodeId, now);
 		reconcileIpNetToMedia(nodeId, now);
 		reconcileBridge(nodeId, now);
 	}
