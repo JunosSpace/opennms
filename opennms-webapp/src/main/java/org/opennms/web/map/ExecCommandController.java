@@ -113,7 +113,9 @@ public class ExecCommandController extends MapsLoggingController {
 		    } else {
                 commandToExec = commandToExec + " " + address;		        
 		    }
-		} else if (command.equals("ipmitool")) {
+		} 
+		/*
+		else if (command.equals("ipmitool")) {
 		    String ipmiCommand = request.getParameter("ipmiCommand");
 		    String ipmiUserName = request.getParameter("ipmiUser");
 		    String ipmiPassword = request.getParameter("ipmiPassword");
@@ -126,7 +128,9 @@ public class ExecCommandController extends MapsLoggingController {
 		    else
 		        throw new IllegalStateException("IPMITool requires Protocol, Command, Usernane and Password");
 		       
-		} else {
+		}
+		*/
+		 else {
 		    throw new IllegalStateException("Command "+ command+" not supported.");   
 		}
         
