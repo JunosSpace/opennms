@@ -1162,4 +1162,150 @@ public class SnmpTrapHelper {
         // Finally, send the trap!
         this.sendTrap(destAddr, destPort, community, trapBuilder);
     }
+	public void sendV3AlarmTrap( Event event, String destAddr, int destPort, int securityLevel, String securityname, 
+    		String authPassPhrase, String authProtocol, String privPassPhrase, String privprotocol) throws UnknownHostException, SnmpTrapHelperException {
+		long trapTimeStamp = 0;
+		SnmpTrapBuilder trap = createV3Trap(".1.3.6.1.4.1.5813.1.3",Long.toString(trapTimeStamp));
+		trap=buildAlarmTrap(event, false, trap);
+		SnmpV3TrapBuilder v3trap = (SnmpV3TrapBuilder) trap;
+		try {
+			v3trap.send(destAddr, destPort, securityLevel, securityname, authPassPhrase, authProtocol, privPassPhrase, privprotocol);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	private SnmpTrapBuilder buildAlarmTrap(Event event, boolean sync, SnmpTrapBuilder trap) {
+		try {
+             if (event.getAlarmData() != null ) {
+            	 if (event.getAlarmData().getAlarmType() == 2) {
+        			 trap = buildEventTrap(event, trap, "Cleared");
+            		 addVarBinding(trap, ".1.3.6.1.4.1.5813.20.3.1.0", "OctetString", "text", event.getAlarmData().getClearKey());
+            	 } else {
+        			 trap = buildEventTrap(event, trap, null);
+            		 addVarBinding(trap, ".1.3.6.1.4.1.5813.20.3.1.0", "OctetString", "text", event.getAlarmData().getReductionKey());     
+            	 }
+             } else {
+    			 trap = buildEventTrap(event, trap, null);
+                 addVarBinding(trap, ".1.3.6.1.4.1.5813.20.3.1.0", "OctetString", "text", "null");            	 
+             }
+             if (sync)
+            	 addVarBinding(trap, ".1.3.6.1.4.1.5813.20.3.2.0", "OctetString", "text", "SYNC");
+             else
+                 addVarBinding(trap, ".1.3.6.1.4.1.5813.20.3.2.0", "OctetString", "text", "null");            	 
+		} catch (SnmpTrapHelperException e) {
+			e.printStackTrace();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+ 		return trap;
+	}
+	
+	private SnmpTrapBuilder buildEventTrap(Event event, SnmpTrapBuilder trap, String severity) {
+		try {
+			 Integer t_dbid = Integer.valueOf(event.getDbid());
+             if (t_dbid.intValue() > 0)
+                     this.addVarBinding(trap, ".1.3.6.1.4.1.5813.20.1.1.0", "OctetString", "text", t_dbid.toString());
+             else
+            	 this.addVarBinding(trap, ".1.3.6.1.4.1.5813.20.1.1.0", "OctetString", "text", "null");
+             if (event.getDistPoller() != null)
+            	 this.addVarBinding(trap, ".1.3.6.1.4.1.5813.20.1.2.0", "OctetString", "text", event.getDistPoller());
+             else
+            	 this.addVarBinding(trap, ".1.3.6.1.4.1.5813.20.1.2.0", "OctetString", "text", "null");
+             if (event.getCreationTime() != null)
+            	 this.addVarBinding(trap, ".1.3.6.1.4.1.5813.20.1.3.0", "OctetString", "text", event.getCreationTime());
+             else
+            	 this.addVarBinding(trap, ".1.3.6.1.4.1.5813.20.1.3.0", "OctetString", "text", "null");
+             if (event.getMasterStation() != null)
+            	 this.addVarBinding(trap, ".1.3.6.1.4.1.5813.20.1.4.0", "OctetString", "text", event.getMasterStation());
+             else
+                     this.addVarBinding(trap, ".1.3.6.1.4.1.5813.20.1.4.0", "OctetString", "text", "null");
+             if (event.getUei() != null)
+                     this.addVarBinding(trap, ".1.3.6.1.4.1.5813.20.1.6.0", "OctetString", "text", event.getUei());
+             else
+                     this.addVarBinding(trap, ".1.3.6.1.4.1.5813.20.1.6.0", "OctetString", "text", "null");
+             if (event.getSource() != null)
+                     this.addVarBinding(trap, ".1.3.6.1.4.1.5813.20.1.7.0", "OctetString", "text", event.getSource());
+             else
+                     this.addVarBinding(trap, ".1.3.6.1.4.1.5813.20.1.7.0", "OctetString", "text", "null");
+             String label=null;
+             if (event.hasNodeid()) {
+            	 	label = DbHelper.getNodeLabel(Integer.valueOf(Long.valueOf(event.getNodeid()).toString()));
+            	 	this.addVarBinding(trap, ".1.3.6.1.4.1.5813.20.1.8.0", "OctetString", "text", Long.valueOf(event.getNodeid()).toString());
+             } else
+                     addVarBinding(trap, ".1.3.6.1.4.1.5813.20.1.8.0", "OctetString", "text", "null");
+             if (event.getTime() != null)
+                     addVarBinding(trap, ".1.3.6.1.4.1.5813.20.1.9.0", "OctetString", "text", event.getTime());
+             else
+                     addVarBinding(trap, ".1.3.6.1.4.1.5813.20.1.9.0", "OctetString", "text", "null");
+             if (event.getHost() != null)
+                     addVarBinding(trap, ".1.3.6.1.4.1.5813.20.1.10.0", "OctetString", "text", event.getHost());
+             else
+                     addVarBinding(trap, ".1.3.6.1.4.1.5813.20.1.10.0", "OctetString", "text", "null");
+             if (event.getInterface() != null)
+                     addVarBinding(trap, ".1.3.6.1.4.1.5813.20.1.11.0", "OctetString", "text", event.getInterface());
+             else
+                     addVarBinding(trap, ".1.3.6.1.4.1.5813.20.1.11.0", "OctetString", "text", "null");
+             if (event.getSnmphost() != null)
+                     addVarBinding(trap, ".1.3.6.1.4.1.5813.20.1.12.0", "OctetString", "text", event.getSnmphost());
+             else
+                     addVarBinding(trap, ".1.3.6.1.4.1.5813.20.1.12.0", "OctetString", "text", "null");
+             if (event.getService() != null)
+                     addVarBinding(trap, ".1.3.6.1.4.1.5813.20.1.13.0", "OctetString", "text", event.getService());
+             else
+                     addVarBinding(trap, ".1.3.6.1.4.1.5813.20.1.13.0", "OctetString", "text", "null");    
+             if (event.getDescr() != null) {
+                 String descrString = event.getDescr().replaceAll("&lt;.*&gt;", " ").replaceAll("\\s+", " ");
+                 addVarBinding(trap, ".1.3.6.1.4.1.5813.20.1.16.0", "OctetString", "text", descrString);
+             } else
+                 addVarBinding(trap, ".1.3.6.1.4.1.5813.20.1.16.0", "OctetString", "text", "null");
+             if (event.getLogmsg() != null && event.getLogmsg().getContent() != null) {
+                 String logString = event.getLogmsg().getContent().replaceAll("&lt;.*&gt;", " ").replaceAll("\\s+", " ");
+                 addVarBinding(trap, ".1.3.6.1.4.1.5813.20.1.17.0", "OctetString", "text", logString);
+             } else
+                 addVarBinding(trap, ".1.3.6.1.4.1.5813.20.1.17.0", "OctetString", "text", "null");
+             if (severity == null && event.getSeverity() != null)
+                 addVarBinding(trap, ".1.3.6.1.4.1.5813.20.1.18.0", "OctetString", "text", event.getSeverity());
+             else if (severity != null)
+                 addVarBinding(trap, ".1.3.6.1.4.1.5813.20.1.18.0", "OctetString", "text", severity);
+             else
+            	 addVarBinding(trap, ".1.3.6.1.4.1.5813.20.1.18.0", "OctetString", "text", "null");
+
+             if (event.getPathoutage() != null)
+                 addVarBinding(trap, ".1.3.6.1.4.1.5813.20.1.19.0", "OctetString", "text", event.getPathoutage());
+             else
+                 addVarBinding(trap, ".1.3.6.1.4.1.5813.20.1.19.0", "OctetString", "text", "null");
+             if (event.getOperinstruct() != null)
+                 addVarBinding(trap, ".1.3.6.1.4.1.5813.20.1.20.0", "OctetString", "text", event.getOperinstruct());
+             else
+                 addVarBinding(trap, ".1.3.6.1.4.1.5813.20.1.20.0", "OctetString", "text", "null");
+
+             String retParmVal = null;
+             if (event.getInterface() != null) {
+                     retParmVal = event.getInterface();
+                     java.net.InetAddress inet = InetAddressUtils.addr(retParmVal);
+                     retParmVal = inet.getHostName();
+             }
+             if (retParmVal != null)
+                     addVarBinding(trap, ".1.3.6.1.4.1.5813.20.1.21.0", "OctetString", "text", retParmVal);
+             else
+                     addVarBinding(trap, ".1.3.6.1.4.1.5813.20.1.21.0", "OctetString", "text", "null");
+
+             if (label != null)
+                     addVarBinding(trap, ".1.3.6.1.4.1.5813.20.1.22.0", "OctetString", "text", label);
+             else
+                     addVarBinding(trap, ".1.3.6.1.4.1.5813.20.1.22.0", "OctetString", "text", "null");
+             
+		} catch (final IllegalArgumentException e) {
+//		    LOG.warn("Failed to look up host.", e);
+			e.printStackTrace();
+		} catch (final SnmpTrapHelperException e) {
+//		    LOG.warn("An SNMP trap helpre error occurred while parsing traps.", e);
+			e.printStackTrace();
+		} catch (final Throwable t) {
+//		    LOG.warn("An unknown error occurred while parsing traps.", t);
+			t.getStackTrace();
+		}		
+        return trap;
+	}
 }
