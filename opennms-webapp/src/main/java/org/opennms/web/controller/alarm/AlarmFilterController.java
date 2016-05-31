@@ -54,10 +54,12 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.Assert;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.multiaction.MultiActionController;
-
+import javax.servlet.http.HttpSession;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.List;
+import org.opennms.web.preference.UserPreferenceUtil;
+import org.opennms.netmgt.dao.api.UserPreferenceDao;
 
 /**
  * A controller that handles querying the event table by using filters to create an
@@ -83,6 +85,9 @@ public class AlarmFilterController extends MultiActionController implements Init
     private FilterFavoriteService favoriteService;
 
     private FilterCallback m_callback;
+    
+    @Autowired
+	private UserPreferenceDao userPreferenceDao;
 
     @Override
     @Transactional
@@ -174,7 +179,23 @@ public class AlarmFilterController extends MultiActionController implements Init
             } catch (NumberFormatException e) {
                 // do nothing, the default is already set
             }
-        }
+        }else {
+        	HttpSession session = request.getSession(true);
+        	String value = null;
+        	if(session.getAttribute("alarm_page_limit_size")!= null){
+        	value = session.getAttribute("alarm_page_limit_size").toString();
+        	}
+        	if (value == null){
+        	int prefLimit = UserPreferenceUtil.getPageSizeLimit(request.getRemoteUser(),"alarm",userPreferenceDao);
+        	if (prefLimit == 0) {
+				prefLimit = limit;
+			} 
+        	session.setAttribute("alarm_page_limit_size",prefLimit);
+        	return prefLimit;
+        	} else{
+         	   limit = Integer.parseInt(value);
+            }
+		}
         return limit;
     }
 

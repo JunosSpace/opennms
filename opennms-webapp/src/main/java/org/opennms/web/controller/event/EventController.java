@@ -39,6 +39,7 @@ import org.opennms.web.event.filter.EventIdListFilter;
 import org.opennms.web.filter.Filter;
 import org.opennms.web.filter.FilterUtil;
 import org.opennms.web.filter.NormalizedQueryParameters;
+import org.opennms.web.preference.UserPreferenceUtil;
 import org.opennms.web.services.FilterFavoriteService;
 import org.opennms.web.servlet.MissingParameterException;
 import org.opennms.web.tags.AlertTag;
@@ -53,7 +54,8 @@ import org.springframework.util.Assert;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.multiaction.MultiActionController;
 import org.springframework.web.servlet.view.RedirectView;
-
+import org.opennms.netmgt.dao.api.UserPreferenceDao;
+import javax.servlet.http.HttpSession;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -93,6 +95,9 @@ public class EventController extends MultiActionController implements Initializi
 
 	@Autowired
 	private WebEventRepository m_webEventRepository;
+	
+	@Autowired
+	private UserPreferenceDao userPreferenceDao;
 
     private boolean m_showEventCount = false;
 
@@ -298,7 +303,23 @@ public class EventController extends MultiActionController implements Initializi
             } catch (NumberFormatException e) {
                 // do nothing, the default is already set
             }
-        }
+        } else {
+        	HttpSession session = request.getSession(true);
+        	String value = null;
+        	if(session.getAttribute("event_page_limit_size")!= null){
+        	   value = session.getAttribute("event_page_limit_size").toString();
+        	}
+        	if (value == null){
+        	int prefLimit = UserPreferenceUtil.getPageSizeLimit(request.getRemoteUser(),"event",userPreferenceDao);
+        	if (prefLimit == 0) {
+				prefLimit = limit;
+			} 
+        	session.setAttribute("event_page_limit_size",prefLimit);
+        	return prefLimit;
+            } else{
+        	   limit = Integer.parseInt(value);
+            }
+		}
         return limit;
     }
     

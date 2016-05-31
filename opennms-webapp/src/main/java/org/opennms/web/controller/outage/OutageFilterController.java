@@ -47,7 +47,10 @@ import org.springframework.beans.factory.InitializingBean;
 import org.springframework.util.Assert;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.AbstractController;
-
+import org.opennms.web.preference.UserPreferenceUtil;
+import org.opennms.netmgt.dao.api.UserPreferenceDao;
+import org.springframework.beans.factory.annotation.Autowired;
+import javax.servlet.http.HttpSession;
 /**
  * A controller that handles querying the outages table by using filters to create an
  * outage list and and then forwards that outage list to a JSP for display.
@@ -73,6 +76,8 @@ public class OutageFilterController extends AbstractController implements Initia
 
     private WebOutageRepository m_webOutageRepository;
     
+    @Autowired
+    private UserPreferenceDao userPreferenceDao;
 
 
     /**
@@ -144,7 +149,22 @@ public class OutageFilterController extends AbstractController implements Initia
             } catch (NumberFormatException e) {
                 // do nothing, the default is aready set
             }
-        }
+        }else {
+        	HttpSession session = request.getSession(true);
+        	String value = null;
+        	if(session.getAttribute("outage_page_limit_size")!= null){
+        	  value = session.getAttribute("outage_page_limit_size").toString();
+        	}
+        	if (value == null){
+        	int prefLimit = UserPreferenceUtil.getPageSizeLimit(request.getRemoteUser(),"outage",userPreferenceDao);
+        	if (prefLimit != 0) {
+        		limit = prefLimit;
+			} 
+        	session.setAttribute("outage_page_limit_size",prefLimit);
+        	} else{
+         	   limit = Integer.parseInt(value);
+            }
+		}
 
         // handle the optional multiple parameter
         String multipleString = request.getParameter("multiple");

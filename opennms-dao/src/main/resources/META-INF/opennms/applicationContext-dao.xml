@@ -220,8 +220,16 @@
   <bean id="demandPollDao" class="org.opennms.netmgt.dao.hibernate.DemandPollDaoHibernate">
     <property name="sessionFactory" ref="sessionFactory" />
   </bean>
-
+  
   <onmsgi:service interface="org.opennms.netmgt.dao.api.DemandPollDao" ref="demandPollDao" />
+
+
+  <bean id="userPreferenceDao" class="org.opennms.netmgt.dao.hibernate.UserPreferenceDaoHibernate">
+    <property name="sessionFactory" ref="sessionFactory" />
+  </bean>
+  <onmsgi:service interface="org.opennms.netmgt.dao.api.UserPreferenceDao" ref="userPreferenceDao" />
+
+
 
   <bean id="eventDao" class="org.opennms.netmgt.dao.hibernate.EventDaoHibernate">
     <property name="sessionFactory" ref="sessionFactory" />

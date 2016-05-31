@@ -447,6 +447,17 @@
   </servlet>  
   
   <servlet>
+    <servlet-name>saveUserPreference</servlet-name>
+    <servlet-class>org.opennms.web.user.preference.UserPreferenceServlet</servlet-class>
+  </servlet>  
+  
+  <servlet-mapping>
+    <servlet-name>saveUserPreference</servlet-name>
+    <url-pattern>/user/preference</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet>
     <servlet-name>importAssets</servlet-name>
     <servlet-class>org.opennms.web.asset.ImportAssetsServlet</servlet-class>
     <init-param>

@@ -395,6 +395,8 @@
                 <jsp:param name="baseurl"  value="<%=baseUrl%>"    />
                 <jsp:param name="limit"    value="<%=parms.getLimit()%>"      />
                 <jsp:param name="multiple" value="<%=parms.getMultiple()%>"   />
+                <jsp:param name="limitSize" value="yes"   />  
+                <jsp:param name="pageName" value="alarm"/>
               </jsp:include>
             <% } %>
 
@@ -656,6 +658,8 @@
             <jsp:param name="baseurl" value="<%=baseUrl%>" />
             <jsp:param name="limit" value="<%=parms.getLimit()%>" />
             <jsp:param name="multiple" value="<%=parms.getMultiple()%>" />
+            <jsp:param name="limitSize" value="yes"   />  
+            <jsp:param name="pageName" value="alarm"/>
           </jsp:include>
         <% } %>
 

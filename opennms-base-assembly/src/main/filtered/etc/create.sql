@@ -79,6 +79,7 @@ drop table group_user cascade;
 drop table category_user cascade;
 drop table category_group cascade;
 drop table filterfavorites cascade;
+drop table UserPreferenceState cascade;
 
 drop sequence catNxtId;
 drop sequence nodeNxtId;
@@ -97,6 +98,7 @@ drop sequence reportCatalogNxtId;
 drop sequence mapNxtId;
 drop sequence opennmsNxtId;  --# should be used for all sequences, eventually
 drop sequence filternextid;
+drop sequence userPreferenceNxtId;
 
 drop index filternamesidx;
 
@@ -161,6 +163,11 @@ create sequence alarmsNxtId minvalue 1;
 --#          sequence,   column, table
 --# install: memoNxtId id memos
 create sequence memoNxtId minvalue 1;
+
+--# Sequence for the id column in the UserPreferenceState table
+--#          sequence,   column, table
+--# install: userPreferenceNxtId id UserPreferenceState
+create sequence userPreferenceNxtId minvalue 1;
 
 --# Sequence for the outageID column in the outages table
 --#          sequence,   column,  table
@@ -1610,6 +1617,20 @@ create table vlan (
 create unique index vlan_id_key on vlan(id);
 create index vlan_vlanname_idx on vlan(vlanname);
 
+--########################################################################
+--#
+--# UserPreferenceState table -- This table maintains a record of user preference in all pages.
+--#  userPreferenceId         : primary key of the table
+--#  stateName                : contains the page name to identify the state
+--#  stateValue               : contains the value of the state or page
+--#  userName                 : store username to persist according to the user.
+--#
+--########################################################################
+CREATE TABLE UserPreferenceState(
+userPreferenceId serial primary key,
+stateName text,
+stateValue text,
+userName text);
 
 --########################################################################
 --#

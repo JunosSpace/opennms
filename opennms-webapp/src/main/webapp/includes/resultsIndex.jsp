@@ -136,6 +136,15 @@
       <a href="<%=baseUrl%>&amp;<%=multipleName%>=<%=highestPossibleIndex%>&amp;<%=limitName%>=<%=limit%>">Last</a>
     <% } %>
 		</span>
-   <% } %>      
+   <% } %>  
+<% String limitSize= request.getParameter("limitSize");
+   String pageName = request.getParameter("pageName");
+    if( limitSize != null && pageName != null) { %>
+        <jsp:include page="/includes/listSize.jsp" flush="false" >
+                <jsp:param name="baseurl"  value="<%=baseUrl%>"/>
+                <jsp:param name="limitSize" value="<%=limit%>"/>
+                <jsp:param name="pageName"  value="<%=pageName%>"/>
+                </jsp:include>
+<% } %>     
 </p>
 

@@ -57,7 +57,10 @@ import org.springframework.beans.factory.InitializingBean;
 import org.springframework.util.Assert;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.AbstractController;
-
+import org.opennms.web.preference.UserPreferenceUtil;
+import org.opennms.netmgt.dao.api.UserPreferenceDao;
+import org.springframework.beans.factory.annotation.Autowired;
+import javax.servlet.http.HttpSession;
 /**
  * <p>NotificationFilterController class.</p>
  *
@@ -79,7 +82,9 @@ public class NotificationFilterController extends AbstractController implements 
     private WebEventRepository m_webEventRepository;
     private WebNotificationRepository m_webNotificationRepository;
     private NodeDao m_nodeDao;
-
+    
+    @Autowired
+    private UserPreferenceDao userPreferenceDao;
     /**
      * {@inheritDoc}
      *
@@ -145,7 +150,22 @@ public class NotificationFilterController extends AbstractController implements 
             } catch (NumberFormatException e) {
                 // do nothing, the default is already set
             }
-        }
+        }else {
+        	HttpSession session = request.getSession(true);
+        	String value = null;
+        	if(session.getAttribute("notification_page_limit_size") != null){
+        	  value = session.getAttribute("notification_page_limit_size").toString();
+        	}
+        	if (value == null){
+        	int prefLimit = UserPreferenceUtil.getPageSizeLimit(request.getRemoteUser(),"notification",userPreferenceDao);
+        	if (prefLimit != 0) {
+        		limit = prefLimit;
+			} 
+        	session.setAttribute("notification_page_limit_size",prefLimit);
+        	} else{
+	        	   limit = Integer.parseInt(value);
+	        }
+		}
 
         // handle the optional multiple parameter
         String multipleString = request.getParameter("multiple");

@@ -418,6 +418,8 @@ if (isPurgeExport)
                   <jsp:param name="baseurl"  value="<%=baseUrl%>"    />
                   <jsp:param name="limit"    value="<%=parms.getLimit()%>"      />
                   <jsp:param name="multiple" value="<%=parms.getMultiple()%>"   />
+                  <jsp:param name="limitSize" value="yes"   />
+                  <jsp:param name="pageName" value="event"/>
                 </jsp:include>
               <% } else { %>
                 <jsp:include page="/includes/resultsIndex.jsp" flush="false" >
@@ -641,6 +643,8 @@ if (isPurgeExport)
                   <jsp:param name="baseurl" value="<%=baseUrl%>" />
                   <jsp:param name="limit" value="<%=parms.getLimit()%>" />
                   <jsp:param name="multiple" value="<%=parms.getMultiple()%>" />
+                  <jsp:param name="limitSize" value="yes"   />  
+                  <jsp:param name="pageName" value="event"/>
                 </jsp:include>
               <% } else { %>
                 <jsp:include page="/includes/resultsIndex.jsp" flush="false" >

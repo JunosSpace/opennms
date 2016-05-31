@@ -107,6 +107,8 @@
         <jsp:param name="baseurl"  value="<%=baseUrl%>" />
         <jsp:param name="limit"    value="<%=parms.limit%>" />
         <jsp:param name="multiple" value="<%=parms.multiple%>" />
+        <jsp:param name="limitSize" value="yes"   />  
+        <jsp:param name="pageName" value="outage"/>
       </jsp:include>
     <% } %>           
     <jsp:include page="/includes/search-constraints-box.jsp" />
@@ -232,6 +234,8 @@
          <jsp:param name="baseurl"  value="<%=baseUrl%>" />
          <jsp:param name="limit"    value="<%=parms.limit%>" />
          <jsp:param name="multiple" value="<%=parms.multiple%>" />
+         <jsp:param name="limitSize" value="yes"   />  
+         <jsp:param name="pageName" value="outage"/>
        </jsp:include>
      <% } %>           
  
