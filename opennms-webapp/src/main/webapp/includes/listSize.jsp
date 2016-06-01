@@ -44,25 +44,20 @@ function UpdateLimitSize(value){
 <%}else{%>
 <option value="20" >20</option>
 <%}%>
-<%if(limitSize == 30){%>
-<option value="30" selected>30</option>
-<%}else{%>
-<option value="30" >30</option>
-<%}%>
 <%if(limitSize == 50){%>
 <option value="50" selected>50</option>
 <%}else{%>
 <option value="50" >50</option>
 <%}%>
-<%if(limitSize == 80){%>
-<option value="80" selected>80</option>
-<%}else{%>
-<option value="80" >80</option>
-<%}%>
 <%if(limitSize == 100){%>
 <option value="100" selected>100</option>
 <%}else{%>
 <option value="100" >100</option>
+<%}%>
+<%if(limitSize == 250){%>
+<option value="250" selected>250</option>
+<%}else{%>
+<option value="250" >250</option>
 <%}%>
 <%if(limitSize == 500){%>
 <option value="500" selected>500</option>

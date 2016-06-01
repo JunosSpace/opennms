@@ -213,9 +213,10 @@
               <select name="limit" size="1">
                 <option value="10">10 events</option>
                 <option value="20">20 events</option>
-                <option value="30">30 events</option>
                 <option value="50">50 events</option>
                 <option value="100">100 events</option>
+                <option value="250">250 events</option>
+                <option value="500">500 events</option>
                 <option value="1000">1000 events</option>
               </select>
             </td>

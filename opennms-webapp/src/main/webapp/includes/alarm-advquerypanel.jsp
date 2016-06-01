@@ -279,10 +279,11 @@
               <select name="limit" size="1">
                 <option value="10">10 alarms</option>
                 <option value="20">20 alarms</option>
-                <option value="30">30 alarms</option>
                 <option value="50">50 alarms</option>
                 <option value="100">100 alarms</option>
-                <option value="-1">all alarms</option>
+                <option value="250">250 alarms</option>
+                <option value="500">500 alarms</option>
+                <option value="1000">1000 alarms</option>
               </select>
             </td>
           </tr>
