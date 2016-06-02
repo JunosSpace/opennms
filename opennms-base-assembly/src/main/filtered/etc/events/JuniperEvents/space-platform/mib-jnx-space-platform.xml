@@ -23,10 +23,10 @@
         <uei>uei.opennms.org/traps/SPACE-PLATFORM-MIB/jnxSpaceCPUTempRising</uei>
         <event-label>SPACE-PLATFORM customized trap event: jnxSpaceCPUTempRising</event-label>
         <descr>
-        &lt;p&gt;CPU temperature too high: %parm[#5]%mC&lt;/p&gt;
+        &lt;p&gt;CPU temperature too high (mC): %parm[#5]%&lt;/p&gt;
         </descr>
                 <logmsg dest='logndisplay'>&lt;p&gt;
-                       CPU temperature too high: %parm[#5]%mC&lt;/p&gt;
+                       CPU temperature too high (mC): %parm[#5]%&lt;/p&gt;
                 </logmsg>
         <severity>Major</severity>
         <alarm-data auto-clean="false" alarm-type="1" reduction-key="%uei%:%dpname%:%nodeid%"/>
@@ -54,10 +54,10 @@
         <uei>uei.opennms.org/traps/SPACE-PLATFORM-MIB/jnxSpaceCPUTempCleared</uei>
         <event-label>SPACE-PLATFORM customized trap event: jnxSpaceCPUTempCleared</event-label>
         <descr>
-        &lt;p&gt;CPU temperature is normal: %parm[#5]%mC&lt;/p&gt;
+        &lt;p&gt;CPU temperature is normal (mC): %parm[#5]%&lt;/p&gt;
         </descr>
                 <logmsg dest='logndisplay'>&lt;p&gt;
-                      CPU temperature is normal: %parm[#5]%mC&lt;/p&gt;
+                      CPU temperature is normal (mC): %parm[#5]%&lt;/p&gt;
                 </logmsg>
         <severity>Normal</severity>
         <alarm-data auto-clean="true" clear-key="uei.opennms.org/traps/SPACE-PLATFORM-MIB/jnxSpaceCPUTempRising:%dpname%:%nodeid%" alarm-type="2" reduction-key="%uei%:%dpname%:%nodeid%"/>
@@ -85,10 +85,10 @@
         <uei>uei.opennms.org/traps/SPACE-PLATFORM-MIB/jnxSpaceCPUFanRising</uei>
         <event-label>SPACE-PLATFORM customized trap event: jnxSpaceCPUFanRising</event-label>
         <descr>
-        &lt;p&gt;CPU fan too slow: %parm[#5]% RPM.&lt;/p&gt;
+        &lt;p&gt;CPU fan too slow (RPM): %parm[#5]%&lt;/p&gt;
         </descr>
                 <logmsg dest='logndisplay'>&lt;p&gt;
-                       CPU fan too slow: %parm[#5]% RPM.&lt;/p&gt;
+                       CPU fan too slow (RPM): %parm[#5]%&lt;/p&gt;
                 </logmsg>
         <severity>Major</severity>
         <alarm-data auto-clean="false" alarm-type="1" reduction-key="%uei%:%dpname%:%nodeid%"/>
@@ -116,10 +116,10 @@
         <uei>uei.opennms.org/traps/SPACE-PLATFORM-MIB/jnxSpaceCPUFanCleared</uei>
         <event-label>SPACE-PLATFORM customized trap event: jnxSpaceCPUFanCleared</event-label>
         <descr>
-        &lt;p&gt;CPU fan is normal: %parm[#5]% RPM.&lt;/p&gt;
+        &lt;p&gt;CPU fan is normal (RPM): %parm[#5]%&lt;/p&gt;
         </descr>
                 <logmsg dest='logndisplay'>&lt;p&gt;
-                      CPU fan is normal: %parm[#5]% RPM.&lt;/p&gt;
+                      CPU fan is normal (RPM): %parm[#5]%&lt;/p&gt;
                 </logmsg>
         <severity>Normal</severity>
         <alarm-data auto-clean="true" clear-key="uei.opennms.org/traps/SPACE-PLATFORM-MIB/jnxSpaceCPUFanRising:%dpname%:%nodeid%" alarm-type="2" reduction-key="%uei%:%dpname%:%nodeid%"/>
@@ -147,10 +147,10 @@
         <uei>uei.opennms.org/traps/SPACE-PLATFORM-MIB/jnxSpaceCPUFan3Rising</uei>
         <event-label>SPACE-PLATFORM customized trap event: jnxSpaceCPUFanRising</event-label>
         <descr>
-        &lt;p&gt;CPU fan: #3 too slow: %parm[#5]% RPM.&lt;/p&gt;
+        &lt;p&gt;CPU fan: #3 too slow (RPM): %parm[#5]%&lt;/p&gt;
         </descr>
                 <logmsg dest='logndisplay'>&lt;p&gt;
-                       CPU fan: #3 too slow: %parm[#5]% RPM.&lt;/p&gt;
+                       CPU fan: #3 too slow (RPM): %parm[#5]%&lt;/p&gt;
                 </logmsg>
         <severity>Major</severity>
         <alarm-data auto-clean="false" alarm-type="1" reduction-key="%uei%:%dpname%:%nodeid%"/>
@@ -178,10 +178,10 @@
         <uei>uei.opennms.org/traps/SPACE-PLATFORM-MIB/jnxSpaceCPUFan3Cleared</uei>
         <event-label>SPACE-PLATFORM customized trap event: jnxSpaceCPUFanCleared</event-label>
         <descr>
-        &lt;p&gt;CPU fan: #3 is normal: %parm[#5]% RPM.&lt;/p&gt;
+        &lt;p&gt;CPU fan: #3 is normal (RPM): %parm[#5]%&lt;/p&gt;
         </descr>
                 <logmsg dest='logndisplay'>&lt;p&gt;
-                      CPU fan: #3 is normal: %parm[#5]% RPM.&lt;/p&gt;
+                      CPU fan: #3 is normal (RPM): %parm[#5]%&lt;/p&gt;
                 </logmsg>
         <severity>Normal</severity>
         <alarm-data auto-clean="true" clear-key="uei.opennms.org/traps/SPACE-PLATFORM-MIB/jnxSpaceCPUFanRising:%dpname%:%nodeid%" alarm-type="2" reduction-key="%uei%:%dpname%:%nodeid%"/>
@@ -209,10 +209,10 @@
         <uei>uei.opennms.org/traps/SPACE-PLATFORM-MIB/jnxSpaceCPUFan4Rising</uei>
         <event-label>SPACE-PLATFORM customized trap event: jnxSpaceCPUFanRising</event-label>
         <descr>
-        &lt;p&gt;CPU fan: #4 too slow: %parm[#5]% RPM.&lt;/p&gt;
+        &lt;p&gt;CPU fan: #4 too slow (RPM): %parm[#5]%&lt;/p&gt;
         </descr>
                 <logmsg dest='logndisplay'>&lt;p&gt;
-                       CPU fan: #4 too slow: %parm[#5]% RPM.&lt;/p&gt;
+                       CPU fan: #4 too slow (RPM): %parm[#5]%&lt;/p&gt;
                 </logmsg>
         <severity>Major</severity>
         <alarm-data auto-clean="false" alarm-type="1" reduction-key="%uei%:%dpname%:%nodeid%"/>
@@ -240,10 +240,10 @@
         <uei>uei.opennms.org/traps/SPACE-PLATFORM-MIB/jnxSpaceCPUFan4Cleared</uei>
         <event-label>SPACE-PLATFORM customized trap event: jnxSpaceCPUFanCleared</event-label>
         <descr>
-        &lt;p&gt;CPU fan: #4 is normal: %parm[#5]% RPM.&lt;/p&gt;
+        &lt;p&gt;CPU fan: #4 is normal (RPM): %parm[#5]%&lt;/p&gt;
         </descr>
                 <logmsg dest='logndisplay'>&lt;p&gt;
-                      CPU fan: #4 is normal: %parm[#5]% RPM.&lt;/p&gt;
+                      CPU fan: #4 is normal (RPM): %parm[#5]%&lt;/p&gt;
                 </logmsg>
         <severity>Normal</severity>
         <alarm-data auto-clean="true" clear-key="uei.opennms.org/traps/SPACE-PLATFORM-MIB/jnxSpaceCPUFanRising:%dpname%:%nodeid%" alarm-type="2" reduction-key="%uei%:%dpname%:%nodeid%"/>
@@ -271,10 +271,10 @@
         <uei>uei.opennms.org/traps/SPACE-PLATFORM-MIB/jnxSpaceCPUVlotRising</uei>
         <event-label>SPACE-PLATFORM customized trap event: jnxSpaceCPUVlotRising</event-label>
         <descr>
-        &lt;p&gt;CPU voltage too low: %parm[#5]%mV.&lt;/p&gt;
+        &lt;p&gt;CPU voltage too low (mV): %parm[#5]%&lt;/p&gt;
         </descr>
                 <logmsg dest='logndisplay'>&lt;p&gt;
-                      CPU voltage too low: %parm[#5]%mV.&lt;/p&gt;
+                      CPU voltage too low (mV): %parm[#5]%&lt;/p&gt;
                 </logmsg>
         <severity>Major</severity>
         <alarm-data auto-clean="false" alarm-type="1" reduction-key="%uei%:%dpname%:%nodeid%"/>
@@ -302,10 +302,10 @@
         <uei>uei.opennms.org/traps/SPACE-PLATFORM-MIB/jnxSpaceCPUVoltCleared</uei>
         <event-label>SPACE-PLATFORM customized trap event: jnxSpaceCPUVoltCleared</event-label>
         <descr>
-        &lt;p&gt;CPU voltage is normal: %parm[#5]%mV.&lt;/p&gt;
+        &lt;p&gt;CPU voltage is normal (mV): %parm[#5]%&lt;/p&gt;
         </descr>
                 <logmsg dest='logndisplay'>&lt;p&gt;
-                      CPU voltage is normal: %parm[#5]%mV.&lt;/p&gt;
+                      CPU voltage is normal (mV): %parm[#5]%&lt;/p&gt;
                 </logmsg>
         <severity>Normal</severity>
         <alarm-data auto-clean="true" clear-key="uei.opennms.org/traps/SPACE-PLATFORM-MIB/jnxSpaceCPUVlotRising:%dpname%:%nodeid%" alarm-type="2" reduction-key="%uei%:%dpname%:%nodeid%"/>
