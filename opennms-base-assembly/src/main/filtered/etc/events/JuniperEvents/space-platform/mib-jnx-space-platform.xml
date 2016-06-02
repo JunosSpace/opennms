@@ -271,10 +271,10 @@
         <uei>uei.opennms.org/traps/SPACE-PLATFORM-MIB/jnxSpaceCPUVlotRising</uei>
         <event-label>SPACE-PLATFORM customized trap event: jnxSpaceCPUVlotRising</event-label>
         <descr>
-        &lt;p&gt;CPU voltage too low: %parm[#5]%&lt;/p&gt;
+        &lt;p&gt;CPU voltage too low: %parm[#5]%mV.&lt;/p&gt;
         </descr>
                 <logmsg dest='logndisplay'>&lt;p&gt;
-                      CPU voltage too low: %parm[#5]%&lt;/p&gt;
+                      CPU voltage too low: %parm[#5]%mV.&lt;/p&gt;
                 </logmsg>
         <severity>Major</severity>
         <alarm-data auto-clean="false" alarm-type="1" reduction-key="%uei%:%dpname%:%nodeid%"/>
