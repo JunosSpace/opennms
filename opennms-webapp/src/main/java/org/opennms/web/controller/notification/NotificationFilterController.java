@@ -160,8 +160,8 @@ public class NotificationFilterController extends AbstractController implements 
         	int prefLimit = UserPreferenceUtil.getPageSizeLimit(request.getRemoteUser(),"notification",userPreferenceDao);
         	if (prefLimit != 0) {
         		limit = prefLimit;
+        		session.setAttribute("notification_page_limit_size",prefLimit);
 			} 
-        	session.setAttribute("notification_page_limit_size",prefLimit);
         	} else{
 	        	   limit = Integer.parseInt(value);
 	        }

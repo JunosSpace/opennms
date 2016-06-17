@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:opennms="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd
+    http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+
+  <!-- create sequence-->
+
+<changeSet runOnChange="false" author="bharani" id="userpreferencenxtid">
+	<preConditions onFail="MARK_RAN">
+		<sqlCheck expectedResult="0">
+			SELECT COUNT(relname) AS SEQUENCE_NAME FROM pg_class, pg_namespace
+			WHERE relkind='S' AND pg_class.relnamespace = pg_namespace.oid AND relname ILIKE 'userpreferencenxtid'
+		</sqlCheck>
+	</preConditions> 
+	<createSequence sequenceName="userpreferencenxtid" />
+	
+	<rollback>
+	  <dropSequence sequenceName="userpreferencenxtid" />
+	</rollback>
+</changeSet>
+
+<changeSet author="bharani" id="16.1-userpreferencenxtid" runAlways="true" context="repair">
+	<validCheckSum>ANY</validCheckSum>
+	<preConditions onFail="MARK_RAN">
+		<tableExists tableName="userpreferencestate" />
+	</preConditions>
+	<opennms:setSequence sequenceName="userpreferencenxtid">
+		<opennms:table name="userpreferencestate" column="userPreferenceId" />
+	</opennms:setSequence>
+</changeSet>
+
+    <!-- create table for userpreferencestate -->
+   <changeSet author="bharani" id="16.1user_preference_user_story">
+   <preConditions onFail="MARK_RAN">
+   <not><tableExists tableName="userpreferencestate" /></not>
+   </preConditions>
+
+  <createTable tableName="userpreferencestate">
+  <column name="userPreferenceId" type="integer">
+  <constraints primaryKey="true" nullable="false" primaryKeyName="pk_userPreferenceId" />
+  </column>
+  <column name="stateName" type="varchar(64)">
+  <constraints nullable="false" />
+  </column>
+  <column name="stateValue" type="varchar(64)">
+  <constraints nullable="false" />
+  </column>
+  <column name="userName" type="varchar(64)">
+  <constraints nullable="false" />
+  </column>
+  </createTable>
+  </changeSet>
+</databaseChangeLog>
+

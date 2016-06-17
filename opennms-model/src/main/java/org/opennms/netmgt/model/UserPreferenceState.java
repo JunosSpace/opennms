@@ -68,7 +68,7 @@ import java.sql.Statement;
 
 @XmlRootElement(name = "user-preference-state")
 @Entity
-@Table(name = "UserPreferenceState")
+@Table(name = "userpreferencestate")
 public class UserPreferenceState implements Serializable {
 
 	private Integer m_id;
@@ -77,7 +77,7 @@ public class UserPreferenceState implements Serializable {
 	private String m_userName;
 	
     @Id
-	@SequenceGenerator(name = "userPreferenceSequence", sequenceName = "userPreferenceNxtId")
+	@SequenceGenerator(name = "userPreferenceSequence", sequenceName = "userpreferencenxtid")
 	@GeneratedValue(generator = "userPreferenceSequence")
 	@Column(name = "userPreferenceId", nullable = false)
 	@XmlAttribute(name = "id")

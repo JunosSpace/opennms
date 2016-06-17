@@ -54,7 +54,15 @@ public interface UserPreferenceDao extends OnmsDao<UserPreferenceState,Integer> 
      * This Method is used to retrive the userpreference value in DB.
      */
     int getUserPreference(String userName , String stateName );
-
+    
+    /**
+     * <p>deleteUserPreference</p>
+     *
+     * @param userName.
+     * This Method is used to delete the userpreference values in DB.
+     */
+    void deleteUserPreference(String userName);
+    
     
 }
 

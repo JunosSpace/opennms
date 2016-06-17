@@ -99,6 +99,18 @@ public class UserPreferenceDaoHibernate extends AbstractDaoHibernate<UserPrefere
      catch(final Exception e){
  		logger.error("Error message is : "+e);
 		}
-   	 } 
+   	 }
+
+  @Transactional
+	public void deleteUserPreference(String userName) {  
+     try{
+    	 String hql = "delete from UserPreferenceState where userName = ?";
+         Object[] values = {userName};
+         bulkDelete(hql, values);
+    }
+    catch(final Exception e){
+		logger.error("Error message is : "+e);
+	}
+  } 
 }
 

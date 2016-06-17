@@ -31,6 +31,7 @@ package org.opennms.web.rest;
 import java.security.Principal;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.List;
 
 import javax.ws.rs.Consumes;
 import javax.ws.rs.DELETE;
@@ -47,6 +48,7 @@ import javax.ws.rs.core.Response;
 import javax.ws.rs.core.Response.Status;
 import javax.ws.rs.core.SecurityContext;
 import javax.ws.rs.core.UriInfo;
+import javax.ws.rs.QueryParam;
 
 import org.opennms.netmgt.config.UserManager;
 import org.opennms.netmgt.model.OnmsUser;
@@ -60,6 +62,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
+import org.opennms.netmgt.dao.api.UserPreferenceDao;
 
 import com.sun.jersey.api.core.ResourceContext;
 import com.sun.jersey.spi.resource.PerRequest;
@@ -85,7 +88,10 @@ public class UserRestService extends OnmsRestService {
 
     @Autowired
     private UserManager m_userManager;
-
+    
+    @Autowired
+    private UserPreferenceDao m_userPreferenceDao;
+    
     @Context 
     UriInfo m_uriInfo;
     
@@ -183,7 +189,7 @@ public class UserRestService extends OnmsRestService {
     
     @DELETE
     @Path("{userCriteria}")
-    public Response deleteUser(@PathParam("userCriteria") final String userCriteria) {
+    public Response deleteUser(@PathParam("userCriteria") final String userCriteria, @QueryParam("deletePreference") Boolean deletePreference) {
         writeLock();
         try {
             if (!hasEditRights()) {
@@ -199,6 +205,16 @@ public class UserRestService extends OnmsRestService {
             LOG.debug("deleteUser: deleting user {}", user);
             try {
                 m_userManager.deleteUser(user.getUsername());
+                if(deletePreference != null && deletePreference == true){
+                     UserPreferenceDao userPreferenceDao = m_userPreferenceDao;
+                     if (userPreferenceDao != null) {
+             			try {
+             				userPreferenceDao.deleteUserPreference(user.getUsername());
+             			} catch (Exception e) {
+             				LOG.error("Exception occure while set userpreference: " + e);
+             			}
+             		}
+                }
             } catch (final Throwable t) {
                 throw getException(Status.INTERNAL_SERVER_ERROR, t);
             }
@@ -207,7 +223,35 @@ public class UserRestService extends OnmsRestService {
             writeUnlock();
         }
     }
-
+    
+    
+    @DELETE
+    @Path("/deletePreference/{user}")
+    public void deleteUnassociatedUserPreference(@PathParam("user") final String user) {
+        writeLock();
+        try {
+            if (!hasEditRights()) {
+                throw getException(Status.BAD_REQUEST, new RuntimeException(m_securityContext.getUserPrincipal().getName() + " does not have write access to users!"));
+            }
+            try {
+                     UserPreferenceDao userPreferenceDao = m_userPreferenceDao;
+                     if (userPreferenceDao != null) {
+             			try {
+             					userPreferenceDao.deleteUserPreference(user);
+             			} catch (Exception e) {
+             				LOG.error("Exception occure while set userpreference: " + e);
+             			}
+             		}
+                
+            } catch (final Throwable t) {
+                throw getException(Status.INTERNAL_SERVER_ERROR, t);
+            }
+       
+        } finally {
+            writeUnlock();
+        }
+    }
+    
     public boolean hasEditRights() {
         if (m_securityContext.isUserInRole(Authentication.ROLE_ADMIN) || m_securityContext.isUserInRole(Authentication.ROLE_REST)) {
             return true;

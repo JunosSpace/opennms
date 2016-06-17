@@ -159,8 +159,8 @@ public class OutageFilterController extends AbstractController implements Initia
         	int prefLimit = UserPreferenceUtil.getPageSizeLimit(request.getRemoteUser(),"outage",userPreferenceDao);
         	if (prefLimit != 0) {
         		limit = prefLimit;
+        		session.setAttribute("outage_page_limit_size",prefLimit);
 			} 
-        	session.setAttribute("outage_page_limit_size",prefLimit);
         	} else{
          	   limit = Integer.parseInt(value);
             }
