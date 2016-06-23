@@ -42,16 +42,16 @@
    </preConditions>
 
   <createTable tableName="userpreferencestate">
-  <column name="userPreferenceId" type="integer">
+  <column name="userpreferenceid" type="integer">
   <constraints primaryKey="true" nullable="false" primaryKeyName="pk_userPreferenceId" />
   </column>
-  <column name="stateName" type="varchar(64)">
+  <column name="statename" type="varchar(64)">
   <constraints nullable="false" />
   </column>
-  <column name="stateValue" type="varchar(64)">
+  <column name="statevalue" type="varchar(64)">
   <constraints nullable="false" />
   </column>
-  <column name="userName" type="varchar(64)">
+  <column name="username" type="varchar(64)">
   <constraints nullable="false" />
   </column>
   </createTable>
