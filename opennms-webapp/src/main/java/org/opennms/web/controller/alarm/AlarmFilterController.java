@@ -188,7 +188,7 @@ public class AlarmFilterController extends MultiActionController implements Init
         	if (value == null){
         	int prefLimit = UserPreferenceUtil.getPageSizeLimit(request.getRemoteUser(),"alarm",userPreferenceDao);
         	if (prefLimit != 0) {
-				prefLimit = limit;
+        		limit = prefLimit;
 				session.setAttribute("alarm_page_limit_size",prefLimit);
 	        	return prefLimit;
 			} 

@@ -312,7 +312,7 @@ public class EventController extends MultiActionController implements Initializi
         	if (value == null){
         	int prefLimit = UserPreferenceUtil.getPageSizeLimit(request.getRemoteUser(),"event",userPreferenceDao);
         	if (prefLimit != 0) {
-				prefLimit = limit;
+        		limit = prefLimit;
 				session.setAttribute("event_page_limit_size",prefLimit);
 	        	return prefLimit;
 			} 
