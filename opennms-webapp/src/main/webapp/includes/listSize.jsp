@@ -3,7 +3,7 @@
 <script type="text/javascript">
 function UpdateLimitSize(value){
 	<%String pageName =request.getParameter("pageName");%>
-    var state_name ="<%=pageName%>" + "_page_limit_size";
+        var state_name ="<%=pageName%>" + "_page_limit_size";
 	var state_value = value;
 
 	var request;
@@ -20,15 +20,17 @@ function UpdateLimitSize(value){
 	request.send("stateName="+state_name+"&stateValue="+state_value);
 
 	}catch(e){alert("Unable to connect to server");}
-    <%String url = request.getParameter("baseurl");%>
-    var url_value ="<%=url%>";
-    var reExp = /limit=[^&]+/;
-    var newUrl = url_value.replace(reExp, "limit=" + value);
-    newUrl = newUrl.replace(/&amp;/g, '&');
-	window.location = newUrl;
-
-
-}
+       <%String url = request.getParameter("baseurl");%>
+       var url_value ="<%=url%>";
+       var reExp = /limit=[^&]+/;
+       var newUrl = url_value.replace(reExp, "limit=" + value);
+       newUrl = newUrl.replace(/&amp;/g, '&');
+       if(window.location.href.indexOf("?") > 0){
+       window.location = window.location.href.split("?")[0]+"?"+newUrl.split("?")[1];
+       }else{
+       window.location = window.location;
+       }
+ }
 </script>
 </head>
 <body>Show:
@@ -72,3 +74,4 @@ function UpdateLimitSize(value){
 </select> Items
 </body>
 </html>
+
