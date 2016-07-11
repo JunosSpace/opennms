@@ -2137,7 +2137,7 @@ instances has fired, for triggers with mteTriggerType
         <uei>uei.opennms.org/traps/SPACE-PLATFORM-MIB/jnxSpaceVIPBindIssue</uei>
         <event-label>SPACE-PLATFORM-MIB defined trap event: jnxSpaceVIPBindIssue</event-label>
         <descr>
-&lt;p&gt;VIP bind issue detected.&lt;/p&gt;&lt;table&gt;
+&lt;p&gt;VIP bind issue detected in Jboss node(s).&lt;/p&gt;&lt;table&gt;
         &lt;tr&gt;&lt;td&gt;&lt;b&gt;
 
         jnxAppModule&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
@@ -2152,7 +2152,7 @@ instances has fired, for triggers with mteTriggerType
         %parm[#3]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
         </descr>
         <logmsg dest="logndisplay">&lt;p&gt;
-        VIP bind issue detected trap received.
+        VIP bind issue detected in Jboss node(s) trap received.
         jnxAppModule=%parm[#1]%
         jnxProcess=%parm[#2]%
         jnxProcessCategory=%parm[#3]%&lt;/p&gt;
@@ -2183,7 +2183,7 @@ instances has fired, for triggers with mteTriggerType
         <uei>uei.opennms.org/traps/SPACE-PLATFORM-MIB/jnxSpaceVIPBindIssue</uei>
         <event-label>SPACE-PLATFORM-MIB defined trap event: jnxSpaceVIPBindIssue</event-label>
         <descr>
-&lt;p&gt;VIP bind issue resolved.&lt;/p&gt;&lt;table&gt;
+&lt;p&gt;VIP bind issue in Jboss node(s) resolved.&lt;/p&gt;&lt;table&gt;
         &lt;tr&gt;&lt;td&gt;&lt;b&gt;
 
         jnxAppModule&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
@@ -2198,7 +2198,7 @@ instances has fired, for triggers with mteTriggerType
         %parm[#3]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
         </descr>
         <logmsg dest="logndisplay">&lt;p&gt;
-        VIP bind issue resolved trap received.
+        VIP bind issue in Jboss node(s) resolved trap received.
         jnxAppModule=%parm[#1]%
         jnxProcess=%parm[#2]%
         jnxProcessCategory=%parm[#3]%&lt;/p&gt;
