@@ -959,7 +959,7 @@ if [ "$1" = 0 ]; then
 fi
 
 %pretrans core
-RPM_INSTALL_PREFIX0=`rpm -q --queryformat '%{INSTALLPREFIX}' opennms-core`
+RPM_INSTALL_PREFIX0=`rpm -q --queryformat '%{INSTPREFIXES}' opennms-core`
 if ! [ -x "$RPM_INSTALL_PREFIX0/bin/config-tools/opennms-pretrans.pl" ]; then
 	echo "This is the first time git-managed OpenNMS is being installed or upgraded."
 	# on a first install, if we're upgrading save etc/ for git-setup.pl
@@ -1074,7 +1074,7 @@ echo " *** release notes for details."
 echo ""
 
 %posttrans core
-RPM_INSTALL_PREFIX0=`rpm -q --queryformat '%{INSTALLPREFIX}' opennms-core`
+RPM_INSTALL_PREFIX0=`rpm -q --queryformat '%{INSTPREFIXES}' opennms-core`
 "$RPM_INSTALL_PREFIX0/bin/config-tools/opennms-posttrans.pl" "$RPM_INSTALL_PREFIX0" "opennms-core" "%{version}-%{release}" 1>&2
 
 %postun core
@@ -1088,7 +1088,7 @@ if [ "$1" = 0 ]; then
 fi
 
 %pretrans remote-poller
-RPM_INSTALL_PREFIX0=`rpm -q --queryformat '%{INSTALLPREFIX}' opennms-core`
+RPM_INSTALL_PREFIX0=`rpm -q --queryformat '%{INSTPREFIXES}' opennms-core`
 if ! [ -x "$RPM_INSTALL_PREFIX0/bin/config-tools/opennms-pretrans.pl" ]; then
 	echo "This is the first time git-managed OpenNMS is being installed or upgraded."
 	# on a first install, if we're upgrading save etc/ for git-setup.pl
@@ -1113,11 +1113,11 @@ fi
 "$RPM_INSTALL_PREFIX0/bin/config-tools/opennms-post.pl" "$RPM_INSTALL_PREFIX0" "remote-poller" "%{version}-%{release}" 1>&2
 
 %posttrans remote-poller
-RPM_INSTALL_PREFIX0=`rpm -q --queryformat '%{INSTALLPREFIX}' opennms-core`
+RPM_INSTALL_PREFIX0=`rpm -q --queryformat '%{INSTPREFIXES}' opennms-core`
 "$RPM_INSTALL_PREFIX0/bin/config-tools/opennms-posttrans.pl" "$RPM_INSTALL_PREFIX0" "opennms-remote-poller" "%{version}-%{release}" 1>&2
 
 %pretrans webapp-jetty
-RPM_INSTALL_PREFIX0=`rpm -q --queryformat '%{INSTALLPREFIX}' opennms-core`
+RPM_INSTALL_PREFIX0=`rpm -q --queryformat '%{INSTPREFIXES}' opennms-core`
 if ! [ -x "$RPM_INSTALL_PREFIX0/bin/config-tools/opennms-pretrans.pl" ]; then
 	echo "This is the first time git-managed OpenNMS is being installed or upgraded."
 	# on a first install, if we're upgrading save etc/ for git-setup.pl
@@ -1142,11 +1142,11 @@ fi
 "$RPM_INSTALL_PREFIX0/bin/config-tools/opennms-post.pl" "$RPM_INSTALL_PREFIX0" "webapp-jetty" "%{version}-%{release}" 1>&2
 
 %posttrans webapp-jetty
-RPM_INSTALL_PREFIX0=`rpm -q --queryformat '%{INSTALLPREFIX}' opennms-core`
+RPM_INSTALL_PREFIX0=`rpm -q --queryformat '%{INSTPREFIXES}' opennms-core`
 "$RPM_INSTALL_PREFIX0/bin/config-tools/opennms-posttrans.pl" "$RPM_INSTALL_PREFIX0" "opennms-webapp-jetty" "%{version}-%{release}" 1>&2
 
 %pretrans ncs
-RPM_INSTALL_PREFIX0=`rpm -q --queryformat '%{INSTALLPREFIX}' opennms-core`
+RPM_INSTALL_PREFIX0=`rpm -q --queryformat '%{INSTPREFIXES}' opennms-core`
 if ! [ -x "$RPM_INSTALL_PREFIX0/bin/config-tools/opennms-pretrans.pl" ]; then
 	echo "This is the first time git-managed OpenNMS is being installed or upgraded."
 	# on a first install, if we're upgrading save etc/ for git-setup.pl
@@ -1171,11 +1171,11 @@ fi
 "$RPM_INSTALL_PREFIX0/bin/config-tools/opennms-post.pl" "$RPM_INSTALL_PREFIX0" "ncs" "%{version}-%{release}" 1>&2
 
 %posttrans ncs
-RPM_INSTALL_PREFIX0=`rpm -q --queryformat '%{INSTALLPREFIX}' opennms-core`
+RPM_INSTALL_PREFIX0=`rpm -q --queryformat '%{INSTPREFIXES}' opennms-core`
 "$RPM_INSTALL_PREFIX0/bin/config-tools/opennms-posttrans.pl" "$RPM_INSTALL_PREFIX0" "opennms-ncs" "%{version}-%{release}" 1>&2
 
 %pretrans plugin-provisioning-dns
-RPM_INSTALL_PREFIX0=`rpm -q --queryformat '%{INSTALLPREFIX}' opennms-core`
+RPM_INSTALL_PREFIX0=`rpm -q --queryformat '%{INSTPREFIXES}' opennms-core`
 if ! [ -x "$RPM_INSTALL_PREFIX0/bin/config-tools/opennms-pretrans.pl" ]; then
 	echo "This is the first time git-managed OpenNMS is being installed or upgraded."
 	# on a first install, if we're upgrading save etc/ for git-setup.pl
@@ -1200,11 +1200,11 @@ fi
 "$RPM_INSTALL_PREFIX0/bin/config-tools/opennms-post.pl" "$RPM_INSTALL_PREFIX0" "opennms-plugin-provisioning-dns" "%{version}-%{release}" 1>&2
 
 %posttrans plugin-provisioning-dns
-RPM_INSTALL_PREFIX0=`rpm -q --queryformat '%{INSTALLPREFIX}' opennms-core`
+RPM_INSTALL_PREFIX0=`rpm -q --queryformat '%{INSTPREFIXES}' opennms-core`
 "$RPM_INSTALL_PREFIX0/bin/config-tools/opennms-posttrans.pl" "$RPM_INSTALL_PREFIX0" "opennms-plugin-provisioning-dns" "%{version}-%{release}" 1>&2
 
 %pretrans plugin-provisioning-link
-RPM_INSTALL_PREFIX0=`rpm -q --queryformat '%{INSTALLPREFIX}' opennms-core`
+RPM_INSTALL_PREFIX0=`rpm -q --queryformat '%{INSTPREFIXES}' opennms-core`
 if ! [ -x "$RPM_INSTALL_PREFIX0/bin/config-tools/opennms-pretrans.pl" ]; then
 	echo "This is the first time git-managed OpenNMS is being installed or upgraded."
 	# on a first install, if we're upgrading save etc/ for git-setup.pl
@@ -1229,11 +1229,11 @@ fi
 "$RPM_INSTALL_PREFIX0/bin/config-tools/opennms-post.pl" "$RPM_INSTALL_PREFIX0" "opennms-plugin-provisioning-link" "%{version}-%{release}" 1>&2
 
 %posttrans plugin-provisioning-link
-RPM_INSTALL_PREFIX0=`rpm -q --queryformat '%{INSTALLPREFIX}' opennms-core`
+RPM_INSTALL_PREFIX0=`rpm -q --queryformat '%{INSTPREFIXES}' opennms-core`
 "$RPM_INSTALL_PREFIX0/bin/config-tools/opennms-posttrans.pl" "$RPM_INSTALL_PREFIX0" "opennms-plugin-provisioning-link" "%{version}-%{release}" 1>&2
 
 %pretrans plugin-provisioning-map
-RPM_INSTALL_PREFIX0=`rpm -q --queryformat '%{INSTALLPREFIX}' opennms-core`
+RPM_INSTALL_PREFIX0=`rpm -q --queryformat '%{INSTPREFIXES}' opennms-core`
 if ! [ -x "$RPM_INSTALL_PREFIX0/bin/config-tools/opennms-pretrans.pl" ]; then
 	echo "This is the first time git-managed OpenNMS is being installed or upgraded."
 	# on a first install, if we're upgrading save etc/ for git-setup.pl
@@ -1258,11 +1258,11 @@ fi
 "$RPM_INSTALL_PREFIX0/bin/config-tools/opennms-post.pl" "$RPM_INSTALL_PREFIX0" "opennms-plugin-provisioning-map" "%{version}-%{release}" 1>&2
 
 %posttrans plugin-provisioning-map
-RPM_INSTALL_PREFIX0=`rpm -q --queryformat '%{INSTALLPREFIX}' opennms-core`
+RPM_INSTALL_PREFIX0=`rpm -q --queryformat '%{INSTPREFIXES}' opennms-core`
 "$RPM_INSTALL_PREFIX0/bin/config-tools/opennms-posttrans.pl" "$RPM_INSTALL_PREFIX0" "opennms-plugin-provisioning-map" "%{version}-%{release}" 1>&2
 
 %pretrans plugin-provisioning-rancid
-RPM_INSTALL_PREFIX0=`rpm -q --queryformat '%{INSTALLPREFIX}' opennms-core`
+RPM_INSTALL_PREFIX0=`rpm -q --queryformat '%{INSTPREFIXES}' opennms-core`
 if ! [ -x "$RPM_INSTALL_PREFIX0/bin/config-tools/opennms-pretrans.pl" ]; then
 	echo "This is the first time git-managed OpenNMS is being installed or upgraded."
 	# on a first install, if we're upgrading save etc/ for git-setup.pl
@@ -1287,11 +1287,11 @@ fi
 "$RPM_INSTALL_PREFIX0/bin/config-tools/opennms-post.pl" "$RPM_INSTALL_PREFIX0" "opennms-plugin-provisioning-rancid" "%{version}-%{release}" 1>&2
 
 %posttrans plugin-provisioning-rancid
-RPM_INSTALL_PREFIX0=`rpm -q --queryformat '%{INSTALLPREFIX}' opennms-core`
+RPM_INSTALL_PREFIX0=`rpm -q --queryformat '%{INSTPREFIXES}' opennms-core`
 "$RPM_INSTALL_PREFIX0/bin/config-tools/opennms-posttrans.pl" "$RPM_INSTALL_PREFIX0" "opennms-plugin-provisioning-rancid" "%{version}-%{release}" 1>&2
 
 %pretrans plugin-provisioning-snmp-asset
-RPM_INSTALL_PREFIX0=`rpm -q --queryformat '%{INSTALLPREFIX}' opennms-core`
+RPM_INSTALL_PREFIX0=`rpm -q --queryformat '%{INSTPREFIXES}' opennms-core`
 if ! [ -x "$RPM_INSTALL_PREFIX0/bin/config-tools/opennms-pretrans.pl" ]; then
 	echo "This is the first time git-managed OpenNMS is being installed or upgraded."
 	# on a first install, if we're upgrading save etc/ for git-setup.pl
@@ -1316,11 +1316,11 @@ fi
 "$RPM_INSTALL_PREFIX0/bin/config-tools/opennms-post.pl" "$RPM_INSTALL_PREFIX0" "opennms-plugin-provisioning-snmp-asset" "%{version}-%{release}" 1>&2
 
 %posttrans plugin-provisioning-snmp-asset
-RPM_INSTALL_PREFIX0=`rpm -q --queryformat '%{INSTALLPREFIX}' opennms-core`
+RPM_INSTALL_PREFIX0=`rpm -q --queryformat '%{INSTPREFIXES}' opennms-core`
 "$RPM_INSTALL_PREFIX0/bin/config-tools/opennms-posttrans.pl" "$RPM_INSTALL_PREFIX0" "opennms-plugin-provisioning-snmp-asset" "%{version}-%{release}" 1>&2
 
 %pretrans plugin-ticketer-jira
-RPM_INSTALL_PREFIX0=`rpm -q --queryformat '%{INSTALLPREFIX}' opennms-core`
+RPM_INSTALL_PREFIX0=`rpm -q --queryformat '%{INSTPREFIXES}' opennms-core`
 if ! [ -x "$RPM_INSTALL_PREFIX0/bin/config-tools/opennms-pretrans.pl" ]; then
 	echo "This is the first time git-managed OpenNMS is being installed or upgraded."
 	# on a first install, if we're upgrading save etc/ for git-setup.pl
@@ -1345,11 +1345,11 @@ fi
 "$RPM_INSTALL_PREFIX0/bin/config-tools/opennms-post.pl" "$RPM_INSTALL_PREFIX0" "opennms-plugin-ticketer-jira" "%{version}-%{release}" 1>&2
 
 %posttrans plugin-ticketer-jira
-RPM_INSTALL_PREFIX0=`rpm -q --queryformat '%{INSTALLPREFIX}' opennms-core`
+RPM_INSTALL_PREFIX0=`rpm -q --queryformat '%{INSTPREFIXES}' opennms-core`
 "$RPM_INSTALL_PREFIX0/bin/config-tools/opennms-posttrans.pl" "$RPM_INSTALL_PREFIX0" "opennms-plugin-ticketer-jira" "%{version}-%{release}" 1>&2
 
 %pretrans plugin-ticketer-otrs
-RPM_INSTALL_PREFIX0=`rpm -q --queryformat '%{INSTALLPREFIX}' opennms-core`
+RPM_INSTALL_PREFIX0=`rpm -q --queryformat '%{INSTPREFIXES}' opennms-core`
 if ! [ -x "$RPM_INSTALL_PREFIX0/bin/config-tools/opennms-pretrans.pl" ]; then
 	echo "This is the first time git-managed OpenNMS is being installed or upgraded."
 	# on a first install, if we're upgrading save etc/ for git-setup.pl
@@ -1374,11 +1374,11 @@ fi
 "$RPM_INSTALL_PREFIX0/bin/config-tools/opennms-post.pl" "$RPM_INSTALL_PREFIX0" "opennms-plugin-ticketer-otrs" "%{version}-%{release}" 1>&2
 
 %posttrans plugin-ticketer-otrs
-RPM_INSTALL_PREFIX0=`rpm -q --queryformat '%{INSTALLPREFIX}' opennms-core`
+RPM_INSTALL_PREFIX0=`rpm -q --queryformat '%{INSTPREFIXES}' opennms-core`
 "$RPM_INSTALL_PREFIX0/bin/config-tools/opennms-posttrans.pl" "$RPM_INSTALL_PREFIX0" "opennms-plugin-ticketer-otrs" "%{version}-%{release}" 1>&2
 
 %pretrans plugin-ticketer-rt
-RPM_INSTALL_PREFIX0=`rpm -q --queryformat '%{INSTALLPREFIX}' opennms-core`
+RPM_INSTALL_PREFIX0=`rpm -q --queryformat '%{INSTPREFIXES}' opennms-core`
 if ! [ -x "$RPM_INSTALL_PREFIX0/bin/config-tools/opennms-pretrans.pl" ]; then
 	echo "This is the first time git-managed OpenNMS is being installed or upgraded."
 	# on a first install, if we're upgrading save etc/ for git-setup.pl
@@ -1403,11 +1403,11 @@ fi
 "$RPM_INSTALL_PREFIX0/bin/config-tools/opennms-post.pl" "$RPM_INSTALL_PREFIX0" "opennms-plugin-ticketer-rt" "%{version}-%{release}" 1>&2
 
 %posttrans plugin-ticketer-rt
-RPM_INSTALL_PREFIX0=`rpm -q --queryformat '%{INSTALLPREFIX}' opennms-core`
+RPM_INSTALL_PREFIX0=`rpm -q --queryformat '%{INSTPREFIXES}' opennms-core`
 "$RPM_INSTALL_PREFIX0/bin/config-tools/opennms-posttrans.pl" "$RPM_INSTALL_PREFIX0" "opennms-plugin-ticketer-rt" "%{version}-%{release}" 1>&2
 
 %pretrans plugin-protocol-dhcp
-RPM_INSTALL_PREFIX0=`rpm -q --queryformat '%{INSTALLPREFIX}' opennms-core`
+RPM_INSTALL_PREFIX0=`rpm -q --queryformat '%{INSTPREFIXES}' opennms-core`
 if ! [ -x "$RPM_INSTALL_PREFIX0/bin/config-tools/opennms-pretrans.pl" ]; then
 	echo "This is the first time git-managed OpenNMS is being installed or upgraded."
 	# on a first install, if we're upgrading save etc/ for git-setup.pl
@@ -1432,11 +1432,11 @@ fi
 "$RPM_INSTALL_PREFIX0/bin/config-tools/opennms-post.pl" "$RPM_INSTALL_PREFIX0" "opennms-plugin-protocol-dhcp" "%{version}-%{release}" 1>&2
 
 %posttrans plugin-protocol-dhcp
-RPM_INSTALL_PREFIX0=`rpm -q --queryformat '%{INSTALLPREFIX}' opennms-core`
+RPM_INSTALL_PREFIX0=`rpm -q --queryformat '%{INSTPREFIXES}' opennms-core`
 "$RPM_INSTALL_PREFIX0/bin/config-tools/opennms-posttrans.pl" "$RPM_INSTALL_PREFIX0" "opennms-plugin-protocol-dhcp" "%{version}-%{release}" 1>&2
 
 %pretrans plugin-protocol-nsclient
-RPM_INSTALL_PREFIX0=`rpm -q --queryformat '%{INSTALLPREFIX}' opennms-core`
+RPM_INSTALL_PREFIX0=`rpm -q --queryformat '%{INSTPREFIXES}' opennms-core`
 if ! [ -x "$RPM_INSTALL_PREFIX0/bin/config-tools/opennms-pretrans.pl" ]; then
 	echo "This is the first time git-managed OpenNMS is being installed or upgraded."
 	# on a first install, if we're upgrading save etc/ for git-setup.pl
@@ -1461,11 +1461,11 @@ fi
 "$RPM_INSTALL_PREFIX0/bin/config-tools/opennms-post.pl" "$RPM_INSTALL_PREFIX0" "opennms-plugin-protocol-nsclient" "%{version}-%{release}" 1>&2
 
 %posttrans plugin-protocol-nsclient
-RPM_INSTALL_PREFIX0=`rpm -q --queryformat '%{INSTALLPREFIX}' opennms-core`
+RPM_INSTALL_PREFIX0=`rpm -q --queryformat '%{INSTPREFIXES}' opennms-core`
 "$RPM_INSTALL_PREFIX0/bin/config-tools/opennms-posttrans.pl" "$RPM_INSTALL_PREFIX0" "opennms-plugin-protocol-nsclient" "%{version}-%{release}" 1>&2
 
 %pretrans plugin-protocol-radius
-RPM_INSTALL_PREFIX0=`rpm -q --queryformat '%{INSTALLPREFIX}' opennms-core`
+RPM_INSTALL_PREFIX0=`rpm -q --queryformat '%{INSTPREFIXES}' opennms-core`
 if ! [ -x "$RPM_INSTALL_PREFIX0/bin/config-tools/opennms-pretrans.pl" ]; then
 	echo "This is the first time git-managed OpenNMS is being installed or upgraded."
 	# on a first install, if we're upgrading save etc/ for git-setup.pl
@@ -1490,11 +1490,11 @@ fi
 "$RPM_INSTALL_PREFIX0/bin/config-tools/opennms-post.pl" "$RPM_INSTALL_PREFIX0" "opennms-plugin-protocol-radius" "%{version}-%{release}" 1>&2
 
 %posttrans plugin-protocol-radius
-RPM_INSTALL_PREFIX0=`rpm -q --queryformat '%{INSTALLPREFIX}' opennms-core`
+RPM_INSTALL_PREFIX0=`rpm -q --queryformat '%{INSTPREFIXES}' opennms-core`
 "$RPM_INSTALL_PREFIX0/bin/config-tools/opennms-posttrans.pl" "$RPM_INSTALL_PREFIX0" "opennms-plugin-protocol-radius" "%{version}-%{release}" 1>&2
 
 %pretrans plugin-protocol-xml
-RPM_INSTALL_PREFIX0=`rpm -q --queryformat '%{INSTALLPREFIX}' opennms-core`
+RPM_INSTALL_PREFIX0=`rpm -q --queryformat '%{INSTPREFIXES}' opennms-core`
 if ! [ -x "$RPM_INSTALL_PREFIX0/bin/config-tools/opennms-pretrans.pl" ]; then
 	echo "This is the first time git-managed OpenNMS is being installed or upgraded."
 	# on a first install, if we're upgrading save etc/ for git-setup.pl
@@ -1519,11 +1519,11 @@ fi
 "$RPM_INSTALL_PREFIX0/bin/config-tools/opennms-post.pl" "$RPM_INSTALL_PREFIX0" "opennms-plugin-protocol-xml" "%{version}-%{release}" 1>&2
 
 %posttrans plugin-protocol-xml
-RPM_INSTALL_PREFIX0=`rpm -q --queryformat '%{INSTALLPREFIX}' opennms-core`
+RPM_INSTALL_PREFIX0=`rpm -q --queryformat '%{INSTPREFIXES}' opennms-core`
 "$RPM_INSTALL_PREFIX0/bin/config-tools/opennms-posttrans.pl" "$RPM_INSTALL_PREFIX0" "opennms-plugin-protocol-xml" "%{version}-%{release}" 1>&2
 
 %pretrans plugin-protocol-xmp
-RPM_INSTALL_PREFIX0=`rpm -q --queryformat '%{INSTALLPREFIX}' opennms-core`
+RPM_INSTALL_PREFIX0=`rpm -q --queryformat '%{INSTPREFIXES}' opennms-core`
 if ! [ -x "$RPM_INSTALL_PREFIX0/bin/config-tools/opennms-pretrans.pl" ]; then
 	echo "This is the first time git-managed OpenNMS is being installed or upgraded."
 	# on a first install, if we're upgrading save etc/ for git-setup.pl
@@ -1548,11 +1548,11 @@ fi
 "$RPM_INSTALL_PREFIX0/bin/config-tools/opennms-post.pl" "$RPM_INSTALL_PREFIX0" "opennms-plugin-protocol-xmp" "%{version}-%{release}" 1>&2
 
 %posttrans plugin-protocol-xmp
-RPM_INSTALL_PREFIX0=`rpm -q --queryformat '%{INSTALLPREFIX}' opennms-core`
+RPM_INSTALL_PREFIX0=`rpm -q --queryformat '%{INSTPREFIXES}' opennms-core`
 "$RPM_INSTALL_PREFIX0/bin/config-tools/opennms-posttrans.pl" "$RPM_INSTALL_PREFIX0" "opennms-plugin-protocol-xmp" "%{version}-%{release}" 1>&2
 
 %pretrans plugin-collector-juniper-tca
-RPM_INSTALL_PREFIX0=`rpm -q --queryformat '%{INSTALLPREFIX}' opennms-core`
+RPM_INSTALL_PREFIX0=`rpm -q --queryformat '%{INSTPREFIXES}' opennms-core`
 if ! [ -x "$RPM_INSTALL_PREFIX0/bin/config-tools/opennms-pretrans.pl" ]; then
 	echo "This is the first time git-managed OpenNMS is being installed or upgraded."
 	# on a first install, if we're upgrading save etc/ for git-setup.pl
@@ -1577,6 +1577,6 @@ fi
 "$RPM_INSTALL_PREFIX0/bin/config-tools/opennms-post.pl" "$RPM_INSTALL_PREFIX0" "opennms-plugin-collector-juniper-tca" "%{version}-%{release}" 1>&2
 
 %posttrans plugin-collector-juniper-tca
-RPM_INSTALL_PREFIX0=`rpm -q --queryformat '%{INSTALLPREFIX}' opennms-core`
+RPM_INSTALL_PREFIX0=`rpm -q --queryformat '%{INSTPREFIXES}' opennms-core`
 "$RPM_INSTALL_PREFIX0/bin/config-tools/opennms-posttrans.pl" "$RPM_INSTALL_PREFIX0" "opennms-plugin-collector-juniper-tca" "%{version}-%{release}" 1>&2
 
