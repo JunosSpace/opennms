@@ -206,7 +206,8 @@ function main()
         run tar zcf "$WORKDIR/SOURCES/centric-troubleticketer.tar.gz" -C "$WORKDIR/tmp/opennms-$VERSION-$RELEASE/opennms-tools" "centric-troubleticketer"
 
         echo "=== Building RPMs ==="
-        for spec in tools/packages/opennms/opennms.spec opennms-tools/centric-troubleticketer/src/main/rpm/opennms-plugin-ticketer-centric.spec
+        #for spec in tools/packages/opennms/opennms.spec opennms-tools/centric-troubleticketer/src/main/rpm/opennms-plugin-ticketer-centric.spec
+        for spec in tools/packages/opennms/opennms.spec
         do
             run rpmbuild -bb \
                 --define "skip_compile $(skipCompile)" \
