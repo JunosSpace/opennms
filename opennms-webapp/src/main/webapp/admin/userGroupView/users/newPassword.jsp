@@ -29,7 +29,7 @@
 
 --%>
 
-<%@page language="java"
+<%-- <%@page language="java"
 	contentType="text/html"
 	session="true"
 %>
@@ -103,3 +103,4 @@
   <jsp:param name="quiet" value="true" />
 </jsp:include>
 
+ --%>

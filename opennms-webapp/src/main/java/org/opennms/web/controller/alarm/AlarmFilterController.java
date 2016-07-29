@@ -74,7 +74,7 @@ public class AlarmFilterController extends MultiActionController implements Init
 
     private static final int DEFAULT_MULTIPLE = 0;
     private static final int DEFAULT_SHORT_LIMIT = 20;
-    private static final int DEFAULT_LONG_LIMIT = 10;
+    private static final int DEFAULT_LONG_LIMIT = 20;
     private static final AcknowledgeType DEFAULT_ACKNOWLEDGE_TYPE = AcknowledgeType.UNACKNOWLEDGED;
     private static final SortStyle DEFAULT_SORT_STYLE = SortStyle.ID;
 
