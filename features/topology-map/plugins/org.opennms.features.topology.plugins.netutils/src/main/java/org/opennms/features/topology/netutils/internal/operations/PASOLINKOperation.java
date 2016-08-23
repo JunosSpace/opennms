@@ -90,7 +90,11 @@ public class PASOLINKOperation extends AbstractOperation {
             for (final VertexRef target : targets) {
                 final Integer nodeId = getNodeIdValue(operationContext, target);
                 final String nodeLabel = getLabelValue(operationContext, target);
+                final String nodeIconKey = getIconKeyValue(operationContext, target);
                 if (nodeId != null && nodeId > 0) {
+                	if (nodeIconKey != null && !nodeIconKey.contains(".1.3.6.1.4.1.119.2.3.69")) {
+                        return false;
+                    }
                     if (nodeLabel.startsWith("space-") && nodeLabel.length() > 17) {
                         return false;
                     }
