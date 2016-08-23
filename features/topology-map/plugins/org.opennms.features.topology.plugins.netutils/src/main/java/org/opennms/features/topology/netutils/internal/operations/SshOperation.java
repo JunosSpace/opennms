@@ -106,8 +106,12 @@ public class SshOperation extends AbstractOperation {
         if (targets == null || targets.size() < 2) {
             for (final VertexRef target : targets) {
                 final Integer nodeValue = getNodeIdValue(operationContext, target);
+                final String nodeIconKey = getIconKeyValue(operationContext, target);
 		final String nodeLabel = getLabelValue(operationContext, target);
                 if (nodeValue != null && nodeValue > 0) {
+                	if (nodeIconKey.contains(".1.3.6.1.4.1.119.2.3.69")) {
+                        return false;
+                    }
 		    if (nodeLabel.startsWith("space-") && nodeLabel.length() > 17) { 
 			return false;
 		    }

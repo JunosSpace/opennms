@@ -32,6 +32,8 @@ import com.google.common.collect.HashMultimap;
 import com.google.common.collect.Multimap;
 
 import org.apache.commons.lang.StringUtils;
+import org.opennms.core.criteria.restrictions.EqRestriction;
+import org.opennms.core.criteria.restrictions.NeRestriction;
 import org.opennms.features.topology.api.topo.*;
 import org.opennms.netmgt.EventConstants;
 import org.opennms.netmgt.dao.api.LldpLinkDao;
@@ -156,6 +158,27 @@ public class LldpLinkStatusProvider extends AbstractLinkStatusProvider {
         return new ArrayList<EdgeAlarmStatusSummary>(summaryMap.values());
     }
 
+    
+    protected List<OnmsAlarm> getLinkDownAlarms() {
+        org.opennms.core.criteria.Criteria criteria = new org.opennms.core.criteria.Criteria(OnmsAlarm.class);
+        criteria.addRestriction(new EqRestriction("uei", EventConstants.TOPOLOGY_LINK_DOWN_EVENT_UEI));
+        criteria.addRestriction(new EqRestriction("uei", EventConstants.FRAME_ID_UEI_LINK));
+        criteria.addRestriction(new EqRestriction("uei", EventConstants.TX_POWER_ALARM_UEI_LINK));
+        criteria.addRestriction(new EqRestriction("uei", EventConstants.RX_LEVEL_ALARM_UEI_LINK));
+        criteria.addRestriction(new EqRestriction("uei", EventConstants.AS_ETH_PORT_SFP_LOS_UEI_LINK));
+        criteria.addRestriction(new EqRestriction("uei", EventConstants.LP_UNEQUIPED_ALARM_UEI_LINK));
+        criteria.addRestriction(new EqRestriction("uei", EventConstants.AS_ETH_PORT_SFP_TX_ERROR_UEI_LINK));
+        criteria.addRestriction(new EqRestriction("uei", EventConstants.E1_LOS_ALARM_UEI_LINK));
+        criteria.addRestriction(new EqRestriction("uei", EventConstants.TDM_RANGE_MISMATCH_UEI_LINK));
+        criteria.addRestriction(new EqRestriction("uei", EventConstants.STM1_LOS_ALARM_UEI_LINK));
+        criteria.addRestriction(new EqRestriction("uei", EventConstants.AS_ETH_PORT_LINK_STATUS_UEI_LINK));
+        criteria.addRestriction(new EqRestriction("uei", EventConstants.LOF_UEI_LINK));
+        criteria.addRestriction(new EqRestriction("uei", EventConstants.L2_SYNC_LOSS_ALARM_UEI_LINK));
+        criteria.addRestriction(new NeRestriction("severity", OnmsSeverity.CLEARED));
+        return getAlarmDao().findMatching(criteria);
+    }
+    
+    
     @Override
     public int hashCode() {
         return toString().hashCode();

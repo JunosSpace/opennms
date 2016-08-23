@@ -56,5 +56,24 @@
   </column>
   </createTable>
   </changeSet>
+  
+  <changeSet author="surendran" id="16.1_Adding_deviceplatform_column_in_node_for_NEC_user_story_2">
+  	
+  	<preConditions onFail="MARK_RAN">
+		<and>
+			<not><columnExists tableName="node" columnName="deviceplatform" /></not>
+		</and>
+	</preConditions>
+		
+	<addColumn tableName="node">
+        <column name="deviceplatform" type="varchar(64)"/>
+    </addColumn>   
+    
+    <rollback>
+      	<dropColumn tableName="node" columnName="deviceplatform" />
+    </rollback>
+  
+  </changeSet>
+  
 </databaseChangeLog>
 

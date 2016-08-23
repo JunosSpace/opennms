@@ -48,6 +48,11 @@ public class UpdateOperation extends SaveOrUpdateOperation {
 		super(nodeId, foreignSource, foreignId, nodeLabel, building, city, provisionService);
 	}
 
+    public UpdateOperation(Integer nodeId, String foreignSource, String foreignId, String nodeLabel, String building, String city,String devicePlatform, ProvisionService provisionService) {
+        super(nodeId, foreignSource, foreignId, nodeLabel, building, city, devicePlatform, provisionService);
+    }
+
+    
 	/**
 	 * <p>toString</p>
 	 *

@@ -46,6 +46,11 @@ public class InsertOperation extends SaveOrUpdateOperation {
 		super(foreignSource, foreignId, nodeLabel, building, city, provisionService);
 	}
 
+    public InsertOperation(String foreignSource, String foreignId, String nodeLabel, String building, String city, String devicePlatform, ProvisionService provisionService) {
+        super(foreignSource, foreignId, nodeLabel, building, city, devicePlatform, provisionService);
+    }
+
+    
 	/**
 	 * <p>toString</p>
 	 *

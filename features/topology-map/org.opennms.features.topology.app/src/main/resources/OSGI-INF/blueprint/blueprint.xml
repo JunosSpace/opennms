@@ -171,6 +171,7 @@ http://www.osgi.org/xmlns/blueprint-ext/v1.1.0 https://svn.apache.org/repos/asf/
                     <value>theme://svg/vmware_icons.svg</value>
                     <value>theme://svg/open_icons.svg</value>
                     <value>theme://svg/Juniper_icons.svg</value>
+					<value>theme://svg/Ipasolin_icons.svg</value> 
                 </list>
             </property>
         </bean>

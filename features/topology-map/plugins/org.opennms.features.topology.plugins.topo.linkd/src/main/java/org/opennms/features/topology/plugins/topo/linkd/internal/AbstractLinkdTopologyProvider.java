@@ -164,6 +164,9 @@ public abstract class AbstractLinkdTopologyProvider extends AbstractTopologyProv
     }
 
     public static String getIconName(OnmsNode node) {
+    	 if (node.getSysObjectId() != null && node.getSysObjectId().equals(".1.3.6.1.4.1.119.2.3.69.502")) {
+    		 return "linkd:system:snmp:"+node.getSysObjectId()+"."+node.getDevicePlatform();
+    	 }
         return node.getSysObjectId() == null ? "linkd:system" : "linkd:system:snmp:"+node.getSysObjectId();
     }
 
@@ -211,7 +214,40 @@ public abstract class AbstractLinkdTopologyProvider extends AbstractTopologyProv
         return tooltipText.toString();
 
     }
+    
 
+	protected String getStyleName(OnmsNode node, OnmsNode parentNode, DataLinkInterface link) {
+
+		if (node.getSysObjectId() == null || parentNode.getSysObjectId() == null) {
+			return null;
+		}
+		if (!node.getSysObjectId().contains("1.3.6.1.4.1.119")
+				|| !parentNode.getSysObjectId().contains("1.3.6.1.4.1.119.")) {
+			return null;
+		}
+
+		OnmsSnmpInterface sourceInterface = m_snmpInterfaceDao
+				.findByNodeIdAndIfIndex(Integer.parseInt(node.getNodeId()), link.getIfIndex());
+		OnmsSnmpInterface targetInterface = m_snmpInterfaceDao
+				.findByNodeIdAndIfIndex(Integer.parseInt(parentNode.getNodeId()), link.getParentIfIndex());
+
+		if (sourceInterface == null || targetInterface == null) {
+			return "nec_dcn edge";
+		}
+
+		// ifType 8: radio interface, has one is radio link
+		// inType 7: traffic interface, has both is traffic link
+		// inType 6: dcn interface, one is dcn, another one is dcn or traffice
+		// is dcn
+		if (sourceInterface.getIfType().intValue() == 8 || targetInterface.getIfType().intValue() == 8) {
+			return "nec_radio edge ";
+		} else if (sourceInterface.getIfType().intValue() == 7 && targetInterface.getIfType().intValue() == 7) {
+			return "nec_traffic edge ";
+		} else {
+			return "nec_dcn edge";
+		}
+	}
+	
     private static String getIfStatusString(int ifStatusNum) {
           if (ifStatusNum < OPER_ADMIN_STATUS.length) {
               return OPER_ADMIN_STATUS[ifStatusNum];
@@ -433,7 +469,7 @@ public abstract class AbstractLinkdTopologyProvider extends AbstractTopologyProv
 
         return tooltipText.toString();
     }
-
+    
     @Override
     public abstract void load(String filename) throws MalformedURLException, JAXBException;
 

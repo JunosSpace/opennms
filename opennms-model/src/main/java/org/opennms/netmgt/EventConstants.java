@@ -660,6 +660,20 @@ public class EventConstants {
     public static final String TOPOLOGY_LINK_DOWN_EVENT_UEI = "uei.opennms.org/internal/topology/linkDown";
     /** Constant <code>TOPOLOGY_LINK_UP_EVENT_UEI="uei.opennms.org/internal/topology/linkUp"{trunked}</code> */
     public static final String TOPOLOGY_LINK_UP_EVENT_UEI = "uei.opennms.org/internal/topology/linkUp";
+    
+    /** Trap Events */
+    public static final String  FRAME_ID_UEI_LINK = "uei.opennms.org/internal/linkd/trap/frameID" ;
+    public static final String  TX_POWER_ALARM_UEI_LINK = "uei.opennms.org/internal/linkd/trap/txPowerAlarm" ;
+    public static final String  RX_LEVEL_ALARM_UEI_LINK = "uei.opennms.org/internal/linkd/trap/rxLevelAlarm" ;
+    public static final String  AS_ETH_PORT_SFP_LOS_UEI_LINK = "uei.opennms.org/internal/linkd/trap/asETHPortSFPLos" ;
+    public static final String  LP_UNEQUIPED_ALARM_UEI_LINK = "uei.opennms.org/internal/linkd/trap/lpUnequipedAlarm" ;
+    public static final String  AS_ETH_PORT_SFP_TX_ERROR_UEI_LINK = "uei.opennms.org/internal/linkd/trap/asETHPortSFPTxError" ;
+    public static final String  E1_LOS_ALARM_UEI_LINK = "uei.opennms.org/internal/linkd/trap/e1LosAlarm" ;
+    public static final String  TDM_RANGE_MISMATCH_UEI_LINK = "uei.opennms.org/internal/linkd/trap/tdmRangeMismatch" ;
+    public static final String  STM1_LOS_ALARM_UEI_LINK = "uei.opennms.org/internal/linkd/trap/stm1LosAlarm" ;
+    public static final String  AS_ETH_PORT_LINK_STATUS_UEI_LINK = "uei.opennms.org/internal/linkd/trap/asETHPortLinkStatus" ;
+    public static final String  LOF_UEI_LINK = "uei.opennms.org/internal/linkd/trap/lof" ;
+    public static final String  L2_SYNC_LOSS_ALARM_UEI_LINK = "uei.opennms.org/internal/linkd/trap/l2SyncLossAlarm" ;
 
    
     //

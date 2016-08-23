@@ -62,6 +62,10 @@ public class ImportOperationsManager {
 			super(nodeId, foreignSource, foreignId, nodeLabel, building, city, provisionService);
 		}
 
+        public NullUpdateOperation(final Integer nodeId, final String foreignSource, final String foreignId, final String nodeLabel, final String building, final String city, final String devicePlatform, final ProvisionService provisionService) {
+            super(nodeId, foreignSource, foreignId, nodeLabel, building, city, devicePlatform, provisionService);
+        }
+		
 		@Override
 	    protected void doPersist() {
 			LOG.debug("Skipping persist for node {}: rescanExisting is false", getNode());
@@ -106,18 +110,29 @@ public class ImportOperationsManager {
      * @return a {@link org.opennms.netmgt.provision.service.operations.SaveOrUpdateOperation} object.
      */
     public SaveOrUpdateOperation foundNode(String foreignId, String nodeLabel, String building, String city) {
+        return foundNode(foreignId, nodeLabel, building, city, null);
+    }
+    
+    public SaveOrUpdateOperation foundNode(String foreignId, String nodeLabel, String building, String city,String devicePlatform) {
         
         SaveOrUpdateOperation ret;
         if (nodeExists(foreignId)) {
-        	ret = updateNode(foreignId, nodeLabel, building, city);
+            ret = updateNode(foreignId, nodeLabel, building, city, devicePlatform);
         } else {
-            ret = insertNode(foreignId, nodeLabel, building, city);
+            ret = insertNode(foreignId, nodeLabel, building, city , devicePlatform);
         }        
         return ret;
     }
+    
 
     private boolean nodeExists(String foreignId) {
         return m_foreignIdToNodeMap.containsKey(foreignId);
+    }
+
+    private SaveOrUpdateOperation insertNode(final String foreignId, final String nodeLabel, final String building, final String city, final String devicePlatform) {
+        SaveOrUpdateOperation insertOperation = new InsertOperation(getForeignSource(), foreignId, nodeLabel, building, city, devicePlatform, m_provisionService);
+        m_inserts.add(insertOperation);
+        return insertOperation;
     }
     
     private SaveOrUpdateOperation insertNode(final String foreignId, final String nodeLabel, final String building, final String city) {
@@ -127,16 +142,21 @@ public class ImportOperationsManager {
     }
 
     private SaveOrUpdateOperation updateNode(final String foreignId, final String nodeLabel, final String building, final String city) {
-    	final Integer nodeId = processForeignId(foreignId);
-    	final UpdateOperation updateOperation;
-    	if (m_rescanExisting) {
-            updateOperation = new UpdateOperation(nodeId, getForeignSource(), foreignId, nodeLabel, building, city, m_provisionService);
-    	} else {
-            updateOperation = new NullUpdateOperation(nodeId, getForeignSource(), foreignId, nodeLabel, building, city, m_provisionService);
-    	}
+        return updateNode(foreignId, nodeLabel, building, city, null);
+    }
+    
+    private SaveOrUpdateOperation updateNode(final String foreignId, final String nodeLabel, final String building, final String city, final String devicePlatform) {
+        final Integer nodeId = processForeignId(foreignId);
+        final UpdateOperation updateOperation;
+        if (m_rescanExisting) {
+            updateOperation = new UpdateOperation(nodeId, getForeignSource(), foreignId, nodeLabel, building, city, devicePlatform, m_provisionService);
+        } else {
+            updateOperation = new NullUpdateOperation(nodeId, getForeignSource(), foreignId, nodeLabel, building, city, devicePlatform, m_provisionService);
+        }
         m_updates.add(updateOperation);
         return updateOperation;
     }
+
 
     /**
      * Return NodeId and remove it from the Map so we know which nodes have been operated on thereby

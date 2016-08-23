@@ -114,6 +114,9 @@ public class EnhancedLinkd extends AbstractServiceDaemon {
         m_nodes = m_queryMgr.getSnmpNodeList();
 
         Assert.notNull(m_nodes);
+
+        new IPASOEventProcessor(m_eventForwarder);
+
         scheduleCollection();
 
         LOG.info("init: ENHANCED LINKD CONFIGURATION INITIALIZED");

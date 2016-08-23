@@ -138,6 +138,7 @@ public class LinkdTopologyProvider extends AbstractLinkdTopologyProvider impleme
             // TODO: Make sure that all properties are set on this object
             AbstractEdge edge = connectVertices(link.getDataLinkInterfaceId(), source, target, getEdgeNamespace());
             edge.setTooltipText(getEdgeTooltipText(link, source, target));
+            edge.setStyleName(this.getStyleName(node, parentNode, link));
         }
         
         LOG.debug("loadtopology: adding nodes without links: " + isAddNodeWithoutLink());

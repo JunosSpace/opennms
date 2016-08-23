@@ -169,6 +169,8 @@ public class Linkd extends AbstractServiceDaemon {
                 "must set the scheduler property");
 
         m_queryMgr.updateDeletedNodes();
+        
+        new IPASOEventProcessor(m_eventForwarder);
 
         schedule(m_queryMgr.getSnmpNodeList());
 

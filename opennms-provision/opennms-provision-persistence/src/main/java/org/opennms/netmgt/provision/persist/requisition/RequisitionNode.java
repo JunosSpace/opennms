@@ -81,6 +81,10 @@ public class RequisitionNode {
 
     @XmlAttribute(name = "parent-node-label")
     protected String m_parentNodeLabel;
+    
+    @XmlAttribute(name = "devicePlatform")
+    protected String m_devicePlatform;
+
 
     /**
      * <p>getInterfaceCount</p>
@@ -570,6 +574,15 @@ public class RequisitionNode {
         }
         return true;
     }
+    
+    public String getDevicePlatform() {
+        return m_devicePlatform;
+    }
+
+    public void setDevicePlatform(String devicePlatform) {
+        m_devicePlatform = devicePlatform;
+    }
+
 
     @Override
     public String toString() {
