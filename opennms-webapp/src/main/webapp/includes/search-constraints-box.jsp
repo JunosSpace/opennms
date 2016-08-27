@@ -51,7 +51,25 @@
 
     int length = parms.filters.size();    
 %>
-
+<script type="text/javascript">
+	function OutageOnchange(value){
+		var url_value =window.location.href;
+		var reExp = /multiple=[^&]+/;
+		var reExp1 = /outtype=[^&]+/;
+		var newUrl = url_value.replace(reExp,"");
+		if(newUrl.indexOf("outtype=") > 0){
+		 newUrl = newUrl.replace(reExp1,"outtype="+value);
+		}
+		else{
+		  if(newUrl.indexOf("?") < 0){
+		 	newUrl = newUrl+"?outtype="+value;
+		  }else{
+			newUrl = newUrl+"&outtype="+value;
+		  }
+		}
+		window.location = newUrl;
+	}
+</script>
 <!-- acknowledged/outstanding row -->
 
 <form action="outage/list.htm" method="get" name="outage_search_constraints_box_outtype_form">
@@ -59,7 +77,7 @@
     
   <p>
     Outage type:
-    <select name="outtype" size="1" onChange="javascript: document.outage_search_constraints_box_outtype_form.submit()">
+    <select name="outtype" size="1" onChange="OutageOnchange(this.value)">
       <option value="<%=OutageType.CURRENT.getShortName() %>" <%=(parms.outageType == OutageType.CURRENT) ? "selected=\"1\"" : ""%>>
         Current
       </option>
@@ -82,5 +100,4 @@
         &nbsp; <span class="filter"><%=WebSecurityUtils.sanitizeString(filter.getTextDescription())%> <a href="<%=OutageUtil.makeLink(req, parms, filter, false)%>">[-]</a></span>
       <% } %>   
   </p>    
-<% } %>  
-
+<% } %> 

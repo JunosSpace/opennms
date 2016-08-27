@@ -95,6 +95,12 @@
     long startResult = (multiple==0) ? 1 : multiple*limit;
     long endResult = (multiple+1)*limit;    
     endResult = (endResult < count) ? endResult : count;
+    if(startResult > endResult){
+    	multiple = 0;
+    	startResult = (multiple==0) ? 1 : multiple*limit;
+        endResult = (multiple+1)*limit;   
+        endResult = (endResult < count) ? endResult : count;
+}
 
     //this is the total number of pages, each showing <limit> number of results,
     //that it would take to display the entire result set with <count> results
@@ -109,18 +115,21 @@
 %>
 
 <p class="pager">
- <% if (limit > 0 ) { %> 
+ <% if (limit > 0 && multiple != 0) { %>
+  Results: (<%=startResult+1%>-<%=endResult%> of <%=count%>)
+ <% } else if(limit > 0 && multiple == 0){%>
   Results: (<%=startResult%>-<%=endResult%> of <%=count%>)
- <% } else { %>
+ <%}else { %>
   All Results
- <% } %> 
+ <% } %>
 	
   <% if( count > limit ) { %>  
     <span>
-<% if( multiple > 0 ) { %>
+  <% if( multiple > 0 ) { %>
       <a href="<%=baseUrl%>&amp;<%=multipleName%>=0&amp;<%=limitName%>=<%=limit%>">First</a>&nbsp;  
       <a href="<%=baseUrl%>&amp;<%=multipleName%>=<%=multiple-1%>&amp;<%=limitName%>=<%=limit%>">Previous</a>&nbsp;  
     <% } %>
+    
     
     <% for( int i=startIndex; i <= endIndex; i++ ) { %>
       <% if( multiple == i ) { %>
@@ -136,7 +145,7 @@
       <a href="<%=baseUrl%>&amp;<%=multipleName%>=<%=highestPossibleIndex%>&amp;<%=limitName%>=<%=limit%>">Last</a>
     <% } %>
 		</span>
-   <% } %>  
+   <% }%>  
 <% String limitSize= request.getParameter("limitSize");
    String pageName = request.getParameter("pageName");
     if( limitSize != null && pageName != null) { %>
