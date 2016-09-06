@@ -29,6 +29,8 @@
 package org.opennms.netmgt.provision.service;
 
 import static org.opennms.core.utils.InetAddressUtils.addr;
+import static org.opennms.core.utils.InetAddressUtils.str;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -36,6 +38,7 @@ import org.slf4j.LoggerFactory;
 
 import java.net.InetAddress;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -51,6 +54,7 @@ import org.opennms.core.tasks.DefaultTaskCoordinator;
 import org.opennms.core.tasks.NeedsContainer;
 import org.opennms.core.tasks.RunInBatch;
 import org.opennms.core.tasks.Task;
+import org.opennms.core.utils.IpasolinkUtil;
 import org.opennms.netmgt.EventConstants;
 import org.opennms.netmgt.config.api.SnmpAgentConfigFactory;
 import org.opennms.netmgt.model.OnmsIpInterface;
@@ -409,6 +413,49 @@ public class NodeScan implements RunInBatch {
                     provisionedIps.add(provisioned.getIpAddress());
                 }
             }
+            
+            final HashMap<Integer, Integer> slotToIftypeMap = new HashMap<Integer, Integer>();
+            
+			if (node.getSysObjectId() != null
+					&& node.getSysObjectId().contains("1.3.6.1.4.1.119")) {
+
+				if (node != null && node.getPrimaryInterface() != null
+						&& node.getPrimaryInterface().getIpAddress() != null) {
+					IpasoIftypeTableTracker iftypeTableTracker = new IpasoIftypeTableTracker() {
+						@Override
+						public void processIftypeRow(final IftypeRow row) {
+							slotToIftypeMap.put(row.getSlotNum(), row.getIfType());
+						}
+					};
+
+					String trackerName = "ipasoIftypeTableTracker";
+					LOG.info("run: collecting {} on: {}", trackerName, node.getPrimaryInterface().getIpAddress());
+					final SnmpAgentConfig agentConfig = getAgentConfigFactory()
+							.getAgentConfig(node.getPrimaryInterface().getIpAddress());
+					SnmpWalker walker = SnmpUtils.createWalker(agentConfig, trackerName, iftypeTableTracker);
+					walker.start();
+
+					try {
+						walker.waitFor();
+						if (walker.timedOut()) {
+							LOG.info(
+									"run:Aborting ipaso Iftype node scan : Agent timed out while scanning the {} table",
+									trackerName);
+							return;
+						} else if (walker.failed()) {
+							LOG.info(
+									"run:Aborting ipaso Iftype node scan : Agent failed while scanning the {} table: {}",
+									trackerName, walker.getErrorMessage());
+							return;
+						}
+					} catch (final InterruptedException e) {
+						LOG.error("run: ipaso Iftype node collection interrupted, exiting", e);
+						return;
+					}
+				}
+
+			}
+
 
             final IPAddressTableTracker ipAddressTracker = new IPAddressTableTracker() {
             	@Override
@@ -455,6 +502,16 @@ public class NodeScan implements RunInBatch {
                             currentPhase.add(ipUpdater(currentPhase, iface), "write");
                         }
                     }
+                    
+                    if (iface != null && iface.getSnmpInterface() != null && iface.getSnmpInterface().getIfIndex() != null && ! slotToIftypeMap.isEmpty()) {
+                    	Integer slotNum = IpasolinkUtil.getSlotNumberByIfIndex(iface.getSnmpInterface().getIfIndex());
+                    	if (slotNum != null) {
+                        	Integer ifType = slotToIftypeMap.get(slotNum + 1);
+                        	if (ifType != null ) {
+                            	iface.getSnmpInterface().setIfType(ifType);
+    						}
+						}
+					}
             	}
             };
 
@@ -580,6 +637,48 @@ public class NodeScan implements RunInBatch {
             final SnmpAgentConfig agentConfig = getAgentConfigFactory().getAgentConfig(getAgentAddress());
             Assert.notNull(getAgentConfigFactory(), "agentConfigFactory was not injected");
             
+        	final OnmsNode node = getNode();
+        	
+            final HashMap<Integer, Integer> slotToIftypeMap = new HashMap<Integer, Integer>();
+            
+      			if (node != null  && node.getSysObjectId() != null
+      					&& node.getSysObjectId().contains("1.3.6.1.4.1.119")) {
+
+      					IpasoIftypeTableTracker iftypeTableTracker = new IpasoIftypeTableTracker() {
+      						@Override
+      						public void processIftypeRow(final IftypeRow row) {
+      							slotToIftypeMap.put(row.getSlotNum(), row.getIfType());
+      						}
+      					};
+
+      					String trackerName = "ipasoIftypeTableTracker";
+      					LOG.info("run: collecting {} on: {}", trackerName, node.getId());
+/*      					final SnmpAgentConfig agentConfig = getAgentConfigFactory()
+      							.getAgentConfig(node.getPrimaryInterface().getIpAddress());*/
+      					SnmpWalker walker = SnmpUtils.createWalker(agentConfig, trackerName, iftypeTableTracker);
+      					walker.start();
+
+      					try {
+      						walker.waitFor();
+      						if (walker.timedOut()) {
+      							LOG.info(
+      									"run:Aborting ipaso Iftype node scan : Agent timed out while scanning the {} table",
+      									trackerName);
+      							return;
+      						} else if (walker.failed()) {
+      							LOG.info(
+      									"run:Aborting ipaso Iftype node scan : Agent failed while scanning the {} table: {}",
+      									trackerName, walker.getErrorMessage());
+      							return;
+      						}
+      					} catch (final InterruptedException e) {
+      						LOG.error("run: ipaso Iftype node collection interrupted, exiting", e);
+      						return;
+      					}
+
+      			}
+
+            
             final PhysInterfaceTableTracker physIfTracker = new PhysInterfaceTableTracker() {
                 @Override
                 public void processPhysicalInterfaceRow(PhysicalInterfaceRow row) {
@@ -595,6 +694,15 @@ public class NodeScan implements RunInBatch {
                     }
                     
                     if (snmpIface != null) {
+						if (snmpIface != null && snmpIface.getIfIndex() != null && !slotToIftypeMap.isEmpty()) {
+							Integer slotNum = IpasolinkUtil.getSlotNumberByIfIndex(snmpIface.getIfIndex());
+							if (slotNum != null) {
+								Integer ifType = slotToIftypeMap.get(slotNum + 1);
+								if (ifType != null) {
+									snmpIface.setIfType(ifType);
+								}
+							}
+						}
                         final OnmsSnmpInterface snmpIfaceResult = snmpIface;
         
                         // add call to the SNMP interface collection enable policies
