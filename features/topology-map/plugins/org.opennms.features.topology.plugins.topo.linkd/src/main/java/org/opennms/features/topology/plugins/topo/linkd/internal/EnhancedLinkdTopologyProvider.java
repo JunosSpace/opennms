@@ -496,7 +496,10 @@ public class EnhancedLinkdTopologyProvider extends AbstractLinkdTopologyProvider
         for (LldpLinkDetail linkDetail : combinedLinkDetails) {
             AbstractEdge edge = connectVertices(linkDetail.getId(), linkDetail.getSource(), linkDetail.getTarget(), LLDP_EDGE_NAMESPACE);
             edge.setTooltipText(getEdgeTooltipText(linkDetail));
-            edge.setStyleName(getStyleName(linkDetail.getTargetLink() , linkDetail.getSourceLink() ));
+            String style = getStyleName(linkDetail.getTargetLink() , linkDetail.getSourceLink() );
+            if (style != null) {
+                edge.setStyleName(style);
+			}
         }
     }
     
