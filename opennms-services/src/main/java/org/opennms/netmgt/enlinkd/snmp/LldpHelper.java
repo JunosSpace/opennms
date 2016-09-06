@@ -4,10 +4,23 @@ import org.opennms.core.utils.LldpUtils;
 import org.opennms.core.utils.LldpUtils.LldpChassisIdSubType;
 import org.opennms.core.utils.LldpUtils.LldpPortIdSubType;
 import org.opennms.netmgt.snmp.SnmpValue;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class LldpHelper {
-
+	private final static Logger LOG = LoggerFactory.getLogger(LldpHelper.class);
+    public static String getDisplayable(final SnmpValue snmpValue) {
+        String decodedsnmpValue = snmpValue.toHexString();
+        try {
+            if (snmpValue.isDisplayable())
+                decodedsnmpValue = snmpValue.toDisplayString();
+        } catch (Exception e) {
+            LOG.debug("getDisplayable: got not displayable Value", e);
+        }
+        return decodedsnmpValue;
+    }
     public static String decodeLldpChassisId(final SnmpValue lldpchassisid, Integer lldpLocChassisidSubType) {
+    	
         LldpChassisIdSubType type = LldpChassisIdSubType.get(lldpLocChassisidSubType);
         
         /*
@@ -66,9 +79,11 @@ public class LldpHelper {
          case LLDP_CHASSISID_SUBTYPE_MACADDRESS:
              return lldpchassisid.toHexString();
          case LLDP_CHASSISID_SUBTYPE_NETWORKADDRESS:
-             LldpUtils.decodeNetworkAddress(lldpchassisid.toDisplayString());
+        	 LOG.error("lldpchassisid to hex" + lldpchassisid.toHexString());
+        	 LOG.error("lldpchassisid to displaystring" + getDisplayable(lldpchassisid));
+             LldpUtils.decodeNetworkAddress(getDisplayable(lldpchassisid));
         }
-    	return lldpchassisid.toDisplayString();
+    	return getDisplayable(lldpchassisid);
     }
 
     

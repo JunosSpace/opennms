@@ -22,9 +22,11 @@ import java.util.Map;
 
 import org.omg.PortableInterceptor.INACTIVE;
 import org.opennms.core.network.IPAddress;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public abstract class LldpUtils {
-
+	private static final Logger LOG = LoggerFactory.getLogger(LldpUtils.class);
     public enum LldpChassisIdSubType {
         /*
          * LldpChassisIdSubtype ::= TEXTUAL-CONVENTION STATUS current
@@ -474,6 +476,14 @@ public abstract class LldpUtils {
     */
 
     public static String decodeNetworkAddress(String networkAddress) {
+    	if ( networkAddress == null ) {
+            throw new IllegalArgumentException("Cannot decode null IANA Family address");
+        }
+    	if (networkAddress.indexOf(":") < 0 && networkAddress.length() == 10) {
+    		String regex = "(.{2})";
+    		networkAddress = networkAddress.replaceAll (regex, "$1:");
+    		
+    	}
         IanaAddressFamilyNumber type = IanaAddressFamilyNumber.get(IanaFamilyAddressStringToType(networkAddress));
         switch (type) {
             case IANA_ADDRESS_FAMILY_IP:
@@ -488,8 +498,18 @@ public abstract class LldpUtils {
         if (networkAddress == null) {
             throw new IllegalArgumentException("Cannot decode null IANA Family address");
         }
-        return Integer.decode("0x" + networkAddress.split(":")[0]);
-    }
+//        return Integer.decode("0x" + networkAddress.split(":")[0]);
+		try {
+			
+			return Integer.decode("0x" + networkAddress.split(":")[0]);
+		} catch (final NumberFormatException e) {
+			final String message = "Cannot decode invalid IANA Family address: "
+					+ networkAddress;
+			LOG.warn(message, e);
+//			throw new IllegalArgumentException(message, e);
+		}
+		return 1;
+	}
     
     public static byte[] IanaFamilyAddressStringToBytes(String networkAddress) {
         if (networkAddress == null) {
@@ -501,8 +521,16 @@ public abstract class LldpUtils {
         // Decode each MAC address digit into a hexadecimal byte value
         for (int i = 1; i < digits.length; i++) {
             // Prefix the value with "0x" so that Integer.decode() knows which base to use
-            contents[i-1] = Integer.decode("0x" + digits[i]).byteValue();
-        }
+//            contents[i-1] = Integer.decode("0x" + digits[i]).byteValue();
+			try {
+				contents[i - 1] = Integer.decode("0x" + digits[i]).byteValue();
+			} catch (final NumberFormatException e) {
+				final String message = "Cannot decode invalid IANA Family address: "
+						+ networkAddress;
+				LOG.warn(message, e);
+				throw new IllegalArgumentException(message, e);
+			}
+		}
         return contents;
     }
 
