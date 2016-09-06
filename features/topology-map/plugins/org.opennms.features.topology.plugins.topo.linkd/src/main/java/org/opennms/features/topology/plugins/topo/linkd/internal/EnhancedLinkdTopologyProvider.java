@@ -496,8 +496,70 @@ public class EnhancedLinkdTopologyProvider extends AbstractLinkdTopologyProvider
         for (LldpLinkDetail linkDetail : combinedLinkDetails) {
             AbstractEdge edge = connectVertices(linkDetail.getId(), linkDetail.getSource(), linkDetail.getTarget(), LLDP_EDGE_NAMESPACE);
             edge.setTooltipText(getEdgeTooltipText(linkDetail));
+            edge.setStyleName(getStyleName(linkDetail.getTargetLink() , linkDetail.getSourceLink() ));
         }
     }
+    
+	private String getStyleName(LldpLink sourceLink, LldpLink targetLink) {
+
+		if (sourceLink.getNode() == null || targetLink.getNode() == null) {
+			return null;
+		}
+		if (!sourceLink.getNode().getSysObjectId().contains("1.3.6.1.4.1.119")
+				|| !targetLink.getNode().getSysObjectId().contains("1.3.6.1.4.1.119.")) {
+			return null;
+		}
+
+		OnmsSnmpInterface sourceInterface = m_snmpInterfaceDao
+				.findByNodeIdAndIfIndex(Integer.parseInt(sourceLink.getNode().getNodeId()), sourceLink.getLldpLocalPortNum());
+		OnmsSnmpInterface targetInterface = m_snmpInterfaceDao
+				.findByNodeIdAndIfIndex(Integer.parseInt(targetLink.getNode().getNodeId()), targetLink.getLldpLocalPortNum());
+
+		if (sourceInterface == null || targetInterface == null) {
+			return "nec_dcn edge";
+		}
+		
+		//Check by snmpInterface Iftype
+		ArrayList<Integer> radio = new ArrayList<Integer>();
+		radio.add(2);
+		radio.add(19);
+		radio.add(30);
+		radio.add(37);
+		radio.add(50);
+		
+		//Check by LldpLink LocportNum
+		ArrayList<Integer> dcn = new ArrayList<Integer>();
+		dcn.add(31);
+		dcn.add(32);
+		
+		
+		if (radio.contains(sourceInterface.getIfType()) || radio.contains(targetInterface.getIfType())) {
+			return "nec_radio edge ";
+		}
+		
+
+		if ((sourceLink.getLldpLocalPortNum() >= 41 && sourceLink.getLldpLocalPortNum() <= 54)
+				&& (targetLink.getLldpLocalPortNum() >= 41 && targetLink.getLldpLocalPortNum() <= 54)) {
+			return "nec_traffic edge ";
+		}
+/*		if (dcn.contains(sourceLink.getLldpLocalPortNum()) || dcn.contains(targetLink.getLldpLocalPortNum())) {
+			return "nec_dcn edge";
+		}
+*/
+		return "nec_dcn edge";
+/*		// ifType 8: radio interface, has one is radio link
+		// inType 7: traffic interface, has both is traffic link
+		// inType 6: dcn interface, one is dcn, another one is dcn or traffice
+		// is dcn
+		if (sourceInterface.getIfType().intValue() == 8 || targetInterface.getIfType().intValue() == 8) {
+			return "nec_radio edge ";
+		} else if (sourceInterface.getIfType().intValue() == 7 && targetInterface.getIfType().intValue() == 7) {
+			return "nec_traffic edge ";
+		} else {
+			return "nec_dcn edge";
+		}*/
+	}
+
 
     private void getIsIsLinks(){
         List<Object[]> isislinks = m_isisLinkDao.getLinksForTopology();
