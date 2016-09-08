@@ -30,96 +30,63 @@
 --%>
 
 <%
-        response.setHeader("X-Frame-Options", "SAMEORIGIN");
-        response.setHeader("Pragma", "no-cache");
-        if (request.getProtocol().equals("HTTP/1.1")) {
-                response.setHeader("Cache-Control", "no-store ");
-        }
+	response.setHeader("X-Frame-Options", "SAMEORIGIN");
+	response.setHeader("Pragma", "no-cache");
+	if (request.getProtocol().equals("HTTP/1.1")) {
+		response.setHeader("Cache-Control", "no-store ");
+	}
 %>
 
 <%@ taglib prefix='c' uri='http://java.sun.com/jsp/jstl/core'%>
 
 <jsp:include page="/includes/header.jsp" flush="false">
-  <jsp:param name="title" value="Login" />
-  <jsp:param name="nonavbar" value="true" />
+	<jsp:param name="title" value="Login" />
+	<jsp:param name="nonavbar" value="true" />
 </jsp:include>
 <%
-     if (request.getServletPath().endsWith("login.jsp")) {
-       // generate JavaScript to see if this is needed
-       // if i am in an iframe, go to jmp to login
+if (request.getServletPath().endsWith("login.jsp")) {
+		// generate JavaScript to see if this is needed
+		// if i am in an iframe, go to jmp to login
 %>
 <script type="text/javascript">
+	var request;
+	if (window.XMLHttpRequest) {
+		request = new XMLHttpRequest();
+	} else if (window.ActiveXObject) {
+		request = new ActiveXObject("Microsoft.XMLHTTP");
+	}
 
-  var user = window.localStorage.getItem('opennmsuser');
-  if (user != null) {
-    user = user.toLowerCase();
-  }
-  if (user != null && user.lastIndexOf('\\') > -1) {
-     user = user.substr(user.lastIndexOf('\\') + 1);
-  }
+	try {
 
-  if (window.top != window.self && user != "") {
-    //window.top.location = '../mainui/unsecured/logout?appName=CMP';
-    
-    //var user = window.localStorage.getItem('opennmsuser').toLowerCase();
-    //if (user.lastIndexOf('\\') > -1) {
-    //    user = user.substr(user.lastIndexOf('\\') + 1);
-    //}
-    var password = window.localStorage.getItem('opennmspw');
-    var groups = window.localStorage.getItem('opennmsdomainname');
+		request.onreadystatechange = function() {
+			var DONE =  (typeof XMLHttpRequest.Done !== 'undefined') ? XMLHttpRequest.DONE : 4;
 
-    var form = document.createElement("form");
-    form.setAttribute("method", "post");
-    form.setAttribute("action", "j_spring_security_check");
-
-    var hiddenFieldName = document.createElement("input");
-    hiddenFieldName.setAttribute("type", "hidden");
-    hiddenFieldName.setAttribute("name", "j_username");
-    hiddenFieldName.setAttribute("value", user);
-    form.appendChild(hiddenFieldName);
-
-    var hiddenFieldPassword = document.createElement("input");
-    hiddenFieldPassword.setAttribute("type", "hidden");
-    hiddenFieldPassword.setAttribute("name", "j_password");
-    hiddenFieldPassword.setAttribute("value", password);
-    form.appendChild(hiddenFieldPassword);
-
-    var hiddenFieldGroups = document.createElement("input");
-    hiddenFieldGroups.setAttribute("type", "hidden");
-    hiddenFieldGroups.setAttribute("name", "j_usergroups");
-    hiddenFieldGroups.setAttribute("value", groups);
-    form.appendChild(hiddenFieldGroups);
-
-    document.body.appendChild(form);
-    form.submit();
-
- <c:if test="${not empty param.login_error}">
-  <p style="color:red;">
-    <strong>Network Monitoring module is initializing for this user, please wait a moment... </strong>
-  </p>
-
-</c:if> 
-  
-   } else {
-    window.top.location = '../mainui/unsecured/logout.jsp';
-   }
+			if (request.readyState == DONE ) {
+				
+				if (request.responseText.length > 0) {
+					window.top.location = '../mainui/unsecured/logout.jsp';
+				}
+			}
+		}
+		request.open("POST", "../mainui/ctrl/fmpm/OpenNMSLogin", true);
+		request.setRequestHeader("Content-type",
+				"application/x-www-form-urlencoded");
+		request.send();
+	} catch (e) {
+		console.log("Unable to connect to server");
+	}
 </script>
 <%
-     }
+	}
 %>
 
 <%-- this form-login-page form is also used as the 
          form-error-page to ask for a login again.
          --%>
-<c:if test="${not empty param.login_error}">
-  <p style="color:red;">
-    <strong>Network Monitoring module is initializing for this user, please wait a moment... </strong>
-  </p>
-
-  <%-- This is: AbstractProcessingFilter.SPRING_SECURITY_LAST_EXCEPTION_KEY
-  <p>Reason: ${SPRING_SECURITY_LAST_EXCEPTION.message}</p>
-  --%>
-</c:if>
+	<p style="color: red;">
+		<strong>Network Monitoring module is initializing for this
+			user, please wait a moment... </strong>
+	</p>
 <%-- comment for Space Only
 <div class="formOnly">
   <form action="<c:url value='j_spring_security_check'/>" method="post">
@@ -135,7 +102,6 @@
     <input name="Login" type="submit" value="Login" />
     <input name="j_usergroups" type="hidden" value=""/>
     <!-- <input name="reset" type="reset" value="Reset" /> -->
-
     <script type="text/javascript">
       if (window.top == window.self && document.getElementById) {
         document.getElementById('input_j_username').focus();
