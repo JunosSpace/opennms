@@ -709,6 +709,23 @@ public class EnhancedLinkdTopologyProvider extends AbstractLinkdTopologyProvider
         OnmsSnmpInterface sourceInterface = getByNodeIdAndIfIndex(linkDetail.getSourceIfIndex(), source);
         OnmsSnmpInterface targetInterface = getByNodeIdAndIfIndex(linkDetail.getTargetIfIndex(), target);
 
+        LldpLink sourceLink = (LldpLink) linkDetail.getSourceLink();
+        LldpLink targetLink = (LldpLink) linkDetail.getTargetLink();
+        
+        String sourcePortDesc = null;
+        String targetPortDesc = null;
+
+		if (sourceLink.getNode() != null && sourceLink.getNode().getSysObjectId() != null
+				&& sourceLink.getNode().getSysObjectId().contains("1.3.6.1.4.1.119")) {
+			sourcePortDesc = sourceLink.getLldpPortDescr();
+		}
+
+		if (targetLink.getNode() != null && targetLink.getNode().getSysObjectId() != null
+				&& targetLink.getNode().getSysObjectId().contains("1.3.6.1.4.1.119.")) {
+			targetPortDesc = targetLink.getLldpPortDescr();
+		}
+
+
         tooltipText.append(HTML_TOOLTIP_TAG_OPEN);
         if (sourceInterface != null && targetInterface != null
                 && sourceInterface.getNetMask() != null && !sourceInterface.getNetMask().isLoopbackAddress()
@@ -723,9 +740,15 @@ public class EnhancedLinkdTopologyProvider extends AbstractLinkdTopologyProvider
         tooltipText.append( "Name: &lt;endpoint1 " + source.getLabel());
         if (sourceInterface != null )
             tooltipText.append( ":"+sourceInterface.getIfName());
+        if (sourcePortDesc != null && sourceInterface == null)
+            tooltipText.append( ":"+sourcePortDesc);
+
         tooltipText.append( " ---- endpoint2 " + target.getLabel());
         if (targetInterface != null)
             tooltipText.append( ":"+targetInterface.getIfName());
+        if (targetPortDesc != null && targetInterface == null)
+            tooltipText.append( ":"+targetPortDesc);
+        
         tooltipText.append("&gt;");
         tooltipText.append(HTML_TOOLTIP_TAG_END);
 
