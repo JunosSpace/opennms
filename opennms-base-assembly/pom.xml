@@ -148,6 +148,9 @@
         <configuration>
           <encoding>UTF-8</encoding>
           <escapeString>\</escapeString>
+          <nonFilteredFileExtensions>
+            <nonFilteredFileExtension>keystore</nonFilteredFileExtension>
+          </nonFilteredFileExtensions>
         </configuration>
       </plugin>
     </plugins>

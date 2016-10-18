@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+﻿<?xml version="1.0"?>
 <datacollection-group name="Juniper">
 
     <!-- Juniper Resource Types -->
@@ -25,6 +25,99 @@
         <!--<mibObj oid=".1.3.6.1.4.1.2636.3.1.13.1.11.6.1.0" instance="0" alias="juniperBufferFeb"  type="gauge32" />-->
         <mibObj oid=".1.3.6.1.4.1.2636.3.1.13.1.11.7.1.0" instance="0" alias="juniperBufferFpc0" type="gauge32" />
         <mibObj oid=".1.3.6.1.4.1.2636.3.1.13.1.11.7.2.0" instance="0" alias="juniperBufferFpc1" type="gauge32" />
+
+<!-- MX 960 VC Custom MIBs-->
+	<mibObj oid=".1.3.6.1.4.1.2636.3.1.13.1.8.9.3.0"  instance="0" alias="jnprCpu_Mem0RE0"    type="gauge32" />
+	<mibObj oid=".1.3.6.1.4.1.2636.3.1.13.1.8.9.4.0"  instance="0" alias="jnprCpu_Mem0RE1"    type="gauge32" />
+	<mibObj oid=".1.3.6.1.4.1.2636.3.1.13.1.8.9.5.0"  instance="0" alias="jnprCpu_Mem1RE0"    type="gauge32" />
+	<mibObj oid=".1.3.6.1.4.1.2636.3.1.13.1.8.9.6.0"  instance="0" alias="jnprCpu_Mem1RE1"    type="gauge32" />
+
+	<mibObj oid=".1.3.6.1.4.1.2636.3.1.13.1.15.9.3.0"  instance="0" alias="jnprMem_Mem0RE0"    type="integer" />
+	<mibObj oid=".1.3.6.1.4.1.2636.3.1.13.1.15.9.4.0"  instance="0" alias="jnprMem_Mem0RE1"    type="integer" />
+	<mibObj oid=".1.3.6.1.4.1.2636.3.1.13.1.15.9.5.0"  instance="0" alias="jnprMem_Mem1RE0"    type="integer" />
+	<mibObj oid=".1.3.6.1.4.1.2636.3.1.13.1.15.9.6.0"  instance="0" alias="jnprMem_Mem1RE1"    type="integer" />
+
+	<mibObj oid=".1.3.6.1.4.1.2636.3.1.13.1.7.9.3.0"  instance="0" alias="jnprTemp_Mem0RE0"    type="gauge32" />
+	<mibObj oid=".1.3.6.1.4.1.2636.3.1.13.1.7.9.4.0"  instance="0" alias="jnprTemp_Mem0RE1"    type="gauge32" />
+	<mibObj oid=".1.3.6.1.4.1.2636.3.1.13.1.7.9.5.0"  instance="0" alias="jnprTemp_Mem1RE0"    type="gauge32" />
+	<mibObj oid=".1.3.6.1.4.1.2636.3.1.13.1.7.9.6.0"  instance="0" alias="jnprTemp_Mem1RE1"    type="gauge32" />
+	
+	<mibObj oid=".1.3.6.1.4.1.2636.3.1.13.1.8.7.13.0"  instance="0" alias="jnprCpu_Mem0FPC0"    type="gauge32" />
+	<mibObj oid=".1.3.6.1.4.1.2636.3.1.13.1.8.7.25.0"  instance="0" alias="jnprCpu_Mem1FPC0"    type="gauge32" />
+	<mibObj oid=".1.3.6.1.4.1.2636.3.1.13.1.8.7.14.0"  instance="0" alias="jnprCpu_Mem0FPC1"    type="gauge32" />
+	<mibObj oid=".1.3.6.1.4.1.2636.3.1.13.1.8.7.26.0"  instance="0" alias="jnprCpu_Mem1FPC1"    type="gauge32" />
+	<mibObj oid=".1.3.6.1.4.1.2636.3.1.13.1.8.7.15.0"  instance="0" alias="jnprCpu_Mem0FPC2"    type="gauge32" />
+	<mibObj oid=".1.3.6.1.4.1.2636.3.1.13.1.8.7.27.0"  instance="0" alias="jnprCpu_Mem1FPC2"    type="gauge32" />	
+	<mibObj oid=".1.3.6.1.4.1.2636.3.1.13.1.8.7.16.0"  instance="0" alias="jnprCpu_Mem0FPC3"    type="gauge32" />
+	<mibObj oid=".1.3.6.1.4.1.2636.3.1.13.1.8.7.28.0"  instance="0" alias="jnprCpu_Mem1FPC3"    type="gauge32" />
+	<mibObj oid=".1.3.6.1.4.1.2636.3.1.13.1.8.7.17.0"  instance="0" alias="jnprCpu_Mem0FPC4"    type="gauge32" />
+	<mibObj oid=".1.3.6.1.4.1.2636.3.1.13.1.8.7.29.0"  instance="0" alias="jnprCpu_Mem1FPC4"    type="gauge32" />
+	<mibObj oid=".1.3.6.1.4.1.2636.3.1.13.1.8.7.18.0"  instance="0" alias="jnprCpu_Mem0FPC5"    type="gauge32" />
+	<mibObj oid=".1.3.6.1.4.1.2636.3.1.13.1.8.7.30.0"  instance="0" alias="jnprCpu_Mem1FPC5"    type="gauge32" />
+	<mibObj oid=".1.3.6.1.4.1.2636.3.1.13.1.8.7.19.0"  instance="0" alias="jnprCpu_Mem0FPC6"    type="gauge32" />
+	<mibObj oid=".1.3.6.1.4.1.2636.3.1.13.1.8.7.31.0"  instance="0" alias="jnprCpu_Mem1FPC6"    type="gauge32" />
+	<mibObj oid=".1.3.6.1.4.1.2636.3.1.13.1.8.7.20.0"  instance="0" alias="jnprCpu_Mem0FPC7"    type="gauge32" />
+	<mibObj oid=".1.3.6.1.4.1.2636.3.1.13.1.8.7.32.0"  instance="0" alias="jnprCpu_Mem1FPC7"    type="gauge32" />
+	<mibObj oid=".1.3.6.1.4.1.2636.3.1.13.1.8.7.21.0"  instance="0" alias="jnprCpu_Mem0FPC8"    type="gauge32" />
+	<mibObj oid=".1.3.6.1.4.1.2636.3.1.13.1.8.7.33.0"  instance="0" alias="jnprCpu_Mem1FPC8"    type="gauge32" />
+	<mibObj oid=".1.3.6.1.4.1.2636.3.1.13.1.8.7.22.0"  instance="0" alias="jnprCpu_Mem0FPC9"    type="gauge32" />
+	<mibObj oid=".1.3.6.1.4.1.2636.3.1.13.1.8.7.34.0"  instance="0" alias="jnprCpu_Mem1FPC9"    type="gauge32" />
+	<mibObj oid=".1.3.6.1.4.1.2636.3.1.13.1.8.7.23.0"  instance="0" alias="jnprCpu_Mem0FPC10"    type="gauge32" />
+	<mibObj oid=".1.3.6.1.4.1.2636.3.1.13.1.8.7.35.0"  instance="0" alias="jnprCpu_Mem1FPC10"    type="gauge32" />
+	<mibObj oid=".1.3.6.1.4.1.2636.3.1.13.1.8.7.24.0"  instance="0" alias="jnprCpu_Mem0FPC11"    type="gauge32" />
+	<mibObj oid=".1.3.6.1.4.1.2636.3.1.13.1.8.7.36.0"  instance="0" alias="jnprCpu_Mem1FPC11"    type="gauge32" />	
+	
+	<mibObj oid=".1.3.6.1.4.1.2636.3.1.13.1.15.7.13.0"  instance="0" alias="jnprMem_Mem0FPC0"    type="integer" />
+	<mibObj oid=".1.3.6.1.4.1.2636.3.1.13.1.15.7.25.0"  instance="0" alias="jnprMem_Mem1FPC0"    type="integer" />
+	<mibObj oid=".1.3.6.1.4.1.2636.3.1.13.1.15.7.14.0"  instance="0" alias="jnprMem_Mem0FPC1"    type="integer" />
+	<mibObj oid=".1.3.6.1.4.1.2636.3.1.13.1.15.7.26.0"  instance="0" alias="jnprMem_Mem1FPC1"    type="integer" />
+	<mibObj oid=".1.3.6.1.4.1.2636.3.1.13.1.15.7.15.0"  instance="0" alias="jnprMem_Mem0FPC2"    type="integer" />
+	<mibObj oid=".1.3.6.1.4.1.2636.3.1.13.1.15.7.27.0"  instance="0" alias="jnprMem_Mem1FPC2"    type="integer" />
+	<mibObj oid=".1.3.6.1.4.1.2636.3.1.13.1.15.7.16.0"  instance="0" alias="jnprMem_Mem0FPC3"    type="integer" />
+	<mibObj oid=".1.3.6.1.4.1.2636.3.1.13.1.15.7.28.0"  instance="0" alias="jnprMem_Mem1FPC3"    type="integer" />
+	<mibObj oid=".1.3.6.1.4.1.2636.3.1.13.1.15.7.17.0"  instance="0" alias="jnprMem_Mem0FPC4"    type="integer" />
+	<mibObj oid=".1.3.6.1.4.1.2636.3.1.13.1.15.7.29.0"  instance="0" alias="jnprMem_Mem1FPC4"    type="integer" />
+	<mibObj oid=".1.3.6.1.4.1.2636.3.1.13.1.15.7.18.0"  instance="0" alias="jnprMem_Mem0FPC5"    type="integer" />
+	<mibObj oid=".1.3.6.1.4.1.2636.3.1.13.1.15.7.30.0"  instance="0" alias="jnprMem_Mem1FPC5"    type="integer" />
+	<mibObj oid=".1.3.6.1.4.1.2636.3.1.13.1.15.7.19.0"  instance="0" alias="jnprMem_Mem0FPC6"    type="integer" />
+	<mibObj oid=".1.3.6.1.4.1.2636.3.1.13.1.15.7.31.0"  instance="0" alias="jnprMem_Mem1FPC6"    type="integer" />
+	<mibObj oid=".1.3.6.1.4.1.2636.3.1.13.1.15.7.20.0"  instance="0" alias="jnprMem_Mem0FPC7"    type="integer" />
+	<mibObj oid=".1.3.6.1.4.1.2636.3.1.13.1.15.7.32.0"  instance="0" alias="jnprMem_Mem1FPC7"    type="integer" />
+	<mibObj oid=".1.3.6.1.4.1.2636.3.1.13.1.15.7.21.0"  instance="0" alias="jnprMem_Mem0FPC8"    type="integer" />
+	<mibObj oid=".1.3.6.1.4.1.2636.3.1.13.1.15.7.33.0"  instance="0" alias="jnprMem_Mem1FPC8"    type="integer" />
+	<mibObj oid=".1.3.6.1.4.1.2636.3.1.13.1.15.7.22.0"  instance="0" alias="jnprMem_Mem0FPC9"    type="integer" />
+	<mibObj oid=".1.3.6.1.4.1.2636.3.1.13.1.15.7.34.0"  instance="0" alias="jnprMem_Mem1FPC9"    type="integer" />
+	<mibObj oid=".1.3.6.1.4.1.2636.3.1.13.1.15.7.23.0"  instance="0" alias="jnprMem_Mem0FPC10"    type="integer" />
+	<mibObj oid=".1.3.6.1.4.1.2636.3.1.13.1.15.7.35.0"  instance="0" alias="jnprMem_Mem1FPC10"    type="integer" />
+	<mibObj oid=".1.3.6.1.4.1.2636.3.1.13.1.15.7.24.0"  instance="0" alias="jnprMem_Mem0FPC11"    type="integer" />
+	<mibObj oid=".1.3.6.1.4.1.2636.3.1.13.1.15.7.36.0"  instance="0" alias="jnprMem_Mem1FPC11"    type="integer" />
+	
+	
+	<mibObj oid=".1.3.6.1.4.1.2636.3.1.13.1.7.7.13.0"  instance="0" alias="jnprTemp_Mem0FPC0"    type="gauge32" />
+	<mibObj oid=".1.3.6.1.4.1.2636.3.1.13.1.7.7.25.0"  instance="0" alias="jnprTemp_Mem1FPC0"    type="gauge32" />
+	<mibObj oid=".1.3.6.1.4.1.2636.3.1.13.1.7.7.14.0"  instance="0" alias="jnprTemp_Mem0FPC1"    type="gauge32" />
+	<mibObj oid=".1.3.6.1.4.1.2636.3.1.13.1.7.7.26.0"  instance="0" alias="jnprTemp_Mem1FPC1"    type="gauge32" />
+	<mibObj oid=".1.3.6.1.4.1.2636.3.1.13.1.7.7.15.0"  instance="0" alias="jnprTemp_Mem0FPC2"    type="gauge32" />
+	<mibObj oid=".1.3.6.1.4.1.2636.3.1.13.1.7.7.27.0"  instance="0" alias="jnprTemp_Mem1FPC2"    type="gauge32" />
+	<mibObj oid=".1.3.6.1.4.1.2636.3.1.13.1.7.7.16.0"  instance="0" alias="jnprTemp_Mem0FPC3"    type="gauge32" />
+	<mibObj oid=".1.3.6.1.4.1.2636.3.1.13.1.7.7.28.0"  instance="0" alias="jnprTemp_Mem1FPC3"    type="gauge32" />
+	<mibObj oid=".1.3.6.1.4.1.2636.3.1.13.1.7.7.17.0"  instance="0" alias="jnprTemp_Mem0FPC4"    type="gauge32" />
+	<mibObj oid=".1.3.6.1.4.1.2636.3.1.13.1.7.7.29.0"  instance="0" alias="jnprTemp_Mem1FPC4"    type="gauge32" />
+	<mibObj oid=".1.3.6.1.4.1.2636.3.1.13.1.7.7.18.0"  instance="0" alias="jnprTemp_Mem0FPC5"    type="gauge32" />
+	<mibObj oid=".1.3.6.1.4.1.2636.3.1.13.1.7.7.30.0"  instance="0" alias="jnprTemp_Mem1FPC5"    type="gauge32" />
+	<mibObj oid=".1.3.6.1.4.1.2636.3.1.13.1.7.7.19.0"  instance="0" alias="jnprTemp_Mem0FPC6"    type="gauge32" />
+	<mibObj oid=".1.3.6.1.4.1.2636.3.1.13.1.7.7.31.0"  instance="0" alias="jnprTemp_Mem1FPC6"    type="gauge32" />
+	<mibObj oid=".1.3.6.1.4.1.2636.3.1.13.1.7.7.20.0"  instance="0" alias="jnprTemp_Mem0FPC7"    type="gauge32" />
+	<mibObj oid=".1.3.6.1.4.1.2636.3.1.13.1.7.7.32.0"  instance="0" alias="jnprTemp_Mem1FPC7"    type="gauge32" />
+	<mibObj oid=".1.3.6.1.4.1.2636.3.1.13.1.7.7.21.0"  instance="0" alias="jnprTemp_Mem0FPC8"    type="gauge32" />
+	<mibObj oid=".1.3.6.1.4.1.2636.3.1.13.1.7.7.33.0"  instance="0" alias="jnprTemp_Mem1FPC8"    type="gauge32" />
+	<mibObj oid=".1.3.6.1.4.1.2636.3.1.13.1.7.7.22.0"  instance="0" alias="jnprTemp_Mem0FPC9"    type="gauge32" />
+	<mibObj oid=".1.3.6.1.4.1.2636.3.1.13.1.7.7.34.0"  instance="0" alias="jnprTemp_Mem1FPC9"    type="gauge32" />
+	<mibObj oid=".1.3.6.1.4.1.2636.3.1.13.1.7.7.23.0"  instance="0" alias="jnprTemp_Mem0FPC10"    type="gauge32" />
+	<mibObj oid=".1.3.6.1.4.1.2636.3.1.13.1.7.7.35.0"  instance="0" alias="jnprTemp_Mem1FPC10"    type="gauge32" />
+	<mibObj oid=".1.3.6.1.4.1.2636.3.1.13.1.7.7.24.0"  instance="0" alias="jnprTemp_Mem0FPC11"    type="gauge32" />
+	<mibObj oid=".1.3.6.1.4.1.2636.3.1.13.1.7.7.36.0"  instance="0" alias="jnprTemp_Mem1FPC11"    type="gauge32" />
+	
       </group>
 
 
