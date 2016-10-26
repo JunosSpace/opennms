@@ -587,12 +587,12 @@ final class PollerEventProcessor implements EventListener {
                 serviceDeletedHandler(event);
             }
         } else if (event.getUei().equals(EventConstants.NODE_CATEGORY_MEMBERSHIP_CHANGED_EVENT_UEI)){
-            if (!(event.getNodeid() < 0)) { 
+            if (event.getNodeid() > 0) { 
                 
                 serviceReschedule(event);
             }
         } else if (event.getUei().equals(EventConstants.ASSET_INFO_CHANGED_EVENT_UEI)){
-            if (!(event.getNodeid() < 0)) { 
+            if (event.getNodeid() > 0) { 
                 serviceReschedule(event);
             }
             

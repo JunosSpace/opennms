@@ -134,6 +134,14 @@ public abstract class CastorUtils {
         u.setIgnoreExtraAttributes(false);
         u.setIgnoreExtraElements(false);
         u.setWhitespacePreserve(preserveWhitespace);
+        u.setProperty(
+            "org.exolab.castor.sax.features",
+            "http://apache.org/xml/features/disallow-doctype-decl"
+        );
+        u.setProperty(
+            "org.exolab.castor.sax.features-to-disable",
+            "http://xml.org/sax/features/external-general-entities,http://xml.org/sax/features/external-parameter-entities,http://apache.org/xml/features/nonvalidating/load-external-dtd"
+        );
         return u;
     }
 
