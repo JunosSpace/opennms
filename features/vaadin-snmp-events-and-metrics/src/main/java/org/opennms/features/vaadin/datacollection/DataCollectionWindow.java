@@ -69,7 +69,7 @@ public class DataCollectionWindow extends Window {
         setResizable(false);
         addStyleName("dialog");
         setSizeFull();
-        setContent(new DataCollectionGroupPanel(dataCollectionConfigDao, dcGroup, logger) {
+        setContent(new DataCollectionGroupPanel(dataCollectionConfigDao, dcGroup, logger, fileName) {
             @Override
             public void cancel() {
                 close();

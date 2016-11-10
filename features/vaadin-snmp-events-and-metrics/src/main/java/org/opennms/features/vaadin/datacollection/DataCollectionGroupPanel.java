@@ -82,7 +82,7 @@ public abstract class DataCollectionGroupPanel extends Panel implements TabSheet
      * @param group the data collection group object
      * @param logger the logger object
      */
-    public DataCollectionGroupPanel(final DataCollectionConfigDao dataCollectionConfigDao, final DatacollectionGroup group, final Logger logger) {
+    public DataCollectionGroupPanel(final DataCollectionConfigDao dataCollectionConfigDao, final DatacollectionGroup group, final Logger logger, final String fileName) {
         setCaption("Data Collection");
         addStyleName("light");
 
@@ -102,7 +102,7 @@ public abstract class DataCollectionGroupPanel extends Panel implements TabSheet
         toolbar.addComponent(new Button("Save Data Collection File", new Button.ClickListener() {
             @Override
             public void buttonClick(ClickEvent event) {
-                processDataCollection(dataCollectionConfigDao, logger);
+                processDataCollection(dataCollectionConfigDao, logger, fileName);
             }
         }));
         toolbar.addComponent(new Button("Cancel", new Button.ClickListener() {
@@ -183,10 +183,10 @@ public abstract class DataCollectionGroupPanel extends Panel implements TabSheet
      * @param dataCollectionConfigDao the OpenNMS data collection configuration DAO
      * @param logger the logger
      */
-    private void processDataCollection(final DataCollectionConfigDao dataCollectionConfigDao, final Logger logger) {
+    private void processDataCollection(final DataCollectionConfigDao dataCollectionConfigDao, final Logger logger, final String fileName) {
         final DatacollectionGroup dcGroup = getOnmsDataCollection();
         final File configDir = new File(ConfigFileConstants.getHome(), "etc/datacollection/");
-        final File file = new File(configDir, dcGroup.getName().replaceAll(" ", "_") + ".xml");
+        final File file = new File(configDir, fileName);
         if (file.exists()) {
             ConfirmDialog.show(getUI(),
                                "Are you sure?",

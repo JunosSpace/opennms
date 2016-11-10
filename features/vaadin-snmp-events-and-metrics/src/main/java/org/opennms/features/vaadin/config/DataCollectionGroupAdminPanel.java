@@ -193,7 +193,7 @@ public class DataCollectionGroupAdminPanel extends VerticalLayout {
      * @param dcGroup the data collection group object
      */
     private void addDataCollectionGroupPanel(final DataCollectionConfigDao dataCollectionDao, final File file, final DatacollectionGroup dcGroup) {
-        DataCollectionGroupPanel panel = new DataCollectionGroupPanel(dataCollectionDao, dcGroup, new SimpleLogger()) {
+        DataCollectionGroupPanel panel = new DataCollectionGroupPanel(dataCollectionDao, dcGroup, new SimpleLogger(), file.getName()) {
             @Override
             public void cancel() {
                 this.setVisible(false);
