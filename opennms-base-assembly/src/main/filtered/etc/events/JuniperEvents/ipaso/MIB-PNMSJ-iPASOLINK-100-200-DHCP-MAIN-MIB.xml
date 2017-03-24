@@ -1,0 +1,2002 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<events xmlns="http://xmlns.opennms.org/xsd/eventconf">
+  <event>
+    <mask>
+      <maskelement>
+        <mename>id</mename>
+        <mevalue>.1.3.6.1.4.1.119.2.3.69.203.502</mevalue>
+      </maskelement>
+      <maskelement>
+        <mename>generic</mename>
+        <mevalue>6</mevalue>
+      </maskelement>
+      <maskelement>
+        <mename>specific</mename>
+        <mevalue>1900</mevalue>
+      </maskelement>
+    </mask>
+    <uei>uei.opennms.org/traps/MIB-PNMSj-iPASOLINK-100-200-DHCP-MAIN-MIB/statusTrap_ipeCfgDhcpMainServerEnable</uei>
+    <event-label>MIB-PNMSj-iPASOLINK-100-200-DHCP-MAIN-MIB defined trap event: statusTrap_ipeCfgDhcpMainServerEnable</event-label>
+    <descr>
+&lt;p&gt;Enable/Disable this DHCP server/relay agent.
+				disable : DHCP server/relay agent is disabled
+				enable : DHCP server/relay agent is enabled&lt;/p&gt;&lt;table&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapSequenceNumber&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#1]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapDate&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#2]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapTime&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#3]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisPasoIP&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#4]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisPasoName&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#5]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisChnPrtNo&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#6]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisOppIPAddress1&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#7]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisOppNEName1&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#8]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText3&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#9]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText4&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#10]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText5&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#11]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+	</descr>
+    <logmsg dest="logndisplay">&lt;p&gt;
+    statusTrap_ipeCfgDhcpMainServerEnable trap received
+    mnisTrapSequenceNumber=%parm[#1]%
+    mnisTrapDate=%parm[#2]%
+    mnisTrapTime=%parm[#3]%
+    mnisPasoIP=%parm[#4]%
+    mnisPasoName=%parm[#5]%
+    mnisChnPrtNo=%parm[#6]%
+    mnisOppIPAddress1=%parm[#7]%
+    mnisOppNEName1=%parm[#8]%
+    eventAdditionalText3=%parm[#9]%
+    eventAdditionalText4=%parm[#10]%
+    eventAdditionalText5=%parm[#11]%
+	</logmsg>
+    <severity>Indeterminate</severity>
+
+  </event>
+  <event>
+    <mask>
+      <maskelement>
+        <mename>id</mename>
+        <mevalue>.1.3.6.1.4.1.119.2.3.69.203.502</mevalue>
+      </maskelement>
+      <maskelement>
+        <mename>generic</mename>
+        <mevalue>6</mevalue>
+      </maskelement>
+      <maskelement>
+        <mename>specific</mename>
+        <mevalue>1901</mevalue>
+      </maskelement>
+    </mask>
+    <uei>uei.opennms.org/traps/MIB-PNMSj-iPASOLINK-100-200-DHCP-MAIN-MIB/statusTrap_ipeCfgDhcpMainServerMode</uei>
+    <event-label>MIB-PNMSj-iPASOLINK-100-200-DHCP-MAIN-MIB defined trap event: statusTrap_ipeCfgDhcpMainServerMode</event-label>
+    <descr>
+&lt;p&gt;Configuration of operation mode.
+				server : This instance is DHCP server mode.
+				relay : This instance is DHCP relay agent mode.
+				When ipeCfgDhcpMainServerIndex is 1-3, both server and relay can
+				configurable. In this case, the default value is server.
+				When ipeCfgDhcpMainServerIndex is 4-16, only relay can
+				configurable. In this case, the default value is relay.&lt;/p&gt;&lt;table&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapSequenceNumber&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#1]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapDate&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#2]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapTime&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#3]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisPasoIP&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#4]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisPasoName&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#5]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisChnPrtNo&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#6]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisOppIPAddress1&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#7]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisOppNEName1&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#8]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText3&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#9]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText4&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#10]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText5&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#11]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+	</descr>
+    <logmsg dest="logndisplay">&lt;p&gt;
+    statusTrap_ipeCfgDhcpMainServerMode trap received
+    mnisTrapSequenceNumber=%parm[#1]%
+    mnisTrapDate=%parm[#2]%
+    mnisTrapTime=%parm[#3]%
+    mnisPasoIP=%parm[#4]%
+    mnisPasoName=%parm[#5]%
+    mnisChnPrtNo=%parm[#6]%
+    mnisOppIPAddress1=%parm[#7]%
+    mnisOppNEName1=%parm[#8]%
+    eventAdditionalText3=%parm[#9]%
+    eventAdditionalText4=%parm[#10]%
+    eventAdditionalText5=%parm[#11]%
+	</logmsg>
+    <severity>Indeterminate</severity>
+
+  </event>
+  <event>
+    <mask>
+      <maskelement>
+        <mename>id</mename>
+        <mevalue>.1.3.6.1.4.1.119.2.3.69.203.502</mevalue>
+      </maskelement>
+      <maskelement>
+        <mename>generic</mename>
+        <mevalue>6</mevalue>
+      </maskelement>
+      <maskelement>
+        <mename>specific</mename>
+        <mevalue>1902</mevalue>
+      </maskelement>
+    </mask>
+    <uei>uei.opennms.org/traps/MIB-PNMSj-iPASOLINK-100-200-DHCP-MAIN-MIB/statusTrap_ipeCfgDhcpMainServerInterface</uei>
+    <event-label>MIB-PNMSj-iPASOLINK-100-200-DHCP-MAIN-MIB defined trap event: statusTrap_ipeCfgDhcpMainServerInterface</event-label>
+    <descr>
+&lt;p&gt;Interface index of local m-plane interface which communicate
+				with DHCP client.
+				The value of this object doesn&apos;t overlap with other instance.&lt;/p&gt;&lt;table&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapSequenceNumber&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#1]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapDate&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#2]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapTime&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#3]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisPasoIP&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#4]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisPasoName&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#5]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisChnPrtNo&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#6]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisOppIPAddress1&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#7]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisOppNEName1&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#8]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText3&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#9]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText4&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#10]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText5&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#11]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+	</descr>
+    <logmsg dest="logndisplay">&lt;p&gt;
+    statusTrap_ipeCfgDhcpMainServerInterface trap received
+    mnisTrapSequenceNumber=%parm[#1]%
+    mnisTrapDate=%parm[#2]%
+    mnisTrapTime=%parm[#3]%
+    mnisPasoIP=%parm[#4]%
+    mnisPasoName=%parm[#5]%
+    mnisChnPrtNo=%parm[#6]%
+    mnisOppIPAddress1=%parm[#7]%
+    mnisOppNEName1=%parm[#8]%
+    eventAdditionalText3=%parm[#9]%
+    eventAdditionalText4=%parm[#10]%
+    eventAdditionalText5=%parm[#11]%
+	</logmsg>
+    <severity>Indeterminate</severity>
+
+  </event>
+  <event>
+    <mask>
+      <maskelement>
+        <mename>id</mename>
+        <mevalue>.1.3.6.1.4.1.119.2.3.69.203.502</mevalue>
+      </maskelement>
+      <maskelement>
+        <mename>generic</mename>
+        <mevalue>6</mevalue>
+      </maskelement>
+      <maskelement>
+        <mename>specific</mename>
+        <mevalue>1903</mevalue>
+      </maskelement>
+    </mask>
+    <uei>uei.opennms.org/traps/MIB-PNMSj-iPASOLINK-100-200-DHCP-MAIN-MIB/statusTrap_ipeCfgDhcpMainServerIpAddr</uei>
+    <event-label>MIB-PNMSj-iPASOLINK-100-200-DHCP-MAIN-MIB defined trap event: statusTrap_ipeCfgDhcpMainServerIpAddr</event-label>
+    <descr>
+&lt;p&gt;IPv4 address of DHCP server. 
+				This object is effective only if DHCP relay agent mode.&lt;/p&gt;&lt;table&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapSequenceNumber&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#1]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapDate&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#2]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapTime&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#3]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisPasoIP&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#4]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisPasoName&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#5]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisChnPrtNo&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#6]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisOppIPAddress1&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#7]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisOppNEName1&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#8]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText3&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#9]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText4&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#10]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText5&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#11]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+	</descr>
+    <logmsg dest="logndisplay">&lt;p&gt;
+    statusTrap_ipeCfgDhcpMainServerIpAddr trap received
+    mnisTrapSequenceNumber=%parm[#1]%
+    mnisTrapDate=%parm[#2]%
+    mnisTrapTime=%parm[#3]%
+    mnisPasoIP=%parm[#4]%
+    mnisPasoName=%parm[#5]%
+    mnisChnPrtNo=%parm[#6]%
+    mnisOppIPAddress1=%parm[#7]%
+    mnisOppNEName1=%parm[#8]%
+    eventAdditionalText3=%parm[#9]%
+    eventAdditionalText4=%parm[#10]%
+    eventAdditionalText5=%parm[#11]%
+	</logmsg>
+    <severity>Indeterminate</severity>
+
+  </event>
+  <event>
+    <mask>
+      <maskelement>
+        <mename>id</mename>
+        <mevalue>.1.3.6.1.4.1.119.2.3.69.203.502</mevalue>
+      </maskelement>
+      <maskelement>
+        <mename>generic</mename>
+        <mevalue>6</mevalue>
+      </maskelement>
+      <maskelement>
+        <mename>specific</mename>
+        <mevalue>1904</mevalue>
+      </maskelement>
+    </mask>
+    <uei>uei.opennms.org/traps/MIB-PNMSj-iPASOLINK-100-200-DHCP-MAIN-MIB/statusTrap_ipeCfgDhcpMainServerLeaseTime</uei>
+    <event-label>MIB-PNMSj-iPASOLINK-100-200-DHCP-MAIN-MIB defined trap event: statusTrap_ipeCfgDhcpMainServerLeaseTime</event-label>
+    <descr>
+&lt;p&gt;The lease time of IPv4 Address provides to DHCP Client. The unit
+				is seconds.
+				0 means inifinity.
+				This object is effective only if DHCP server mode.&lt;/p&gt;&lt;table&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapSequenceNumber&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#1]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapDate&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#2]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapTime&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#3]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisPasoIP&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#4]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisPasoName&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#5]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisChnPrtNo&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#6]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisOppIPAddress1&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#7]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisOppNEName1&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#8]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText3&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#9]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText4&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#10]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText5&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#11]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+	</descr>
+    <logmsg dest="logndisplay">&lt;p&gt;
+    statusTrap_ipeCfgDhcpMainServerLeaseTime trap received
+    mnisTrapSequenceNumber=%parm[#1]%
+    mnisTrapDate=%parm[#2]%
+    mnisTrapTime=%parm[#3]%
+    mnisPasoIP=%parm[#4]%
+    mnisPasoName=%parm[#5]%
+    mnisChnPrtNo=%parm[#6]%
+    mnisOppIPAddress1=%parm[#7]%
+    mnisOppNEName1=%parm[#8]%
+    eventAdditionalText3=%parm[#9]%
+    eventAdditionalText4=%parm[#10]%
+    eventAdditionalText5=%parm[#11]%
+	</logmsg>
+    <severity>Indeterminate</severity>
+
+  </event>
+  <event>
+    <mask>
+      <maskelement>
+        <mename>id</mename>
+        <mevalue>.1.3.6.1.4.1.119.2.3.69.203.502</mevalue>
+      </maskelement>
+      <maskelement>
+        <mename>generic</mename>
+        <mevalue>6</mevalue>
+      </maskelement>
+      <maskelement>
+        <mename>specific</mename>
+        <mevalue>1905</mevalue>
+      </maskelement>
+    </mask>
+    <uei>uei.opennms.org/traps/MIB-PNMSj-iPASOLINK-100-200-DHCP-MAIN-MIB/statusTrap_ipeCfgDhcpMainServerLeaseAddrRangeBegin</uei>
+    <event-label>MIB-PNMSj-iPASOLINK-100-200-DHCP-MAIN-MIB defined trap event: statusTrap_ipeCfgDhcpMainServerLeaseAddrRangeBegin</event-label>
+    <descr>
+&lt;p&gt;First IPv4 address within the range of lease address.
+				This IP address is less equal than
+				ipeCfgDhcpMainServerAddrRangeEnd.
+				This object is effective only if DHCP server mode.&lt;/p&gt;&lt;table&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapSequenceNumber&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#1]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapDate&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#2]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapTime&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#3]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisPasoIP&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#4]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisPasoName&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#5]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisChnPrtNo&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#6]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisOppIPAddress1&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#7]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisOppNEName1&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#8]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText3&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#9]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText4&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#10]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText5&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#11]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+	</descr>
+    <logmsg dest="logndisplay">&lt;p&gt;
+    statusTrap_ipeCfgDhcpMainServerLeaseAddrRangeBegin trap received
+    mnisTrapSequenceNumber=%parm[#1]%
+    mnisTrapDate=%parm[#2]%
+    mnisTrapTime=%parm[#3]%
+    mnisPasoIP=%parm[#4]%
+    mnisPasoName=%parm[#5]%
+    mnisChnPrtNo=%parm[#6]%
+    mnisOppIPAddress1=%parm[#7]%
+    mnisOppNEName1=%parm[#8]%
+    eventAdditionalText3=%parm[#9]%
+    eventAdditionalText4=%parm[#10]%
+    eventAdditionalText5=%parm[#11]%
+	</logmsg>
+    <severity>Indeterminate</severity>
+
+  </event>
+  <event>
+    <mask>
+      <maskelement>
+        <mename>id</mename>
+        <mevalue>.1.3.6.1.4.1.119.2.3.69.203.502</mevalue>
+      </maskelement>
+      <maskelement>
+        <mename>generic</mename>
+        <mevalue>6</mevalue>
+      </maskelement>
+      <maskelement>
+        <mename>specific</mename>
+        <mevalue>1906</mevalue>
+      </maskelement>
+    </mask>
+    <uei>uei.opennms.org/traps/MIB-PNMSj-iPASOLINK-100-200-DHCP-MAIN-MIB/statusTrap_ipeCfgDhcpMainServerLeaseAddrRangeEnd</uei>
+    <event-label>MIB-PNMSj-iPASOLINK-100-200-DHCP-MAIN-MIB defined trap event: statusTrap_ipeCfgDhcpMainServerLeaseAddrRangeEnd</event-label>
+    <descr>
+&lt;p&gt;Last IPv4 address within the range of lease address.
+				This IPv4 address is greater equal than
+				ipeCfgDhcpMainServerAddrRangeBegin. This object is effective only
+				if DHCP server mode.&lt;/p&gt;&lt;table&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapSequenceNumber&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#1]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapDate&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#2]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapTime&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#3]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisPasoIP&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#4]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisPasoName&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#5]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisChnPrtNo&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#6]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisOppIPAddress1&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#7]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisOppNEName1&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#8]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText3&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#9]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText4&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#10]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText5&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#11]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+	</descr>
+    <logmsg dest="logndisplay">&lt;p&gt;
+    statusTrap_ipeCfgDhcpMainServerLeaseAddrRangeEnd trap received
+    mnisTrapSequenceNumber=%parm[#1]%
+    mnisTrapDate=%parm[#2]%
+    mnisTrapTime=%parm[#3]%
+    mnisPasoIP=%parm[#4]%
+    mnisPasoName=%parm[#5]%
+    mnisChnPrtNo=%parm[#6]%
+    mnisOppIPAddress1=%parm[#7]%
+    mnisOppNEName1=%parm[#8]%
+    eventAdditionalText3=%parm[#9]%
+    eventAdditionalText4=%parm[#10]%
+    eventAdditionalText5=%parm[#11]%
+	</logmsg>
+    <severity>Indeterminate</severity>
+
+  </event>
+  <event>
+    <mask>
+      <maskelement>
+        <mename>id</mename>
+        <mevalue>.1.3.6.1.4.1.119.2.3.69.203.502</mevalue>
+      </maskelement>
+      <maskelement>
+        <mename>generic</mename>
+        <mevalue>6</mevalue>
+      </maskelement>
+      <maskelement>
+        <mename>specific</mename>
+        <mevalue>1907</mevalue>
+      </maskelement>
+    </mask>
+    <uei>uei.opennms.org/traps/MIB-PNMSj-iPASOLINK-100-200-DHCP-MAIN-MIB/statusTrap_ipeCfgDhcpMainServerLeaseAddrExcludeBegin</uei>
+    <event-label>MIB-PNMSj-iPASOLINK-100-200-DHCP-MAIN-MIB defined trap event: statusTrap_ipeCfgDhcpMainServerLeaseAddrExcludeBegin</event-label>
+    <descr>
+&lt;p&gt;First IPv4 address within the range of lease exclude address.
+				DHCP server don&apos;t lease IP address within lease exclude address.
+				This IPv4 address is less equal than ipeCfgDhcpMainServerAddr-
+				ExcludeEnd.
+				This object is effective only if  DHCP server mode.&lt;/p&gt;&lt;table&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapSequenceNumber&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#1]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapDate&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#2]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapTime&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#3]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisPasoIP&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#4]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisPasoName&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#5]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisChnPrtNo&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#6]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisOppIPAddress1&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#7]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisOppNEName1&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#8]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText3&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#9]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText4&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#10]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText5&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#11]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+	</descr>
+    <logmsg dest="logndisplay">&lt;p&gt;
+    statusTrap_ipeCfgDhcpMainServerLeaseAddrExcludeBegin trap received
+    mnisTrapSequenceNumber=%parm[#1]%
+    mnisTrapDate=%parm[#2]%
+    mnisTrapTime=%parm[#3]%
+    mnisPasoIP=%parm[#4]%
+    mnisPasoName=%parm[#5]%
+    mnisChnPrtNo=%parm[#6]%
+    mnisOppIPAddress1=%parm[#7]%
+    mnisOppNEName1=%parm[#8]%
+    eventAdditionalText3=%parm[#9]%
+    eventAdditionalText4=%parm[#10]%
+    eventAdditionalText5=%parm[#11]%
+	</logmsg>
+    <severity>Indeterminate</severity>
+
+  </event>
+  <event>
+    <mask>
+      <maskelement>
+        <mename>id</mename>
+        <mevalue>.1.3.6.1.4.1.119.2.3.69.203.502</mevalue>
+      </maskelement>
+      <maskelement>
+        <mename>generic</mename>
+        <mevalue>6</mevalue>
+      </maskelement>
+      <maskelement>
+        <mename>specific</mename>
+        <mevalue>1908</mevalue>
+      </maskelement>
+    </mask>
+    <uei>uei.opennms.org/traps/MIB-PNMSj-iPASOLINK-100-200-DHCP-MAIN-MIB/statusTrap_ipeCfgDhcpMainServerLeaseAddrExcludeEnd</uei>
+    <event-label>MIB-PNMSj-iPASOLINK-100-200-DHCP-MAIN-MIB defined trap event: statusTrap_ipeCfgDhcpMainServerLeaseAddrExcludeEnd</event-label>
+    <descr>
+&lt;p&gt;Last IPv4 address within the range of lease exclude address.
+				DHCP server don&apos;t lease IP address within lease exclude address.
+				This IPv4 address is less equal than ipeCfgDhcpMainServerAddr-
+				ExcludeBegin.
+				This object is effective only if  DHCP server mode.&lt;/p&gt;&lt;table&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapSequenceNumber&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#1]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapDate&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#2]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapTime&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#3]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisPasoIP&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#4]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisPasoName&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#5]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisChnPrtNo&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#6]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisOppIPAddress1&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#7]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisOppNEName1&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#8]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText3&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#9]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText4&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#10]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText5&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#11]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+	</descr>
+    <logmsg dest="logndisplay">&lt;p&gt;
+    statusTrap_ipeCfgDhcpMainServerLeaseAddrExcludeEnd trap received
+    mnisTrapSequenceNumber=%parm[#1]%
+    mnisTrapDate=%parm[#2]%
+    mnisTrapTime=%parm[#3]%
+    mnisPasoIP=%parm[#4]%
+    mnisPasoName=%parm[#5]%
+    mnisChnPrtNo=%parm[#6]%
+    mnisOppIPAddress1=%parm[#7]%
+    mnisOppNEName1=%parm[#8]%
+    eventAdditionalText3=%parm[#9]%
+    eventAdditionalText4=%parm[#10]%
+    eventAdditionalText5=%parm[#11]%
+	</logmsg>
+    <severity>Indeterminate</severity>
+
+  </event>
+  <event>
+    <mask>
+      <maskelement>
+        <mename>id</mename>
+        <mevalue>.1.3.6.1.4.1.119.2.3.69.203.502</mevalue>
+      </maskelement>
+      <maskelement>
+        <mename>generic</mename>
+        <mevalue>6</mevalue>
+      </maskelement>
+      <maskelement>
+        <mename>specific</mename>
+        <mevalue>1909</mevalue>
+      </maskelement>
+    </mask>
+    <uei>uei.opennms.org/traps/MIB-PNMSj-iPASOLINK-100-200-DHCP-MAIN-MIB/statusTrap_ipeCfgDhcpMainServerOptGatewayAddrEnable</uei>
+    <event-label>MIB-PNMSj-iPASOLINK-100-200-DHCP-MAIN-MIB defined trap event: statusTrap_ipeCfgDhcpMainServerOptGatewayAddrEnable</event-label>
+    <descr>
+&lt;p&gt;Switch that how to handle gateway IP address option on DHCP
+				server.
+				enabledInterface : Use interface IP address. DHCP server
+				provides gateway IP address configured on 
+				interface which is set to 
+				ipeCfgDhcpMainServerInterface.
+				enabledSpecify : Use IP address which is set to
+				ipeCfgDhcpMainServerOptGatewayAddr.
+				disabled : DHCP server doesn&apos;t provide gateway IP address.
+				This object is effective only if DHCP server mode.&lt;/p&gt;&lt;table&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapSequenceNumber&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#1]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapDate&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#2]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapTime&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#3]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisPasoIP&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#4]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisPasoName&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#5]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisChnPrtNo&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#6]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisOppIPAddress1&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#7]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisOppNEName1&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#8]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText3&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#9]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText4&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#10]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText5&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#11]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+	</descr>
+    <logmsg dest="logndisplay">&lt;p&gt;
+    statusTrap_ipeCfgDhcpMainServerOptGatewayAddrEnable trap received
+    mnisTrapSequenceNumber=%parm[#1]%
+    mnisTrapDate=%parm[#2]%
+    mnisTrapTime=%parm[#3]%
+    mnisPasoIP=%parm[#4]%
+    mnisPasoName=%parm[#5]%
+    mnisChnPrtNo=%parm[#6]%
+    mnisOppIPAddress1=%parm[#7]%
+    mnisOppNEName1=%parm[#8]%
+    eventAdditionalText3=%parm[#9]%
+    eventAdditionalText4=%parm[#10]%
+    eventAdditionalText5=%parm[#11]%
+	</logmsg>
+    <severity>Indeterminate</severity>
+
+  </event>
+  <event>
+    <mask>
+      <maskelement>
+        <mename>id</mename>
+        <mevalue>.1.3.6.1.4.1.119.2.3.69.203.502</mevalue>
+      </maskelement>
+      <maskelement>
+        <mename>generic</mename>
+        <mevalue>6</mevalue>
+      </maskelement>
+      <maskelement>
+        <mename>specific</mename>
+        <mevalue>1910</mevalue>
+      </maskelement>
+    </mask>
+    <uei>uei.opennms.org/traps/MIB-PNMSj-iPASOLINK-100-200-DHCP-MAIN-MIB/statusTrap_ipeCfgDhcpMainServerOptGatewayAddr</uei>
+    <event-label>MIB-PNMSj-iPASOLINK-100-200-DHCP-MAIN-MIB defined trap event: statusTrap_ipeCfgDhcpMainServerOptGatewayAddr</event-label>
+    <descr>
+&lt;p&gt;Gateway IP address which is provided by DHCP server.
+				This object is effective only if DHCP server mode and
+				ipeCfgDhcpMainServerOptGatewayAddrEnable is set to
+				enabledSpecify.&lt;/p&gt;&lt;table&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapSequenceNumber&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#1]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapDate&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#2]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapTime&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#3]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisPasoIP&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#4]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisPasoName&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#5]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisChnPrtNo&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#6]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisOppIPAddress1&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#7]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisOppNEName1&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#8]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText3&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#9]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText4&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#10]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText5&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#11]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+	</descr>
+    <logmsg dest="logndisplay">&lt;p&gt;
+    statusTrap_ipeCfgDhcpMainServerOptGatewayAddr trap received
+    mnisTrapSequenceNumber=%parm[#1]%
+    mnisTrapDate=%parm[#2]%
+    mnisTrapTime=%parm[#3]%
+    mnisPasoIP=%parm[#4]%
+    mnisPasoName=%parm[#5]%
+    mnisChnPrtNo=%parm[#6]%
+    mnisOppIPAddress1=%parm[#7]%
+    mnisOppNEName1=%parm[#8]%
+    eventAdditionalText3=%parm[#9]%
+    eventAdditionalText4=%parm[#10]%
+    eventAdditionalText5=%parm[#11]%
+	</logmsg>
+    <severity>Indeterminate</severity>
+
+  </event>
+  <event>
+    <mask>
+      <maskelement>
+        <mename>id</mename>
+        <mevalue>.1.3.6.1.4.1.119.2.3.69.203.502</mevalue>
+      </maskelement>
+      <maskelement>
+        <mename>generic</mename>
+        <mevalue>6</mevalue>
+      </maskelement>
+      <maskelement>
+        <mename>specific</mename>
+        <mevalue>1911</mevalue>
+      </maskelement>
+    </mask>
+    <uei>uei.opennms.org/traps/MIB-PNMSj-iPASOLINK-100-200-DHCP-MAIN-MIB/statusTrap_ipeCfgDhcpMainServerOptDnsServerPrimary</uei>
+    <event-label>MIB-PNMSj-iPASOLINK-100-200-DHCP-MAIN-MIB defined trap event: statusTrap_ipeCfgDhcpMainServerOptDnsServerPrimary</event-label>
+    <descr>
+&lt;p&gt;Primary DNS server address which is provided by DHCP server.
+				This object is effective only if DHCP server mode.&lt;/p&gt;&lt;table&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapSequenceNumber&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#1]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapDate&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#2]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapTime&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#3]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisPasoIP&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#4]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisPasoName&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#5]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisChnPrtNo&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#6]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisOppIPAddress1&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#7]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisOppNEName1&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#8]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText3&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#9]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText4&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#10]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText5&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#11]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+	</descr>
+    <logmsg dest="logndisplay">&lt;p&gt;
+    statusTrap_ipeCfgDhcpMainServerOptDnsServerPrimary trap received
+    mnisTrapSequenceNumber=%parm[#1]%
+    mnisTrapDate=%parm[#2]%
+    mnisTrapTime=%parm[#3]%
+    mnisPasoIP=%parm[#4]%
+    mnisPasoName=%parm[#5]%
+    mnisChnPrtNo=%parm[#6]%
+    mnisOppIPAddress1=%parm[#7]%
+    mnisOppNEName1=%parm[#8]%
+    eventAdditionalText3=%parm[#9]%
+    eventAdditionalText4=%parm[#10]%
+    eventAdditionalText5=%parm[#11]%
+	</logmsg>
+    <severity>Indeterminate</severity>
+
+  </event>
+  <event>
+    <mask>
+      <maskelement>
+        <mename>id</mename>
+        <mevalue>.1.3.6.1.4.1.119.2.3.69.203.502</mevalue>
+      </maskelement>
+      <maskelement>
+        <mename>generic</mename>
+        <mevalue>6</mevalue>
+      </maskelement>
+      <maskelement>
+        <mename>specific</mename>
+        <mevalue>1912</mevalue>
+      </maskelement>
+    </mask>
+    <uei>uei.opennms.org/traps/MIB-PNMSj-iPASOLINK-100-200-DHCP-MAIN-MIB/statusTrap_ipeCfgDhcpMainServerOptDnsServerSecondary</uei>
+    <event-label>MIB-PNMSj-iPASOLINK-100-200-DHCP-MAIN-MIB defined trap event: statusTrap_ipeCfgDhcpMainServerOptDnsServerSecondary</event-label>
+    <descr>
+&lt;p&gt;Secoundary DNS server address which is provided by DHCP server.
+				In order to configure this object.
+				ipeCfgDhcpMainServerOptDnsServerPrimary must be set in advance.
+				This object is effective only if DHCP server mode.&lt;/p&gt;&lt;table&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapSequenceNumber&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#1]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapDate&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#2]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapTime&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#3]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisPasoIP&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#4]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisPasoName&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#5]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisChnPrtNo&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#6]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisOppIPAddress1&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#7]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisOppNEName1&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#8]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText3&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#9]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText4&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#10]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText5&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#11]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+	</descr>
+    <logmsg dest="logndisplay">&lt;p&gt;
+    statusTrap_ipeCfgDhcpMainServerOptDnsServerSecondary trap received
+    mnisTrapSequenceNumber=%parm[#1]%
+    mnisTrapDate=%parm[#2]%
+    mnisTrapTime=%parm[#3]%
+    mnisPasoIP=%parm[#4]%
+    mnisPasoName=%parm[#5]%
+    mnisChnPrtNo=%parm[#6]%
+    mnisOppIPAddress1=%parm[#7]%
+    mnisOppNEName1=%parm[#8]%
+    eventAdditionalText3=%parm[#9]%
+    eventAdditionalText4=%parm[#10]%
+    eventAdditionalText5=%parm[#11]%
+	</logmsg>
+    <severity>Indeterminate</severity>
+
+  </event>
+  <event>
+    <mask>
+      <maskelement>
+        <mename>id</mename>
+        <mevalue>.1.3.6.1.4.1.119.2.3.69.203.502</mevalue>
+      </maskelement>
+      <maskelement>
+        <mename>generic</mename>
+        <mevalue>6</mevalue>
+      </maskelement>
+      <maskelement>
+        <mename>specific</mename>
+        <mevalue>1913</mevalue>
+      </maskelement>
+    </mask>
+    <uei>uei.opennms.org/traps/MIB-PNMSj-iPASOLINK-100-200-DHCP-MAIN-MIB/statusTrap_ipeCfgDhcpMainServerOptSpecifyEnable</uei>
+    <event-label>MIB-PNMSj-iPASOLINK-100-200-DHCP-MAIN-MIB defined trap event: statusTrap_ipeCfgDhcpMainServerOptSpecifyEnable</event-label>
+    <descr>
+&lt;p&gt;Switch that whether DHCP server add user specified option to
+				DHCP message.
+				enable : DHCP server add user specified option.
+				disable : DHCP server doesn&apos;t add user specified otption.
+				This object is effective only if DHCP server mode.&lt;/p&gt;&lt;table&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapSequenceNumber&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#1]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapDate&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#2]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapTime&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#3]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisPasoIP&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#4]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisPasoName&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#5]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisChnPrtNo&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#6]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisOppIPAddress1&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#7]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisOppNEName1&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#8]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText3&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#9]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText4&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#10]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText5&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#11]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+	</descr>
+    <logmsg dest="logndisplay">&lt;p&gt;
+    statusTrap_ipeCfgDhcpMainServerOptSpecifyEnable trap received
+    mnisTrapSequenceNumber=%parm[#1]%
+    mnisTrapDate=%parm[#2]%
+    mnisTrapTime=%parm[#3]%
+    mnisPasoIP=%parm[#4]%
+    mnisPasoName=%parm[#5]%
+    mnisChnPrtNo=%parm[#6]%
+    mnisOppIPAddress1=%parm[#7]%
+    mnisOppNEName1=%parm[#8]%
+    eventAdditionalText3=%parm[#9]%
+    eventAdditionalText4=%parm[#10]%
+    eventAdditionalText5=%parm[#11]%
+	</logmsg>
+    <severity>Indeterminate</severity>
+
+  </event>
+  <event>
+    <mask>
+      <maskelement>
+        <mename>id</mename>
+        <mevalue>.1.3.6.1.4.1.119.2.3.69.203.502</mevalue>
+      </maskelement>
+      <maskelement>
+        <mename>generic</mename>
+        <mevalue>6</mevalue>
+      </maskelement>
+      <maskelement>
+        <mename>specific</mename>
+        <mevalue>1914</mevalue>
+      </maskelement>
+    </mask>
+    <uei>uei.opennms.org/traps/MIB-PNMSj-iPASOLINK-100-200-DHCP-MAIN-MIB/statusTrap_ipeCfgDhcpMainServerOptSpecifyId</uei>
+    <event-label>MIB-PNMSj-iPASOLINK-100-200-DHCP-MAIN-MIB defined trap event: statusTrap_ipeCfgDhcpMainServerOptSpecifyId</event-label>
+    <descr>
+&lt;p&gt;Option id which DHCP server adds user specified option to DHCP
+				message.
+				This object is effective only if DHCP server mode and ipeCfgDhcp-
+				MainServerOptSpecifyEnable is set to enabled.&lt;/p&gt;&lt;table&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapSequenceNumber&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#1]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapDate&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#2]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapTime&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#3]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisPasoIP&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#4]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisPasoName&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#5]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisChnPrtNo&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#6]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisOppIPAddress1&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#7]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisOppNEName1&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#8]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText3&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#9]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText4&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#10]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText5&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#11]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+	</descr>
+    <logmsg dest="logndisplay">&lt;p&gt;
+    statusTrap_ipeCfgDhcpMainServerOptSpecifyId trap received
+    mnisTrapSequenceNumber=%parm[#1]%
+    mnisTrapDate=%parm[#2]%
+    mnisTrapTime=%parm[#3]%
+    mnisPasoIP=%parm[#4]%
+    mnisPasoName=%parm[#5]%
+    mnisChnPrtNo=%parm[#6]%
+    mnisOppIPAddress1=%parm[#7]%
+    mnisOppNEName1=%parm[#8]%
+    eventAdditionalText3=%parm[#9]%
+    eventAdditionalText4=%parm[#10]%
+    eventAdditionalText5=%parm[#11]%
+	</logmsg>
+    <severity>Indeterminate</severity>
+
+  </event>
+  <event>
+    <mask>
+      <maskelement>
+        <mename>id</mename>
+        <mevalue>.1.3.6.1.4.1.119.2.3.69.203.502</mevalue>
+      </maskelement>
+      <maskelement>
+        <mename>generic</mename>
+        <mevalue>6</mevalue>
+      </maskelement>
+      <maskelement>
+        <mename>specific</mename>
+        <mevalue>1915</mevalue>
+      </maskelement>
+    </mask>
+    <uei>uei.opennms.org/traps/MIB-PNMSj-iPASOLINK-100-200-DHCP-MAIN-MIB/statusTrap_ipeCfgDhcpMainServerOptSpecifyType</uei>
+    <event-label>MIB-PNMSj-iPASOLINK-100-200-DHCP-MAIN-MIB defined trap event: statusTrap_ipeCfgDhcpMainServerOptSpecifyType</event-label>
+    <descr>
+&lt;p&gt;Option type which DHCP server adds to DHCP message.
+				This object is effective only if DHCP server mode and ipeCfgDhcp-
+				MainServerOptSpecifyEnable is set to enabled.&lt;/p&gt;&lt;table&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapSequenceNumber&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#1]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapDate&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#2]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapTime&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#3]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisPasoIP&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#4]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisPasoName&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#5]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisChnPrtNo&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#6]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisOppIPAddress1&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#7]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisOppNEName1&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#8]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText3&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#9]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText4&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#10]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText5&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#11]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+	</descr>
+    <logmsg dest="logndisplay">&lt;p&gt;
+    statusTrap_ipeCfgDhcpMainServerOptSpecifyType trap received
+    mnisTrapSequenceNumber=%parm[#1]%
+    mnisTrapDate=%parm[#2]%
+    mnisTrapTime=%parm[#3]%
+    mnisPasoIP=%parm[#4]%
+    mnisPasoName=%parm[#5]%
+    mnisChnPrtNo=%parm[#6]%
+    mnisOppIPAddress1=%parm[#7]%
+    mnisOppNEName1=%parm[#8]%
+    eventAdditionalText3=%parm[#9]%
+    eventAdditionalText4=%parm[#10]%
+    eventAdditionalText5=%parm[#11]%
+	</logmsg>
+    <severity>Indeterminate</severity>
+
+  </event>
+  <event>
+    <mask>
+      <maskelement>
+        <mename>id</mename>
+        <mevalue>.1.3.6.1.4.1.119.2.3.69.203.502</mevalue>
+      </maskelement>
+      <maskelement>
+        <mename>generic</mename>
+        <mevalue>6</mevalue>
+      </maskelement>
+      <maskelement>
+        <mename>specific</mename>
+        <mevalue>1916</mevalue>
+      </maskelement>
+    </mask>
+    <uei>uei.opennms.org/traps/MIB-PNMSj-iPASOLINK-100-200-DHCP-MAIN-MIB/statusTrap_ipeCfgDhcpMainServerOptSpecifyValue</uei>
+    <event-label>MIB-PNMSj-iPASOLINK-100-200-DHCP-MAIN-MIB defined trap event: statusTrap_ipeCfgDhcpMainServerOptSpecifyValue</event-label>
+    <descr>
+&lt;p&gt;Option value which DHCP server adds to DHCP message.
+				This object is decoded according to
+				ipeCfgDhcpMainServerOptSpecifyType.
+				ipv4 : Syntax is IpAddress.
+				ipv6 : Syntax is Ipv6Address.
+				displayString : Syntax is DisplayString.
+				octetString : Syntax is OCTET STRING.
+				This object is effective only if DHCP server mode and
+				ipeCfgDhcpMainServerOptSpecifyEnable is set to enabled.&lt;/p&gt;&lt;table&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapSequenceNumber&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#1]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapDate&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#2]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapTime&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#3]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisPasoIP&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#4]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisPasoName&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#5]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisChnPrtNo&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#6]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisOppIPAddress1&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#7]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisOppNEName1&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#8]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText3&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#9]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText4&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#10]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText5&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#11]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+	</descr>
+    <logmsg dest="logndisplay">&lt;p&gt;
+    statusTrap_ipeCfgDhcpMainServerOptSpecifyValue trap received
+    mnisTrapSequenceNumber=%parm[#1]%
+    mnisTrapDate=%parm[#2]%
+    mnisTrapTime=%parm[#3]%
+    mnisPasoIP=%parm[#4]%
+    mnisPasoName=%parm[#5]%
+    mnisChnPrtNo=%parm[#6]%
+    mnisOppIPAddress1=%parm[#7]%
+    mnisOppNEName1=%parm[#8]%
+    eventAdditionalText3=%parm[#9]%
+    eventAdditionalText4=%parm[#10]%
+    eventAdditionalText5=%parm[#11]%
+	</logmsg>
+    <severity>Indeterminate</severity>
+
+  </event>
+  <event>
+    <mask>
+      <maskelement>
+        <mename>id</mename>
+        <mevalue>.1.3.6.1.4.1.119.2.3.69.203.502</mevalue>
+      </maskelement>
+      <maskelement>
+        <mename>generic</mename>
+        <mevalue>6</mevalue>
+      </maskelement>
+      <maskelement>
+        <mename>specific</mename>
+        <mevalue>1917</mevalue>
+      </maskelement>
+    </mask>
+    <uei>uei.opennms.org/traps/MIB-PNMSj-iPASOLINK-100-200-DHCP-MAIN-MIB/statusTrap_ipeCfgDhcpMainServerSecurityLevel</uei>
+    <event-label>MIB-PNMSj-iPASOLINK-100-200-DHCP-MAIN-MIB defined trap event: statusTrap_ipeCfgDhcpMainServerSecurityLevel</event-label>
+    <descr>
+&lt;p&gt;Security level of this DHCP server.
+				any: DHCP server doesn&apos;t check MAC address except for
+				rejected MAC address.
+				onlyRegistered : DHCP server provides IP address only to
+				registered MAC addresss.
+				Note : Rejected MAC address is examined even if
+				ipeCfgDhcpMainServerSecurityLevel is set to any.
+				This object is effective only if DHCP server mode.&lt;/p&gt;&lt;table&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapSequenceNumber&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#1]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapDate&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#2]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapTime&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#3]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisPasoIP&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#4]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisPasoName&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#5]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisChnPrtNo&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#6]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisOppIPAddress1&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#7]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisOppNEName1&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#8]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText3&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#9]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText4&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#10]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText5&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#11]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+	</descr>
+    <logmsg dest="logndisplay">&lt;p&gt;
+    statusTrap_ipeCfgDhcpMainServerSecurityLevel trap received
+    mnisTrapSequenceNumber=%parm[#1]%
+    mnisTrapDate=%parm[#2]%
+    mnisTrapTime=%parm[#3]%
+    mnisPasoIP=%parm[#4]%
+    mnisPasoName=%parm[#5]%
+    mnisChnPrtNo=%parm[#6]%
+    mnisOppIPAddress1=%parm[#7]%
+    mnisOppNEName1=%parm[#8]%
+    eventAdditionalText3=%parm[#9]%
+    eventAdditionalText4=%parm[#10]%
+    eventAdditionalText5=%parm[#11]%
+	</logmsg>
+    <severity>Indeterminate</severity>
+
+  </event>
+  <event>
+    <mask>
+      <maskelement>
+        <mename>id</mename>
+        <mevalue>.1.3.6.1.4.1.119.2.3.69.203.502</mevalue>
+      </maskelement>
+      <maskelement>
+        <mename>generic</mename>
+        <mevalue>6</mevalue>
+      </maskelement>
+      <maskelement>
+        <mename>specific</mename>
+        <mevalue>1918</mevalue>
+      </maskelement>
+    </mask>
+    <uei>uei.opennms.org/traps/MIB-PNMSj-iPASOLINK-100-200-DHCP-MAIN-MIB/statusTrap_ipeCfgDhcpMainServerRegisteredMacId</uei>
+    <event-label>MIB-PNMSj-iPASOLINK-100-200-DHCP-MAIN-MIB defined trap event: statusTrap_ipeCfgDhcpMainServerRegisteredMacId</event-label>
+    <descr>
+&lt;p&gt;The identifier of ipeCfgDhcpMainServerRegisteredMacEnrty. 
+				0 means no registered/rejected IP address exists.
+				This object is effective only if DHCP server mode.&lt;/p&gt;&lt;table&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapSequenceNumber&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#1]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapDate&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#2]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapTime&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#3]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisPasoIP&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#4]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisPasoName&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#5]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisChnPrtNo&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#6]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisOppIPAddress1&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#7]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisOppNEName1&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#8]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText3&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#9]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText4&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#10]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText5&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#11]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+	</descr>
+    <logmsg dest="logndisplay">&lt;p&gt;
+    statusTrap_ipeCfgDhcpMainServerRegisteredMacId trap received
+    mnisTrapSequenceNumber=%parm[#1]%
+    mnisTrapDate=%parm[#2]%
+    mnisTrapTime=%parm[#3]%
+    mnisPasoIP=%parm[#4]%
+    mnisPasoName=%parm[#5]%
+    mnisChnPrtNo=%parm[#6]%
+    mnisOppIPAddress1=%parm[#7]%
+    mnisOppNEName1=%parm[#8]%
+    eventAdditionalText3=%parm[#9]%
+    eventAdditionalText4=%parm[#10]%
+    eventAdditionalText5=%parm[#11]%
+	</logmsg>
+    <severity>Indeterminate</severity>
+
+  </event>
+  <event>
+    <mask>
+      <maskelement>
+        <mename>id</mename>
+        <mevalue>.1.3.6.1.4.1.119.2.3.69.203.502</mevalue>
+      </maskelement>
+      <maskelement>
+        <mename>generic</mename>
+        <mevalue>6</mevalue>
+      </maskelement>
+      <maskelement>
+        <mename>specific</mename>
+        <mevalue>1919</mevalue>
+      </maskelement>
+    </mask>
+    <uei>uei.opennms.org/traps/MIB-PNMSj-iPASOLINK-100-200-DHCP-MAIN-MIB/statusTrap_ipeCfgDhcpMainRegisteredMacAddr</uei>
+    <event-label>MIB-PNMSj-iPASOLINK-100-200-DHCP-MAIN-MIB defined trap event: statusTrap_ipeCfgDhcpMainRegisteredMacAddr</event-label>
+    <descr>
+&lt;p&gt;This object means registered MAC address. When ipeCfgDhcpMain-
+				ServerSecurityLevel is set to onlyRegisterd, DHCP server accept
+				DHCP message sent from registered MAC address.
+				This object must be set when the row is created.&lt;/p&gt;&lt;table&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapSequenceNumber&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#1]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapDate&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#2]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapTime&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#3]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisPasoIP&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#4]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisPasoName&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#5]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisChnPrtNo&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#6]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisOppIPAddress1&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#7]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisOppNEName1&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#8]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText3&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#9]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText4&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#10]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText5&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#11]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+	</descr>
+    <logmsg dest="logndisplay">&lt;p&gt;
+    statusTrap_ipeCfgDhcpMainRegisteredMacAddr trap received
+    mnisTrapSequenceNumber=%parm[#1]%
+    mnisTrapDate=%parm[#2]%
+    mnisTrapTime=%parm[#3]%
+    mnisPasoIP=%parm[#4]%
+    mnisPasoName=%parm[#5]%
+    mnisChnPrtNo=%parm[#6]%
+    mnisOppIPAddress1=%parm[#7]%
+    mnisOppNEName1=%parm[#8]%
+    eventAdditionalText3=%parm[#9]%
+    eventAdditionalText4=%parm[#10]%
+    eventAdditionalText5=%parm[#11]%
+	</logmsg>
+    <severity>Indeterminate</severity>
+
+  </event>
+  <event>
+    <mask>
+      <maskelement>
+        <mename>id</mename>
+        <mevalue>.1.3.6.1.4.1.119.2.3.69.203.502</mevalue>
+      </maskelement>
+      <maskelement>
+        <mename>generic</mename>
+        <mevalue>6</mevalue>
+      </maskelement>
+      <maskelement>
+        <mename>specific</mename>
+        <mevalue>1920</mevalue>
+      </maskelement>
+    </mask>
+    <uei>uei.opennms.org/traps/MIB-PNMSj-iPASOLINK-100-200-DHCP-MAIN-MIB/statusTrap_ipeCfgDhcpMainRegisteredMacIpAddr</uei>
+    <event-label>MIB-PNMSj-iPASOLINK-100-200-DHCP-MAIN-MIB defined trap event: statusTrap_ipeCfgDhcpMainRegisteredMacIpAddr</event-label>
+    <descr>
+&lt;p&gt;IP address correspond to registered MAC address. If DHCP server
+				receives DHCP DISCOVER from registered MAC address, it provide 
+				corespoinding IP address set to this object. 
+				When this object is set to 0.0.0.0, DHCP server provide any
+				address whthin the lease address range.
+				When this object is set to 255.255.255.255, DHCP server treats
+				this MAC address as rejected MAC Address.&lt;/p&gt;&lt;table&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapSequenceNumber&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#1]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapDate&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#2]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapTime&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#3]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisPasoIP&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#4]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisPasoName&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#5]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisChnPrtNo&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#6]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisOppIPAddress1&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#7]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisOppNEName1&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#8]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText3&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#9]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText4&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#10]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText5&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#11]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+	</descr>
+    <logmsg dest="logndisplay">&lt;p&gt;
+    statusTrap_ipeCfgDhcpMainRegisteredMacIpAddr trap received
+    mnisTrapSequenceNumber=%parm[#1]%
+    mnisTrapDate=%parm[#2]%
+    mnisTrapTime=%parm[#3]%
+    mnisPasoIP=%parm[#4]%
+    mnisPasoName=%parm[#5]%
+    mnisChnPrtNo=%parm[#6]%
+    mnisOppIPAddress1=%parm[#7]%
+    mnisOppNEName1=%parm[#8]%
+    eventAdditionalText3=%parm[#9]%
+    eventAdditionalText4=%parm[#10]%
+    eventAdditionalText5=%parm[#11]%
+	</logmsg>
+    <severity>Indeterminate</severity>
+
+  </event>
+  <event>
+    <mask>
+      <maskelement>
+        <mename>id</mename>
+        <mevalue>.1.3.6.1.4.1.119.2.3.69.203.502</mevalue>
+      </maskelement>
+      <maskelement>
+        <mename>generic</mename>
+        <mevalue>6</mevalue>
+      </maskelement>
+      <maskelement>
+        <mename>specific</mename>
+        <mevalue>1921</mevalue>
+      </maskelement>
+    </mask>
+    <uei>uei.opennms.org/traps/MIB-PNMSj-iPASOLINK-100-200-DHCP-MAIN-MIB/statusTrap_ipeCfgDhcpMainRegisteredMacRowStatus</uei>
+    <event-label>MIB-PNMSj-iPASOLINK-100-200-DHCP-MAIN-MIB defined trap event: statusTrap_ipeCfgDhcpMainRegisteredMacRowStatus</event-label>
+    <descr>
+&lt;p&gt;RowStatus of this entry. The system supports three values shonw
+				below.
+				active(1) : change attribute in existing instance.
+				createAndGo(4) : create the instance.
+				destroy(6) : delete the instance.&lt;/p&gt;&lt;table&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapSequenceNumber&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#1]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapDate&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#2]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapTime&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#3]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisPasoIP&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#4]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisPasoName&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#5]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisChnPrtNo&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#6]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisOppIPAddress1&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#7]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisOppNEName1&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#8]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText3&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#9]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText4&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#10]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText5&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#11]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+	</descr>
+    <logmsg dest="logndisplay">&lt;p&gt;
+    statusTrap_ipeCfgDhcpMainRegisteredMacRowStatus trap received
+    mnisTrapSequenceNumber=%parm[#1]%
+    mnisTrapDate=%parm[#2]%
+    mnisTrapTime=%parm[#3]%
+    mnisPasoIP=%parm[#4]%
+    mnisPasoName=%parm[#5]%
+    mnisChnPrtNo=%parm[#6]%
+    mnisOppIPAddress1=%parm[#7]%
+    mnisOppNEName1=%parm[#8]%
+    eventAdditionalText3=%parm[#9]%
+    eventAdditionalText4=%parm[#10]%
+    eventAdditionalText5=%parm[#11]%
+	</logmsg>
+    <severity>Indeterminate</severity>
+
+  </event>
+  <event>
+    <mask>
+      <maskelement>
+        <mename>id</mename>
+        <mevalue>.1.3.6.1.4.1.119.2.3.69.203.502</mevalue>
+      </maskelement>
+      <maskelement>
+        <mename>generic</mename>
+        <mevalue>6</mevalue>
+      </maskelement>
+      <maskelement>
+        <mename>specific</mename>
+        <mevalue>1922</mevalue>
+      </maskelement>
+    </mask>
+    <uei>uei.opennms.org/traps/MIB-PNMSj-iPASOLINK-100-200-DHCP-MAIN-MIB/statusTrap_ipeCmdDhcpMainManualDelete</uei>
+    <event-label>MIB-PNMSj-iPASOLINK-100-200-DHCP-MAIN-MIB defined trap event: statusTrap_ipeCmdDhcpMainManualDelete</event-label>
+    <descr>
+&lt;p&gt;Operator manually deletes this lease address.
+				normal : can not set this value. 
+				manualDelete : Delete this lease address. 
+				If ipeCmdDhcpMainLeaseIpAddr is set to 0.0.0.0, 
+				DHCP server deletes all entry in corresponding
+				ipeStsDhcpMainLeaseAddrEntry.
+				Note : When you read this object, the system alwasys return
+				normal.&lt;/p&gt;&lt;table&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapSequenceNumber&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#1]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapDate&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#2]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapTime&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#3]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisPasoIP&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#4]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisPasoName&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#5]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisChnPrtNo&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#6]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisOppIPAddress1&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#7]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisOppNEName1&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#8]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText3&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#9]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText4&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#10]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText5&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#11]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+	</descr>
+    <logmsg dest="logndisplay">&lt;p&gt;
+    statusTrap_ipeCmdDhcpMainManualDelete trap received
+    mnisTrapSequenceNumber=%parm[#1]%
+    mnisTrapDate=%parm[#2]%
+    mnisTrapTime=%parm[#3]%
+    mnisPasoIP=%parm[#4]%
+    mnisPasoName=%parm[#5]%
+    mnisChnPrtNo=%parm[#6]%
+    mnisOppIPAddress1=%parm[#7]%
+    mnisOppNEName1=%parm[#8]%
+    eventAdditionalText3=%parm[#9]%
+    eventAdditionalText4=%parm[#10]%
+    eventAdditionalText5=%parm[#11]%
+	</logmsg>
+    <severity>Indeterminate</severity>
+
+  </event>
+</events>

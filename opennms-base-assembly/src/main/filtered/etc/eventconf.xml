@@ -2146,11 +2146,30 @@
 <event-file>events/JuniperEvents/tcaos/mib-jnx-tca-timing.xml</event-file>
 
 <!-- Events for the ipaso family -->
-<event-file>events/JuniperEvents/ipaso/MIB-MNIS-IPASOLINK-100-200-COMMON-MIB.events.xml</event-file>
-<event-file>events/JuniperEvents/ipaso/MIB-MNIS-IPASOLINK-100-200-SYSTEM-MIB.events.xml</event-file>
-<event-file>events/JuniperEvents/ipaso/MIB-MNIS-IPASOLINK-400-COMMON-MIB.events.xml</event-file>
-<event-file>events/JuniperEvents/ipaso/MIB-MNIS-IPASOLINK-400-SYSTEM-MIB.events.xml</event-file>
 <event-file>events/JuniperEvents/ipaso/IPASOLINK-LINKD_ALARM.xml</event-file>
+
+<event-file>events/JuniperEvents/ipaso/MIB-PNMSJ-iPASOLINK-100-200-COMMON-MIB.xml</event-file>
+<event-file>events/JuniperEvents/ipaso/MIB-PNMSJ-iPASOLINK-100-200-DHCP-MAIN-MIB.xml</event-file>
+<event-file>events/JuniperEvents/ipaso/MIB-PNMSJ-iPASOLINK-100-200-DOT3OAM-MIB.xml</event-file>
+<event-file>events/JuniperEvents/ipaso/MIB-PNMSJ-iPASOLINK-100-200-ETH-RING-MIB.xml</event-file>
+<event-file>events/JuniperEvents/ipaso/MIB-PNMSJ-iPASOLINK-100-200-LAG-MIB.xml</event-file>
+<event-file>events/JuniperEvents/ipaso/MIB-PNMSJ-iPASOLINK-100-200-MSE-MIB.xml</event-file>
+<event-file>events/JuniperEvents/ipaso/MIB-PNMSJ-iPASOLINK-100-200-MSTP-MIB.xml</event-file>
+<event-file>events/JuniperEvents/ipaso/MIB-PNMSJ-iPASOLINK-100-200-PW-MIB.xml</event-file>
+<event-file>events/JuniperEvents/ipaso/MIB-PNMSJ-iPASOLINK-100-200-SYSTEM-MIB.xml</event-file>
+<event-file>events/JuniperEvents/ipaso/MIB-PNMSJ-iPASOLINK-400-COMMON-MIB.xml</event-file>
+<event-file>events/JuniperEvents/ipaso/MIB-PNMSJ-iPASOLINK-400-ETH-RING-MIB.xml</event-file>
+<event-file>events/JuniperEvents/ipaso/MIB-PNMSJ-iPASOLINK-400-LAG-MIB.xml</event-file>
+<event-file>events/JuniperEvents/ipaso/MIB-PNMSJ-iPASOLINK-400-MSE-MIB.xml</event-file>
+<event-file>events/JuniperEvents/ipaso/MIB-PNMSJ-iPASOLINK-400-MSTP-MIB.xml</event-file>
+<event-file>events/JuniperEvents/ipaso/MIB-PNMSJ-iPASOLINK-400-SYSTEM-MIB.xml</event-file>
+<event-file>events/JuniperEvents/ipaso/MIB-PNMSJ-iPASOLINK-1000-COMMON1000-MIB.xml</event-file>
+<event-file>events/JuniperEvents/ipaso/MIB-PNMSJ-iPASOLINK-1000-COMMON-MIB.xml</event-file>
+<event-file>events/JuniperEvents/ipaso/MIB-PNMSJ-iPASOLINK-1000-ETH-RING-MIB.xml</event-file>
+<event-file>events/JuniperEvents/ipaso/MIB-PNMSJ-iPASOLINK-1000-LAG-MIB.xml</event-file>
+<event-file>events/JuniperEvents/ipaso/MIB-PNMSJ-iPASOLINK-1000-MSE-MIB.xml</event-file>
+<event-file>events/JuniperEvents/ipaso/MIB-PNMSJ-iPASOLINK-1000-MSTP-MIB.xml</event-file>
+<event-file>events/JuniperEvents/ipaso/MIB-PNMSJ-iPASOLINK-1000-TERM-MIB.xml</event-file>
 
 <!-- Events for the mbg mx family -->
 <event-file>events/JuniperEvents/mbg/mib-jnx-mobile-gateway-aaa.xml</event-file>

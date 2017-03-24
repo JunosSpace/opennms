@@ -1,0 +1,534 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<events xmlns="http://xmlns.opennms.org/xsd/eventconf">
+  <event>
+    <mask>
+      <maskelement>
+        <mename>id</mename>
+        <mevalue>.1.3.6.1.4.1.119.2.3.69.203.502</mevalue>
+      </maskelement>
+      <maskelement>
+        <mename>generic</mename>
+        <mevalue>6</mevalue>
+      </maskelement>
+      <maskelement>
+        <mename>specific</mename>
+        <mevalue>1650</mevalue>
+      </maskelement>
+    </mask>
+    <uei>uei.opennms.org/traps/MIB-PNMSj-iPASOLINK-100-200-ETH-RING-MIB/statusTrap_asEtherRingState</uei>
+    <event-label>MIB-PNMSj-iPASOLINK-100-200-ETH-RING-MIB defined trap event: statusTrap_asEtherRingState</event-label>
+    <descr>
+&lt;p&gt;The status of Etherring instance.
+				The value &apos;idle&apos; is initial and normal value. And that means
+				there is no fault on the Ring Network (i.e. the RPL Port is
+				closed). When the RPL port is opened because of the detection of
+				Signal Failure on the Network, the value will change to
+				&apos;protection&apos;. &apos;force&apos; and &apos;manual&apos; shows switch control is
+				performed on the Ring Network. When the switch control is cleared
+				or the Signal Failure is cleared, the value will show &apos;pending&apos;.&lt;/p&gt;&lt;table&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapSequenceNumber&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#1]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapDate&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#2]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapTime&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#3]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisPasoIP&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#4]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisPasoName&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#5]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisChnPrtNo&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#6]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisOppIPAddress1&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#7]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisOppNEName1&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#8]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText3&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#9]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText4&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#10]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText5&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#11]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+	</descr>
+    <logmsg dest="logndisplay">&lt;p&gt;
+    statusTrap_asEtherRingState trap received
+    mnisTrapSequenceNumber=%parm[#1]%
+    mnisTrapDate=%parm[#2]%
+    mnisTrapTime=%parm[#3]%
+    mnisPasoIP=%parm[#4]%
+    mnisPasoName=%parm[#5]%
+    mnisChnPrtNo=%parm[#6]%
+    mnisOppIPAddress1=%parm[#7]%
+    mnisOppNEName1=%parm[#8]%
+    eventAdditionalText3=%parm[#9]%
+    eventAdditionalText4=%parm[#10]%
+    eventAdditionalText5=%parm[#11]%
+	</logmsg>
+    <severity>Indeterminate</severity>
+
+  </event>
+  <event>
+    <mask>
+      <maskelement>
+        <mename>id</mename>
+        <mevalue>.1.3.6.1.4.1.119.2.3.69.203.502</mevalue>
+      </maskelement>
+      <maskelement>
+        <mename>generic</mename>
+        <mevalue>6</mevalue>
+      </maskelement>
+      <maskelement>
+        <mename>specific</mename>
+        <mevalue>1651</mevalue>
+      </maskelement>
+    </mask>
+    <uei>uei.opennms.org/traps/MIB-PNMSj-iPASOLINK-100-200-ETH-RING-MIB/statusTrap_asEtherRingCause</uei>
+    <event-label>MIB-PNMSj-iPASOLINK-100-200-ETH-RING-MIB defined trap event: statusTrap_asEtherRingCause</event-label>
+    <descr>
+&lt;p&gt;The object shows the reason of the asEtherRingStatus change.
+				&apos;localSf&apos; : Signal Failure of the local node.
+				&apos;localNr&apos; : Normal Request of the local node.
+				&apos;remoteSf&apos; : Signal Failure from the other node.
+				&apos;remoteNr&apos; : Normal Request from the other node.
+				&apos;localFs&apos; : Forced Switch Request of the local node.
+				&apos;localMs&apos; : Manual Switch Request of the local node.
+				&apos;remoteFs&apos; : Forced Switch Request from the other node.
+				&apos;remoteMs&apos; : Manual Switch Request from the other node.&lt;/p&gt;&lt;table&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapSequenceNumber&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#1]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapDate&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#2]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapTime&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#3]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisPasoIP&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#4]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisPasoName&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#5]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisChnPrtNo&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#6]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisOppIPAddress1&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#7]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisOppNEName1&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#8]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText3&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#9]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText4&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#10]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText5&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#11]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+	</descr>
+    <logmsg dest="logndisplay">&lt;p&gt;
+    statusTrap_asEtherRingCause trap received
+    mnisTrapSequenceNumber=%parm[#1]%
+    mnisTrapDate=%parm[#2]%
+    mnisTrapTime=%parm[#3]%
+    mnisPasoIP=%parm[#4]%
+    mnisPasoName=%parm[#5]%
+    mnisChnPrtNo=%parm[#6]%
+    mnisOppIPAddress1=%parm[#7]%
+    mnisOppNEName1=%parm[#8]%
+    eventAdditionalText3=%parm[#9]%
+    eventAdditionalText4=%parm[#10]%
+    eventAdditionalText5=%parm[#11]%
+	</logmsg>
+    <severity>Indeterminate</severity>
+
+  </event>
+  <event>
+    <mask>
+      <maskelement>
+        <mename>id</mename>
+        <mevalue>.1.3.6.1.4.1.119.2.3.69.203.502</mevalue>
+      </maskelement>
+      <maskelement>
+        <mename>generic</mename>
+        <mevalue>6</mevalue>
+      </maskelement>
+      <maskelement>
+        <mename>specific</mename>
+        <mevalue>1652</mevalue>
+      </maskelement>
+    </mask>
+    <uei>uei.opennms.org/traps/MIB-PNMSj-iPASOLINK-100-200-ETH-RING-MIB/statusTrap_asEtherRingMultiRplOwnerDetect</uei>
+    <event-label>MIB-PNMSj-iPASOLINK-100-200-ETH-RING-MIB defined trap event: statusTrap_asEtherRingMultiRplOwnerDetect</event-label>
+    <descr>
+&lt;p&gt;when the multiple RPL Owner is detected on the Ring Network, the
+				value will change to &apos;detected&apos;.&lt;/p&gt;&lt;table&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapSequenceNumber&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#1]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapDate&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#2]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapTime&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#3]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisPasoIP&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#4]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisPasoName&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#5]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisChnPrtNo&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#6]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisOppIPAddress1&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#7]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisOppNEName1&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#8]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText3&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#9]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText4&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#10]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText5&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#11]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+	</descr>
+    <logmsg dest="logndisplay">&lt;p&gt;
+    statusTrap_asEtherRingMultiRplOwnerDetect trap received
+    mnisTrapSequenceNumber=%parm[#1]%
+    mnisTrapDate=%parm[#2]%
+    mnisTrapTime=%parm[#3]%
+    mnisPasoIP=%parm[#4]%
+    mnisPasoName=%parm[#5]%
+    mnisChnPrtNo=%parm[#6]%
+    mnisOppIPAddress1=%parm[#7]%
+    mnisOppNEName1=%parm[#8]%
+    eventAdditionalText3=%parm[#9]%
+    eventAdditionalText4=%parm[#10]%
+    eventAdditionalText5=%parm[#11]%
+	</logmsg>
+    <severity>Indeterminate</severity>
+
+  </event>
+  <event>
+    <mask>
+      <maskelement>
+        <mename>id</mename>
+        <mevalue>.1.3.6.1.4.1.119.2.3.69.203.502</mevalue>
+      </maskelement>
+      <maskelement>
+        <mename>generic</mename>
+        <mevalue>6</mevalue>
+      </maskelement>
+      <maskelement>
+        <mename>specific</mename>
+        <mevalue>1653</mevalue>
+      </maskelement>
+    </mask>
+    <uei>uei.opennms.org/traps/MIB-PNMSj-iPASOLINK-100-200-ETH-RING-MIB/statusTrap_asEtherRingPortState</uei>
+    <event-label>MIB-PNMSj-iPASOLINK-100-200-ETH-RING-MIB defined trap event: statusTrap_asEtherRingPortState</event-label>
+    <descr>
+&lt;p&gt;Port Status.
+				&apos;initBlocking&apos; is the initial value. At this point the no R-APS
+				frame is received. When the port is configured as RPL port and
+				the port is closed, the value will show &apos;rplBlocking&apos;. The port
+				forwards the frames, the value will show &apos;forwarding&apos;.
+				If the signal failure is detected on the port and the port is
+				closed, the object will return the value &apos;signalFail&apos;. And then
+				the condition of Signal Failure is cleared but the port is still
+				closed, the object will return the value &apos;recovery&apos;.
+				&apos;waitToRestore&apos; shows the RPL port is still closed till expiring
+				the wait-to-restore timer.
+				&apos;forcedSwitch&apos; and &apos;manualSwitch&apos; represents the port is
+				controlled by the maintenance control. &apos;waitToBlock&apos; is waiting
+				the RPL Port open after clearing maintenance control.&lt;/p&gt;&lt;table&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapSequenceNumber&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#1]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapDate&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#2]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapTime&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#3]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisPasoIP&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#4]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisPasoName&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#5]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisChnPrtNo&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#6]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisOppIPAddress1&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#7]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisOppNEName1&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#8]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText3&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#9]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText4&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#10]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText5&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#11]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+	</descr>
+    <logmsg dest="logndisplay">&lt;p&gt;
+    statusTrap_asEtherRingPortState trap received
+    mnisTrapSequenceNumber=%parm[#1]%
+    mnisTrapDate=%parm[#2]%
+    mnisTrapTime=%parm[#3]%
+    mnisPasoIP=%parm[#4]%
+    mnisPasoName=%parm[#5]%
+    mnisChnPrtNo=%parm[#6]%
+    mnisOppIPAddress1=%parm[#7]%
+    mnisOppNEName1=%parm[#8]%
+    eventAdditionalText3=%parm[#9]%
+    eventAdditionalText4=%parm[#10]%
+    eventAdditionalText5=%parm[#11]%
+	</logmsg>
+    <severity>Indeterminate</severity>
+
+  </event>
+  <event>
+    <mask>
+      <maskelement>
+        <mename>id</mename>
+        <mevalue>.1.3.6.1.4.1.119.2.3.69.203.502</mevalue>
+      </maskelement>
+      <maskelement>
+        <mename>generic</mename>
+        <mevalue>6</mevalue>
+      </maskelement>
+      <maskelement>
+        <mename>specific</mename>
+        <mevalue>1654</mevalue>
+      </maskelement>
+    </mask>
+    <uei>uei.opennms.org/traps/MIB-PNMSj-iPASOLINK-100-200-ETH-RING-MIB/statusTrap_asEtherRingPortLoopDetect</uei>
+    <event-label>MIB-PNMSj-iPASOLINK-100-200-ETH-RING-MIB defined trap event: statusTrap_asEtherRingPortLoopDetect</event-label>
+    <descr>
+&lt;p&gt;The loop detection status.
+				The object will show the value &apos;detected&apos;, when the Loop
+				connection is detected.&lt;/p&gt;&lt;table&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapSequenceNumber&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#1]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapDate&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#2]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapTime&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#3]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisPasoIP&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#4]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisPasoName&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#5]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisChnPrtNo&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#6]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisOppIPAddress1&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#7]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisOppNEName1&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#8]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText3&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#9]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText4&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#10]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText5&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#11]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+	</descr>
+    <logmsg dest="logndisplay">&lt;p&gt;
+    statusTrap_asEtherRingPortLoopDetect trap received
+    mnisTrapSequenceNumber=%parm[#1]%
+    mnisTrapDate=%parm[#2]%
+    mnisTrapTime=%parm[#3]%
+    mnisPasoIP=%parm[#4]%
+    mnisPasoName=%parm[#5]%
+    mnisChnPrtNo=%parm[#6]%
+    mnisOppIPAddress1=%parm[#7]%
+    mnisOppNEName1=%parm[#8]%
+    eventAdditionalText3=%parm[#9]%
+    eventAdditionalText4=%parm[#10]%
+    eventAdditionalText5=%parm[#11]%
+	</logmsg>
+    <severity>Indeterminate</severity>
+
+  </event>
+  <event>
+    <mask>
+      <maskelement>
+        <mename>id</mename>
+        <mevalue>.1.3.6.1.4.1.119.2.3.69.203.502</mevalue>
+      </maskelement>
+      <maskelement>
+        <mename>generic</mename>
+        <mevalue>6</mevalue>
+      </maskelement>
+      <maskelement>
+        <mename>specific</mename>
+        <mevalue>1655</mevalue>
+      </maskelement>
+    </mask>
+    <uei>uei.opennms.org/traps/MIB-PNMSj-iPASOLINK-100-200-ETH-RING-MIB/statusTrap_asEtherRingPortProtoTimeout</uei>
+    <event-label>MIB-PNMSj-iPASOLINK-100-200-ETH-RING-MIB defined trap event: statusTrap_asEtherRingPortProtoTimeout</event-label>
+    <descr>
+&lt;p&gt;The status of Protocol Timeout.
+				If the R-APS frame is not received in a specified time, the
+				object will show the value &apos;detected&apos;.&lt;/p&gt;&lt;table&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapSequenceNumber&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#1]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapDate&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#2]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapTime&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#3]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisPasoIP&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#4]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisPasoName&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#5]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisChnPrtNo&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#6]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisOppIPAddress1&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#7]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisOppNEName1&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#8]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText3&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#9]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText4&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#10]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText5&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#11]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+	</descr>
+    <logmsg dest="logndisplay">&lt;p&gt;
+    statusTrap_asEtherRingPortProtoTimeout trap received
+    mnisTrapSequenceNumber=%parm[#1]%
+    mnisTrapDate=%parm[#2]%
+    mnisTrapTime=%parm[#3]%
+    mnisPasoIP=%parm[#4]%
+    mnisPasoName=%parm[#5]%
+    mnisChnPrtNo=%parm[#6]%
+    mnisOppIPAddress1=%parm[#7]%
+    mnisOppNEName1=%parm[#8]%
+    eventAdditionalText3=%parm[#9]%
+    eventAdditionalText4=%parm[#10]%
+    eventAdditionalText5=%parm[#11]%
+	</logmsg>
+    <severity>Indeterminate</severity>
+
+  </event>
+</events>

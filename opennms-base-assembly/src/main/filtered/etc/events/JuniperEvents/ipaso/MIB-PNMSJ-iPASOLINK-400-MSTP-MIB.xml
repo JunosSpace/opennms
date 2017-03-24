@@ -1,0 +1,1948 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<events xmlns="http://xmlns.opennms.org/xsd/eventconf">
+  <event>
+    <mask>
+      <maskelement>
+        <mename>id</mename>
+        <mevalue>.1.3.6.1.4.1.119.2.3.69.203.503</mevalue>
+      </maskelement>
+      <maskelement>
+        <mename>generic</mename>
+        <mevalue>6</mevalue>
+      </maskelement>
+      <maskelement>
+        <mename>specific</mename>
+        <mevalue>1750</mevalue>
+      </maskelement>
+    </mask>
+    <uei>uei.opennms.org/traps/MIB-PNMSj-iPASOLINK-400-MSTP-MIB/statusTrap_asMstpBridgeCistRegionalRoot</uei>
+    <event-label>MIB-PNMSj-iPASOLINK-400-MSTP-MIB defined trap event: statusTrap_asMstpBridgeCistRegionalRoot</event-label>
+    <descr>
+&lt;p&gt;In an MSTP Bridge, the CIST Regional Root Identifier parameter,
+             i.e. the Bridge Identifier of the current CIST Regional Root.&lt;/p&gt;&lt;table&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapSequenceNumber&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#1]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapDate&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#2]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapTime&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#3]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisPasoIP&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#4]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisPasoName&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#5]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisChnPrtNo&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#6]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisOppIPAddress1&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#7]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisOppNEName1&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#8]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText3&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#9]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText4&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#10]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText5&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#11]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+	</descr>
+    <logmsg dest="logndisplay">&lt;p&gt;
+    statusTrap_asMstpBridgeCistRegionalRoot trap received
+    mnisTrapSequenceNumber=%parm[#1]%
+    mnisTrapDate=%parm[#2]%
+    mnisTrapTime=%parm[#3]%
+    mnisPasoIP=%parm[#4]%
+    mnisPasoName=%parm[#5]%
+    mnisChnPrtNo=%parm[#6]%
+    mnisOppIPAddress1=%parm[#7]%
+    mnisOppNEName1=%parm[#8]%
+    eventAdditionalText3=%parm[#9]%
+    eventAdditionalText4=%parm[#10]%
+    eventAdditionalText5=%parm[#11]%
+	</logmsg>
+    <severity>Indeterminate</severity>
+
+  </event>
+  <event>
+    <mask>
+      <maskelement>
+        <mename>id</mename>
+        <mevalue>.1.3.6.1.4.1.119.2.3.69.203.503</mevalue>
+      </maskelement>
+      <maskelement>
+        <mename>generic</mename>
+        <mevalue>6</mevalue>
+      </maskelement>
+      <maskelement>
+        <mename>specific</mename>
+        <mevalue>1751</mevalue>
+      </maskelement>
+    </mask>
+    <uei>uei.opennms.org/traps/MIB-PNMSj-iPASOLINK-400-MSTP-MIB/statusTrap_asMstpBridgeCistTopChanges</uei>
+    <event-label>MIB-PNMSj-iPASOLINK-400-MSTP-MIB defined trap event: statusTrap_asMstpBridgeCistTopChanges</event-label>
+    <descr>
+&lt;p&gt;MSTP Topology Changed Status. The total number of topology
+             chagnes detected by this bridge since the equipment was last
+             initialized.&lt;/p&gt;&lt;table&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapSequenceNumber&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#1]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapDate&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#2]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapTime&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#3]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisPasoIP&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#4]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisPasoName&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#5]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisChnPrtNo&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#6]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisOppIPAddress1&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#7]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisOppNEName1&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#8]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText3&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#9]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText4&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#10]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText5&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#11]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+	</descr>
+    <logmsg dest="logndisplay">&lt;p&gt;
+    statusTrap_asMstpBridgeCistTopChanges trap received
+    mnisTrapSequenceNumber=%parm[#1]%
+    mnisTrapDate=%parm[#2]%
+    mnisTrapTime=%parm[#3]%
+    mnisPasoIP=%parm[#4]%
+    mnisPasoName=%parm[#5]%
+    mnisChnPrtNo=%parm[#6]%
+    mnisOppIPAddress1=%parm[#7]%
+    mnisOppNEName1=%parm[#8]%
+    eventAdditionalText3=%parm[#9]%
+    eventAdditionalText4=%parm[#10]%
+    eventAdditionalText5=%parm[#11]%
+	</logmsg>
+    <severity>Indeterminate</severity>
+
+  </event>
+  <event>
+    <mask>
+      <maskelement>
+        <mename>id</mename>
+        <mevalue>.1.3.6.1.4.1.119.2.3.69.203.503</mevalue>
+      </maskelement>
+      <maskelement>
+        <mename>generic</mename>
+        <mevalue>6</mevalue>
+      </maskelement>
+      <maskelement>
+        <mename>specific</mename>
+        <mevalue>1752</mevalue>
+      </maskelement>
+    </mask>
+    <uei>uei.opennms.org/traps/MIB-PNMSj-iPASOLINK-400-MSTP-MIB/statusTrap_asMstpBridgeCistRoot</uei>
+    <event-label>MIB-PNMSj-iPASOLINK-400-MSTP-MIB defined trap event: statusTrap_asMstpBridgeCistRoot</event-label>
+    <descr>
+&lt;p&gt;&lt;/p&gt;&lt;table&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapSequenceNumber&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#1]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapDate&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#2]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapTime&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#3]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisPasoIP&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#4]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisPasoName&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#5]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisChnPrtNo&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#6]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisOppIPAddress1&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#7]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisOppNEName1&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#8]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText3&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#9]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText4&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#10]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText5&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#11]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+	</descr>
+    <logmsg dest="logndisplay">&lt;p&gt;
+    statusTrap_asMstpBridgeCistRoot trap received
+    mnisTrapSequenceNumber=%parm[#1]%
+    mnisTrapDate=%parm[#2]%
+    mnisTrapTime=%parm[#3]%
+    mnisPasoIP=%parm[#4]%
+    mnisPasoName=%parm[#5]%
+    mnisChnPrtNo=%parm[#6]%
+    mnisOppIPAddress1=%parm[#7]%
+    mnisOppNEName1=%parm[#8]%
+    eventAdditionalText3=%parm[#9]%
+    eventAdditionalText4=%parm[#10]%
+    eventAdditionalText5=%parm[#11]%
+	</logmsg>
+    <severity>Indeterminate</severity>
+
+  </event>
+  <event>
+    <mask>
+      <maskelement>
+        <mename>id</mename>
+        <mevalue>.1.3.6.1.4.1.119.2.3.69.203.503</mevalue>
+      </maskelement>
+      <maskelement>
+        <mename>generic</mename>
+        <mevalue>6</mevalue>
+      </maskelement>
+      <maskelement>
+        <mename>specific</mename>
+        <mevalue>1753</mevalue>
+      </maskelement>
+    </mask>
+    <uei>uei.opennms.org/traps/MIB-PNMSj-iPASOLINK-400-MSTP-MIB/statusTrap_asMstpBridgeMstRegionalRoot</uei>
+    <event-label>MIB-PNMSj-iPASOLINK-400-MSTP-MIB defined trap event: statusTrap_asMstpBridgeMstRegionalRoot</event-label>
+    <descr>
+&lt;p&gt;In an MSTP Bridge, the Designated Root parameter value, i.e. the
+             Bridge Identifier of the Root Bridge for the MSTI.&lt;/p&gt;&lt;table&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapSequenceNumber&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#1]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapDate&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#2]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapTime&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#3]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisPasoIP&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#4]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisPasoName&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#5]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisChnPrtNo&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#6]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisOppIPAddress1&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#7]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisOppNEName1&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#8]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText3&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#9]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText4&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#10]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText5&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#11]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+	</descr>
+    <logmsg dest="logndisplay">&lt;p&gt;
+    statusTrap_asMstpBridgeMstRegionalRoot trap received
+    mnisTrapSequenceNumber=%parm[#1]%
+    mnisTrapDate=%parm[#2]%
+    mnisTrapTime=%parm[#3]%
+    mnisPasoIP=%parm[#4]%
+    mnisPasoName=%parm[#5]%
+    mnisChnPrtNo=%parm[#6]%
+    mnisOppIPAddress1=%parm[#7]%
+    mnisOppNEName1=%parm[#8]%
+    eventAdditionalText3=%parm[#9]%
+    eventAdditionalText4=%parm[#10]%
+    eventAdditionalText5=%parm[#11]%
+	</logmsg>
+    <severity>Indeterminate</severity>
+
+  </event>
+  <event>
+    <mask>
+      <maskelement>
+        <mename>id</mename>
+        <mevalue>.1.3.6.1.4.1.119.2.3.69.203.503</mevalue>
+      </maskelement>
+      <maskelement>
+        <mename>generic</mename>
+        <mevalue>6</mevalue>
+      </maskelement>
+      <maskelement>
+        <mename>specific</mename>
+        <mevalue>1754</mevalue>
+      </maskelement>
+    </mask>
+    <uei>uei.opennms.org/traps/MIB-PNMSj-iPASOLINK-400-MSTP-MIB/statusTrap_asMstpBridgeMstTopChanges</uei>
+    <event-label>MIB-PNMSj-iPASOLINK-400-MSTP-MIB defined trap event: statusTrap_asMstpBridgeMstTopChanges</event-label>
+    <descr>
+&lt;p&gt;In an MSTP Bridge, count of the times tcWhile has been
+             non-zero for any Port for the MSTI since the Bridge was powered
+             on or initialized.&lt;/p&gt;&lt;table&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapSequenceNumber&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#1]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapDate&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#2]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapTime&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#3]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisPasoIP&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#4]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisPasoName&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#5]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisChnPrtNo&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#6]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisOppIPAddress1&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#7]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisOppNEName1&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#8]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText3&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#9]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText4&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#10]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText5&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#11]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+	</descr>
+    <logmsg dest="logndisplay">&lt;p&gt;
+    statusTrap_asMstpBridgeMstTopChanges trap received
+    mnisTrapSequenceNumber=%parm[#1]%
+    mnisTrapDate=%parm[#2]%
+    mnisTrapTime=%parm[#3]%
+    mnisPasoIP=%parm[#4]%
+    mnisPasoName=%parm[#5]%
+    mnisChnPrtNo=%parm[#6]%
+    mnisOppIPAddress1=%parm[#7]%
+    mnisOppNEName1=%parm[#8]%
+    eventAdditionalText3=%parm[#9]%
+    eventAdditionalText4=%parm[#10]%
+    eventAdditionalText5=%parm[#11]%
+	</logmsg>
+    <severity>Indeterminate</severity>
+
+  </event>
+  <event>
+    <mask>
+      <maskelement>
+        <mename>id</mename>
+        <mevalue>.1.3.6.1.4.1.119.2.3.69.203.503</mevalue>
+      </maskelement>
+      <maskelement>
+        <mename>generic</mename>
+        <mevalue>6</mevalue>
+      </maskelement>
+      <maskelement>
+        <mename>specific</mename>
+        <mevalue>1755</mevalue>
+      </maskelement>
+    </mask>
+    <uei>uei.opennms.org/traps/MIB-PNMSj-iPASOLINK-400-MSTP-MIB/statusTrap_asMstpPortCistRole</uei>
+    <event-label>MIB-PNMSj-iPASOLINK-400-MSTP-MIB defined trap event: statusTrap_asMstpPortCistRole</event-label>
+    <descr>
+&lt;p&gt;The current Port Role for the Port (i.e., Root, Alternate,
+             Designated, or Backup), for the CIST.&lt;/p&gt;&lt;table&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapSequenceNumber&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#1]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapDate&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#2]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapTime&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#3]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisPasoIP&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#4]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisPasoName&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#5]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisChnPrtNo&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#6]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisOppIPAddress1&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#7]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisOppNEName1&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#8]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText3&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#9]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText4&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#10]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText5&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#11]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+	</descr>
+    <logmsg dest="logndisplay">&lt;p&gt;
+    statusTrap_asMstpPortCistRole trap received
+    mnisTrapSequenceNumber=%parm[#1]%
+    mnisTrapDate=%parm[#2]%
+    mnisTrapTime=%parm[#3]%
+    mnisPasoIP=%parm[#4]%
+    mnisPasoName=%parm[#5]%
+    mnisChnPrtNo=%parm[#6]%
+    mnisOppIPAddress1=%parm[#7]%
+    mnisOppNEName1=%parm[#8]%
+    eventAdditionalText3=%parm[#9]%
+    eventAdditionalText4=%parm[#10]%
+    eventAdditionalText5=%parm[#11]%
+	</logmsg>
+    <severity>Indeterminate</severity>
+
+  </event>
+  <event>
+    <mask>
+      <maskelement>
+        <mename>id</mename>
+        <mevalue>.1.3.6.1.4.1.119.2.3.69.203.503</mevalue>
+      </maskelement>
+      <maskelement>
+        <mename>generic</mename>
+        <mevalue>6</mevalue>
+      </maskelement>
+      <maskelement>
+        <mename>specific</mename>
+        <mevalue>1756</mevalue>
+      </maskelement>
+    </mask>
+    <uei>uei.opennms.org/traps/MIB-PNMSj-iPASOLINK-400-MSTP-MIB/statusTrap_asMstpPortCistState</uei>
+    <event-label>MIB-PNMSj-iPASOLINK-400-MSTP-MIB defined trap event: statusTrap_asMstpPortCistState</event-label>
+    <descr>
+&lt;p&gt;In an MSTP Bridge, the current state of the Port (i.e.,
+             Disabled, Listening, Learning, Forwarding, or Blocking), for the
+             MSTI.&lt;/p&gt;&lt;table&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapSequenceNumber&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#1]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapDate&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#2]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapTime&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#3]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisPasoIP&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#4]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisPasoName&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#5]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisChnPrtNo&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#6]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisOppIPAddress1&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#7]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisOppNEName1&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#8]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText3&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#9]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText4&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#10]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText5&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#11]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+	</descr>
+    <logmsg dest="logndisplay">&lt;p&gt;
+    statusTrap_asMstpPortCistState trap received
+    mnisTrapSequenceNumber=%parm[#1]%
+    mnisTrapDate=%parm[#2]%
+    mnisTrapTime=%parm[#3]%
+    mnisPasoIP=%parm[#4]%
+    mnisPasoName=%parm[#5]%
+    mnisChnPrtNo=%parm[#6]%
+    mnisOppIPAddress1=%parm[#7]%
+    mnisOppNEName1=%parm[#8]%
+    eventAdditionalText3=%parm[#9]%
+    eventAdditionalText4=%parm[#10]%
+    eventAdditionalText5=%parm[#11]%
+	</logmsg>
+    <severity>Indeterminate</severity>
+
+  </event>
+  <event>
+    <mask>
+      <maskelement>
+        <mename>id</mename>
+        <mevalue>.1.3.6.1.4.1.119.2.3.69.203.503</mevalue>
+      </maskelement>
+      <maskelement>
+        <mename>generic</mename>
+        <mevalue>6</mevalue>
+      </maskelement>
+      <maskelement>
+        <mename>specific</mename>
+        <mevalue>1757</mevalue>
+      </maskelement>
+    </mask>
+    <uei>uei.opennms.org/traps/MIB-PNMSj-iPASOLINK-400-MSTP-MIB/statusTrap_asMstpPortCistRegionalRoot</uei>
+    <event-label>MIB-PNMSj-iPASOLINK-400-MSTP-MIB defined trap event: statusTrap_asMstpPortCistRegionalRoot</event-label>
+    <descr>
+&lt;p&gt;In an MSTP Bridge, the CIST Regional Root Identifier, i.e. the
+             Bridge Identifier of the current CIST Regional Root, for the
+             CIST.&lt;/p&gt;&lt;table&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapSequenceNumber&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#1]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapDate&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#2]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapTime&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#3]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisPasoIP&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#4]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisPasoName&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#5]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisChnPrtNo&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#6]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisOppIPAddress1&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#7]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisOppNEName1&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#8]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText3&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#9]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText4&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#10]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText5&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#11]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+	</descr>
+    <logmsg dest="logndisplay">&lt;p&gt;
+    statusTrap_asMstpPortCistRegionalRoot trap received
+    mnisTrapSequenceNumber=%parm[#1]%
+    mnisTrapDate=%parm[#2]%
+    mnisTrapTime=%parm[#3]%
+    mnisPasoIP=%parm[#4]%
+    mnisPasoName=%parm[#5]%
+    mnisChnPrtNo=%parm[#6]%
+    mnisOppIPAddress1=%parm[#7]%
+    mnisOppNEName1=%parm[#8]%
+    eventAdditionalText3=%parm[#9]%
+    eventAdditionalText4=%parm[#10]%
+    eventAdditionalText5=%parm[#11]%
+	</logmsg>
+    <severity>Indeterminate</severity>
+
+  </event>
+  <event>
+    <mask>
+      <maskelement>
+        <mename>id</mename>
+        <mevalue>.1.3.6.1.4.1.119.2.3.69.203.503</mevalue>
+      </maskelement>
+      <maskelement>
+        <mename>generic</mename>
+        <mevalue>6</mevalue>
+      </maskelement>
+      <maskelement>
+        <mename>specific</mename>
+        <mevalue>1758</mevalue>
+      </maskelement>
+    </mask>
+    <uei>uei.opennms.org/traps/MIB-PNMSj-iPASOLINK-400-MSTP-MIB/statusTrap_asMstpPortCistProtoVersion</uei>
+    <event-label>MIB-PNMSj-iPASOLINK-400-MSTP-MIB defined trap event: statusTrap_asMstpPortCistProtoVersion</event-label>
+    <descr>
+&lt;p&gt;In an MSTP Bridge, the current version of xSTP Protocol for the
+             Port.&lt;/p&gt;&lt;table&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapSequenceNumber&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#1]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapDate&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#2]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapTime&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#3]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisPasoIP&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#4]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisPasoName&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#5]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisChnPrtNo&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#6]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisOppIPAddress1&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#7]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisOppNEName1&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#8]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText3&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#9]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText4&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#10]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText5&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#11]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+	</descr>
+    <logmsg dest="logndisplay">&lt;p&gt;
+    statusTrap_asMstpPortCistProtoVersion trap received
+    mnisTrapSequenceNumber=%parm[#1]%
+    mnisTrapDate=%parm[#2]%
+    mnisTrapTime=%parm[#3]%
+    mnisPasoIP=%parm[#4]%
+    mnisPasoName=%parm[#5]%
+    mnisChnPrtNo=%parm[#6]%
+    mnisOppIPAddress1=%parm[#7]%
+    mnisOppNEName1=%parm[#8]%
+    eventAdditionalText3=%parm[#9]%
+    eventAdditionalText4=%parm[#10]%
+    eventAdditionalText5=%parm[#11]%
+	</logmsg>
+    <severity>Indeterminate</severity>
+
+  </event>
+  <event>
+    <mask>
+      <maskelement>
+        <mename>id</mename>
+        <mevalue>.1.3.6.1.4.1.119.2.3.69.203.503</mevalue>
+      </maskelement>
+      <maskelement>
+        <mename>generic</mename>
+        <mevalue>6</mevalue>
+      </maskelement>
+      <maskelement>
+        <mename>specific</mename>
+        <mevalue>1759</mevalue>
+      </maskelement>
+    </mask>
+    <uei>uei.opennms.org/traps/MIB-PNMSj-iPASOLINK-400-MSTP-MIB/statusTrap_asMstpPortCistPathCost</uei>
+    <event-label>MIB-PNMSj-iPASOLINK-400-MSTP-MIB defined trap event: statusTrap_asMstpPortCistPathCost</event-label>
+    <descr>
+&lt;p&gt;In an MSTP Bridge, the CIST Path Cost parameter, i.e. the
+             CISTpath cost from the transmitting Bridge to the CIST Regional
+             Root. The sum (about 20 possible out of the given range) of
+             multiple port path costs. Also, if the &apos;transmitting Bridge&apos; is
+             the &apos;CIST Regional Root&apos;, then this value could be zero.&lt;/p&gt;&lt;table&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapSequenceNumber&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#1]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapDate&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#2]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapTime&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#3]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisPasoIP&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#4]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisPasoName&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#5]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisChnPrtNo&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#6]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisOppIPAddress1&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#7]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisOppNEName1&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#8]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText3&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#9]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText4&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#10]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText5&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#11]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+	</descr>
+    <logmsg dest="logndisplay">&lt;p&gt;
+    statusTrap_asMstpPortCistPathCost trap received
+    mnisTrapSequenceNumber=%parm[#1]%
+    mnisTrapDate=%parm[#2]%
+    mnisTrapTime=%parm[#3]%
+    mnisPasoIP=%parm[#4]%
+    mnisPasoName=%parm[#5]%
+    mnisChnPrtNo=%parm[#6]%
+    mnisOppIPAddress1=%parm[#7]%
+    mnisOppNEName1=%parm[#8]%
+    eventAdditionalText3=%parm[#9]%
+    eventAdditionalText4=%parm[#10]%
+    eventAdditionalText5=%parm[#11]%
+	</logmsg>
+    <severity>Indeterminate</severity>
+
+  </event>
+  <event>
+    <mask>
+      <maskelement>
+        <mename>id</mename>
+        <mevalue>.1.3.6.1.4.1.119.2.3.69.203.503</mevalue>
+      </maskelement>
+      <maskelement>
+        <mename>generic</mename>
+        <mevalue>6</mevalue>
+      </maskelement>
+      <maskelement>
+        <mename>specific</mename>
+        <mevalue>1760</mevalue>
+      </maskelement>
+    </mask>
+    <uei>uei.opennms.org/traps/MIB-PNMSj-iPASOLINK-400-MSTP-MIB/statusTrap_asMstpPortCistInvalidBpdu</uei>
+    <event-label>MIB-PNMSj-iPASOLINK-400-MSTP-MIB defined trap event: statusTrap_asMstpPortCistInvalidBpdu</event-label>
+    <descr>
+&lt;p&gt;&lt;/p&gt;&lt;table&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapSequenceNumber&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#1]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapDate&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#2]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapTime&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#3]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisPasoIP&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#4]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisPasoName&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#5]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisChnPrtNo&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#6]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisOppIPAddress1&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#7]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisOppNEName1&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#8]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText3&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#9]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText4&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#10]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText5&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#11]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+	</descr>
+    <logmsg dest="logndisplay">&lt;p&gt;
+    statusTrap_asMstpPortCistInvalidBpdu trap received
+    mnisTrapSequenceNumber=%parm[#1]%
+    mnisTrapDate=%parm[#2]%
+    mnisTrapTime=%parm[#3]%
+    mnisPasoIP=%parm[#4]%
+    mnisPasoName=%parm[#5]%
+    mnisChnPrtNo=%parm[#6]%
+    mnisOppIPAddress1=%parm[#7]%
+    mnisOppNEName1=%parm[#8]%
+    eventAdditionalText3=%parm[#9]%
+    eventAdditionalText4=%parm[#10]%
+    eventAdditionalText5=%parm[#11]%
+	</logmsg>
+    <severity>Indeterminate</severity>
+
+  </event>
+  <event>
+    <mask>
+      <maskelement>
+        <mename>id</mename>
+        <mevalue>.1.3.6.1.4.1.119.2.3.69.203.503</mevalue>
+      </maskelement>
+      <maskelement>
+        <mename>generic</mename>
+        <mevalue>6</mevalue>
+      </maskelement>
+      <maskelement>
+        <mename>specific</mename>
+        <mevalue>1761</mevalue>
+      </maskelement>
+    </mask>
+    <uei>uei.opennms.org/traps/MIB-PNMSj-iPASOLINK-400-MSTP-MIB/statusTrap_asMstpPortCistDesignatedPathCost</uei>
+    <event-label>MIB-PNMSj-iPASOLINK-400-MSTP-MIB defined trap event: statusTrap_asMstpPortCistDesignatedPathCost</event-label>
+    <descr>
+&lt;p&gt;In an MSTP Bridge, the CIST Path Cost parameter, i.e. the CIST
+             path cost from the transmitting Bridge to the CIST Regional Root.
+             The sum (about 20 possible out of the given range) of multiple
+             port path costs. Also, if the &apos;transmitting Bridge&apos; is the &apos;CIST
+             Regional Root&apos;, then this value could be zero.&lt;/p&gt;&lt;table&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapSequenceNumber&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#1]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapDate&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#2]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapTime&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#3]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisPasoIP&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#4]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisPasoName&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#5]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisChnPrtNo&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#6]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisOppIPAddress1&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#7]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisOppNEName1&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#8]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText3&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#9]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText4&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#10]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText5&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#11]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+	</descr>
+    <logmsg dest="logndisplay">&lt;p&gt;
+    statusTrap_asMstpPortCistDesignatedPathCost trap received
+    mnisTrapSequenceNumber=%parm[#1]%
+    mnisTrapDate=%parm[#2]%
+    mnisTrapTime=%parm[#3]%
+    mnisPasoIP=%parm[#4]%
+    mnisPasoName=%parm[#5]%
+    mnisChnPrtNo=%parm[#6]%
+    mnisOppIPAddress1=%parm[#7]%
+    mnisOppNEName1=%parm[#8]%
+    eventAdditionalText3=%parm[#9]%
+    eventAdditionalText4=%parm[#10]%
+    eventAdditionalText5=%parm[#11]%
+	</logmsg>
+    <severity>Indeterminate</severity>
+
+  </event>
+  <event>
+    <mask>
+      <maskelement>
+        <mename>id</mename>
+        <mevalue>.1.3.6.1.4.1.119.2.3.69.203.503</mevalue>
+      </maskelement>
+      <maskelement>
+        <mename>generic</mename>
+        <mevalue>6</mevalue>
+      </maskelement>
+      <maskelement>
+        <mename>specific</mename>
+        <mevalue>1762</mevalue>
+      </maskelement>
+    </mask>
+    <uei>uei.opennms.org/traps/MIB-PNMSj-iPASOLINK-400-MSTP-MIB/statusTrap_asMstpPortCistDesignatedBridge</uei>
+    <event-label>MIB-PNMSj-iPASOLINK-400-MSTP-MIB defined trap event: statusTrap_asMstpPortCistDesignatedBridge</event-label>
+    <descr>
+&lt;p&gt;In an MSTP Bridge, the Designated Root parameter value, i.e. the
+             Bridge Identifier of the Root Bridge for the MSTI.&lt;/p&gt;&lt;table&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapSequenceNumber&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#1]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapDate&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#2]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapTime&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#3]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisPasoIP&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#4]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisPasoName&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#5]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisChnPrtNo&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#6]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisOppIPAddress1&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#7]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisOppNEName1&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#8]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText3&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#9]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText4&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#10]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText5&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#11]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+	</descr>
+    <logmsg dest="logndisplay">&lt;p&gt;
+    statusTrap_asMstpPortCistDesignatedBridge trap received
+    mnisTrapSequenceNumber=%parm[#1]%
+    mnisTrapDate=%parm[#2]%
+    mnisTrapTime=%parm[#3]%
+    mnisPasoIP=%parm[#4]%
+    mnisPasoName=%parm[#5]%
+    mnisChnPrtNo=%parm[#6]%
+    mnisOppIPAddress1=%parm[#7]%
+    mnisOppNEName1=%parm[#8]%
+    eventAdditionalText3=%parm[#9]%
+    eventAdditionalText4=%parm[#10]%
+    eventAdditionalText5=%parm[#11]%
+	</logmsg>
+    <severity>Indeterminate</severity>
+
+  </event>
+  <event>
+    <mask>
+      <maskelement>
+        <mename>id</mename>
+        <mevalue>.1.3.6.1.4.1.119.2.3.69.203.503</mevalue>
+      </maskelement>
+      <maskelement>
+        <mename>generic</mename>
+        <mevalue>6</mevalue>
+      </maskelement>
+      <maskelement>
+        <mename>specific</mename>
+        <mevalue>1763</mevalue>
+      </maskelement>
+    </mask>
+    <uei>uei.opennms.org/traps/MIB-PNMSj-iPASOLINK-400-MSTP-MIB/statusTrap_asMstpPortCistDesignatedPort</uei>
+    <event-label>MIB-PNMSj-iPASOLINK-400-MSTP-MIB defined trap event: statusTrap_asMstpPortCistDesignatedPort</event-label>
+    <descr>
+&lt;p&gt;The CIST Regional Root Identifier component of the Port&apos;s port
+             priority vector for the CIST.&lt;/p&gt;&lt;table&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapSequenceNumber&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#1]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapDate&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#2]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapTime&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#3]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisPasoIP&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#4]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisPasoName&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#5]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisChnPrtNo&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#6]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisOppIPAddress1&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#7]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisOppNEName1&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#8]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText3&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#9]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText4&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#10]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText5&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#11]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+	</descr>
+    <logmsg dest="logndisplay">&lt;p&gt;
+    statusTrap_asMstpPortCistDesignatedPort trap received
+    mnisTrapSequenceNumber=%parm[#1]%
+    mnisTrapDate=%parm[#2]%
+    mnisTrapTime=%parm[#3]%
+    mnisPasoIP=%parm[#4]%
+    mnisPasoName=%parm[#5]%
+    mnisChnPrtNo=%parm[#6]%
+    mnisOppIPAddress1=%parm[#7]%
+    mnisOppNEName1=%parm[#8]%
+    eventAdditionalText3=%parm[#9]%
+    eventAdditionalText4=%parm[#10]%
+    eventAdditionalText5=%parm[#11]%
+	</logmsg>
+    <severity>Indeterminate</severity>
+
+  </event>
+  <event>
+    <mask>
+      <maskelement>
+        <mename>id</mename>
+        <mevalue>.1.3.6.1.4.1.119.2.3.69.203.503</mevalue>
+      </maskelement>
+      <maskelement>
+        <mename>generic</mename>
+        <mevalue>6</mevalue>
+      </maskelement>
+      <maskelement>
+        <mename>specific</mename>
+        <mevalue>1764</mevalue>
+      </maskelement>
+    </mask>
+    <uei>uei.opennms.org/traps/MIB-PNMSj-iPASOLINK-400-MSTP-MIB/statusTrap_asMstpPortCistForwardTransitions</uei>
+    <event-label>MIB-PNMSj-iPASOLINK-400-MSTP-MIB defined trap event: statusTrap_asMstpPortCistForwardTransitions</event-label>
+    <descr>
+&lt;p&gt;The number of times this port has transitioned from the Learning
+             state to the Forwarding state.&lt;/p&gt;&lt;table&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapSequenceNumber&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#1]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapDate&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#2]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapTime&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#3]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisPasoIP&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#4]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisPasoName&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#5]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisChnPrtNo&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#6]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisOppIPAddress1&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#7]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisOppNEName1&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#8]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText3&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#9]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText4&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#10]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText5&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#11]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+	</descr>
+    <logmsg dest="logndisplay">&lt;p&gt;
+    statusTrap_asMstpPortCistForwardTransitions trap received
+    mnisTrapSequenceNumber=%parm[#1]%
+    mnisTrapDate=%parm[#2]%
+    mnisTrapTime=%parm[#3]%
+    mnisPasoIP=%parm[#4]%
+    mnisPasoName=%parm[#5]%
+    mnisChnPrtNo=%parm[#6]%
+    mnisOppIPAddress1=%parm[#7]%
+    mnisOppNEName1=%parm[#8]%
+    eventAdditionalText3=%parm[#9]%
+    eventAdditionalText4=%parm[#10]%
+    eventAdditionalText5=%parm[#11]%
+	</logmsg>
+    <severity>Indeterminate</severity>
+
+  </event>
+  <event>
+    <mask>
+      <maskelement>
+        <mename>id</mename>
+        <mevalue>.1.3.6.1.4.1.119.2.3.69.203.503</mevalue>
+      </maskelement>
+      <maskelement>
+        <mename>generic</mename>
+        <mevalue>6</mevalue>
+      </maskelement>
+      <maskelement>
+        <mename>specific</mename>
+        <mevalue>1765</mevalue>
+      </maskelement>
+    </mask>
+    <uei>uei.opennms.org/traps/MIB-PNMSj-iPASOLINK-400-MSTP-MIB/statusTrap_asMstpPortCistOperEdgePort</uei>
+    <event-label>MIB-PNMSj-iPASOLINK-400-MSTP-MIB defined trap event: statusTrap_asMstpPortCistOperEdgePort</event-label>
+    <descr>
+&lt;p&gt;The operational value of the Edge Port parameter.
+             If the port whose &apos;provMstpPortCistEdgePort&apos; is &apos;enable&apos; receives
+             the BPDU, the object will be changed to alarmOn.
+    
+             When the &apos;provMstpPortCistEdgePort&apos; is &apos;disable&apos;, the object
+             always shows &apos;alarmOff&apos;.&lt;/p&gt;&lt;table&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapSequenceNumber&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#1]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapDate&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#2]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapTime&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#3]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisPasoIP&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#4]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisPasoName&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#5]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisChnPrtNo&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#6]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisOppIPAddress1&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#7]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisOppNEName1&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#8]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText3&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#9]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText4&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#10]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText5&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#11]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+	</descr>
+    <logmsg dest="logndisplay">&lt;p&gt;
+    statusTrap_asMstpPortCistOperEdgePort trap received
+    mnisTrapSequenceNumber=%parm[#1]%
+    mnisTrapDate=%parm[#2]%
+    mnisTrapTime=%parm[#3]%
+    mnisPasoIP=%parm[#4]%
+    mnisPasoName=%parm[#5]%
+    mnisChnPrtNo=%parm[#6]%
+    mnisOppIPAddress1=%parm[#7]%
+    mnisOppNEName1=%parm[#8]%
+    eventAdditionalText3=%parm[#9]%
+    eventAdditionalText4=%parm[#10]%
+    eventAdditionalText5=%parm[#11]%
+	</logmsg>
+    <severity>Indeterminate</severity>
+
+  </event>
+  <event>
+    <mask>
+      <maskelement>
+        <mename>id</mename>
+        <mevalue>.1.3.6.1.4.1.119.2.3.69.203.503</mevalue>
+      </maskelement>
+      <maskelement>
+        <mename>generic</mename>
+        <mevalue>6</mevalue>
+      </maskelement>
+      <maskelement>
+        <mename>specific</mename>
+        <mevalue>1766</mevalue>
+      </maskelement>
+    </mask>
+    <uei>uei.opennms.org/traps/MIB-PNMSj-iPASOLINK-400-MSTP-MIB/statusTrap_asMstpPortMstRole</uei>
+    <event-label>MIB-PNMSj-iPASOLINK-400-MSTP-MIB defined trap event: statusTrap_asMstpPortMstRole</event-label>
+    <descr>
+&lt;p&gt;In an MSTP Bridge, the current Port Role for the Port (i.e.,
+             Root, Alternate, Designated, or Backup), for the MSTI.&lt;/p&gt;&lt;table&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapSequenceNumber&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#1]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapDate&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#2]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapTime&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#3]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisPasoIP&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#4]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisPasoName&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#5]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisChnPrtNo&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#6]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisOppIPAddress1&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#7]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisOppNEName1&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#8]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText3&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#9]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText4&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#10]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText5&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#11]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+	</descr>
+    <logmsg dest="logndisplay">&lt;p&gt;
+    statusTrap_asMstpPortMstRole trap received
+    mnisTrapSequenceNumber=%parm[#1]%
+    mnisTrapDate=%parm[#2]%
+    mnisTrapTime=%parm[#3]%
+    mnisPasoIP=%parm[#4]%
+    mnisPasoName=%parm[#5]%
+    mnisChnPrtNo=%parm[#6]%
+    mnisOppIPAddress1=%parm[#7]%
+    mnisOppNEName1=%parm[#8]%
+    eventAdditionalText3=%parm[#9]%
+    eventAdditionalText4=%parm[#10]%
+    eventAdditionalText5=%parm[#11]%
+	</logmsg>
+    <severity>Indeterminate</severity>
+
+  </event>
+  <event>
+    <mask>
+      <maskelement>
+        <mename>id</mename>
+        <mevalue>.1.3.6.1.4.1.119.2.3.69.203.503</mevalue>
+      </maskelement>
+      <maskelement>
+        <mename>generic</mename>
+        <mevalue>6</mevalue>
+      </maskelement>
+      <maskelement>
+        <mename>specific</mename>
+        <mevalue>1767</mevalue>
+      </maskelement>
+    </mask>
+    <uei>uei.opennms.org/traps/MIB-PNMSj-iPASOLINK-400-MSTP-MIB/statusTrap_asMstpPortMstState</uei>
+    <event-label>MIB-PNMSj-iPASOLINK-400-MSTP-MIB defined trap event: statusTrap_asMstpPortMstState</event-label>
+    <descr>
+&lt;p&gt;In an MSTP Bridge, the current state of the Port (i.e.,
+             Disabled, Listening, Learning, Forwarding, or Blocking), for the
+             MSTI.&lt;/p&gt;&lt;table&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapSequenceNumber&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#1]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapDate&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#2]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapTime&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#3]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisPasoIP&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#4]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisPasoName&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#5]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisChnPrtNo&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#6]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisOppIPAddress1&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#7]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisOppNEName1&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#8]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText3&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#9]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText4&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#10]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText5&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#11]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+	</descr>
+    <logmsg dest="logndisplay">&lt;p&gt;
+    statusTrap_asMstpPortMstState trap received
+    mnisTrapSequenceNumber=%parm[#1]%
+    mnisTrapDate=%parm[#2]%
+    mnisTrapTime=%parm[#3]%
+    mnisPasoIP=%parm[#4]%
+    mnisPasoName=%parm[#5]%
+    mnisChnPrtNo=%parm[#6]%
+    mnisOppIPAddress1=%parm[#7]%
+    mnisOppNEName1=%parm[#8]%
+    eventAdditionalText3=%parm[#9]%
+    eventAdditionalText4=%parm[#10]%
+    eventAdditionalText5=%parm[#11]%
+	</logmsg>
+    <severity>Indeterminate</severity>
+
+  </event>
+  <event>
+    <mask>
+      <maskelement>
+        <mename>id</mename>
+        <mevalue>.1.3.6.1.4.1.119.2.3.69.203.503</mevalue>
+      </maskelement>
+      <maskelement>
+        <mename>generic</mename>
+        <mevalue>6</mevalue>
+      </maskelement>
+      <maskelement>
+        <mename>specific</mename>
+        <mevalue>1768</mevalue>
+      </maskelement>
+    </mask>
+    <uei>uei.opennms.org/traps/MIB-PNMSj-iPASOLINK-400-MSTP-MIB/statusTrap_asMstpPortMstRegionalRoot</uei>
+    <event-label>MIB-PNMSj-iPASOLINK-400-MSTP-MIB defined trap event: statusTrap_asMstpPortMstRegionalRoot</event-label>
+    <descr>
+&lt;p&gt;In an MSTP Bridge, the Regional Root Identifier component of the
+             Port&apos;s MSTI port priority vector for the MSTI.&lt;/p&gt;&lt;table&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapSequenceNumber&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#1]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapDate&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#2]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapTime&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#3]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisPasoIP&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#4]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisPasoName&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#5]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisChnPrtNo&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#6]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisOppIPAddress1&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#7]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisOppNEName1&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#8]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText3&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#9]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText4&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#10]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText5&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#11]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+	</descr>
+    <logmsg dest="logndisplay">&lt;p&gt;
+    statusTrap_asMstpPortMstRegionalRoot trap received
+    mnisTrapSequenceNumber=%parm[#1]%
+    mnisTrapDate=%parm[#2]%
+    mnisTrapTime=%parm[#3]%
+    mnisPasoIP=%parm[#4]%
+    mnisPasoName=%parm[#5]%
+    mnisChnPrtNo=%parm[#6]%
+    mnisOppIPAddress1=%parm[#7]%
+    mnisOppNEName1=%parm[#8]%
+    eventAdditionalText3=%parm[#9]%
+    eventAdditionalText4=%parm[#10]%
+    eventAdditionalText5=%parm[#11]%
+	</logmsg>
+    <severity>Indeterminate</severity>
+
+  </event>
+  <event>
+    <mask>
+      <maskelement>
+        <mename>id</mename>
+        <mevalue>.1.3.6.1.4.1.119.2.3.69.203.503</mevalue>
+      </maskelement>
+      <maskelement>
+        <mename>generic</mename>
+        <mevalue>6</mevalue>
+      </maskelement>
+      <maskelement>
+        <mename>specific</mename>
+        <mevalue>1769</mevalue>
+      </maskelement>
+    </mask>
+    <uei>uei.opennms.org/traps/MIB-PNMSj-iPASOLINK-400-MSTP-MIB/statusTrap_asMstpPortMstPathCost</uei>
+    <event-label>MIB-PNMSj-iPASOLINK-400-MSTP-MIB defined trap event: statusTrap_asMstpPortMstPathCost</event-label>
+    <descr>
+&lt;p&gt;In an MSTP Bridge, the Port&apos;s Port Path Cost parameter value for
+             the MSTI.&lt;/p&gt;&lt;table&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapSequenceNumber&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#1]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapDate&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#2]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapTime&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#3]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisPasoIP&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#4]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisPasoName&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#5]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisChnPrtNo&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#6]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisOppIPAddress1&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#7]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisOppNEName1&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#8]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText3&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#9]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText4&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#10]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText5&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#11]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+	</descr>
+    <logmsg dest="logndisplay">&lt;p&gt;
+    statusTrap_asMstpPortMstPathCost trap received
+    mnisTrapSequenceNumber=%parm[#1]%
+    mnisTrapDate=%parm[#2]%
+    mnisTrapTime=%parm[#3]%
+    mnisPasoIP=%parm[#4]%
+    mnisPasoName=%parm[#5]%
+    mnisChnPrtNo=%parm[#6]%
+    mnisOppIPAddress1=%parm[#7]%
+    mnisOppNEName1=%parm[#8]%
+    eventAdditionalText3=%parm[#9]%
+    eventAdditionalText4=%parm[#10]%
+    eventAdditionalText5=%parm[#11]%
+	</logmsg>
+    <severity>Indeterminate</severity>
+
+  </event>
+  <event>
+    <mask>
+      <maskelement>
+        <mename>id</mename>
+        <mevalue>.1.3.6.1.4.1.119.2.3.69.203.503</mevalue>
+      </maskelement>
+      <maskelement>
+        <mename>generic</mename>
+        <mevalue>6</mevalue>
+      </maskelement>
+      <maskelement>
+        <mename>specific</mename>
+        <mevalue>1770</mevalue>
+      </maskelement>
+    </mask>
+    <uei>uei.opennms.org/traps/MIB-PNMSj-iPASOLINK-400-MSTP-MIB/statusTrap_asMstpPortMstDesignatedPathCost</uei>
+    <event-label>MIB-PNMSj-iPASOLINK-400-MSTP-MIB defined trap event: statusTrap_asMstpPortMstDesignatedPathCost</event-label>
+    <descr>
+&lt;p&gt;In an MSTP Bridge, the Internal Root Path Cost component of the
+             Port&apos;s MSTI port priority vector for the MSTI.&lt;/p&gt;&lt;table&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapSequenceNumber&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#1]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapDate&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#2]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapTime&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#3]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisPasoIP&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#4]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisPasoName&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#5]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisChnPrtNo&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#6]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisOppIPAddress1&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#7]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisOppNEName1&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#8]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText3&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#9]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText4&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#10]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText5&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#11]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+	</descr>
+    <logmsg dest="logndisplay">&lt;p&gt;
+    statusTrap_asMstpPortMstDesignatedPathCost trap received
+    mnisTrapSequenceNumber=%parm[#1]%
+    mnisTrapDate=%parm[#2]%
+    mnisTrapTime=%parm[#3]%
+    mnisPasoIP=%parm[#4]%
+    mnisPasoName=%parm[#5]%
+    mnisChnPrtNo=%parm[#6]%
+    mnisOppIPAddress1=%parm[#7]%
+    mnisOppNEName1=%parm[#8]%
+    eventAdditionalText3=%parm[#9]%
+    eventAdditionalText4=%parm[#10]%
+    eventAdditionalText5=%parm[#11]%
+	</logmsg>
+    <severity>Indeterminate</severity>
+
+  </event>
+  <event>
+    <mask>
+      <maskelement>
+        <mename>id</mename>
+        <mevalue>.1.3.6.1.4.1.119.2.3.69.203.503</mevalue>
+      </maskelement>
+      <maskelement>
+        <mename>generic</mename>
+        <mevalue>6</mevalue>
+      </maskelement>
+      <maskelement>
+        <mename>specific</mename>
+        <mevalue>1771</mevalue>
+      </maskelement>
+    </mask>
+    <uei>uei.opennms.org/traps/MIB-PNMSj-iPASOLINK-400-MSTP-MIB/statusTrap_asMstpPortMstDesignatedBridge</uei>
+    <event-label>MIB-PNMSj-iPASOLINK-400-MSTP-MIB defined trap event: statusTrap_asMstpPortMstDesignatedBridge</event-label>
+    <descr>
+&lt;p&gt;In an MSTP Bridge, the Designated Bridge Identifier component of
+             the Port&apos;s MSTI port priority vector for the MSTI.&lt;/p&gt;&lt;table&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapSequenceNumber&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#1]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapDate&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#2]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapTime&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#3]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisPasoIP&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#4]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisPasoName&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#5]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisChnPrtNo&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#6]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisOppIPAddress1&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#7]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisOppNEName1&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#8]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText3&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#9]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText4&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#10]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText5&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#11]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+	</descr>
+    <logmsg dest="logndisplay">&lt;p&gt;
+    statusTrap_asMstpPortMstDesignatedBridge trap received
+    mnisTrapSequenceNumber=%parm[#1]%
+    mnisTrapDate=%parm[#2]%
+    mnisTrapTime=%parm[#3]%
+    mnisPasoIP=%parm[#4]%
+    mnisPasoName=%parm[#5]%
+    mnisChnPrtNo=%parm[#6]%
+    mnisOppIPAddress1=%parm[#7]%
+    mnisOppNEName1=%parm[#8]%
+    eventAdditionalText3=%parm[#9]%
+    eventAdditionalText4=%parm[#10]%
+    eventAdditionalText5=%parm[#11]%
+	</logmsg>
+    <severity>Indeterminate</severity>
+
+  </event>
+  <event>
+    <mask>
+      <maskelement>
+        <mename>id</mename>
+        <mevalue>.1.3.6.1.4.1.119.2.3.69.203.503</mevalue>
+      </maskelement>
+      <maskelement>
+        <mename>generic</mename>
+        <mevalue>6</mevalue>
+      </maskelement>
+      <maskelement>
+        <mename>specific</mename>
+        <mevalue>1772</mevalue>
+      </maskelement>
+    </mask>
+    <uei>uei.opennms.org/traps/MIB-PNMSj-iPASOLINK-400-MSTP-MIB/statusTrap_asMstpPortMstDesignatedPort</uei>
+    <event-label>MIB-PNMSj-iPASOLINK-400-MSTP-MIB defined trap event: statusTrap_asMstpPortMstDesignatedPort</event-label>
+    <descr>
+&lt;p&gt;In an MSTP Bridge, the Designated Port Identifier component of
+             the Port&apos;s MSTI port priority vector for the MSTI.&lt;/p&gt;&lt;table&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapSequenceNumber&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#1]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapDate&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#2]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisTrapTime&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#3]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisPasoIP&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#4]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisPasoName&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#5]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisChnPrtNo&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#6]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisOppIPAddress1&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#7]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    mnisOppNEName1&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#8]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText3&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#9]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText4&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#10]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+    eventAdditionalText5&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
+	%parm[#11]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;b&gt;
+
+	</descr>
+    <logmsg dest="logndisplay">&lt;p&gt;
+    statusTrap_asMstpPortMstDesignatedPort trap received
+    mnisTrapSequenceNumber=%parm[#1]%
+    mnisTrapDate=%parm[#2]%
+    mnisTrapTime=%parm[#3]%
+    mnisPasoIP=%parm[#4]%
+    mnisPasoName=%parm[#5]%
+    mnisChnPrtNo=%parm[#6]%
+    mnisOppIPAddress1=%parm[#7]%
+    mnisOppNEName1=%parm[#8]%
+    eventAdditionalText3=%parm[#9]%
+    eventAdditionalText4=%parm[#10]%
+    eventAdditionalText5=%parm[#11]%
+	</logmsg>
+    <severity>Indeterminate</severity>
+
+  </event>
+</events>
