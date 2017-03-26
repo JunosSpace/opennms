@@ -59,7 +59,6 @@
 	<include file="space-integration/12.1/changelog.xml"/>
 	<include file="space-integration/12.3/changelog.xml"/>
         <include file="space-integration/16.1/changelog.xml"/>
-	<include file="space-integration/17.1/changelog.xml"/>
 	<include file="1.11.4/changelog.xml"/>
 	<include file="1.11.90/changelog.xml"/>
 	<include file="1.11.95/changelog.xml"/>
@@ -69,6 +68,7 @@
 	<include file="1.13.0/changelog.xml"/>
 	<include file="1.13.1/changelog.xml"/>
 	<include file="1.14.0-enlinkd/changelog.xml"/>
+	<include file="space-integration/17.1/changelog.xml"/>
 
 	<include file="stored-procedures/getManagePercentAvailIntfWindow.xml" />
 	<include file="stored-procedures/getManagePercentAvailNodeWindow.xml" />
