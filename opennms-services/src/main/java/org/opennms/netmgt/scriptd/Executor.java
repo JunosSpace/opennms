@@ -275,12 +275,16 @@ final class Executor implements Runnable, PausableFiber {
                 // And the events node
                 OnmsNode node = null;
 
-                if (event.hasNodeid()) {
-                    Long nodeLong = event.getNodeid();
-                    Integer nodeInt = Integer.valueOf(nodeLong.intValue());
-                    node = m_nodeDao.get(nodeInt);
-                    m_mgr.registerBean("node", node);
-                }
+				if (event.hasNodeid()) {
+					try {
+						Long nodeLong = event.getNodeid();
+						Integer nodeInt = Integer.valueOf(nodeLong.intValue());
+						node = m_nodeDao.get(nodeInt);
+						m_mgr.registerBean("node", node);
+					} catch (Exception e) {
+						LOG.error("Exception occure while fetching node information:", e);
+					}
+				}
 
                 // execute the scripts attached to the event
 
