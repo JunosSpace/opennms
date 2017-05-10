@@ -115,7 +115,6 @@ maintained
     <invoke at="status" pass="0" method="status"/>
     <invoke at="stop" pass="0" method="stop"/>
   </service>
-<!--
   <service>
     <name>OpenNMS:Name=Rtcd</name>
     <class-name>org.opennms.netmgt.rtc.jmx.Rtcd</class-name>
@@ -124,7 +123,6 @@ maintained
     <invoke at="status" pass="0" method="status"/>
     <invoke at="stop" pass="0" method="stop"/>
   </service>
--->
   <service>
     <name>OpenNMS:Name=Pollerd</name>
     <class-name>org.opennms.netmgt.poller.jmx.Pollerd</class-name>
