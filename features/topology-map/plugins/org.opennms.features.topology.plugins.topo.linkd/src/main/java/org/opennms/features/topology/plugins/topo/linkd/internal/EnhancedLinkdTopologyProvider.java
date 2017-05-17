@@ -709,22 +709,24 @@ public class EnhancedLinkdTopologyProvider extends AbstractLinkdTopologyProvider
         OnmsSnmpInterface sourceInterface = getByNodeIdAndIfIndex(linkDetail.getSourceIfIndex(), source);
         OnmsSnmpInterface targetInterface = getByNodeIdAndIfIndex(linkDetail.getTargetIfIndex(), target);
 
-        LldpLink sourceLink = (LldpLink) linkDetail.getSourceLink();
-        LldpLink targetLink = (LldpLink) linkDetail.getTargetLink();
-        
         String sourcePortDesc = null;
         String targetPortDesc = null;
+        
+        if (linkDetail.getSourceLink() instanceof LldpLink && linkDetail.getTargetLink() instanceof LldpLink )  {
+            LldpLink sourceLink = (LldpLink) linkDetail.getSourceLink();
+            LldpLink targetLink = (LldpLink) linkDetail.getTargetLink();
+            
 
-		if (sourceLink.getNode() != null && sourceLink.getNode().getSysObjectId() != null
-				&& sourceLink.getNode().getSysObjectId().contains("1.3.6.1.4.1.119")) {
-			sourcePortDesc = sourceLink.getLldpPortDescr();
+    		if (sourceLink.getNode() != null && sourceLink.getNode().getSysObjectId() != null
+    				&& sourceLink.getNode().getSysObjectId().contains("1.3.6.1.4.1.119")) {
+    			sourcePortDesc = sourceLink.getLldpPortDescr();
+    		}
+
+    		if (targetLink.getNode() != null && targetLink.getNode().getSysObjectId() != null
+    				&& targetLink.getNode().getSysObjectId().contains("1.3.6.1.4.1.119.")) {
+    			targetPortDesc = targetLink.getLldpPortDescr();
+    		}
 		}
-
-		if (targetLink.getNode() != null && targetLink.getNode().getSysObjectId() != null
-				&& targetLink.getNode().getSysObjectId().contains("1.3.6.1.4.1.119.")) {
-			targetPortDesc = targetLink.getLldpPortDescr();
-		}
-
 
         tooltipText.append(HTML_TOOLTIP_TAG_OPEN);
         if (sourceInterface != null && targetInterface != null
