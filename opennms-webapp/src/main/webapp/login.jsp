@@ -57,30 +57,18 @@ if (request.getServletPath().endsWith("login.jsp")) {
 	}
 
 	try {
-		var cookies = (document.cookie).split(';');
-    		var csrfCookie = "";
-    		for(var i=0; i < cookies.length; i++) {
-        		if (allCookie[i].trim().indexOf("X-CSRF=") == 0) {
-            			csrfCookie = cookies[i].trim().split("=")[1];
-				break;
-        		}   
-    		}
+
 		request.onreadystatechange = function() {
 			var DONE =  (typeof XMLHttpRequest.Done !== 'undefined') ? XMLHttpRequest.DONE : 4;
 
 			if (request.readyState == DONE ) {
 				
 				if (request.responseText.length > 0) {
-					var xmlHttp = new XMLHttpRequest();
-				    	xmlHttp.open( "GET", '../mainui/unsecured/logout.jsp', false );
-					xmlHttp.setRequestHeader("X-CSRF",csrfCookie);
-					xmlHttp.send();
-					window.top.location = '../mainui/spaceLogout.jsp';
+					window.top.location = '../mainui/unsecured/logout.jsp';
 				}
 			}
 		}
 		request.open("POST", "../mainui/ctrl/fmpm/OpenNMSLogin", true);
-		request.setRequestHeader("X-CSRF",csrfCookie);
 		request.setRequestHeader("Content-type",
 				"application/x-www-form-urlencoded");
 		request.send();
