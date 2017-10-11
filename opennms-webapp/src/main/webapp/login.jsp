@@ -71,6 +71,14 @@ if (request.getServletPath().endsWith("login.jsp")) {
 			if (request.readyState == DONE ) {
 				
 				if (request.responseText.length > 0) {
+					var cookies = (document.cookie).split(';');
+			    		var csrfCookie = "";
+			    		for(var i=0; i < cookies.length; i++) {
+        					if (cookies[i].trim().indexOf("X-CSRF=") == 0) {
+			            			csrfCookie = cookies[i].trim().split("=")[1];
+							break;
+			        		}   
+    					}
 					var xmlHttp = new XMLHttpRequest();
 				    	xmlHttp.open( "GET", '../mainui/unsecured/logout.jsp', false );
 					xmlHttp.setRequestHeader("X-CSRF",csrfCookie);
