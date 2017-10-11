@@ -60,7 +60,7 @@ if (request.getServletPath().endsWith("login.jsp")) {
     		var cookies = (document.cookie).split(';');
     		var csrfCookie = "";
     		for(var i=0; i < cookies.length; i++) {
-        		if (allCookie[i].trim().indexOf("X-CSRF=") == 0) {
+        		if (cookies[i].trim().indexOf("X-CSRF=") == 0) {
             			csrfCookie = cookies[i].trim().split("=")[1];
 				break;
         		}   
