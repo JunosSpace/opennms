@@ -1642,13 +1642,13 @@ instances has fired, for triggers with mteTriggerType
             </maskelement>
             <varbind>
                 <vbnumber>5</vbnumber>
-                <vbvalue>0</vbvalue>
+                <vbvalue>1</vbvalue>
             </varbind>
         </mask>
         <uei>uei.opennms.org/traps/SPACE-PLATFORM-MIB/jnxSpaceDatabaseOutOfSysnc</uei>
         <event-label>SPACE-PLATFORM-MIB defined trap event: jnxSpaceDatabaseOutOfSysnc</event-label>
          <descr>
-&lt;p&gt;MySQL database is out of sync%parm[#6]%.&lt;/p&gt;&lt;table&gt;
+&lt;p&gt;MySQL database is out of sync in node %parm[#6]%.&lt;/p&gt;&lt;table&gt;
         &lt;tr&gt;&lt;td&gt;&lt;b&gt;
 
         jnxSpaceNodeIP&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
@@ -1673,59 +1673,9 @@ instances has fired, for triggers with mteTriggerType
         jnxProcess=%parm[#3]%
         jnxProcessCategory=%parm[#4]%&lt;/p&gt;
         </logmsg>
+		<severity>Major</severity>
 		<alarm-data auto-clean="true" alarm-type="1" reduction-key="%uei%:%parm[#3]%:%parm[#6]%:%parm[#5]%"/>
     </event>
-
-   <event>
-       <mask>
-            <maskelement>
-                <mename>id</mename>
-                <mevalue>.1.3.6.1.4.1.2636.1.3.1.3.1</mevalue>
-            </maskelement>
-            <maskelement>
-                <mename>generic</mename>
-                <mevalue>6</mevalue>
-            </maskelement>
-            <maskelement>
-                <mename>specific</mename>
-                <mevalue>10</mevalue>
-            </maskelement>
-            <varbind>
-                <vbnumber>5</vbnumber>
-                <vbvalue>0</vbvalue>
-            </varbind>
-        </mask>
-        <uei>uei.opennms.org/traps/SPACE-PLATFORM-MIB/jnxMySqlReplicationIssues</uei>
-        <event-label>SPACE-PLATFORM-MIB defined trap event: jnxMySqlReplicationIssues</event-label>
-        <descr>
-&lt;p&gt;MySQL database is out of sync resolved %parm[#6]%.&lt;/p&gt;&lt;table&gt;
-        &lt;tr&gt;&lt;td&gt;&lt;b&gt;
-
-        jnxSpaceNodeIP&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
-        %parm[#1]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
-        &lt;tr&gt;&lt;td&gt;&lt;b&gt;
-
-        jnxAppModule&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
-        %parm[#2]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
-        &lt;tr&gt;&lt;td&gt;&lt;b&gt;
-
-        jnxProcess&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
-        %parm[#3]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
-        &lt;tr&gt;&lt;td&gt;&lt;b&gt;
-
-        jnxProcessCategory&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
-        %parm[#4]%;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-        </descr>
-        <logmsg dest="logndisplay">&lt;p&gt;
-        MySQL database is out of sync resolved trap received.
-        jnxNodeIP=%parm[#1]%
-        jnxAppModule=%parm[#2]%
-        jnxProcess=%parm[#3]%
-        jnxProcessCategory=%parm[#4]%&lt;/p&gt;
-        </logmsg>
-        <severity>Cleared</severity>
-	<alarm-data auto-clean="true" clear-key="uei.opennms.org/traps/SPACE-PLATFORM-MIB/jnxSpaceDatabaseOutOfSysnc:%parm[#3]%:%parm[#6]%:1" alarm-type="2" reduction-key="%uei%:%parm[#3]%:%parm[#6]%:%parm[#5]%"/>
-
 
     <event>
         <mask>
@@ -2088,14 +2038,14 @@ instances has fired, for triggers with mteTriggerType
                 <mevalue>10</mevalue>
             </maskelement>
             <varbind>
-                <vbnumber>4</vbnumber>
+                <vbnumber>5</vbnumber>
                 <vbvalue>0</vbvalue>
             </varbind>
         </mask>
         <uei>uei.opennms.org/traps/SPACE-PLATFORM-MIB/jnxSpaceDatabaseOutOfSysnc</uei>
         <event-label>SPACE-PLATFORM-MIB defined trap event: jnxSpaceDatabaseOutOfSysnc</event-label>
         <descr>
-&lt;p&gt;MySQL database is synchronizing.&lt;/p&gt;&lt;table&gt;
+&lt;p&gt;MySQL out of sync issue is resolved in node %parm[#6]%.&lt;/p&gt;&lt;table&gt;
         &lt;tr&gt;&lt;td&gt;&lt;b&gt;
 
         jnxAppModule&lt;/b&gt;&lt;/td&gt;&lt;td&gt;
@@ -2111,12 +2061,13 @@ instances has fired, for triggers with mteTriggerType
         </descr>
         <logmsg dest="logndisplay">&lt;p&gt;
         MySQL database is synchronizing trap received.
-        jnxAppModule=%parm[#1]%
-        jnxProcess=%parm[#2]%
-        jnxProcessCategory=%parm[#3]%&lt;/p&gt;
+        jnxNodeIP=%parm[#1]%
+        jnxAppModule=%parm[#2]%
+        jnxProcess=%parm[#3]%
+        jnxProcessCategory=%parm[#4]%&lt;/p&gt;
         </logmsg>
         <severity>Cleared</severity>
-		<alarm-data auto-clean="true" clear-key="uei.opennms.org/traps/SPACE-PLATFORM-MIB/jnxSpaceDatabaseOutOfSysnc:%parm[#2]%:1" alarm-type="2" reduction-key="%uei%:%parm[#2]%:%parm[#4]%"/>
+		<alarm-data auto-clean="true" clear-key="uei.opennms.org/traps/SPACE-PLATFORM-MIB/jnxSpaceDatabaseOutOfSysnc:%parm[#3]%:%parm[#6]%:1" alarm-type="2" reduction-key="%uei%:%parm[#3]%:%parm[#6]%:%parm[#5]%"/>
     </event>
 
     <event>
