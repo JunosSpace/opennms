@@ -211,7 +211,7 @@ public class TopologyUI extends UI implements CommandUpdateListener, MenuItemUpd
                 loadGraphProvider(request);
                 loadVertexHopCriteria(request, m_graphContainer);
                 loadSemanticZoomLevel(request, m_graphContainer);
-                m_graphContainer.redoLayout();
+                //m_graphContainer.redoLayout();
                 return false; // No response was written
             }
         });
