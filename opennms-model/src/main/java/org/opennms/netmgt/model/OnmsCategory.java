@@ -55,7 +55,7 @@ import org.springframework.core.style.ToStringCreator;
 @XmlRootElement(name = "category")
 @Entity
 @Table(name="categories")
-@Filter(name=FilterManager.AUTH_FILTER_NAME, condition="categoryid in (select distinct cn.categoryId from category_node cn join category_node cn2 on cn.nodeid = cn2.nodeid join category_group cg on cn2.categoryId = cg.categoryId where cg.groupId in (:userGroups))")
+//@Filter(name=FilterManager.AUTH_FILTER_NAME, condition="categoryid in (select distinct cn.categoryId from category_node cn join category_node cn2 on cn.nodeid = cn2.nodeid join category_group cg on cn2.categoryId = cg.categoryId where cg.groupId in (:userGroups))")
 @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 public class OnmsCategory implements Serializable, Comparable<OnmsCategory> {
 
