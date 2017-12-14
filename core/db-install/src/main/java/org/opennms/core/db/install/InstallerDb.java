@@ -2011,7 +2011,7 @@ public class InstallerDb {
      * @throws java.sql.SQLException if any.
      */
     public void databaseSetUser() throws SQLException {
-    	final ResultSet rs = getAdminConnection().getMetaData().getTables(null, "public", "%", new String[]{"TABLE", "SYSTEM TABLE"});
+    	final ResultSet rs = getAdminConnection().getMetaData().getTables(null, "public", "%", null);
         final HashSet<String> objects = new HashSet<String>();
         while (rs.next()) {
             objects.add(rs.getString("TABLE_NAME"));
