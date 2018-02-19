@@ -527,6 +527,12 @@
       <artifactId>org.opennms.features.system-report</artifactId>
       <scope>${onmsLibScope}</scope>
     </dependency>
+<dependency>
+<groupId>org.opennms.core</groupId>
+<artifactId>org.opennms.core.cryptUtil</artifactId>
+<scope>${onmsLibScope}</scope>
+<version>${project.version}</version>
+</dependency>
 
     <!-- indirect 3rd-party dependencies that belong in $OPENNMS_HOME/lib -->
     <!-- these should all be <scope>${onmsLibScope}</scope> and also included in opennms-base-assembly -->
