@@ -43,9 +43,7 @@
     <module>tasks</module>
     <module>test-api</module>
     <module>upgrade</module>
-    <module>CryptUtil</module>
     <!--<module>web</module>-->
     <module>xml</module>
-    <module>nmautils</module>
   </modules>
 </project>

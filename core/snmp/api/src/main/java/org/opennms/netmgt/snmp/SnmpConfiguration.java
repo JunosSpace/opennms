@@ -29,7 +29,6 @@
 package org.opennms.netmgt.snmp;
 
 import javax.xml.bind.annotation.XmlRootElement;
-import org.opennms.core.cryptutil.CryptUtil;
 
 /**
  * Represents a base class for SnmpConfiguration of agents, ranges and defaults
@@ -206,7 +205,7 @@ public class SnmpConfiguration {
     }
 
     public final String getReadCommunity() {
-        return CryptUtil.decodePwd(m_readCommunity);
+        return m_readCommunity;
     }
 
     public final int getMaxVarsPerPdu() {
@@ -226,7 +225,7 @@ public class SnmpConfiguration {
     }
 
     public final String getWriteCommunity() {
-        return CryptUtil.decodePwd(m_writeCommunity);
+        return m_writeCommunity;
     }
 
     public final void setWriteCommunity(String community) {
@@ -260,7 +259,7 @@ public class SnmpConfiguration {
     }
 
     public final String getAuthPassPhrase() {
-        return CryptUtil.decodePwd(m_authPassPhrase);
+        return m_authPassPhrase;
     }
 
     public final void setAuthPassPhrase(String authPassPhrase) {
@@ -284,7 +283,7 @@ public class SnmpConfiguration {
     }
 
     public final String getPrivPassPhrase() {
-        return CryptUtil.decodePwd(m_privPassPhrase);
+        return m_privPassPhrase;
     }
 
     public final void setPrivPassPhrase(String privPassPhrase) {
