@@ -39,7 +39,7 @@ import org.apache.commons.lang.builder.ToStringStyle;
 import org.opennms.core.utils.InetAddressUtils;
 import org.opennms.netmgt.config.SnmpEventInfo;
 import org.opennms.netmgt.snmp.SnmpAgentConfig;
-import org.opennms.core.cryptutil.CryptUtil;
+
 /**
  * <p>
  * SnmpInfo class.
@@ -276,11 +276,11 @@ public class SnmpInfo {
 	}
 
 	public String getAuthPassPhrase() {
-		return CryptUtil.decodePwd(m_authPassPhrase);
+		return m_authPassPhrase;
 	}
 
 	public void setAuthPassPhrase(String authPassPhrase) {
-		m_authPassPhrase = CryptUtil.encodePwd(authPassPhrase);
+		m_authPassPhrase = authPassPhrase;
 	}
 
 	public String getAuthProtocol() {
@@ -292,11 +292,11 @@ public class SnmpInfo {
 	}
 
 	public String getPrivPassPhrase() {
-		return CryptUtil.decodePwd(m_privPassPhrase);
+		return m_privPassPhrase;
 	}
 
 	public void setPrivPassPhrase(String privPassPhrase) {
-		m_privPassPhrase = CryptUtil.encodePwd(privPassPhrase);
+		m_privPassPhrase = privPassPhrase;
 	}
 
 	public String getPrivProtocol() {
@@ -356,19 +356,19 @@ public class SnmpInfo {
 	}
 	
 	public String getReadCommunity() {
-		return CryptUtil.decodePwd(m_readCommunity);
+		return m_readCommunity;
 	}
 	
 	public void setReadCommunity(String readCommunity) {
-		m_readCommunity = CryptUtil.encodePwd(readCommunity);
+		m_readCommunity = readCommunity;
 	}
 
 	public String getWriteCommunity() {
-		return CryptUtil.decodePwd(m_writeCommunity);
+		return m_writeCommunity;
 	}
 	
 	public void setWriteCommunity(String writeCommunity) {
-		m_writeCommunity =CryptUtil.encodePwd(writeCommunity);
+		m_writeCommunity = writeCommunity;
 	}
 	
 	public Integer getMaxRequestSize() {
