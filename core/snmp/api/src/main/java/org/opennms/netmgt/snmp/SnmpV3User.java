@@ -27,7 +27,7 @@
  *******************************************************************************/
 
 package org.opennms.netmgt.snmp;
-
+import org.opennms.core.cryptutil.CryptUtil;
 public class SnmpV3User {
 
     private String engineId;
@@ -47,14 +47,14 @@ public class SnmpV3User {
         super();
         this.securityName = securityName;
         this.authProtocol = authenticationProtocol;
-        this.authPassPhrase = authenticationPassphrase;
+        this.authPassPhrase = CryptUtil.decodePwd(authenticationPassphrase);
         this.privProtocol = privacyProtocol;
-        this.privPassPhrase = privacyPassphrase;
+        this.privPassPhrase =  CryptUtil.decodePwd(privacyPassphrase);
     }
 
     public SnmpV3User(String engineId, String securityName, String authenticationProtocol,
             String authenticationPassphrase, String privacyProtocol, String privacyPassphrase) {
-        this(securityName, authenticationProtocol, authenticationPassphrase, privacyProtocol, privacyPassphrase);
+        this(securityName, authenticationProtocol,  authenticationPassphrase, privacyProtocol, privacyPassphrase);
         this.engineId = engineId;
     }
 
