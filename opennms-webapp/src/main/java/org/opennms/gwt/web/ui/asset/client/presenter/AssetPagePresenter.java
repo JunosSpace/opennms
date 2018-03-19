@@ -28,6 +28,8 @@
 
 package org.opennms.gwt.web.ui.asset.client.presenter;
 
+import org.apache.commons.lang.StringEscapeUtils;
+
 import org.opennms.gwt.web.ui.asset.client.AssetPageConstants;
 import org.opennms.gwt.web.ui.asset.client.AssetService;
 import org.opennms.gwt.web.ui.asset.client.AssetServiceAsync;
@@ -159,7 +161,7 @@ public class AssetPagePresenter implements Presenter {
 			nodeId = Integer.parseInt(Window.Location.getParameter("node"));
 		} catch (NumberFormatException e) {
 			GWT.log(con.nodeParamNotValidInt() + Window.Location.getParameter("node"), e);
-			display.setError(con.nodeParamNotValidInt() + Window.Location.getParameter("node"), e);
+			display.setError(con.nodeParamNotValidInt() + StringEscapeUtils.escapeHtml(Window.Location.getParameter("node")), e);
 		}
 	}
 
