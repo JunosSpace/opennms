@@ -52,6 +52,7 @@ import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.event.dom.client.HasClickHandlers;
 import com.google.gwt.i18n.client.DateTimeFormat;
 import com.google.gwt.i18n.client.DateTimeFormat.PredefinedFormat;
+import com.google.gwt.safehtml.shared.SafeHtmlUtils;
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiField;
 import com.google.gwt.uibinder.client.UiTemplate;
@@ -740,6 +741,7 @@ public class AssetNodePageImpl extends Composite implements AssetPagePresenter.D
         String error = "";
         if (throwable != null) {
             error = throwable.toString();
+            error = SafeHtmlUtils.htmlEscape(error);
         }
         final DialogBox dialog = new DialogBox();
         dialog.setText(description);
@@ -773,3 +775,4 @@ public class AssetNodePageImpl extends Composite implements AssetPagePresenter.D
         lInfoBottom.setText(info);
     }
 }
+
