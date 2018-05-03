@@ -1,5 +1,6 @@
 package org.opennms.core.cryptutil;
 
+import java.io.File;
 import java.io.IOException;
 
 import org.opennms.core.nmautils.NMACommand;
@@ -11,12 +12,18 @@ public class FilePersister implements CryptographKeyPersister {
 	private static final int LOCK_BUSY_ERROR = 2;
 	
 	   public String readKey() {
-		   NMACommand cmd = new NMACommand("localhost", "readAESKey.pl");
-		    cmd.changeCommand("/local-cgi/readAESKey.pl");
-		    cmd.setUseDefaultPassword(true);
+		   File tmpDir = new File("/etc/node.conf");
+		   boolean splNodeExists = tmpDir.exists();
 		    String keyStr = null;
+		    int port = 8002;
 		    try {
-		      NMAResponse response;
+		    	 NMAResponse response =null;
+		    	 if(splNodeExists){
+		    		   port = 8004;
+				    }	   
+		      NMACommand cmd = new NMACommand("localhost", "readAESKey.pl",port);
+		      cmd.changeCommand("/local-cgi/readAESKey.pl");
+		      cmd.setUseDefaultPassword(true);
 		      response = cmd.execute();
 		      if (NMAResponse.FAILURE.equals(response.getStatus())) {
 		        if (response.getErrorcode() == LOCK_BUSY_ERROR) {

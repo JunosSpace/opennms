@@ -26,14 +26,14 @@ public class CryptUtil {
 	  public static String decodePwd(String cipherText) {
 	    String text = cipherText;
 	    try {
+	    String keyStr = AESKeyManager.getInst().getKey().getKeyStr();
 	    	if(text.contains("IV:")){
-	      String keyStr = AESKeyManager.getInst().getKey().getKeyStr();
 	      text = CryptService.getInst().decodePassword(cipherText, keyStr);
 	    	}	
 	    } catch (Exception e) {
-	      if ( text != null && !(text.startsWith("AESKEY:") || text.contains("IV:"))){
-	        text = new String(Base64.decode(text));
-	      }
+        if ( text != null && !(text.contains("IV:"))){
+         text = new String(Base64.decode(text));
+         }
 	      LOG.debug("Decode device password error, please check the AESKey!");
 	      LOG.debug("Decode device password error details:", e);
 	    }

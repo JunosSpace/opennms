@@ -36,19 +36,20 @@ public class NMACommand {
 	  
 	protected String protocol = "HTTPS";
 	protected String host = null;
-	protected int port = 8002;
+	protected int port = 0;
 	protected StringBuffer command = null;
 	protected StringBuffer param = new StringBuffer();
 	protected String data = null;
 	private boolean useDefaultPassword = true;
 
 	private String password = "abc123";
-
-	public NMACommand(String host, String command) {
+    
+	public NMACommand(String host, String command, int port) {
 		this.host = host;
+		this.port = port;
 		this.command = new StringBuffer("/cgi-bin/" + command);
-	}
-
+	} 
+	
 	public void changeCommand(String command) {
 		this.command = new StringBuffer(command);
 
