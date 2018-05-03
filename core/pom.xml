@@ -45,7 +45,5 @@
     <module>upgrade</module>
     <!--<module>web</module>-->
     <module>xml</module>
-    <module>CryptUtil</module>
-    <module>nmautils</module>
   </modules>
 </project>
