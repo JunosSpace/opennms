@@ -143,34 +143,6 @@
 	/*
 	 * On Version change only the specificy section is shown.
 	 */
-	function onSecurityLevelChange() {
-		var authenticationElement = document.getElementById("authentication");
-		var privacyElement = document.getElementById("privacy");
-		var selectedElement = null;
-		//  determine selected element
-                var element = document.getElementById("securityLevel");
-                var value = element.options[element.selectedIndex].value;
-                if (value == "authNoPriv" ){
-                	authenticationElement.style.visibility = '';
-                	authenticationElement.style.display = "block";
-                	privacyElement.style.visibility = "hidden";
-                	privacyElement.style.display = "none"
-                } else if (value == "noAuthNoPriv" ){
-                	authenticationElement.style.visibility = "hidden";
-                	authenticationElement.style.display = "none";
-                	privacyElement.style.visibility = "hidden";
-                	privacyElement.style.display = "none"
-                } else {
-                	authenticationElement.style.visibility = '';
-                	authenticationElement.style.display = "block";
-                	privacyElement.style.visibility = "";
-                	privacyElement.style.display = "block"
-                }
-	}
-
-	/*
-	 * On Version change only the specificy section is shown.
-	 */
 	function onVersionChange() {
 		var versionElements = new Array(document.getElementById("v1v2"), document.getElementById("v3"));
 		var selectedElement = null;
@@ -263,84 +235,21 @@
 		return input.toString();
 	}
 
-public String[] getVersion() {
-	if (isFIPSMode()) {
-		String[] versions = { "v3" };
-		return versions;
-	} else {
-		String[] versions = { "v1", "v2c", "v3" };
-		return versions;
-	}
-}
+	public String getOptions(String selectedOption, String defaultOption, String... options) {
+		// prevent Nullpointer
+		if (defaultOption == null) defaultOption = "";
+		// ensure that there is a default :)
+		if (Strings.isNullOrEmpty(selectedOption)) selectedOption = defaultOption;
 
-public String[] getPrivProtocol() {
-	if (isFIPSMode()) {
-		String[] privProtocol = {"AES", "AES192", "AES256"};
-		return privProtocol;
-	} else {
-		String[] privProtocol = {"","AES", "AES192", "AES256", "DES"};
-		return privProtocol;
-	}
-}
-
-public String[] getAuthProtocol() {
-	if (isFIPSMode()) {
-		String[] authProtocol = {"SHA"};
-		return authProtocol;
-	} else {
-		String[] authProtocol = {"","SHA", "MD5"};
-		return authProtocol;
-	}
-}
-
-public String[] getSecurityLevel() {
-	if (isFIPSMode()) {
-		String[] securityLevel = {"authPriv"};
-		return securityLevel;
-	} else {
-		String[] securityLevel = {"","authPriv", "authNoPriv", "noAuthNoPriv"};
-		return securityLevel;
-	}
-}
-
-public String getUIOptions(String type, String selectedOption) {
-	String[] input = new String[5];
-	if(type.equals("version")){
-		input =  getVersion();
-	} else if(type.equals("privProtocol")){
-		input =  getPrivProtocol();
-	} else if(type.equals("authProtocol")){
-		input =  getAuthProtocol();
-	} else if(type.equals("securityLevel")){
-		input =  getSecurityLevel();
-	}
-	return getOptions(selectedOption, input[0], input);
-}
-
-public boolean isFIPSMode() {
-  boolean isFIPSMode = false;
-  String result = System.getProperty("FIPSMode");
-  if (result != null && "true".equals(result)) {
-    isFIPSMode = true;
-  }
-  return isFIPSMode;
-}
-
-public String getOptions(String selectedOption, String defaultOption, String[] options) {
-	// prevent Nullpointers
-	if (defaultOption == null) defaultOption = "";
-	// ensure that there is a default :)
-	if (Strings.isNullOrEmpty(selectedOption)) selectedOption = defaultOption;
-
-	final String optionTemplate = "<option %s>%s</option>";
-	String optionsString = "";
-	for (String eachOption : options) {
-		optionsString += String.format(optionTemplate, eachOption.equals(selectedOption) ? "selected" : "",
-				eachOption);
-		optionsString += "\n";
-	}
-	return optionsString.trim();
-}%>
+		final String optionTemplate = "<option %s>%s</option>";
+		String optionsString = "";
+		for (String eachOption : options) {
+			optionsString += String.format(optionTemplate, eachOption.equals(selectedOption) ? "selected" : "",
+					eachOption);
+			optionsString += "\n";
+		}
+		return optionsString.trim();
+	}%>
 
 <%
 	Object obj = request.getAttribute("snmpConfigForIp");
@@ -406,7 +315,7 @@ public String getOptions(String selectedOption, String defaultOption, String[] o
 						<td width="25%">Version:</td>
 						<td width="50%">
 							<select id="version" name="version" onChange="onVersionChange()">
-								<%=getUIOptions("version", version)%>
+								<%=getOptions(version, "v2c", "v1", "v2c", "v3")%>
 							</select>
 							<img src="css/images/ui-trans_1x1.png" class="info" onMouseOver="showTT('versionTT')" onMouseOut="hideTT()"/>
 						</td>
@@ -526,17 +435,23 @@ public String getOptions(String selectedOption, String defaultOption, String[] o
 					<tr>
 						<td width="25%">Security Level:</td>
 						<td width="50%">
-							<select name="securityLevel" id="securityLevel" style="width: 120px" onChange="onSecurityLevelChange()">
-								<%=getUIOptions("securityLevel", securityLevel)%>
+							<select name="securityLevel" style="width: 120px">
+								<option value=""></option>
+								<option value="1"
+									<%="1".equals(securityLevel) ? "selected" : ""%>>noAuthNoPriv</option>
+								<option value="2"
+									<%="2".equals(securityLevel) ? "selected" : ""%>>authNoPriv</option>
+								<option value="3"
+									<%="3".equals(securityLevel) ? "selected" : ""%>>authPriv</option>
 							</select>
 							<img src="css/images/ui-trans_1x1.png" class="info" onMouseOver="showTT('securityLevelTT')" onMouseOut="hideTT()"/>
 							
 						</td>
 					</tr>
 				</table>
-				<table id="authentication">
+				<table>
 					<tr>
-						<td width="25%" disable>Auth Passphrase:</td>
+						<td width="25%">Auth Passphrase:</td>
 						<td width="50%">
 							<input style="width:120px;" name="authPassPhrase" value="<%=authPassPhrase%>" />
 							<img src="css/images/ui-trans_1x1.png" class="info" onMouseOver="showTT('authPassPhraseTT')" onMouseOut="hideTT()"/>
@@ -547,14 +462,14 @@ public String getOptions(String selectedOption, String defaultOption, String[] o
 						<td width="25%">Auth Protocol:</td>
 						<td width="50%">
 							<select name="authProtocol" style="width: 120px">
-								<%=getUIOptions("authProtocol", authProtocol)%>
+								<%=getOptions(authProtocol, "", "", "MD5", "SHA")%>
 							</select>
 							<img src="css/images/ui-trans_1x1.png" class="info" onMouseOver="showTT('authProtocolTT')" onMouseOut="hideTT()"/>
 							
 						</td>
 					</tr>
 				</table>
-				<table id="privacy">
+				<table>
 					<tr>
 						<td width="25%">Privacy Passphrase:</td>
 						<td width="50%">
@@ -566,7 +481,7 @@ public String getOptions(String selectedOption, String defaultOption, String[] o
 						<td width="25%">Privacy Protocol:</td>
 						<td width="50%">
 							<select name="privProtocol" style="width: 120px">
-								<%=getUIOptions("privProtocol", privProtocol)%>
+								<%=getOptions(privProtocol, "", "", "DES", "AES", "AES192", "AES256")%>
 							</select>
 							<img src="css/images/ui-trans_1x1.png" class="info" onMouseOver="showTT('privProtocolTT')" onMouseOut="hideTT()"/>
 							
