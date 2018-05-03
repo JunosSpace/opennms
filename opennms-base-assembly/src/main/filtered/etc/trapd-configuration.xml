@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
 <trapd-configuration snmp-trap-port="162" new-suspect-on-trap="false">
-  <snmpv3-user security-name="JunosSpace" auth-passphrase="jnpR123!" auth-protocol="MD5"
-      privacy-passphrase="jnpR123!" privacy-protocol="DES"/>
+  <snmpv3-user security-name="JunosSpace" auth-passphrase="jnpR123!" auth-protocol="SHA"
+      privacy-passphrase="jnpR123!" privacy-protocol="AES"/>
 </trapd-configuration>
