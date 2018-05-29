@@ -1,2 +1,2 @@
 <?xml version="1.0"?>
-<snmp-config read-community="public" retry="3" timeout="2000" version="v2c" />
+<snmp-config version="v3" auth-passphrase="0p3nNMSv3" auth-protocol="SHA" privacy-passphrase="0p3nNMSv3" privacy-protocol="AES" timeout="2000" retry="3" />
