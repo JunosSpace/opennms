@@ -2284,5 +2284,8 @@
 
   <event-file>events/asset-management.events.xml</event-file>
   <event-file>events/Standard.events.xml</event-file>
+  
+  <!-- PR - 1353775-->
+  <event-file>events/MPLS.events.xml</event-file>
   <event-file>events/default.events.xml</event-file>
 </events>
