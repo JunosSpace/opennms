@@ -16,7 +16,6 @@ public class CryptUtil {
 	      String keyStr = AESKeyManager.getInst().getKey().getKeyStr();
 	      cipherText = CryptService.getInst().encodePassword(text, keyStr);
 	    } catch (Exception e) {
-	      cipherText = new String(Base64.encodeBytes(text.getBytes()));
 	      LOG.debug("Encode device password error, please check the AESKey!");
 	      LOG.debug("Encode device password error details:", e);
 	    }
@@ -31,9 +30,6 @@ public class CryptUtil {
 	      text = CryptService.getInst().decodePassword(cipherText, keyStr);
 	    	}	
 	    } catch (Exception e) {
-        if ( text != null && !(text.contains("IV:"))){
-         text = new String(Base64.decode(text));
-         }
 	      LOG.debug("Decode device password error, please check the AESKey!");
 	      LOG.debug("Decode device password error details:", e);
 	    }
