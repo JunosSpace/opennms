@@ -139,6 +139,31 @@
 		return !isNaN(input - 0) && input != null && input !== null
 				&& input !== "" && input !== false;
 	}
+		
+	function onSecurityLevelChange() {
+		var authenticationElement = document.getElementById("authentication");
+		var privacyElement = document.getElementById("privacy");
+		var selectedElement = null;
+		//  determine selected element
+	    var element = document.getElementById("securityLevel");
+	    var value = element.options[element.selectedIndex].value;
+	    if (value == "authNoPriv" ){
+	    	authenticationElement.style.visibility = '';
+	        authenticationElement.style.display = "block";
+	        privacyElement.style.visibility = "hidden";
+	        privacyElement.style.display = "none"
+	  	} else if (value == "noAuthNoPriv" ){
+	  		authenticationElement.style.visibility = "hidden";
+	        authenticationElement.style.display = "none";
+	        privacyElement.style.visibility = "hidden";
+	        privacyElement.style.display = "none"
+	    } else {
+	        authenticationElement.style.visibility = '';
+	        authenticationElement.style.display = "block";
+	        privacyElement.style.visibility = "";
+	        privacyElement.style.display = "block"
+	    }
+	}
 
 	/*
 	 * On Version change only the specificy section is shown.
@@ -235,12 +260,75 @@
 		return input.toString();
 	}
 
-	public String getOptions(String selectedOption, String defaultOption, String... options) {
-		// prevent Nullpointer
+	public String[] getVersion() {
+		if (isFIPSMode()) {
+			String[] versions = { "v3" };
+			return versions;
+		} else {
+			String[] versions = { "v1", "v2c", "v3" };
+			return versions;
+		}
+	}
+	
+	public String[] getPrivProtocol() {
+		if (isFIPSMode()) {
+			String[] privProtocol = {"AES", "AES192", "AES256"};
+			return privProtocol;
+		} else {
+			String[] privProtocol = {"","AES", "AES192", "AES256", "DES"};
+			return privProtocol;
+		}
+	}
+	
+	public String[] getAuthProtocol() {
+		if (isFIPSMode()) {
+			String[] authProtocol = {"SHA"};
+			return authProtocol;
+		} else {
+			String[] authProtocol = {"","SHA", "MD5"};
+			return authProtocol;
+		}
+	}
+	
+	public String[] getSecurityLevel() {
+		if (isFIPSMode()) {
+			String[] securityLevel = {"authPriv"};
+			return securityLevel;
+		} else {
+			String[] securityLevel = {"","authPriv", "authNoPriv", "noAuthNoPriv"};
+			return securityLevel;
+		}
+	}
+	
+	public String getUIOptions(String type, String selectedOption) {
+		String[] input = new String[5];
+		if(type.equals("version")){
+			input =  getVersion();
+		} else if(type.equals("privProtocol")){
+			input =  getPrivProtocol();
+		} else if(type.equals("authProtocol")){
+			input =  getAuthProtocol();
+		} else if(type.equals("securityLevel")){
+			input =  getSecurityLevel();
+		}
+		return getOptions(selectedOption, input[0], input);
+	}
+	
+	public boolean isFIPSMode() {
+	  boolean isFIPSMode = false;
+	  String result = System.getProperty("FIPSMode");
+	  if (result != null && "true".equals(result)) {
+	    isFIPSMode = true;
+	  }
+	  return isFIPSMode;
+	}
+	
+	public String getOptions(String selectedOption, String defaultOption, String[] options) {
+		// prevent Nullpointers
 		if (defaultOption == null) defaultOption = "";
 		// ensure that there is a default :)
 		if (Strings.isNullOrEmpty(selectedOption)) selectedOption = defaultOption;
-
+	
 		final String optionTemplate = "<option %s>%s</option>";
 		String optionsString = "";
 		for (String eachOption : options) {
@@ -315,7 +403,7 @@
 						<td width="25%">Version:</td>
 						<td width="50%">
 							<select id="version" name="version" onChange="onVersionChange()">
-								<%=getOptions(version, "v2c", "v1", "v2c", "v3")%>
+								<%=getUIOptions("version", version)%>
 							</select>
 							<img src="css/images/ui-trans_1x1.png" class="info" onMouseOver="showTT('versionTT')" onMouseOut="hideTT()"/>
 						</td>
@@ -435,23 +523,17 @@
 					<tr>
 						<td width="25%">Security Level:</td>
 						<td width="50%">
-							<select name="securityLevel" style="width: 120px">
-								<option value=""></option>
-								<option value="1"
-									<%="1".equals(securityLevel) ? "selected" : ""%>>noAuthNoPriv</option>
-								<option value="2"
-									<%="2".equals(securityLevel) ? "selected" : ""%>>authNoPriv</option>
-								<option value="3"
-									<%="3".equals(securityLevel) ? "selected" : ""%>>authPriv</option>
+							<select name="securityLevel" id="securityLevel" style="width: 120px" onChange="onSecurityLevelChange()">
+								<%=getUIOptions("securityLevel", securityLevel)%>
 							</select>
 							<img src="css/images/ui-trans_1x1.png" class="info" onMouseOver="showTT('securityLevelTT')" onMouseOut="hideTT()"/>
 							
 						</td>
 					</tr>
 				</table>
-				<table>
+				<table id="authentication">
 					<tr>
-						<td width="25%">Auth Passphrase:</td>
+						<td width="25%" disable>Auth Passphrase:</td>
 						<td width="50%">
 							<input style="width:120px;" name="authPassPhrase" value="<%=authPassPhrase%>" />
 							<img src="css/images/ui-trans_1x1.png" class="info" onMouseOver="showTT('authPassPhraseTT')" onMouseOut="hideTT()"/>
@@ -462,14 +544,14 @@
 						<td width="25%">Auth Protocol:</td>
 						<td width="50%">
 							<select name="authProtocol" style="width: 120px">
-								<%=getOptions(authProtocol, "", "", "MD5", "SHA")%>
+								<%=getUIOptions("authProtocol", authProtocol)%>
 							</select>
 							<img src="css/images/ui-trans_1x1.png" class="info" onMouseOver="showTT('authProtocolTT')" onMouseOut="hideTT()"/>
 							
 						</td>
 					</tr>
 				</table>
-				<table>
+				<table id="privacy">
 					<tr>
 						<td width="25%">Privacy Passphrase:</td>
 						<td width="50%">
@@ -481,7 +563,7 @@
 						<td width="25%">Privacy Protocol:</td>
 						<td width="50%">
 							<select name="privProtocol" style="width: 120px">
-								<%=getOptions(privProtocol, "", "", "DES", "AES", "AES192", "AES256")%>
+								<%=getUIOptions("privProtocol", privProtocol)%>
 							</select>
 							<img src="css/images/ui-trans_1x1.png" class="info" onMouseOver="showTT('privProtocolTT')" onMouseOut="hideTT()"/>
 							
