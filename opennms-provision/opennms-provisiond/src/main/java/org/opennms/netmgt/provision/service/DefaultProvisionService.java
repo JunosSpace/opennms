@@ -806,10 +806,9 @@ public class DefaultProvisionService implements ProvisionService, InitializingBe
         OnmsIpInterface critIface = null;
     	if (parent != null) {
     		critIface = parent.getCriticalInterface();
-    	}
-
-    	LOG.info("Setting criticalInterface of node: {} to: {}", node, critIface);
-    	node.setPathElement(critIface == null ? null : new PathElement(str(critIface.getIpAddress()), "ICMP"));
+    		LOG.info("Setting criticalInterface of node: {} to: {}", node, critIface);
+        	node.setPathElement(critIface == null ? null : new PathElement(str(critIface.getIpAddress()), "ICMP"));
+    	} 
 
     }
     
